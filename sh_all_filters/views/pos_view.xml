@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+	<!-- POS ORDER FILTERS -->
+	<record id="sh_inherit_view_pos_order_filter_for_all_in_one_filter" model="ir.ui.view">
+		<field name="name">sh.inherit.view.pos.order.filter.for.all.in.one.filter</field>
+		<field name="model">pos.order</field>
+		<field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+		<field name="arch" type="xml">
+		
+			<xpath expr="//filter" position="before">			
+				<filter string="Today" name="today" 
+					domain="[('date_order', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('date_order', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Yesterday"  name="Yesterday" 
+                         domain="[('date_order','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('date_order','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Current Week"
+			        name="this_week"
+			        domain="[('date_order', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('date_order', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Previous Week" name="prev_week"
+				domain="[('date_order', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('date_order', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Current Month" name="this_month" 
+				domain="[('date_order','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('date_order','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Previous Month" name="prev_month" domain="[('date_order','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('date_order','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Current Year" name="year" domain="[('date_order','&lt;=', time.strftime('%%Y-12-31')),('date_order','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Previous Year"
+                	domain="[('date_order', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('date_order','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+
+			 </xpath>
+			 
+			 <xpath expr="//group" position="inside">
+                  <filter string="Day" domain="[]" context="{'group_by':'date_order:day'}"/>		
+                  <filter string="Week" domain="[]" context="{'group_by':'date_order:week'}"/>		 
+                  <filter string="Month" domain="[]" context="{'group_by':'date_order:month'}"/>
+                  <filter string="Year" domain="[]" context="{'group_by':'date_order:year'}"/>                                                       
+			 </xpath>			 
+		
+		</field>
+	</record>
+	
+	<!-- POS REPORT ORDER FILTERS -->
+	<record id="sh_inherit_view_report_pos_order_search_for_all_in_one_filter" model="ir.ui.view">
+		<field name="name">sh.inherit.view.report.pos.order.search.for.all.in.one.filter</field>
+		<field name="model">report.pos.order</field>
+		<field name="inherit_id" ref="point_of_sale.view_report_pos_order_search"/>
+		<field name="arch" type="xml">
+		
+			<xpath expr="//filter" position="before">			
+				<filter string="Today" name="today" 
+					domain="[('date', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('date', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Yesterday"  name="Yesterday" 
+                         domain="[('date','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('date','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Current Week"
+			        name="this_week"
+			        domain="[('date', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('date', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Previous Week" name="prev_week"
+				domain="[('date', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('date', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Current Month" name="this_month" 
+				domain="[('date','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('date','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Previous Month" name="prev_month" domain="[('date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('date','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Current Year" name="year" domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Previous Year"
+                	domain="[('date', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('date','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+
+			 </xpath>
+			 
+			 <xpath expr="//group" position="inside">
+                  <filter string="Day" domain="[]" context="{'group_by':'date:day'}"/>		
+                  <filter string="Week" domain="[]" context="{'group_by':'date:week'}"/>		 
+                  <filter string="Month" domain="[]" context="{'group_by':'date:month'}"/>
+                  <filter string="Year" domain="[]" context="{'group_by':'date:year'}"/>                                                       
+			 </xpath>				 			
+		
+		
+		</field>
+	</record>
+
+
+	<!-- POS SESSIONS FILTERS -->
+	<record id="sh_inherit_view_pos_session_search_for_all_in_one_filters" model="ir.ui.view">
+		<field name="name">sh.inherit.view.pos.session.search.for.all.in.one.filters</field>
+		<field name="model">pos.session</field>
+		<field name="inherit_id" ref="point_of_sale.view_pos_session_search"/>
+		<field name="arch" type="xml">
+			<xpath expr="//filter" position="before">				
+			 
+			 <!-- FILTER BY OPENING DATE  -->
+				<filter string="Today Opening Date" name="today_od" 
+					domain="[('start_at', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('start_at', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Yesterday Opening Date"  name="Yesterday_od" 
+                         domain="[('start_at','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('start_at','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Current Week Opening Date"
+			        name="this_week_od"
+			        domain="[('start_at', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('start_at', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Previous Week Opening Date" name="prev_week_od"
+				domain="[('start_at', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('start_at', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Current Month Opening Date" name="this_month_od" 
+				domain="[('start_at','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('start_at','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Previous Month Opening Date" name="prev_month_od" domain="[('start_at','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('start_at','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Current Year Opening Date" name="year_od" domain="[('start_at','&lt;=', time.strftime('%%Y-12-31')),('start_at','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Previous Year Opening Date" name="last_year_od"
+                	domain="[('start_at', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('start_at','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+			
+		
+		
+		
+		<!-- FILTER BY CLOSING DATE -->
+				<filter string="Today Closing Date" name="today_cd" 
+					domain="[('stop_at', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('stop_at', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Yesterday Closing Date"  name="Yesterday_cd" 
+                         domain="[('stop_at','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('stop_at','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Current Week Closing Date"
+			        name="this_week_cd"
+			        domain="[('stop_at', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('stop_at', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Previous Week Closing Date" name="prev_week_cd"
+				domain="[('stop_at', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('stop_at', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Current Month Closing Date" name="this_month_cd" 
+				domain="[('stop_at','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('stop_at','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Previous Month Closing Date" name="prev_month_cd" domain="[('stop_at','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('stop_at','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Current Year Closing Date" name="year_cd" domain="[('stop_at','&lt;=', time.strftime('%%Y-12-31')),('stop_at','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Previous Year Closing Date" name="last_year_cd"
+                	domain="[('stop_at', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('stop_at','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+		
+
+		</xpath>
+
+		 <xpath expr="//group" position="inside">
+		 		<!-- GROUP BY OPENING DATE -->
+                 <filter string="Opening Day" domain="[]" context="{'group_by':'start_at:day'}"/>		
+                 <filter string="Opening Week" domain="[]" context="{'group_by':'start_at:week'}"/>		 
+                 <filter string="Opening Month" domain="[]" context="{'group_by':'start_at:month'}"/>
+                 <filter string="Opening Year" domain="[]" context="{'group_by':'start_at:year'}"/>     
+                                                                   
+		 
+		 		<!-- GROUP BY CLOSING DATE -->
+                 <filter string="Closing Day" domain="[]" context="{'group_by':'stop_at:day'}"/>		
+                 <filter string="Closing Week" domain="[]" context="{'group_by':'stop_at:week'}"/>		 
+                 <filter string="Closing Month" domain="[]" context="{'group_by':'stop_at:month'}"/>
+                 <filter string="Closing Year" domain="[]" context="{'group_by':'stop_at:year'}"/>    		 		
+		 </xpath>		
+		
+		</field>
+	</record>
+	
+
+</data>
+</odoo>

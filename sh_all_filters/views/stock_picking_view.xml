@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<!-- Stock Operations filters -->
+<record id="sh_inherit_view_picking_internal_search" model="ir.ui.view">
+	<field name="name">sh.inherit.view.picking.internal.search</field>
+	<field name="model">stock.picking</field>
+	<field name="inherit_id" ref="stock.view_picking_internal_search"/>
+	<field name="arch" type="xml">
+	
+			<xpath expr="//filter" position="before">
+
+				
+				<filter string="Today" name="today" 
+					domain="[('scheduled_date', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('scheduled_date', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Yesterday"  name="Yesterday" 
+                         domain="[('scheduled_date','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('scheduled_date','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Current Week"
+			        name="this_week"
+			        domain="[('scheduled_date', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('scheduled_date', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Previous Week" name="prev_week"
+				domain="[('scheduled_date', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('scheduled_date', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Current Month" name="this_month" 
+				domain="[('scheduled_date','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('scheduled_date','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Previous Month" name="prev_month" domain="[('scheduled_date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('scheduled_date','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Current Year" name="year" domain="[('scheduled_date','&lt;=', time.strftime('%%Y-12-31')),('scheduled_date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Previous Year"
+                	domain="[('scheduled_date', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('scheduled_date','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+
+			
+			</xpath>	
+			
+			 <xpath expr="//group" position="inside">
+                  <filter string="Day" domain="[]" context="{'group_by':'scheduled_date:day'}"/>		
+                  <filter string="Week" domain="[]" context="{'group_by':'scheduled_date:week'}"/>		 
+                  <filter string="Month" domain="[]" context="{'group_by':'scheduled_date:month'}"/>
+                  <filter string="Year" domain="[]" context="{'group_by':'scheduled_date:year'}"/>                                                       
+			 </xpath>					
+	
+	</field>
+</record>
+	
+<!-- Inventory Adjustments Filters   -->
+<record id="sh_inherit_view_inventory_filter" model="ir.ui.view">
+	<field name="name">sh.inherit.view.inventory.filter</field>
+	<field name="model">stock.inventory</field>
+	<field name="inherit_id" ref="stock.view_inventory_filter"/>
+	<field name="arch" type="xml">
+
+			<xpath expr="//search" position="inside">
+
+				
+				<filter string="Today" name="today" 
+					domain="[('date', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('date', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Yesterday"  name="Yesterday" 
+                         domain="[('date','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('date','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Current Week"
+			        name="this_week"
+			        domain="[('date', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('date', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Previous Week" name="prev_week"
+				domain="[('date', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('date', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Current Month" name="this_month" 
+				domain="[('date','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('date','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Previous Month" name="prev_month" domain="[('date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('date','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Current Year" name="year" domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Previous Year"
+                	domain="[('date', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('date','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+
+				</xpath>	
+				
+			 <xpath expr="//group" position="inside">
+                  <filter string="Day" domain="[]" context="{'group_by':'date:day'}"/>		
+                  <filter string="Week" domain="[]" context="{'group_by':'date:week'}"/>		 
+                  <filter string="Month" domain="[]" context="{'group_by':'date:month'}"/>
+                  <filter string="Year" domain="[]" context="{'group_by':'date:year'}"/>                                                       
+			 </xpath>						
+
+	</field>
+
+		
+	
+</record>
+
+<!-- Scrap Filters -->
+<record id="sh_inherit_stock_scrap_search_view" model="ir.ui.view">
+	<field name="name">sh.inherit.stock.scrap.search.view</field>
+	<field name="model">stock.scrap</field>
+	<field name="inherit_id" ref="stock.stock_scrap_search_view"/>
+	<field name="arch" type="xml">
+	
+			<xpath expr="//search" position="inside">
+
+				
+				<filter string="Today" name="today" 
+					domain="[('create_date', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('create_date', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Yesterday"  name="Yesterday" 
+                         domain="[('create_date','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('create_date','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Current Week"
+			        name="this_week"
+			        domain="[('create_date', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('create_date', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Previous Week" name="prev_week"
+				domain="[('create_date', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('create_date', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Current Month" name="this_month" 
+				domain="[('create_date','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('create_date','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Previous Month" name="prev_month" domain="[('create_date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('create_date','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Current Year" name="year" domain="[('create_date','&lt;=', time.strftime('%%Y-12-31')),('create_date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Previous Year"
+                	domain="[('create_date', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('create_date','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+
+				</xpath>
+				
+			 <xpath expr="//group" position="inside">
+                  <filter string="Day" domain="[]" context="{'group_by':'create_date:day'}"/>		
+                  <filter string="Week" domain="[]" context="{'group_by':'create_date:week'}"/>		 
+                  <filter string="Month" domain="[]" context="{'group_by':'create_date:month'}"/>
+                  <filter string="Year" domain="[]" context="{'group_by':'create_date:year'}"/>                                                       
+			 </xpath>						
+	
+	</field>
+</record>
+
+
+<!-- STOCK PRODUCTION LOT TREE VIEW -->
+<!-- <record id="sh_all_filter_production_lot_tree" model="ir.ui.view">
+	<field name="name">sh.all.filter.production.lot.tree</field>
+	<field name="model">stock.production.lot</field>
+	<field name="inherit_id" ref="stock.view_production_lot_tree"/>
+	<field name="arch" type="xml">
+		<xpath expr="//tree" position="inside">
+			<field name="life_date"/>
+			<field name="create_date"/>
+		</xpath>
+	</field>
+</record> -->
+
+<!-- STOCK PRODUCTION LOT SEARCH VIEW  FILTER -->
+<record id="sh_all_filter_production_lot_search_view" model="ir.ui.view">
+	<field name="name">sh.all.filter.production.lot.search.view</field>
+	<field name="model">stock.production.lot</field>
+	<field name="inherit_id" ref="stock.search_product_lot_filter"/>
+	<field name="arch" type="xml">
+		<xpath expr="//group" position="before">
+				
+				<!-- END OF LIFE FILTER -->
+<!-- 				<filter string="End of Life Today" name="eol_today" 
+					domain="[('life_date', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('life_date', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="End of Life Yesterday"  name="eol_Yesterday" 
+                         domain="[('life_date','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('life_date','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>	 -->			
+
+<!-- 				<filter 
+			        string="End of Life Current Week"
+			        name="eol_this_week"
+			        domain="[('life_date', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('life_date', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 		 -->		
+
+				
+<!-- 				<filter string="End of Life Previous Week" name="eol_prev_week"
+				domain="[('life_date', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('life_date', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/> -->
+	
+<!-- 				<filter string="End of Life Current Month" name="eol_this_month" 
+				domain="[('life_date','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('life_date','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	 -->
+<!-- 				<filter string="End of Life Previous Month" name="eol_prev_month" domain="[('life_date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('life_date','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="End of Life Current Year" name="eol_year" domain="[('life_date','&lt;=', time.strftime('%%Y-12-31')),('life_date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="End of Life Previous Year"
+                	domain="[('life_date', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('life_date','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/> -->
+
+
+
+			<!-- ALERT DATE FILTER -->
+				<filter string="Alert Today" name="alert_today" 
+					domain="[('create_date', '&gt;=', datetime.datetime.now().strftime('%m/%d/%Y 00:00:00')),('create_date', '&lt;=', datetime.datetime.now().strftime('%m/%d/%Y 23:23:59'))]"/>
+			
+			     <filter string="Alert Yesterday"  name="alert_Yesterday" 
+                         domain="[('create_date','&gt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d'))), ('create_date','&lt;=', ((context_today()+datetime.timedelta(days=-1)).strftime('%Y-%m-%d')))]"
+                           help="Yesterday"/>				
+
+				<filter 
+			        string="Alert Current Week"
+			        name="alert_this_week"
+			        domain="[('create_date', '&gt;=', ((context_today()+ relativedelta(weeks=-1,weekday=0)).strftime('%Y-%m-%d'))), ('create_date', '&lt;=', ((context_today()+ relativedelta(weeks=-1,days=5,weekday=6)).strftime('%Y-%m-%d')))]"
+			       /> 				
+
+				
+				<filter string="Alert Previous Week" name="alert_prev_week"
+				domain="[('create_date', '&gt;=', ((context_today()+relativedelta(weeks=-2, weekday=0)).strftime('%Y-%m-%d'))),('create_date', '&lt;=', ((context_today()+relativedelta(weeks=-1,weekday=6)).strftime('%Y-%m-%d')))]"/>
+	
+				<filter string="Alert Current Month" name="alert_this_month" 
+				domain="[('create_date','&lt;',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-01')), ('create_date','&gt;=',time.strftime('%%Y-%%m-01'))]"/>				
+	
+				<filter string="Alert Previous Month" name="alert_prev_month" domain="[('create_date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%%Y-%%m-01')),('create_date','&lt;',time.strftime('%%Y-%%m-01'))]"/>
+
+			    <filter string="Alert Current Year" name="alert_year" domain="[('create_date','&lt;=', time.strftime('%%Y-12-31')),('create_date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+
+				<filter string="Alert Previous Year"
+                	domain="[('create_date', '&gt;=' ,(context_today()-relativedelta(years=1)).strftime('%Y-01-01')),('create_date','&lt;=',time.strftime('%Y-01-01'))]" help="last year"/>
+
+		</xpath>
+		
+		<xpath expr="//group" position="inside">
+<!--              <filter string="End of Life Day" domain="[]" context="{'group_by':'life_date:day'}"/>		
+             <filter string="End of Life Week" domain="[]" context="{'group_by':'life_date:week'}"/>		 
+             <filter string="End of Life Month" domain="[]" context="{'group_by':'life_date:month'}"/>
+             <filter string="End of Life Year" domain="[]" context="{'group_by':'life_date:year'}"/>  -->
+             
+             <filter string="Alert Day" domain="[]" context="{'group_by':'create_date:day'}"/>		
+             <filter string="Alert Week" domain="[]" context="{'group_by':'create_date:week'}"/>		 
+             <filter string="Alert Month" domain="[]" context="{'group_by':'create_date:month'}"/>
+             <filter string="Alert Year" domain="[]" context="{'group_by':'create_date:year'}"/>               		
+		</xpath>
+	</field>
+</record>
+
+</data>
+</odoo>
+
+

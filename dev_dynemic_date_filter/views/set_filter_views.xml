@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015 DevIntelle Consulting Service Pvt.Ltd (<http://www.devintellecs.com>).
+
+For Module Support : devintelle@gmail.com  or Skype : devintelle 
+ -->
+<odoo>
+	<record id="view_dev_set_filter_form" model="ir.ui.view">
+		<field name="name">view.dev.set.filter.form</field>
+		<field name="model">set.filter</field>
+		<field name="arch" type="xml">
+			<form string="Dynemic Date Filter">
+				<header>
+					<button name="action_done" string="Confirm" type="object" states="draft" class="btn-primary"/>
+					<button name="action_draft" string="Set to Draft" type="object" states="done"/>
+					<field name="state" widget="statusbar"/>
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="name" attrs="{'readonly':[('state','=','done')]}"/>
+							<field name="filter_field" domain="[('model_id','=',model_id),('ttype','in',['datetime','date'])]" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							<field name="model_id"  attrs="{'readonly':[('state','=','done')]}" />
+							<field name="view_id" invisible="1"/>
+						</group>
+					</group>
+					<separator string='Select Filters'/>
+					<group>
+						<group>
+							<field name="today" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							<field name="yesterday" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+					</group>
+						
+					<group>
+						<group>
+							 <field name="last_7_days" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							 <field name="last_30_days" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							 <field name="last_365_days" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+					</group>
+						
+					<group>
+						<group>
+							 <field name="this_week" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							<field name="this_month" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							<field name="this_year" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+					</group>
+						
+					<group>
+						<group>
+							 <field name="last_week" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							 <field name="last_month" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+						<group>
+							<field name="last_year" attrs="{'readonly':[('state','=','done')]}"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_dev_set_filter_tree" model="ir.ui.view">
+		<field name="name">view.dev.set.filter.tree</field>
+		<field name="model">set.filter</field>
+		<field name="arch" type="xml">
+			<tree string="Dynemic Date Filter">
+				<field name="name"/>
+				<field name="model_id"/>
+				<field name="filter_field"/>
+			</tree>
+		</field>
+	</record>
+
+
+	<record id="action_dev_set_filter" model="ir.actions.act_window">
+		<field name="name">Dynemic Date Filter</field>
+		<field name="res_model">set.filter</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<menuitem name="Dynemic Date Filter" id="menu_dev_dynemic_filter" parent="base.menu_administration" sequence="5" groups="dev_dynemic_date_filter.group_access_dynemic_date_filter"/>
+	
+	<menuitem name="Dynemic Date Filter" id="dev_menu_dynemic_filter_sub" parent="menu_dev_dynemic_filter" action="action_dev_set_filter" sequence="1" groups="dev_dynemic_date_filter.group_access_dynemic_date_filter"/>
+</odoo>

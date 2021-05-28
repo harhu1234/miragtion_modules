@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Action for export sale summary report -->
+        <act_window id="act_sale_export" 
+            name="Export Sales Summary" 
+            res_model="sale.export.wizard" 
+            binding_model="sale.order" 
+            view_mode="form"
+            target="new"
+             />
+    </data>
+</odoo>
+

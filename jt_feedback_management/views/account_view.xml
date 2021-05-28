@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Account Move Form View -->
+        <record id="view_move_form_view_form" model="ir.ui.view">
+            <field name="name">account.move.view.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="send_feedback_link" type="object" string="Send Feedback Link" class="btn btn-highlight"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

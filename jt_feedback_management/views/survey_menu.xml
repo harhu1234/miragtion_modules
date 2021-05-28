@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Action Sale Feedback Form -->
+        <record id="action_sale_feedback_forms" model="ir.actions.act_window">
+            <field name="name">Feedback Forms</field>
+            <field name="res_model">survey.survey</field>
+            <field name="view_mode">kanban,tree,activity,form</field>
+            <field name="domain">[('model_id.model', '=', 'sale.order')]</field>
+            <field name="context" eval="{'default_model_id': ref('sale.model_sale_order')}"/>
+        </record>
+
+        <!-- Action Purchase Feedback Form -->
+        <record id="action_purchase_feedback_forms" model="ir.actions.act_window">
+            <field name="name">Feedback Forms</field>
+            <field name="res_model">survey.survey</field>
+            <field name="view_mode">kanban,tree,activity,form</field>
+            <field name="domain">[('model_id.model', '=', 'purchase.order')]</field>
+            <field name="context" eval="{'default_model_id': ref('purchase.model_purchase_order')}"/>
+        </record>
+
+        <!-- Action Invoice Feedback Form -->
+        <record id="action_invoice_feedback_forms" model="ir.actions.act_window">
+            <field name="name">Feedback Forms</field>
+            <field name="res_model">survey.survey</field>
+            <field name="view_mode">kanban,tree,activity,form</field>
+            <field name="domain">[('model_id.model', '=', 'account.move')]</field>
+            <field name="context" eval="{'default_model_id': ref('account.model_account_move')}"/>
+        </record>
+
+        <!-- Action Picking Feedback Form -->
+        <record id="action_delivery_feedback_forms" model="ir.actions.act_window">
+            <field name="name">Feedback Forms</field>
+            <field name="res_model">survey.survey</field>
+            <field name="view_mode">kanban,tree,activity,form</field>
+            <field name="domain">[('model_id.model', '=', 'stock.picking')]</field>
+            <field name="context" eval="{'default_model_id': ref('stock.model_stock_picking')}"/>
+        </record>
+
+
+        <!-- Action Sale Feedback Templates -->
+        <record id="action_sale_feedback_template" model="ir.actions.act_window">
+            <field name="name">Feedback Templates</field>
+            <field name="res_model">mail.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="['|', '&amp;', ('id','in', (ref('survey.mail_template_user_input_invite'), ref('survey.mail_template_certification'))), ('model_id.model', '=', 'survey.user_input'), ('survey_model_id.model', '=', 'sale.order')]"/>
+            <field name="context" eval="{'default_model_id': ref('survey.model_survey_user_input'), 'default_survey_model_id': ref('sale.model_sale_order')}"/>
+        </record>
+
+        <!-- Action Purchase Feedback Templates -->
+        <record id="action_purchase_feedback_template" model="ir.actions.act_window">
+            <field name="name">Feedback Templates</field>
+            <field name="res_model">mail.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="['|', '&amp;', ('id','in', (ref('survey.mail_template_user_input_invite'), ref('survey.mail_template_certification'))), ('model_id.model', '=', 'survey.user_input'), ('survey_model_id.model', '=', 'purchase.order')]"/>
+            <field name="context" eval="{'default_model_id': ref('survey.model_survey_user_input'), 'default_survey_model_id': ref('purchase.model_purchase_order')}"/>
+        </record>
+
+        <!-- Action Invoice Feedback Templates -->
+        <record id="action_invoice_feedback_template" model="ir.actions.act_window">
+            <field name="name">Feedback Templates</field>
+            <field name="res_model">mail.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="['|', '&amp;', ('id','in', (ref('survey.mail_template_user_input_invite'), ref('survey.mail_template_certification'))), ('model_id.model', '=', 'survey.user_input'), ('survey_model_id.model', '=', 'account.move')]"/>
+            <field name="context" eval="{'default_model_id': ref('survey.model_survey_user_input'), 'default_survey_model_id': ref('account.model_account_move')}"/>
+        </record>
+
+        <!-- Action Picking Feedback Templates -->
+        <record id="action_delivery_feedback_template" model="ir.actions.act_window">
+            <field name="name">Feedback Templates</field>
+            <field name="res_model">mail.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="['|', '&amp;', ('id','in', (ref('survey.mail_template_user_input_invite'), ref('survey.mail_template_certification'))), ('model_id.model', '=', 'survey.user_input'), ('survey_model_id.model', '=', 'stock.picking')]"/>
+            <field name="context" eval="{'default_model_id': ref('survey.model_survey_user_input'), 'default_survey_model_id': ref('stock.model_stock_picking')}"/>
+        </record>
+
+
+        <!-- Menu Sale Feedbacks -->
+        <menuitem
+            id="menu_sale_feedback"
+            parent="sale.menu_sale_config"
+            name="Customer Feedback Management"/>
+
+        <menuitem
+            id="menu_sale_feedback_forms"
+            action="action_sale_feedback_forms"
+            parent="menu_sale_feedback"
+            name="Feedback Forms"/>
+
+        <menuitem
+            id="menu_sale_feedback_template"
+            action="action_sale_feedback_template"
+            parent="menu_sale_feedback"
+            name="Feedback Templates"/>
+
+        <!-- Menu Purchase Feedbacks -->
+        <menuitem
+            id="menu_purchase_feedback"
+            parent="purchase.menu_purchase_config"
+            name="Customer Feedback Management"/>
+
+        <menuitem
+            id="menu_purchase_feedback_forms"
+            action="action_purchase_feedback_forms"
+            parent="menu_purchase_feedback"
+            name="Feedback Forms"/>
+
+        <menuitem
+            id="menu_purchase_feedback_template"
+            action="action_purchase_feedback_template"
+            parent="menu_purchase_feedback"
+            name="Feedback Templates"/>
+
+        <!-- Menu Invoice Feedbacks -->
+        <menuitem
+            id="menu_invoice_feedback"
+            parent="account.menu_finance_configuration"
+            name="Customer Feedback Management"/>
+
+        <menuitem
+            id="menu_invoice_feedback_forms"
+            action="action_invoice_feedback_forms"
+            parent="menu_invoice_feedback"
+            name="Feedback Forms"/>
+
+        <menuitem
+            id="menu_invoice_feedback_template"
+            action="action_invoice_feedback_template"
+            parent="menu_invoice_feedback"
+            name="Feedback Templates"/>
+
+        <!-- Menu Delivery Feedbacks -->
+        <menuitem
+            id="menu_delivery_feedback"
+            parent="stock.menu_stock_config_settings"
+            name="Customer Feedback Management"/>
+
+        <menuitem
+            id="menu_delivery_feedback_forms"
+            action="action_delivery_feedback_forms"
+            parent="menu_delivery_feedback"
+            name="Feedback Forms"/>
+
+        <menuitem
+            id="menu_delivery_feedback_template"
+            action="action_delivery_feedback_template"
+            parent="menu_delivery_feedback"
+            name="Feedback Templates"/>
+    </data>
+</odoo>

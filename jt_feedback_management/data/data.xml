@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Feedback Template for Sales Order -->
+        <record id="survey_survey_1" model="survey.survey">
+            <field name="title">Customer Feedback Form Template For Sales Orders</field>
+            <field name="description">Customer Feedback Form Template For Sales Orders</field>
+            <field name="access_mode">token</field>
+            <field name="users_login_required">True</field>
+            <field name="is_attempts_limited">True</field>
+            <field name="attempts_limit">1</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+        </record>
+
+        <!-- Feedback Template for Purchase Order -->
+        <record id="survey_survey_2" model="survey.survey">
+            <field name="title">Customer Feedback Form Template For Purchase Orders</field>
+            <field name="description">Customer Feedback Form Template For Purchase Orders</field>
+            <field name="access_mode">token</field>
+            <field name="users_login_required">True</field>
+            <field name="is_attempts_limited">True</field>
+            <field name="attempts_limit">1</field>
+            <field name="model_id" ref="purchase.model_purchase_order"/>
+        </record>
+
+        <!-- Feedback Template for Invoice -->
+        <record id="survey_survey_3" model="survey.survey">
+            <field name="title">Customer Feedback Form Template For Invoices</field>
+            <field name="description">Customer Feedback Form Template For Invoices</field>
+            <field name="access_mode">token</field>
+            <field name="users_login_required">True</field>
+            <field name="is_attempts_limited">True</field>
+            <field name="attempts_limit">1</field>
+            <field name="model_id" ref="account.model_account_move"/>
+        </record>
+
+        <!-- Feedback Template for Picking -->
+        <record id="survey_survey_4" model="survey.survey">
+            <field name="title">Customer Feedback Form Template For Delivery Orders</field>
+            <field name="description">Customer Feedback Form Template For Delivery Orders</field>
+            <field name="access_mode">token</field>
+            <field name="users_login_required">True</field>
+            <field name="is_attempts_limited">True</field>
+            <field name="attempts_limit">1</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+        </record>
+
+        <!-- Questions For Sales Order -->
+        <record id="sale_question_01" model="survey.question">
+            <field name="survey_id" ref="survey_survey_1" />
+            <field name="title">Did we meet your expectations?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="sale_question_02" model="survey.question">
+            <field name="survey_id" ref="survey_survey_1" />
+            <field name="title">What do you like most about company?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="sale_question_03" model="survey.question">
+            <field name="survey_id" ref="survey_survey_1" />
+            <field name="title">Is there anything else you would like us to know about your experience?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="sale_question_04" model="survey.question">
+            <field name="survey_id" ref="survey_survey_1" />
+            <field name="title">Rate the product (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+        <record id="sale_question_05" model="survey.question">
+            <field name="survey_id" ref="survey_survey_1" />
+            <field name="title">Rate our service (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+        <!-- Questions For Purchase Order -->
+        <record id="purchase_question_01" model="survey.question">
+            <field name="survey_id" ref="survey_survey_2" />
+            <field name="title">Did we meet your expectations?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="purchase_question_02" model="survey.question">
+            <field name="survey_id" ref="survey_survey_2" />
+            <field name="title">What do you like most about company?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="purchase_question_03" model="survey.question">
+            <field name="survey_id" ref="survey_survey_2" />
+            <field name="title">Is there anything else you would like us to know about your experience?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="purchase_question_04" model="survey.question">
+            <field name="survey_id" ref="survey_survey_2" />
+            <field name="title">Rate the product (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+        <record id="purchase_question_05" model="survey.question">
+            <field name="survey_id" ref="survey_survey_2" />
+            <field name="title">Rate our service (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+        <!-- Questions For Invoice -->
+        <record id="invoice_question_01" model="survey.question">
+            <field name="survey_id" ref="survey_survey_3" />
+            <field name="title">Did we meet your expectations?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="invoice_question_02" model="survey.question">
+            <field name="survey_id" ref="survey_survey_3" />
+            <field name="title">What do you like most about company?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="invoice_question_03" model="survey.question">
+            <field name="survey_id" ref="survey_survey_3" />
+            <field name="title">Is there anything else you would like us to know about your experience?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="invoice_question_04" model="survey.question">
+            <field name="survey_id" ref="survey_survey_3" />
+            <field name="title">Rate the product (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+        <record id="invoice_question_05" model="survey.question">
+            <field name="survey_id" ref="survey_survey_3" />
+            <field name="title">Rate our service (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+        <!-- Questions For Delivery Orders -->
+        <record id="stock_question_01" model="survey.question">
+            <field name="survey_id" ref="survey_survey_4" />
+            <field name="title">Did we meet your expectations?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="stock_question_02" model="survey.question">
+            <field name="survey_id" ref="survey_survey_4" />
+            <field name="title">What do you like most about company?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="stock_question_03" model="survey.question">
+            <field name="survey_id" ref="survey_survey_4" />
+            <field name="title">Is there anything else you would like us to know about your experience?</field>
+            <field name="question_type">char_box</field>
+            <field name="constr_mandatory">True</field>
+        </record>
+
+        <record id="stock_question_04" model="survey.question">
+            <field name="survey_id" ref="survey_survey_4" />
+            <field name="title">Rate the product (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+        <record id="stock_question_05" model="survey.question">
+            <field name="survey_id" ref="survey_survey_4" />
+            <field name="title">Rate our service (Out of 10)</field>
+            <field name="question_type">numerical_box</field>
+            <field name="constr_mandatory">True</field>
+            <field name="validation_required">True</field>
+            <field name="validation_min_float_value">1</field>
+            <field name="validation_max_float_value">10</field>
+        </record>
+
+    </data>
+</odoo>

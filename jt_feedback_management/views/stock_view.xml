@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Stock Picking Form View -->
+        <record id="view_picking_form_view_form" model="ir.ui.view">
+            <field name="name">stock.picking.view.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="send_feedback_link" type="object" string="Send Feedback Link" class="btn btn-highlight"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

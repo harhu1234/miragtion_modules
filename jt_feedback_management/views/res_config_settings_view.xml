@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Sale Configuration -->
+        <record id="res_config_settings_view_form_inh_sale" model="ir.ui.view">
+            <field name="name">res.config.settings.form.view.inh.sale</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@data-key='sale_management']" position="inside">
+                    <h2>Customer Feedback Management</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sale_template_id" string="Feedback Link Template"/><br/>
+                                <field name="sale_template_id"/>
+                                <div class="text-muted">
+                                    Default Template For Feedback Form Invitation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sale_survey_id" string="Default Survey Form"/><br/>
+                                <field name="sale_survey_id"/>
+                                <div class="text-muted">
+                                    Default Feedback Form
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_form_inh_purchase" model="ir.ui.view">
+            <field name="name">res.config.settings.form.view.inh.purchase</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@data-key='purchase']" position="inside">
+                    <h2>Customer Feedback Management</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="purchase_template_id" string="Feedback Link Template"/><br/>
+                                <field name="purchase_template_id"/>
+                                <div class="text-muted">
+                                    Default Template For Feedback Form Invitation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="purchase_survey_id" string="Default Survey Form"/><br/>
+                                <field name="purchase_survey_id"/>
+                                <div class="text-muted">
+                                    Default Feedback Form
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_form_inh_account" model="ir.ui.view">
+            <field name="name">res.config.settings.form.view.inh.account</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@data-key='account']" position="inside">
+                    <h2>Customer Feedback Management</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="invoice_template_id" string="Feedback Link Template"/><br/>
+                                <field name="invoice_template_id"/>
+                                <div class="text-muted">
+                                    Default Template For Feedback Form Invitation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="invoice_survey_id" string="Default Survey Form"/><br/>
+                                <field name="invoice_survey_id"/>
+                                <div class="text-muted">
+                                    Default Feedback Form
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_form_inh_stock" model="ir.ui.view">
+            <field name="name">res.config.settings.form.view.inh.stock</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@data-key='stock']" position="inside">
+                    <h2>Customer Feedback Management</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="stock_template_id" string="Feedback Link Template"/><br/>
+                                <field name="stock_template_id"/>
+                                <div class="text-muted">
+                                    Default Template For Feedback Form Invitation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="stock_survey_id" string="Default Survey Form"/><br/>
+                                <field name="stock_survey_id"/>
+                                <div class="text-muted">
+                                    Default Feedback Form
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

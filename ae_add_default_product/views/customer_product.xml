@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <record id="view_customer_sale_product_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+            <xpath expr="//page[@name='internal_notes']" position="after">
+            	<page string="Product" name="default_product">
+            		<field name="product_id">
+	            		<tree editable="bottom">
+		                	<field name="product_id"/>
+		                	<field name="description"/>
+		                	<field name="product_qty"/>
+		                	<field name="product_uom" groups="uom.group_uom"/>
+		                	<field name="price_unit"/>
+	                	</tree>
+	                </field>
+                </page>
+            </xpath>    
+            </field>
+        </record>
+    </data>
+</odoo>

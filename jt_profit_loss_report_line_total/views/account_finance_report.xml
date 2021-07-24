@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="account_finance_form_view_inh" model="ir.ui.view">
+			<field name="name">account.finance.report.view.form</field>
+			<field name="model">account.financial.html.report</field>
+			<field name="inherit_id" ref="account_reports.view_account_financial_report_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='generated_menu_id']" position="before">
+					<field name="disp_cum_total" string="Display Cumulative total in report?" attrs="{'invisible': [('name', '!=', 'Profit and Loss')]}"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

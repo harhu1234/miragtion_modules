@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Financial Report -->
+        <record id="account_financial_report_periodic0" model="account.financial.html.report">
+            <field name="name">Partner Periodic Summary Report</field>
+            <field name="debit_credit" eval="False"/>
+            <field name="analytic" eval="True"/>
+            <field name="unfold_all_filter" eval="True"/>
+            <field name="show_journal_filter" eval="True"/>
+            <field name='parent_id' ref='account.account_reports_management_menu'/>
+        </record>
+
+        <!-- Financial Report Line -->
+        <record id="account_financial_report_vv0" model="account.financial.html.report.line">
+            <field name="name">Value of goods deliveries</field>
+            <field name="code">VGD</field>
+            <field name="financial_report_id" ref="account_financial_report_periodic0"/>
+            <field name="formulas">balance =- sum.balance</field>
+            <field name="sequence" eval="0"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', 'Moms 35')]" />
+            <field name="groupby">partner_vat</field>
+            <field name="special_date_changer">normal</field>
+            <field name="level" eval="0" />
+            <field name="green_on_positive" eval="True"/>
+            <field name="figure_type">float</field>
+            <field name="show_domain">foldable</field>
+        </record>
+
+        <!-- Financial Report Line -->
+        <record id="account_financial_report_vt0" model="account.financial.html.report.line">
+            <field name="name">Value of third party trade</field>
+            <field name="code">VTT</field>
+            <field name="financial_report_id" ref="account_financial_report_periodic0"/>
+            <field name="formulas">balance =- sum.balance</field>
+            <field name="sequence" eval="0"/>
+            <field name="domain" eval="[('account_id.tag_ids', '!=', 'Moms 37')]" />
+            <field name="groupby">partner_vat</field>
+            <field name="special_date_changer">normal</field>
+            <field name="level" eval="0" />
+            <field name="green_on_positive" eval="True"/>
+            <field name="figure_type">float</field>
+            <field name="show_domain">foldable</field>
+        </record>
+
+        <!-- Financial Report Line -->
+        <record id="account_financial_report_vte0" model="account.financial.html.report.line">
+            <field name="name">Value of services</field>
+            <field name="code">VS</field>
+            <field name="financial_report_id" ref="account_financial_report_periodic0"/>
+            <field name="formulas">balance =- sum.balance</field>
+            <field name="sequence" eval="0"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', 'Moms 39')]" />
+            <field name="groupby">partner_vat</field>
+            <field name="special_date_changer">normal</field>
+            <field name="level" eval="0" />
+            <field name="green_on_positive" eval="True"/>
+            <field name="figure_type">float</field>
+            <field name="show_domain">foldable</field>
+        </record>
+    </data>
+</odoo>

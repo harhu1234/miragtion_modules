@@ -1,0 +1,7 @@
+Order Number,Product,Product Internal Code,Description,Quantity,Price,Tax
+S00001,Bolt,CONS_89957,Bolt,5,50,
+,Large Desk,E-COM09,Large Desk,1,20,
+,Office Chair,FURN_7777,Office Chair,3,30,
+S00002,Bolt,CONS_89957,Bolt,5,50,
+,Keyboard,,Large Desk,3,30,
+,Office Chair,FURN_7777,Office Chair,1,20,

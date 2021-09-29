@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="account_report_temp_inh" inherit_id="account_reports.main_table_header">
+        <xpath expr="//thead/tr[hasclass('o_account_report_column_header')]" position="inside">
+            <t t-if="report.get('display_cumulative_total') == True">
+	            <t t-if="report.get('name') == 'Profit and Loss' and options.get('comparison').get('filter') != 'no_comparison'">
+	                <th class="o_account_report_column_header number">
+	                    Cumulative Total
+	                </th>
+	            </t>
+	        </t>
+        </xpath>
+    </template>
+
+    <template id="line_tmpl_inh" inherit_id="account_reports.line_template">
+        <xpath expr="//tr" position="inside">
+            <t t-if="report.get('display_cumulative_total') == True">
+	            <td class="o_account_report_line text-right"><t t-esc="line.get('total')"/></td>
+	        </t>
+        </xpath>
+    </template>
+</odoo>

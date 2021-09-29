@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="import_order_popup" model="ir.ui.view">
+            <field name="name">import.order.popup</field>
+            <field name="model">import.order</field>
+            <field name="arch" type="xml">
+                <form>
+                     <field name="state" invisible="1"/>
+                     <group states="init">
+                        <field name="name" invisible="1" />
+                        <field name="type" required="1"/>
+                        <field name="operation" attrs="{'invisible': [('import_type', '=', 'attachment')], 'required': [('import_type', '!=', 'attachment')]}"/>
+                        <field name="import_type" widget="radio" options="{'horizontal': true}" required="1"/>
+                        <field name="file" widget="binary" height="64" filename="name" required="1"/>
+                    </group>
+                    <group states="done" colspan="4">
+                        <span string="The import process is started on background, You will be notify shortly once
+                            the import process will be finished."/>
+                    </group>
+                    <footer states="init">
+                        <button name="import_data_through_cron"  type="object" string="Import"
+                                class="oe_highlight"/>
+                        <button special="cancel" string="Cancel" class="oe_highlight"/>
+                    </footer>
+                    <footer states="done">
+                        <button special="cancel" string="Close" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--Action-->
+        <record id="action_import_orders" model="ir.actions.act_window">
+            <field name="name">Import Orders</field>
+            <field name="res_model">import.order</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Import" id="menu_import_orders" 
+            parent="sale.sale_menu_root"/>
+
+        <menuitem name="Import Orders" action="action_import_orders" 
+            id="menu_load_orders" parent="menu_import_orders" />
+
+    </data>
+</odoo>

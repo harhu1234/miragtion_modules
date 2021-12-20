@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="stock_search_form_view_inherit" model="ir.ui.view">
+		<field name="name">stock.search.form.view.inherit</field>
+		<field name="model">stock.location</field>
+		<field name="inherit_id" ref="stock.view_location_form"/>
+		<field name="arch" type="xml">
+			<field name="return_location" position="after">
+				<field name="search_priority"/>
+			</field>
+		</field>
+	</record>
+	<record id="stock_search_tree_view_inherit" model="ir.ui.view">
+		<field name="name">stock.search.tree.view.inherit</field>
+		<field name="model">stock.location</field>
+		<field name="inherit_id" ref="stock.view_location_tree2"/>
+		<field name="arch" type="xml">
+			<field name="company_id" position="after">
+				<field name="search_priority"/>
+			</field>
+		</field>
+	</record>
+</odoo>

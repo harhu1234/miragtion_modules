@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="products_item_in" inherit_id="website_sale.products_item">
+        <xpath expr="//div[hasclass('product_price')]" position="replace">
+            <t t-if="not product.hide_price if request.env.user._is_public() else request.env.user.partner_id.id">
+
+                <div class="product_price" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+                    <del t-attf-class="text-danger mr-2 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                    <span t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                    <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                    <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                </div>
+            </t>        
+        </xpath>
+    </template>
+
+    <template id="product_price_in" inherit_id="website_sale.product_price">
+        <xpath expr="//div[hasclass('product_price')]" position="replace">
+            <t t-if="not product.hide_price if request.env.user._is_public() else request.env.user.partner_id.id">
+                <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
+                      <h4 class="oe_price_h4 css_editable_mode_hidden">
+                          <span t-attf-class="text-danger oe_default_price {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;"
+                              t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"
+                          />
+                          <b class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                          <span itemprop="price" style="display:none;" t-esc="combination_info['price']"/>
+                          <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
+                      </h4>
+                      <h4 class="css_non_editable_mode_hidden decimal_precision" t-att-data-precision="str(website.currency_id.decimal_places)">
+                        <span t-field="product.list_price"
+                            t-options='{
+                               "widget": "monetary",
+                               "display_currency": product.currency_id,
+                           }'/>
+                      </h4>
+                  </div>
+              </t>
+        </xpath>
+    </template>
+    <template id="product_product_in" inherit_id="website_sale_comparison.product_product">
+        <xpath expr="//h6" position="replace">
+            <h6>
+                <a t-att-href="product.website_url"><t t-esc="combination_info['display_name']" /></a><br/>
+                <t t-if="not product.hide_price if request.env.user._is_public() else request.env.user.partner_id.id"> 
+                    <del t-attf-class="text-danger mr8 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                    <span t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"></span>
+                </t>
+            </h6>
+        </xpath>
+    </template>
+    <template id="product_compare_in" inherit_id="website_sale_comparison.product_compare">
+        <xpath expr="//div[hasclass('product_summary')]/span" position="replace">
+            <span>
+                <strong>Price:</strong>
+                <t t-if="not product.hide_price if request.env.user._is_public() else request.env.user.partner_id.id"> 
+                    <del t-attf-class="text-danger mr8 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                    <span t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"></span>
+                </t>
+            </span>
+        </xpath>
+        <xpath expr="//form" position="replace">
+            <t t-if="not request.env.user._is_public()">
+                <form action="/shop/cart/update" method="post" class="text-center">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                    <input name="product_id" t-att-value="product.id" type="hidden"/>
+                    <a role="button" class="btn btn-primary btn-block a-submit" href="#"><i class="fa fa-shopping-cart"></i>&amp;nbsp;Add to Cart</a>
+                </form>
+            </t> 
+        </xpath>
+    </template>
+    <template id="product_wishlist_in" inherit_id="website_sale_wishlist.product_wishlist">
+        <xpath expr="//tr/td[3]" position="replace">
+            <td>
+                <t t-if="not wish.product_id.hide_price if request.env.user._is_public() else request.env.user.partner_id.id">
+                    <t t-set="combination_info" t-value="wish.product_id._get_combination_info_variant()"/>
+                    <t t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.pricelist_id.currency_id}"/>
+                </t>
+            </td>
+        </xpath>
+        <xpath expr="//button[hasclass('o_wish_add')]" position="replace">
+            <t t-if="not request.env.user._is_public()">
+                <button type="button" role="button" class="btn btn-secondary btn-block o_wish_add mb4" >Add <span class='d-none d-md-inline'>to Cart</span></button>
+            </t>
+        </xpath>
+    </template>
+    <template id="cart_lines_in" inherit_id="website_sale.cart_lines">
+        <xpath expr="//td[hasclass('td-price')]" position="replace">
+            <t t-if="not line.product_id.hide_price if request.env.user._is_public() else request.env.user.partner_id.id"> 
+                <td class="text-center td-price" name="price">
+                <t t-set="combination" t-value="line.product_id.product_template_attribute_value_ids + line.product_no_variant_attribute_value_ids"/>
+                <t t-set="combination_info" t-value="line.product_id.product_tmpl_id._get_combination_info(combination)"/>
+
+                <t t-set="list_price_converted" t-value="website.currency_id._convert(combination_info['list_price'], website_sale_order.currency_id, website_sale_order.company_id, date)"/>
+                <t groups="account.group_show_line_subtotals_tax_excluded" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxexcl) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_reduce) == 1" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                </t>
+                <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" groups="account.group_show_line_subtotals_tax_excluded" />
+                <t groups="account.group_show_line_subtotals_tax_included" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxinc) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_reduce) == 1" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                </t>
+                <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" groups="account.group_show_line_subtotals_tax_included" />
+                </td>
+            </t>
+        </xpath>
+    </template>
+    <template id="header_cart_link_in" inherit_id="website_sale.header_cart_link">
+        <xpath expr="//li[2]" position="replace">
+            <t t-if="not request.env.user._is_public()"> 
+                <li t-attf-class="o_wsale_my_cart #{not show_cart and 'd-none'} #{_item_class}">
+                    <a href="/shop/cart" t-attf-class="#{_link_class}">
+                        <i t-if="_icon" class="fa fa-shopping-cart"/>
+                        <span t-if="_text">My Cart</span>
+                        <sup class="my_cart_quantity badge badge-primary" t-esc="website_sale_order and website_sale_order.cart_quantity or '0'" t-att-data-order-id="website_sale_order and website_sale_order.id or ''"/>
+                    </a>
+                </li>
+            </t>
+        </xpath>
+    </template>
+    <template id="product_in" inherit_id="website_sale.product">
+        <xpath expr="//a[@id='add_to_cart']" position="replace">
+            <t t-if="not request.env.user._is_public()"> 
+                <a role="button" id="add_to_cart" class="btn btn-primary btn-lg mt16 js_check_product a-submit d-block d-sm-inline-block" href="#"><i class="fa fa-shopping-cart"/> Add to Cart</a>
+                <div id="product_option_block"/>
+            </t>
+        </xpath>
+    </template>
+     <template id="product_buy_now_in" inherit_id="website_sale.product_buy_now">
+        <xpath expr="//a[@id='buy_now']" position="replace">
+            <t t-if="not request.env.user._is_public()"> 
+                <a role="button" id="buy_now" class="btn btn-outline-primary btn-lg mt16 d-block d-sm-inline-block" href="#"><i class="fa fa-bolt"/> Buy Now</a>
+            </t>
+        </xpath>
+    </template>
+    <template id="variants_in" inherit_id="sale.variants">
+        <xpath expr="//select" position="replace">
+            <t t-if="product.hide_price if request.env.user._is_public() else request.env.user.partner_id.id">
+                <select
+                    t-att-data-attribute_id="ptal.attribute_id.id"
+                    t-attf-class="form-control js_variant_change #{ptal.attribute_id.create_variant} #{'d-none' if single_and_custom else ''}"
+                    t-att-name="'ptal-%s' % ptal.id">
+                    <t t-foreach="ptal.product_template_value_ids._only_active()" t-as="ptav">
+                        <option t-att-value="ptav.id"
+                            t-att-data-value_id="ptav.id"
+                            t-att-data-value_name="ptav.name"
+                            t-att-data-attribute_name="ptav.attribute_id.name"
+                            t-att-data-is_custom="ptav.is_custom"
+                            t-att-selected="ptav in combination"
+                            t-att-data-is_single_and_custom="single_and_custom">
+                            <span t-field="ptav.name"/>
+                            <span t-if="ptav.price_extra" class="badge badge-pill badge-secondary">
+                                <!--
+                                    price_extra is displayed as catalog price instead of
+                                    price after pricelist because it is impossible to
+                                    compute. Indeed, the pricelist rule might depend on the
+                                    selected variant, so the price_extra will be different
+                                    depending on the selected combination. The price of an
+                                    attribute is therefore variable and it's not very
+                                    accurate to display it.
+                                    -->
+                                <t t-esc="ptav.price_extra > 0 and '+' or '-'"/>
+                                <span t-esc="abs(ptav.price_extra)" class="variant_price_extra" style="white-space: nowrap;"
+                                    t-options='{
+                                        "widget": "monetary",
+                                        "from_currency": product.currency_id,
+                                        "display_currency": (pricelist or product).currency_id
+                                    }'/>
+                            </span>
+                        </option>
+                    </t>
+                </select>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('radio_input_value')]/span[2]" position="replace">
+            <t t-if="not product.hide_price if request.env.user._is_public() else request.env.user.partner_id.id">
+                <span class="badge badge-pill badge-secondary" t-if="ptav.price_extra">
+                    <!-- see note above about price_extra -->
+                    <t t-esc="ptav.price_extra > 0 and '+' or '-'"/>
+                    <span t-esc="abs(ptav.price_extra)" class="variant_price_extra" style="white-space: nowrap;"
+                        t-options='{
+                            "widget": "monetary",
+                            "from_currency": product.currency_id,
+                            "display_currency": (pricelist or product).currency_id
+                        }'/>
+                </span>
+            </t>
+        </xpath>
+    </template>
+    <template id="product_variants_in" inherit_id="website_sale.product_variants">
+        <xpath expr="//span[hasclass('badge-pill')]" position="replace">
+            <t t-if="not product.hide_price if request.env.user._is_public() else request.env.user.partner_id.id">
+                <span class="badge badge-pill badge-secondary" t-if="diff_price != 0">
+                    <t t-esc="diff_price > 0 and '+' or '-'"/><span t-esc="abs(combination_info['price'] - template_combination_info['price'])" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                </span>
+            </t>
+        </xpath>
+    </template>
+    <template id="products_add_to_cart_in" inherit_id="website_sale.products_add_to_cart">
+        <xpath expr="//a[hasclass('a-submit')]" position="replace">
+            <t t-if="not request.env.user._is_public()">
+                <a href="#" role="button" class="btn btn-secondary a-submit" aria-label="Shopping cart" title="Shopping cart">
+                    <span class="fa fa-shopping-cart"/>
+                </a>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

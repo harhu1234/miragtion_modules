@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="car_assets_css" name="Assets" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+        	 
+           <link href="/jt_car_service_theme/static/description/jupical.png" rel="icon"/>
+           
+           <link href="/jt_car_service_theme/static/src/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+           <link href="/jt_car_service_theme/static/src/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
+
+           <link href="/jt_car_service_theme/static/src/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+           <link href="/jt_car_service_theme/static/src/lib/animate/animate.min.css" rel="stylesheet"/>
+
+           <link href="/jt_car_service_theme/static/src/lib/ionicons/css/ionicons.min.css" rel="stylesheet"/>
+
+           <link href="/jt_car_service_theme/static/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+
+           <link href="/jt_car_service_theme/static/src/lib/magnific-popup/magnific-popup.css" rel="stylesheet"/>
+
+           <link href="/jt_car_service_theme/static/src/lib/ionicons/css/ionicons.min.css" rel="stylesheet"/>
+           
+           <link href="/jt_car_service_theme/static/src/css/style.css" rel="stylesheet"/>
+
+           <!-- JavaScript -->
+           <script src="/jt_car_service_theme/static/src/lib/easing/easing.min.js"></script>
+
+           <script src="/jt_car_service_theme/static/src/lib/superfish/hoverIntent.js"></script>
+
+           <script src="/jt_car_service_theme/static/src/lib/superfish/superfish.min.js"></script>
+
+           <script src="/jt_car_service_theme/static/src/lib/wow/wow.min.js"></script>
+
+           <script src="/jt_car_service_theme/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+
+           <script src="/jt_car_service_theme/static/src/lib/magnific-popup/magnific-popup.min.js"></script>
+
+           <script src="/jt_car_service_theme/static/src/lib/sticky/sticky.js"></script><script src="/jt_car_service_theme/static/src/contact/jqBootstrapValidation.js"></script>
+           
+          <script src="/jt_car_service_theme/static/src/js/main.js"></script> 
+           
+        </xpath>
+    </template>
+</odoo>

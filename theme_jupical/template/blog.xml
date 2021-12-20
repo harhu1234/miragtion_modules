@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="blog_theme" inherit_id="website_blog.posts_loop">
+		<xpath expr="//article[@name='blog_post']" position="attributes">
+			<style>
+				.stlblog{
+						background: red;
+					}
+			</style>
+			<span t-att-class="stlblog"/>
+		</xpath>
+	</template>
+	<!-- <template id="cover_image_blog_theme" inherit_id="website_blog.post_cover_image">
+	</template> -->
+</odoo>

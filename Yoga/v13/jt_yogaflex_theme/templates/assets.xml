@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="yoga_assets_css" name="Assets" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+                        
+            <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" rel="stylesheet"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/linearicons.css"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/bootstrap.css"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/magnific-popup.css"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/nice-select.css"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/animate.min.css"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/owl.carousel.css"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/jquery-ui.css"/>
+            
+            <link rel="stylesheet" href="/jt_yogaflex_theme/static/src/css/main.css"/> 
+
+            <script src="/jt_yogaflex_theme/static/src/js/vendor/bootstrap.min.js"></script>
+            
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/easing.min.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/hoverIntent.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/superfish.min.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/jquery.ajaxchimp.min.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/jquery.magnific-popup.min.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/jquery.tabs.min.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/jquery.nice-select.min.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/owl.carousel.min.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/mail-script.js"></script>
+            
+            <script src="/jt_yogaflex_theme/static/src/js/main.js"></script>        
+        
+        </xpath>
+    </template>
+</odoo>

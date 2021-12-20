@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="construction_assets" name="Theme Management" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Css Styles -->
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/open-iconic-bootstrap.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/animate.css"/>
+		    
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/owl.carousel.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/owl.theme.default.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/magnific-popup.css"/>
+
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/aos.css"/>
+
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/ionicons.min.css"/>
+
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/bootstrap-datepicker.css"/>
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/jquery.timepicker.css"/>
+
+		    
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/flaticon.css"/>
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/icomoon.css"/>
+		    <link rel="stylesheet" href="/theme_ht_construction/static/src/css/style.css"/>
+
+		    <!-- Js Plugins -->
+		    <!-- <script src="theme_ht_construction/static/src/js/jquery.min.js"></script> -->
+			<script src="theme_ht_construction/static/src/js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/popper.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/bootstrap.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/jquery.easing.1.3.js"></script>
+			<script src="theme_ht_construction/static/src/js/jquery.waypoints.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/jquery.stellar.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/owl.carousel.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/jquery.magnific-popup.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/aos.js"></script>
+			<script src="theme_ht_construction/static/src/js/jquery.animateNumber.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/bootstrap-datepicker.js"></script>
+			<script src="theme_ht_construction/static/src/js/jquery.timepicker.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/scrollax.min.js"></script>
+			<script src="theme_ht_construction/static/src/js/main.js"></script>
+		</xpath>
+	</template>
+</odoo>

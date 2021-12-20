@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="theme_octashop_assets" name="Octashop Theme Management" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Css Styles -->
+		    <link rel="stylesheet" type="text/css" href="/theme_octashop/static/src/assets/css/bootstrap.min.css"/>
+		    <link rel="stylesheet" type="text/css" href="/theme_octashop/static/src/assets/css/font-awesome.css"/>
+		    <link rel="stylesheet" href="/theme_octashop/static/src/assets/css/templatemo-hexashop.css"/>
+		    <link rel="stylesheet" href="/theme_octashop/static/src/assets/css/owl-carousel.css"/>
+		    <link rel="stylesheet" href="/theme_octashop/static/src/assets/css/lightbox.css"/>
+
+		    <!-- Js Plugins -->
+		    <script type="text/javascript" src="/theme_octashop/static/src/assets/js/jquery-migrate-3.0.1.min.js"></script>
+		    <script src="/theme_octashop/static/src/assets/js/popper.js"></script>
+    		<script src="/theme_octashop/static/src/assets/js/bootstrap.min.js"></script>
+		    <script src="/theme_octashop/static/src/assets/js/owl-carousel.js"></script>
+		    <!-- <script src="/theme_octashop/static/src/assets/js/accordions.js"></script> -->
+		    <script src="/theme_octashop/static/src/assets/js/datepicker.js"></script>
+		    <script src="/theme_octashop/static/src/assets/js/scrollreveal.min.js"></script>
+		    <script src="/theme_octashop/static/src/assets/js/waypoints.min.js"></script>
+		    <script src="/theme_octashop/static/src/assets/js/jquery.counterup.min.js"></script>
+		    <script src="/theme_octashop/static/src/assets/js/imgfix.min.js"></script> 
+		    <script src="/theme_octashop/static/src/assets/js/slick.js"></script> 
+		    <script src="/theme_octashop/static/src/assets/js/lightbox.js"></script> 
+		    <script src="/theme_octashop/static/src/assets/js/isotope.js"></script> 
+		    <script src="/theme_octashop/static/src/assets/js/custom.js"></script>
+		</xpath>
+	</template>
+</odoo>

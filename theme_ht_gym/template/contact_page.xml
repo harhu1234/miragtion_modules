@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="contact_page" name="Contact Page">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty">
+				<section>
+					<!-- bradcam_area -->
+			        <div class="bradcam_area">
+			                <div class="single_bradcam  d-flex align-items-center bradcam_bg_2 overlay">
+			                        <div class="container">
+			                            <div class="row align-items-center justify-content-center">
+			                                <div class="col-xl-9">
+			                                    <div class="bradcam_text text-center">
+			                                        <h3>contact</h3>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			        </div>
+			        <!-- bradcam_area end -->
+			    </section>
+
+			    <!-- ================ contact section start ================= -->
+			    <section class="contact-section">
+		            <div class="container">
+		                <div class="d-none d-sm-block mb-5 pb-4">
+		                    <div id="map" style="height: 480px; position: relative; overflow: hidden;"> </div>
+		                    <script>
+		                        function initMap() {
+		                            var uluru = {
+		                                lat: -25.363,
+		                                lng: 131.044
+		                            };
+		                            var grayStyles = [{
+		                                    featureType: "all",
+		                                    stylers: [{
+		                                            saturation: -90
+		                                        },
+		                                        {
+		                                            lightness: 50
+		                                        }
+		                                    ]
+		                                },
+		                                {
+		                                    elementType: 'labels.text.fill',
+		                                    stylers: [{
+		                                        color: '#ccdee9'
+		                                    }]
+		                                }
+		                            ];
+		                            var map = new google.maps.Map(document.getElementById('map'), {
+		                                center: {
+		                                    lat: -31.197,
+		                                    lng: 150.744
+		                                },
+		                                zoom: 9,
+		                                styles: grayStyles,
+		                                scrollwheel: false
+		                            });
+		                        }
+		                    </script>
+		                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
+		                    </script>
+		                </div>
+		    		</div>
+			    </section>
+			    <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+			    	<div class="container">
+		                <div class="row">
+		                    <div class="col-12">
+		                        <h2 class="contact-title">Get in Touch</h2>
+		                    </div>
+		                    <div class="col-lg-8">
+		                        <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/thank-you" class="o_mark_required" data-mark="*" data-editable-form="false">
+	                                <div class="s_website_form_rows row s_col_no_bgcolor">
+	                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+	                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+	                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity1">
+	                                                <span class="s_website_form_label_content">Your Name</span>
+	                                                <span class="s_website_form_mark"> *</span>
+	                                            </label>
+	                                            <div class="col-sm">
+	                                                <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required=""/>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+	                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+	                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity2">
+	                                                <span class="s_website_form_label_content">Phone Number</span>
+	                                            </label>
+	                                            <div class="col-sm">
+	                                                <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" />
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+	                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+	                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity3">
+	                                                <span class="s_website_form_label_content">Email</span>
+	                                                <span class="s_website_form_mark"> *</span>
+	                                            </label>
+	                                            <div class="col-sm">
+	                                                <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" />
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+	                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+	                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity4">
+	                                                <span class="s_website_form_label_content">Your Company</span>
+	                                            </label>
+	                                            <div class="col-sm">
+	                                                <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" />
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+	                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+	                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity5">
+	                                                <span class="s_website_form_label_content">Subject</span>
+	                                            </label>
+	                                            <div class="col-sm">
+	                                                <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" />
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+	                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+	                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity6">
+	                                                <span class="s_website_form_label_content">Your Question</span>
+	                                                <span class="s_website_form_mark"> *</span>
+	                                            </label>
+	                                            <div class="col-sm">
+	                                                <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required=""></textarea>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="form-group col-12 s_website_form_submit mt-3" data-name="Submit Button">
+	                                        <div style="width: 200px;" class="s_website_form_label"/>
+	                                        <a href="#" role="button" class="button button-contactForm boxed-btn s_website_form_send">Send</a>
+	                                        <span id="s_website_form_result"></span>
+	                                    </div>
+	                                </div>
+                            	</form>
+		                    </div>
+		                    <div class="col-lg-3 offset-lg-1">
+		                        <div class="media contact-info">
+		                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+		                            <div class="media-body">
+		                                <h3>Buttonwood, California.</h3>
+		                                <p>Rosemead, CA 91770</p>
+		                            </div>
+		                        </div>
+		                        <div class="media contact-info">
+		                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+		                            <div class="media-body">
+		                                <h3>+1 253 565 2365</h3>
+		                                <p>Mon to Fri 9am to 6pm</p>
+		                            </div>
+		                        </div>
+		                        <div class="media contact-info">
+		                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+		                            <div class="media-body">
+		                                <h3>support@colorlib.com</h3>
+		                                <p>Send us your query anytime!</p>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+			 	</section>
+			    <!-- ================ contact section end ================= -->
+			</div>
+		</t>
+	</template>
+</odoo>

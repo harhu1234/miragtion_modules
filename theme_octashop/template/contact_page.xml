@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="contact_page" name="Contact Page">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty">
+                <section>
+                	<!-- ***** Main Banner Area Start ***** -->
+				    <div class="page-heading about-page-heading" id="top">
+				        <div class="container">
+				            <div class="row">
+				                <div class="col-lg-12">
+				                    <div class="inner-content">
+				                        <h2>Contact Us</h2>
+				                        <span>Awesome, clean &amp; creative HTML5 Template</span>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <!-- ***** Main Banner Area End ***** -->
+                </section>
+                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                	<!-- ***** Contact Area Starts ***** -->
+				    <div class="contact-us">
+				        <div class="container">
+				            <div class="row">
+				                <div class="col-lg-6">
+				                    <div id="map">
+				                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90186.37207676383!2d-80.13495239500924!3d25.9317678710111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ad1877e4a82d%3A0xa891714787d1fb5e!2sPier%20Park!5e1!3m2!1sen!2sth!4v1637512439384!5m2!1sen!2sth" width="100%" height="400px" frameborder="0" style="border:0"></iframe>
+				                      <!-- You can simply copy and paste "Embed a map" code from Google Maps for any location. -->
+				                      
+				                    </div>
+				                </div>
+				                <div class="col-lg-6">
+				                    <div class="section-heading">
+				                        <h2>Say Hello. Don't Be Shy!</h2>
+				                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+				                    </div>
+				                    <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required" data-mark="*" data-editable-form="false">
+		                                <div class="s_website_form_rows row s_col_no_bgcolor">
+		                                    <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <label class="col-form-label col-sm-auto s_website_form_label"  for="opportunity1">
+		                                                <!-- <span class="s_website_form_label_content">Your Name</span>
+		                                                <span class="s_website_form_mark"> *</span> -->
+		                                            </label>
+		                                            <div class="col-sm">
+		                                                <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required="" placeholder="Your Name"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <label class="col-form-label col-sm-auto s_website_form_label"  for="opportunity2">
+		                                                <!-- <span class="s_website_form_label_content">Phone Number</span> -->
+		                                            </label>
+		                                            <div class="col-sm">
+		                                                <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" placeholder="Phone Number"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <label class="col-form-label col-sm-auto s_website_form_label"  for="opportunity3">
+		                                                <!-- <span class="s_website_form_label_content">Email</span>
+		                                                <span class="s_website_form_mark"> *</span> -->
+		                                            </label>
+		                                            <div class="col-sm">
+		                                                <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" placeholder="Email"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <label class="col-form-label col-sm-auto s_website_form_label"  for="opportunity4">
+		                                                <!-- <span class="s_website_form_label_content">Your Company</span> -->
+		                                            </label>
+		                                            <div class="col-sm">
+		                                                <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" placeholder="Your Company"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <label class="col-form-label col-sm-auto s_website_form_label"  for="opportunity5">
+		                                                <!-- <span class="s_website_form_label_content">Subject</span> -->
+		                                            </label>
+		                                            <div class="col-sm">
+		                                                <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" placeholder="Subject"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <label class="col-form-label col-sm-auto s_website_form_label"  for="opportunity6">
+		                                                <!-- <span class="s_website_form_label_content">Your Question</span>
+		                                                <span class="s_website_form_mark"> *</span> -->
+		                                            </label>
+		                                            <div class="col-sm">
+		                                                <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required="" placeholder="Your Question"></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+		                                        <div class="s_website_form_label"/>
+		                                        <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send fa fa-paper-plane "></a>
+		                                        <span id="s_website_form_result"></span>
+		                                    </div>
+		                                </div>
+		                            </form>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <!-- ***** Contact Area Ends ***** -->
+                </section>
+                <section>
+                	<!-- ***** Subscribe Area Starts ***** -->
+				    <div class="subscribe">
+				        <div class="container">
+				            <div class="row">
+				                <div class="col-lg-8">
+				                    <div class="section-heading">
+				                        <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
+				                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+				                    </div>
+				                    <form id="subscribe" action="" method="get">
+				                        <div class="row">
+				                          <div class="col-lg-5">
+				                            <fieldset>
+				                              <input name="name" type="text" id="name" placeholder="Your Name" required=""/>
+				                            </fieldset>
+				                          </div>
+				                          <div class="col-lg-5">
+				                            <fieldset>
+				                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required=""/>
+				                            </fieldset>
+				                          </div>
+				                          <div class="col-lg-2">
+				                            <fieldset>
+				                              <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+				                            </fieldset>
+				                          </div>
+				                        </div>
+				                    </form>
+				                </div>
+				                <div class="col-lg-4">
+				                    <div class="row">
+				                        <div class="col-6">
+				                            <ul>
+				                                <li>Store Location:<br/><span>Sunny Isles Beach, FL 33160, United States</span></li>
+				                                <li>Phone:<br/><span>010-020-0340</span></li>
+				                                <li>Office Location:<br/><span>North Miami Beach</span></li>
+				                            </ul>
+				                        </div>
+				                        <div class="col-6">
+				                            <ul>
+				                                <li>Work Hours:<br/><span>07:30 AM - 9:30 PM Daily</span></li>
+				                                <li>Email:<br/><span>info@company.com</span></li>
+				                                <li>Social Media:<br/><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <!-- ***** Subscribe Area Ends ***** -->
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

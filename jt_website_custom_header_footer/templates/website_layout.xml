@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <template id="website_layout_inh" inherit_id="website.layout" name="Website Layout"> -->
+        <template id="portal.frontend_layout" name="Main Frontend Layout" inherit_id="web.frontend_layout">
+            <xpath expr="//div[@id='wrapwrap']" position="attributes">
+                <attribute name="t-attf-class" add="#{request.env['res.lang'].search([('code', '=', request.env.lang)]).direction == 'rtl' and 'o_rtl' or ''}" separator=" "/>
+                <attribute name="t-attf-class" add="#{'o_portal' if is_portal else ''}" separator=" "/>
+            </xpath>
+            <xpath expr="//div[@id='wrapwrap']/header/img" position="replace">
+                <t t-set="web_custom_header" t-value="request.env['ir.config_parameter'].sudo().get_param('jt_website_custom_header_footer.allow_custom_header')"/>
+        
+                <t t-if="web_custom_header">
+                    <div id="custom_header">
+                        <section class="s_text_block pt16 pb8">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="custom_main_nav">
+                                        <div class="class_comp_name">
+                                            <a href="/" class="navbar-brand logo cmp_logo">
+                                                <span t-field="res_company.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+                                            </a>
+                                        </div>
+                                        <div class="class_signin">
+                                            <li class="nav-item dropdown signin_inner" t-ignore="true" t-if="not user_id._is_public()">
+                                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"/>
+                                                <div class="dropdown-menu js_usermenu" role="menu">
+                                                    <a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                                                </div>
+                                            </li>
+                                            <t t-if="user_id.has_group('base.group_public')">
+                                                <a href="/web/login" style="color: white; font-weight: bold; font-size: 20px;">
+                                                <li class="signin_inner"></li>
+                                                <div style="margin-top: 20px;">
+                                                    <span>Sign In</span>
+                                                </div>
+                                                </a>
+                                            </t>
+                                            <t t-else="">
+                                                <div style="margin-top: 20px !important;">
+                                                    <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" style="color: white; font-weight: bold; font-size: 20px;"/>
+                                                </div>
+                                            </t>
+                                        </div>
+                                        <div style="clear:both;"/>
+                                    </div>
+                                    <div class="page_name_style">
+                                        <h1><t t-esc="main_object.name"/></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </t>
+                <t t-else="">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light">
+                        <div class="container">
+                            <a href="/" class="navbar-brand logo">
+                                <img t-att-src="'/logo.png?company=%s' % res_company.id" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                            </a>
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#top_menu_collapse">
+                                <span class="navbar-toggler-icon"/>
+                            </button>
+                            <div class="collapse navbar-collapse" id="top_menu_collapse">
+                                <!-- FIXME We want menu to open to the right by default (except cases handled in JS) -->
+                                <ul class="nav navbar-nav ml-auto text-right" id="top_menu">
+                                    <li class="nav-item divider" t-ignore="true" t-if="not user_id._is_public()"/>
+                                    <li class="nav-item dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                            <b>
+                                                <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                            </b>
+                                        </a>
+                                        <div class="dropdown-menu js_usermenu" role="menu">
+                                            <a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </t>
+            </xpath>
+            <xpath expr="//div[@id='wrapwrap']/main/t[@t-raw='0']" position="before">
+                <div t-if="o_portal_fullwidth_alert" class="alert alert-info alert-dismissible rounded-0 fade show d-print-none css_editable_mode_hidden">
+                    <div class="container">
+                        <t t-raw="o_portal_fullwidth_alert"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+
+        <template id="web.frontend_layout" name="Frontend Layout" inherit_id="web.layout" primary="True">
+            <xpath expr="//head/link[last()]" position="after">
+                <t t-call-assets="web.assets_common" t-js="false"/>
+                <t t-call-assets="web.assets_frontend" t-js="false"/>
+            </xpath>
+            <xpath expr="//head/script" position="after">
+                <script type="text/javascript">
+                    odoo.session_info = <t t-raw="json.dumps(request.env['ir.http'].get_frontend_session_info())"/>;
+                </script>
+                <t t-call-assets="web.assets_common_minimal_js" t-css="false" defer_load="True"/>
+                <t t-call-assets="web.assets_frontend_minimal_js" t-css="false" defer_load="True"/>
+                <t t-call="web.conditional_assets_tests"/>
+                <t t-call-assets="web.assets_common_lazy" t-css="false" lazy_load="True"/>
+                <t t-call-assets="web.assets_frontend_lazy" t-css="false" lazy_load="True"/>
+            </xpath>
+            <xpath expr="//t[@t-raw='0']" position="replace">
+                <div id="wrapwrap" t-attf-class="#{pageName or ''}">
+                    <header t-if="not no_header" id="top" data-anchor="true">
+                        <img class="img-responsive d-block mx-auto"
+                            t-attf-src="/web/binary/company_logo"
+                            alt="Logo"/>
+                    </header>
+                    <main>
+                        <t t-raw="0"/>
+                    </main>
+                    <div>
+                        <t t-set="web_custom_footer" t-value="request.env['ir.config_parameter'].sudo().get_param('jt_website_custom_header_footer.allow_custom_footer')"/>
+
+                        <t t-if="web_custom_footer">
+                            <footer t-if="not no_footer" id="bottom" data-anchor="true" class="bg-light o_footer">
+                                <div id="footer_customm">
+                                    <section class="s_text_block pt16 pb8">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <a href="/" class="navbar-brand logo cmp_logo">
+                                                        <span t-field="res_company.footer_image" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+                                                    </a>
+                                                    <p>
+                                                        <a t-if="website.social_facebook" t-att-href="website.social_facebook" class="btn btn-sm btn-link"><i class="fa fa-2x fa-facebook-square"/></a>
+                                                        <a t-if="website.social_twitter" t-att-href="website.social_twitter" class="btn btn-sm btn-link"><i class="fa fa-2x fa-twitter"/></a>
+                                                        <a t-if="website.social_linkedin" t-att-href="website.social_linkedin" class="btn btn-sm btn-link"><i class="fa fa-2x fa-linkedin"/></a>
+                                                        <a t-if="website.social_youtube" t-att-href="website.social_youtube" class="btn btn-sm btn-link"><i class="fa fa-2x fa-youtube-play"/></a>
+                                                        <!-- <a t-if="website.social_googleplus" t-att-href="website.social_googleplus" class="btn btn-sm btn-link" rel="publisher"><i class="fa fa-2x fa-google-plus-square"/></a> -->
+                                                        <a t-if="website.social_github" t-att-href="website.social_github" class="btn btn-sm btn-link"><i class="fa fa-2x fa-github"/></a>
+                                                        <a t-if="website.social_instagram" t-att-href="website.social_instagram" class="btn btn-sm btn-link"><i class="fa fa-2x fa-instagram"/></a>
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-4" id="connect">
+                                                    <t t-set="tmp" t-value="1"/>
+                                                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                                        <a t-att-href="submenu.clean_url()"
+                                                            t-attf-class="#{link_class or ''} #{'active' if submenu.clean_url() and unslug_url(request.httprequest.path) == unslug_url(submenu.clean_url()) else ''} footer_menu"
+                                                            role="menuitem"
+                                                            t-ignore="true"
+                                                            t-att-target="'_blank' if submenu.new_window else None" style="width: 300px;">
+                                                            <span t-field="submenu.name"/>
+                                                        </a>
+                                                    <t t-if="tmp % 2 == 0">
+                                                        <br/>
+                                                    </t>
+                                                    <t t-set="tmp" t-value="tmp + 1"/>
+                                                    </t>
+                                                </div>
+                                                <div class="col-lg-4 store_icon_div">
+                                                    <a t-att-href="website.apple_app_store_link" t-att-target="'_blank'">
+                                                        <img src="/jt_website_custom_header_footer/static/src/img/apple_store_icon.png" />
+                                                    </a>
+                                                    <a t-att-href="website.google_app_store_link" t-att-target="'_blank'">
+                                                        <img src="/jt_website_custom_header_footer/static/src/img/google_play_store_icon.png" />
+                                                    </a>
+                                                    <div class="text-muted text-md-right">
+                                                        <span class="o_footer_copyright_name">Copyright &amp;copy;</span> <span t-field="res_company.name" itemprop="name">Company name</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="o_footer_copyright">
+                                    <div class="container py-3">
+                                        <div class="row">
+                                            <div class="col-sm text-center text-sm-left text-muted">
+                                                <t t-call="web.debug_icon"/>
+                                                <span>Copyright &amp;copy;</span> <span t-field="res_company.name" itemprop="name">Company name</span>
+                                            </div>
+                                            <div class="col-sm text-center text-sm-right">
+                                                <t t-call="web.brand_promotion"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </t>
+                        <t t-else="">
+                            <footer t-if="not no_footer" id="bottom" data-anchor="true" class="bg-light o_footer">
+                                <div id="footer"/>
+                                <div class="o_footer_copyright">
+                                    <div class="container py-3">
+                                        <div class="row">
+                                            <div class="col-sm text-center text-sm-left text-muted">
+                                                <t t-call="web.debug_icon"/>
+                                                <span>Copyright &amp;copy;</span> <span t-field="res_company.name" itemprop="name">Company name</span>
+                                            </div>
+                                            <div class="col-sm text-center text-sm-right">
+                                                <t t-call="web.brand_promotion"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </t>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

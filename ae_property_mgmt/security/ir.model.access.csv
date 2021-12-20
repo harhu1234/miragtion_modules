@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_property_mgmt,property.mgmt,model_property_mgmt,,1,1,1,1
+access_facility_services,facility.services,model_facility_services,,1,1,1,1
+access_building_layout,building.layout,model_building_layout,,1,1,1,1
+access_tenancy_agreement,tenancy.agreement,model_tenancy_agreement,,1,1,1,1
+access_create_tenant_agreement,create.tenant.agreement,model_create_tenant_agreement,,1,1,1,1
+access_buy_property,buy.property,model_buy_property,,1,1,1,1
+access_create_payment_wizard,create.payment.wizard,model_create_payment_wizard,,1,1,1,1

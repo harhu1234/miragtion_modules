@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- assets -->
+    <template id="assets_frontend" name="Frontend Assets" inherit_id="web.assets_frontend">
+        <xpath expr=".">
+            <link rel="stylesheet" href="/jt_website_custom_header_footer/static/src/css/style.css"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Gym</div>
+				<div class="o_panel_body">
+                    <t t-snippet="theme_jt_gym.gym_slider_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_plan_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_our_class_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_banner_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_pricing_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_gallery_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_team_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_get_touch_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_breadcrumb_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_about_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_testimonial_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_class_detail_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_class_timetable_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_services_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_banner_video_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_our_team_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_bmi_cal_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_blog_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_contact_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                    <t t-snippet="theme_jt_gym.gym_map_snippet" t-thumbnail="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    </t>
+                </div>
+			</div>
+		</xpath>
+	</template>
+	<template id="gym_slider_snippet" name="Gym Slider">
+		<!-- Hero Section Begin -->
+        <section class="hero-section">
+            <div class="hs-slider owl-carousel">
+                <div class="hs-item set-bg" data-setbg="/theme_jt_gym/static/src/img/hero/hero-1.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-6">
+                                <div class="hi-text">
+                                    <span>Shape your body</span>
+                                    <h1>Be <strong>strong</strong> traning hard</h1>
+                                    <a href="#" class="primary-btn">Get info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hs-item set-bg" data-setbg="/theme_jt_gym/static/src/img/hero/hero-2.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-6">
+                                <div class="hi-text">
+                                    <span>Shape your body</span>
+                                    <h1>Be <strong>strong</strong> traning hard</h1>
+                                    <a href="#" class="primary-btn">Get info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+	</template>
+	<template id="gym_plan_snippet" name="Gym Plan">
+    	<!-- ChoseUs Section Begin -->
+        <section class="choseus-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <span>Why chose us?</span>
+                            <h2>PUSH YOUR LIMITS FORWARD</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="cs-item">
+                            <span class="flaticon-034-stationary-bike"></span>
+                            <h4>Modern equipment</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                dolore facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="cs-item">
+                            <span class="flaticon-033-juice"></span>
+                            <h4>Healthy nutrition plan</h4>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="cs-item">
+                            <span class="flaticon-002-dumbell"></span>
+                            <h4>Proffesponal training plan</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                dolore facilisis.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="cs-item">
+                            <span class="flaticon-014-heart-beat"></span>
+                            <h4>Unique to your needs</h4>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                facilisis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ChoseUs Section End -->
+    </template>
+    <template id="gym_our_class_snippet" name="Gym Classes">
+    	<!-- Classes Section Begin -->
+        <section class="classes-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <span>Our Classes</span>
+                            <h2>WHAT WE CAN OFFER</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="class-item">
+                            <div class="ci-pic">
+                                <img src="/theme_jt_gym/static/src/img/classes/class-1.jpg" alt=""/>
+                            </div>
+                            <div class="ci-text">
+                                <span>STRENGTH</span>
+                                <h5>Weightlifting</h5>
+                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="class-item">
+                            <div class="ci-pic">
+                                <img src="/theme_jt_gym/static/src/img/classes/class-2.jpg" alt=""/>
+                            </div>
+                            <div class="ci-text">
+                                <span>Cardio</span>
+                                <h5>Indoor cycling</h5>
+                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="class-item">
+                            <div class="ci-pic">
+                                <img src="/theme_jt_gym/static/src/img/classes/class-3.jpg" alt=""/>
+                            </div>
+                            <div class="ci-text">
+                                <span>STRENGTH</span>
+                                <h5>Kettlebell power</h5>
+                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="class-item">
+                            <div class="ci-pic">
+                                <img src="/theme_jt_gym/static/src/img/classes/class-4.jpg" alt=""/>
+                            </div>
+                            <div class="ci-text">
+                                <span>Cardio</span>
+                                <h4>Indoor cycling</h4>
+                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="class-item">
+                            <div class="ci-pic">
+                                <img src="/theme_jt_gym/static/src/img/classes/class-5.jpg" alt=""/>
+                            </div>
+                            <div class="ci-text">
+                                <span>Training</span>
+                                <h4>Boxing</h4>
+                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ChoseUs Section End -->
+    </template>
+    <template id="gym_banner_snippet" name="Banner">
+    	<!-- Banner Section Begin -->
+        <section class="banner-section set-bg" data-setbg="/theme_jt_gym/static/src/img/banner-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="bs-text">
+                            <h2>registration now to get more deals</h2>
+                            <div class="bt-tips">Where health, beauty and fitness meet.</div>
+                            <a href="#" class="primary-btn  btn-normal">Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner Section End -->
+    </template>
+    <template id="gym_pricing_snippet" name="Pricing">
+    	<!-- Pricing Section Begin -->
+        <section class="pricing-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <span>Our Plan</span>
+                            <h2>Choose your pricing plan</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-8">
+                        <div class="ps-item">
+                            <h3>Class drop-in</h3>
+                            <div class="pi-price">
+                                <h2>$ 39.0</h2>
+                                <span>SINGLE CLASS</span>
+                            </div>
+                            <ul>
+                                <li>Free riding</li>
+                                <li>Unlimited equipments</li>
+                                <li>Personal trainer</li>
+                                <li>Weight losing classes</li>
+                                <li>Month to mouth</li>
+                                <li>No time restriction</li>
+                            </ul>
+                            <a href="#" class="primary-btn pricing-btn">Enroll now</a>
+                            <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8">
+                        <div class="ps-item">
+                            <h3>12 Month unlimited</h3>
+                            <div class="pi-price">
+                                <h2>$ 99.0</h2>
+                                <span>SINGLE CLASS</span>
+                            </div>
+                            <ul>
+                                <li>Free riding</li>
+                                <li>Unlimited equipments</li>
+                                <li>Personal trainer</li>
+                                <li>Weight losing classes</li>
+                                <li>Month to mouth</li>
+                                <li>No time restriction</li>
+                            </ul>
+                            <a href="#" class="primary-btn pricing-btn">Enroll now</a>
+                            <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8">
+                        <div class="ps-item">
+                            <h3>6 Month unlimited</h3>
+                            <div class="pi-price">
+                                <h2>$ 59.0</h2>
+                                <span>SINGLE CLASS</span>
+                            </div>
+                            <ul>
+                                <li>Free riding</li>
+                                <li>Unlimited equipments</li>
+                                <li>Personal trainer</li>
+                                <li>Weight losing classes</li>
+                                <li>Month to mouth</li>
+                                <li>No time restriction</li>
+                            </ul>
+                            <a href="#" class="primary-btn pricing-btn">Enroll now</a>
+                            <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Section End -->
+    </template>
+    <template id="gym_gallery_snippet" name="Gallery">
+    	<!-- Gallery Section Begin -->
+        <section>
+            <div class="gallery-section">
+                <div class="gallery">
+                    <div class="grid-sizer"></div>
+                    <div class="gs-item grid-wide set-bg" data-setbg="/theme_jt_gym/static/src/img/gallery/gallery-1.jpg">
+                        <a href="/theme_jt_gym/static/src/img/gallery/gallery-1.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                    </div>
+                    <div class="gs-item set-bg" data-setbg="/theme_jt_gym/static/src/img/gallery/gallery-2.jpg">
+                        <a href="/theme_jt_gym/static/src/img/gallery/gallery-2.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                    </div>
+                    <div class="gs-item set-bg" data-setbg="/theme_jt_gym/static/src/img/gallery/gallery-3.jpg">
+                        <a href="/theme_jt_gym/static/src/img/gallery/gallery-3.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                    </div>
+                    <div class="gs-item set-bg" data-setbg="/theme_jt_gym/static/src/img/gallery/gallery-4.jpg">
+                        <a href="/theme_jt_gym/static/src/img/gallery/gallery-4.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                    </div>
+                    <div class="gs-item set-bg" data-setbg="/theme_jt_gym/static/src/img/gallery/gallery-5.jpg">
+                        <a href="/theme_jt_gym/static/src/img/gallery/gallery-5.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                    </div>
+                    <div class="gs-item grid-wide set-bg" data-setbg="/theme_jt_gym/static/src/img/gallery/gallery-6.jpg">
+                        <a href="/theme_jt_gym/static/src/img/gallery/gallery-6.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section End -->
+    </template>
+    <template id="gym_team_snippet" name="Gym Team">
+    	<!-- Team Section Begin -->
+        <section class="team-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="team-title">
+                            <div class="section-title">
+                                <span>Our Team</span>
+                                <h2>TRAIN WITH EXPERTS</h2>
+                            </div>
+                            <a href="#" class="primary-btn btn-normal appoinment-btn">appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ts-slider owl-carousel">
+                        <div class="col-lg-4">
+                            <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-1.jpg">
+                                <div class="ts_text">
+                                    <h4>Athart Rachel</h4>
+                                    <span>Gym Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-2.jpg">
+                                <div class="ts_text">
+                                    <h4>Athart Rachel</h4>
+                                    <span>Gym Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-3.jpg">
+                                <div class="ts_text">
+                                    <h4>Athart Rachel</h4>
+                                    <span>Gym Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-4.jpg">
+                                <div class="ts_text">
+                                    <h4>Athart Rachel</h4>
+                                    <span>Gym Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-5.jpg">
+                                <div class="ts_text">
+                                    <h4>Athart Rachel</h4>
+                                    <span>Gym Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-6.jpg">
+                                <div class="ts_text">
+                                    <h4>Athart Rachel</h4>
+                                    <span>Gym Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section End -->
+    </template>
+    <template id="gym_get_touch_snippet" name="Get In Touch">
+    	<!-- Get In Touch Section Begin -->
+        <section>
+            <div class="gettouch-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="gt-text">
+                                <i class="fa fa-map-marker"></i>
+                                <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gt-text">
+                                <i class="fa fa-mobile"></i>
+                                <ul>
+                                    <li>125-711-811</li>
+                                    <li>125-668-886</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gt-text email">
+                                <i class="fa fa-envelope"></i>
+                                <p>Support.gymcenter@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Get In Touch Section End -->
+    </template>
+    <template id="gym_breadcrumb_snippet" name="Breadcrumb">
+    	<section class="breadcrumb-section set-bg" data-setbg="/theme_jt_gym/static/src/img/breadcrumb-bg.jpg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="breadcrumb-text">
+							<h2>About us</h2>
+							<div class="bt-option">
+								<a href="./">Home</a>
+								<span>About</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Breadcrumb Section End -->
+    </template>
+    <template id="gym_about_snippet" name="Gym About">
+    	<!-- About US Section Begin -->
+		<section class="aboutus-section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 p-0">
+						<div class="about-video set-bg" data-setbg="/theme_jt_gym/static/src/img/about-us.jpg">
+							<a href="https://www.youtube.com/watch?v=PfHTD5u4V4k" class="play-btn video-popup">
+								<i class="fa fa-caret-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-6 p-0">
+						<div class="about-text">
+							<div class="section-title">
+								<span>About Us</span>
+								<h2>What we have done</h2>
+							</div>
+							<div class="at-desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+									ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+									viverra maecenas accumsan lacus vel facilisis. aliquip ex ea commodo consequat sit amet,
+									consectetur adipiscing elit, sed do eiusmod tempor.</p>
+							</div>
+							<div class="about-bar">
+								<div class="ab-item">
+									<p>Body building</p>
+									<div id="bar1" class="barfiller">
+										<span class="fill" data-percentage="80"></span>
+										<div class="tipWrap">
+											<span class="tip"></span>
+										</div>
+									</div>
+								</div>
+								<div class="ab-item">
+									<p>Training</p>
+									<div id="bar2" class="barfiller">
+										<span class="fill" data-percentage="85"></span>
+										<div class="tipWrap">
+											<span class="tip"></span>
+										</div>
+									</div>
+								</div>
+								<div class="ab-item">
+									<p>Fitness</p>
+									<div id="bar3" class="barfiller">
+										<span class="fill" data-percentage="75"></span>
+										<div class="tipWrap">
+											<span class="tip"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About US Section End -->
+    </template>
+    <template id="gym_testimonial_snippet" name="Testimonial">
+    	<!-- Testimonial Section Begin -->
+		<section class="testimonial-section spad">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<span>Testimonial</span>
+							<h2>Our cilent say</h2>
+						</div>
+					</div>
+				</div>
+				<div class="ts_slider owl-carousel">
+					<div class="ts_item">
+						<div class="row">
+							<div class="col-lg-12 text-center">
+								<div class="ti_pic">
+									<img src="/theme_jt_gym/static/src/img/testimonial/testimonial-1.jpg" alt=""/>
+								</div>
+								<div class="ti_text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt<br /> ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+										gravida. Risus commodo<br /> viverra maecenas accumsan lacus vel facilisis.</p>
+									<h5>Marshmello Gomez</h5>
+									<div class="tt-rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ts_item">
+						<div class="row">
+							<div class="col-lg-12 text-center">
+								<div class="ti_pic">
+									<img src="/theme_jt_gym/static/src/img/testimonial/testimonial-2.jpg" alt=""/>
+								</div>
+								<div class="ti_text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt<br /> ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+										gravida. Risus commodo<br /> viverra maecenas accumsan lacus vel facilisis.</p>
+									<h5>Marshmello Gomez</h5>
+									<div class="tt-rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Testimonial Section End -->
+    </template>
+    <template id="gym_class_detail_snippet" name="Gym Class Details">
+    	<!-- Class Details Section Begin -->
+            <section class="class-details-section spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="class-details-text">
+                                <div class="cd-pic">
+                                    <img src="/theme_jt_gym/static/src/img/classes/class-details/class-detailsl.jpg" alt=""/>
+                                </div>
+                                <div class="cd-text">
+                                    <div class="cd-single-item">
+                                        <h3>Body buiding</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                            irure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua accusantium doloremque
+                                            laudantium. Excepteur sint occaecat cupidatat non proident sculpa.</p>
+                                    </div>
+                                    <div class="cd-single-item">
+                                        <h3>Trainer</h3>
+                                        <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur officia
+                                            deserunt mollit.</p>
+                                    </div>
+                                </div>
+                                <div class="cd-trainer">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="cd-trainer-pic">
+                                                <img src="/theme_jt_gym/static/src/img/classes/class-details/trainer-profile.jpg" alt=""/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="cd-trainer-text">
+                                                <div class="trainer-title">
+                                                    <h4>Athart Rachel</h4>
+                                                    <span>Gym Trainer</span>
+                                                </div>
+                                                <div class="trainer-social">
+                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua viverra maecenas lacus
+                                                    vel facilisis.</p>
+                                                <ul class="trainer-info">
+                                                    <li><span>Age</span>35</li>
+                                                    <li><span>Weight</span>148lbs</li>
+                                                    <li><span>Height</span>10' 2``</li>
+                                                    <li><span>Occupation</span>no-founder</li>
+                                                </ul>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua viverra maecenas lacus
+                                                    vel facilisis. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-8">
+                            <div class="sidebar-option">
+                                <div class="so-categories">
+                                    <h5 class="title">Categories</h5>
+                                    <ul>
+                                        <li><a href="#">Yoga <span>12</span></a></li>
+                                        <li><a href="#">Runing <span>32</span></a></li>
+                                        <li><a href="#">Weightloss <span>86</span></a></li>
+                                        <li><a href="#">Cario <span>25</span></a></li>
+                                        <li><a href="#">Body buiding <span>36</span></a></li>
+                                        <li><a href="#">Nutrition <span>15</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="so-latest">
+                                    <h5 class="title">Latest posts</h5>
+                                    <div class="latest-large set-bg" data-setbg="/theme_jt_gym/static/src/img/letest-blog/latest-1.jpg">
+                                        <div class="ll-text">
+                                            <h5><a href="#">This Japanese Way of Making Iced Coffee Is a Game...</a></h5>
+                                            <ul>
+                                                <li>Aug 20, 2019</li>
+                                                <li>20 Comment</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="latest-item">
+                                        <div class="li-pic">
+                                            <img src="/theme_jt_gym/static/src/img/letest-blog/latest-2.jpg" alt=""/>
+                                        </div>
+                                        <div class="li-text">
+                                            <h6><a href="#">Grilled Potato and Green Bean Salad</a></h6>
+                                            <span class="li-time">Aug 15, 2019</span>
+                                        </div>
+                                    </div>
+                                    <div class="latest-item">
+                                        <div class="li-pic">
+                                            <img src="/theme_jt_gym/static/src/img/letest-blog/latest-3.jpg" alt=""/>
+                                        </div>
+                                        <div class="li-text">
+                                            <h6><a href="#">The $8 French Rosé I Buy in Bulk Every Summer</a></h6>
+                                            <span class="li-time">Aug 15, 2019</span>
+                                        </div>
+                                    </div>
+                                    <div class="latest-item">
+                                        <div class="li-pic">
+                                            <img src="/theme_jt_gym/static/src/img/letest-blog/latest-4.jpg" alt=""/>
+                                        </div>
+                                        <div class="li-text">
+                                            <h6><a href="#">Ina Garten's Skillet-Roasted Lemon Chicken</a></h6>
+                                            <span class="li-time">Aug 15, 2019</span>
+                                        </div>
+                                    </div>
+                                    <div class="latest-item">
+                                        <div class="li-pic">
+                                            <img src="/theme_jt_gym/static/src/img/letest-blog/latest-5.jpg" alt=""/>
+                                        </div>
+                                        <div class="li-text">
+                                            <h6><a href="#">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></h6>
+                                            <span class="li-time">Aug 15, 2019</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="so-banner set-bg" data-setbg="/theme_jt_gym/static/src/img/sidebar-banner.jpg">
+                                    <h5>Banner 300x300</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Class Details Section End -->
+    </template>
+    <template id="gym_class_timetable_snippet" name="Class Time Table">
+    	<!-- Class Timetable Section Begin -->
+        <section class="class-timetable-section class-details-timetable spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="class-details-timetable_title">
+                            <h5>Classes timetable</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="class-timetable details-timetable">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                        <th>Saturday</th>
+                                        <th>Sunday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="class-time">6.00am - 8.00am</td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>WEIGHT LOOSE</h5>
+                                            <span>RLefew D. Loee</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                                            <h5>Cardio</h5>
+                                            <span>RLefew D. Loee</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>Yoga</h5>
+                                            <span>Keaf Shen</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                                            <h5>Fitness</h5>
+                                            <span>Kimberly Stone</span>
+                                        </td>
+                                        <td class="dark-bg blank-td"></td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                                            <h5>Boxing</h5>
+                                            <span>Rachel Adam</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>Body Building</h5>
+                                            <span>Robert Cage</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="class-time">10.00am - 12.00am</td>
+                                        <td class="blank-td"></td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
+                                            <h5>Fitness</h5>
+                                            <span>Kimberly Stone</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>WEIGHT LOOSE</h5>
+                                            <span>RLefew D. Loee</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="motivation">
+                                            <h5>Cardio</h5>
+                                            <span>RLefew D. Loee</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>Body Building</h5>
+                                            <span>Robert Cage</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="motivation">
+                                            <h5>Karate</h5>
+                                            <span>Donald Grey</span>
+                                        </td>
+                                        <td class="blank-td"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="class-time">5.00pm - 7.00pm</td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
+                                            <h5>Boxing</h5>
+                                            <span>Rachel Adam</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                                            <h5>Karate</h5>
+                                            <span>Donald Grey</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>Body Building</h5>
+                                            <span>Robert Cage</span>
+                                        </td>
+                                        <td class="blank-td"></td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>Yoga</h5>
+                                            <span>Keaf Shen</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                                            <h5>Cardio</h5>
+                                            <span>RLefew D. Loee</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
+                                            <h5>Fitness</h5>
+                                            <span>Kimberly Stone</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="class-time">7.00pm - 9.00pm</td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                                            <h5>Cardio</h5>
+                                            <span>RLefew D. Loee</span>
+                                        </td>
+                                        <td class="dark-bg blank-td"></td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                                            <h5>Boxing</h5>
+                                            <span>Rachel Adam</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>Yoga</h5>
+                                            <span>Keaf Shen</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                                            <h5>Karate</h5>
+                                            <span>Donald Grey</span>
+                                        </td>
+                                        <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
+                                            <h5>Boxing</h5>
+                                            <span>Rachel Adam</span>
+                                        </td>
+                                        <td class="hover-dp ts-meta" data-tsmeta="workout">
+                                            <h5>WEIGHT LOOSE</h5>
+                                            <span>RLefew D. Loee</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Class Timetable Section End -->
+    </template>
+    <template id="gym_services_snippet" name="Services">
+    	<!-- Services Section Begin -->
+        <section class="services-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <span>What we do?</span>
+                            <h2>PUSH YOUR LIMITS FORWARD</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 order-lg-1 col-md-6 p-0">
+                        <div class="ss-pic">
+                            <img src="/theme_jt_gym/static/src/img/services/services-1.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 order-lg-2 col-md-6 p-0">
+                        <div class="ss-text">
+                            <h4>Personal training</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut dolore
+                                facilisis.</p>
+                            <a href="#">Explore</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 order-lg-3 col-md-6 p-0">
+                        <div class="ss-pic">
+                            <img src="/theme_jt_gym/static/src/img/services/services-2.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 order-lg-4 col-md-6 p-0">
+                        <div class="ss-text">
+                            <h4>Group fitness classes</h4>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.</p>
+                            <a href="#">Explore</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 order-lg-8 col-md-6 p-0">
+                        <div class="ss-pic">
+                            <img src="/theme_jt_gym/static/src/img/services/services-4.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 order-lg-7 col-md-6 p-0">
+                        <div class="ss-text second-row">
+                            <h4>Body building</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut dolore
+                                facilisis.</p>
+                            <a href="#">Explore</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 order-lg-6 col-md-6 p-0">
+                        <div class="ss-pic">
+                            <img src="/theme_jt_gym/static/src/img/services/services-3.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 order-lg-5 col-md-6 p-0">
+                        <div class="ss-text second-row">
+                            <h4>Strength training</h4>
+                            <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.</p>
+                            <a href="#">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section End -->
+    </template>
+    <template id="gym_banner_video_snippet" name="Banner Video">
+    	<!-- Banner Section Begin -->
+        <section class="banner-section set-bg" data-setbg="/theme_jt_gym/static/src/img/banner-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="bs-text service-banner">
+                            <h2>Exercise until the body obeys.</h2>
+                            <div class="bt-tips">Where health, beauty and fitness meet.</div>
+                            <a href="https://www.youtube.com/watch?v=PfHTD5u4V4k" class="play-btn video-popup"><i
+                                    class="fa fa-caret-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner Section End -->
+    </template>
+    <template id="gym_our_team_snippet" name="Our Team">
+    	<!-- Team Section Begin -->
+        <section class="team-section team-page spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="team-title">
+                            <div class="section-title">
+                                <span>Our Team</span>
+                                <h2>TRAIN WITH EXPERTS</h2>
+                            </div>
+                            <a href="#" class="primary-btn btn-normal appoinment-btn">appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-1.jpg">
+                            <div class="ts_text">
+                                <h4>Athart Rachel</h4>
+                                <span>Gym Trainer</span>
+                                <div class="tt_social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-2.jpg">
+                            <div class="ts_text">
+                                <h4>Athart Rachel</h4>
+                                <span>Gym Trainer</span>
+                                <div class="tt_social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-3.jpg">
+                            <div class="ts_text">
+                                <h4>Athart Rachel</h4>
+                                <span>Gym Trainer</span>
+                                <div class="tt_social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-4.jpg">
+                            <div class="ts_text">
+                                <h4>Athart Rachel</h4>
+                                <span>Gym Trainer</span>
+                                <div class="tt_social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-5.jpg">
+                            <div class="ts_text">
+                                <h4>Athart Rachel</h4>
+                                <span>Gym Trainer</span>
+                                <div class="tt_social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="ts-item set-bg" data-setbg="/theme_jt_gym/static/src/img/team/team-6.jpg">
+                            <div class="ts_text">
+                                <h4>Athart Rachel</h4>
+                                <span>Gym Trainer</span>
+                                <div class="tt_social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section End -->
+    </template>
+    <template id="gym_bmi_cal_snippet" name="BMI Calculate">
+        <!-- BMI Calculator Section Begin -->
+        <section class="bmi-calculator-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-title chart-title">
+                            <span>check your body</span>
+                            <h2>BMI CALCULATOR CHART</h2>
+                        </div>
+                        <div class="chart-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Bmi</th>
+                                        <th>WEIGHT STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="point">Below 18.5</td>
+                                        <td>Underweight</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="point">18.5 - 24.9</td>
+                                        <td>Healthy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="point">25.0 - 29.9</td>
+                                        <td>Overweight</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="point">30.0 - and Above</td>
+                                        <td>Obese</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-title chart-calculate-title">
+                            <span>check your body</span>
+                            <h2>CALCULATE YOUR BMI</h2>
+                        </div>
+                        <div class="chart-calculate-form">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis.</p>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Height / cm"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Weight / kg"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Age"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Sex"/>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button type="submit">Calculate</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BMI Calculator Section End -->
+    </template>
+    <template id="gym_blog_snippet" name="Blog">
+        <!-- Blog Section Begin -->
+        <section class="blog-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 p-0">
+                        <div class="blog-item">
+                            <div class="bi-pic">
+                                <img src="/theme_jt_gym/static/src/img/blog/blog-1.jpg" alt=""/>
+                            </div>
+                            <div class="bi-text">
+                                <h5><a href="./gym-blog-details">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
+                                        Cobbler...</a></h5>
+                                <ul>
+                                    <li>by Admin</li>
+                                    <li>Aug,15, 2019</li>
+                                    <li>20 Comment</li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua accumsan lacus facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="bi-pic">
+                                <img src="/theme_jt_gym/static/src/img/blog/blog-2.jpg" alt=""/>
+                            </div>
+                            <div class="bi-text">
+                                <h5><a href="./gym-blog-details">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
+                                        Cobbler...</a></h5>
+                                <ul>
+                                    <li>by Admin</li>
+                                    <li>Aug,15, 2019</li>
+                                    <li>20 Comment</li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua accumsan lacus facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="bi-pic">
+                                <img src="/theme_jt_gym/static/src/img/blog/blog-3.jpg" alt=""/>
+                            </div>
+                            <div class="bi-text">
+                                <h5><a href="./gym-blog-details">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
+                                        Cobbler...</a></h5>
+                                <ul>
+                                    <li>by Admin</li>
+                                    <li>Aug,15, 2019</li>
+                                    <li>20 Comment</li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua accumsan lacus facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="bi-pic">
+                                <img src="/theme_jt_gym/static/src/img/blog/blog-4.jpg" alt=""/>
+                            </div>
+                            <div class="bi-text">
+                                <h5><a href="./gym-blog-details">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
+                                        Cobbler...</a></h5>
+                                <ul>
+                                    <li>by Admin</li>
+                                    <li>Aug,15, 2019</li>
+                                    <li>20 Comment</li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua accumsan lacus facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="bi-pic">
+                                <img src="/theme_jt_gym/static/src/img/blog/blog-5.jpg" alt=""/>
+                            </div>
+                            <div class="bi-text">
+                                <h5><a href="./gym-blog-details">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
+                                        Cobbler...</a></h5>
+                                <ul>
+                                    <li>by Admin</li>
+                                    <li>Aug,15, 2019</li>
+                                    <li>20 Comment</li>
+                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua accumsan lacus facilisis.</p>
+                            </div>
+                        </div>
+                        <div class="blog-pagination">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">Next</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8 p-0">
+                        <div class="sidebar-option">
+                            <div class="so-categories">
+                                <h5 class="title">Categories</h5>
+                                <ul>
+                                    <li><a href="#">Yoga <span>12</span></a></li>
+                                    <li><a href="#">Runing <span>32</span></a></li>
+                                    <li><a href="#">Weightloss <span>86</span></a></li>
+                                    <li><a href="#">Cario <span>25</span></a></li>
+                                    <li><a href="#">Body buiding <span>36</span></a></li>
+                                    <li><a href="#">Nutrition <span>15</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="so-latest">
+                                <h5 class="title">Feature posts</h5>
+                                <div class="latest-large set-bg" data-setbg="/theme_jt_gym/static/src/img/letest-blog/latest-1.jpg">
+                                    <div class="ll-text">
+                                        <h5><a href="./gym-blog-details">This Japanese Way of Making Iced Coffee Is a Game...</a></h5>
+                                        <ul>
+                                            <li>Aug 20, 2019</li>
+                                            <li>20 Comment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="latest-item">
+                                    <div class="li-pic">
+                                        <img src="/theme_jt_gym/static/src/img/letest-blog/latest-2.jpg" alt=""/>
+                                    </div>
+                                    <div class="li-text">
+                                        <h6><a href="./gym-blog-details">Grilled Potato and Green Bean Salad</a></h6>
+                                        <span class="li-time">Aug 15, 2019</span>
+                                    </div>
+                                </div>
+                                <div class="latest-item">
+                                    <div class="li-pic">
+                                        <img src="/theme_jt_gym/static/src/img/letest-blog/latest-3.jpg" alt=""/>
+                                    </div>
+                                    <div class="li-text">
+                                        <h6><a href="./gym-blog-details">The $8 French Rosé I Buy in Bulk Every Summer</a></h6>
+                                        <span class="li-time">Aug 15, 2019</span>
+                                    </div>
+                                </div>
+                                <div class="latest-item">
+                                    <div class="li-pic">
+                                        <img src="/theme_jt_gym/static/src/img/letest-blog/latest-4.jpg" alt=""/>
+                                    </div>
+                                    <div class="li-text">
+                                        <h6><a href="./gym-blog-details">Ina Garten's Skillet-Roasted Lemon Chicken</a></h6>
+                                        <span class="li-time">Aug 15, 2019</span>
+                                    </div>
+                                </div>
+                                <div class="latest-item">
+                                    <div class="li-pic">
+                                        <img src="/theme_jt_gym/static/src/img/letest-blog/latest-5.jpg" alt=""/>
+                                    </div>
+                                    <div class="li-text">
+                                        <h6><a href="./gym-blog-details">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></h6>
+                                        <span class="li-time">Aug 15, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="so-tags">
+                                <h5 class="title">Popular tags</h5>
+                                <a href="#">Gyming</a>
+                                <a href="#">Body buidling</a>
+                                <a href="#">Yoga</a>
+                                <a href="#">Weightloss</a>
+                                <a href="#">Proffeponal</a>
+                                <a href="#">Streching</a>
+                                <a href="#">Cardio</a>
+                                <a href="#">Karate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section End -->
+    </template>
+    <template id="gym_contact_snippet" name="Contact">
+        <!-- Contact Section Begin -->
+        <section class="contact-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-title contact-title">
+                            <span>Contact Us</span>
+                            <h2>GET IN TOUCH</h2>
+                        </div>
+                        <div class="contact-widget">
+                            <div class="cw-text">
+                                <i class="fa fa-map-marker"></i>
+                                <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                            </div>
+                            <div class="cw-text">
+                                <i class="fa fa-mobile"></i>
+                                <ul>
+                                    <li>125-711-811</li>
+                                    <li>125-668-886</li>
+                                </ul>
+                            </div>
+                            <div class="cw-text email">
+                                <i class="fa fa-envelope"></i>
+                                <p>Support.gymcenter@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="leave-comment">
+                            <form action="#">
+                                <input type="text" placeholder="Name"/>
+                                <input type="text" placeholder="Email"/>
+                                <input type="text" placeholder="Website"/>
+                                <textarea placeholder="Comment"></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+    </template>
+    <template id="gym_map_snippet" name="Map">
+        <section class="contact-section spad">
+            <div class="container">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12087.069761554938!2d-74.2175599360452!3d40.767139456514954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c254b5958982c3%3A0xb6ab3931055a2612!2sEast%20Orange%2C%20NJ%2C%20USA!5e0!3m2!1sen!2sbd!4v1581710470843!5m2!1sen!2sbd"
+                        height="550" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </section>
+    </template>
+	</odoo>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="project_checklist_form_view_inherit" model ="ir.ui.view">
+            <field name="name">project.checklist.form.inh</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[1]" position="after">
+                    <page name="custom_checklist" string="Project Checklist" >
+                        <field name="custom_checklist" string="Checklist Completed" widget="percentpie" style="height:30px;background:White;"/>
+                        <field name="custom_checklist_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="updated_date"/>
+                                <field name="state"/>                                                               
+                                <button string="Complete" name="btn_check" type="object" class="fa fa-check-square" attrs="{'invisible':[('state','=','completed')]}" />
+                                <button string="Cancel" name="btn_close" type="object" class="fa fa-window-close" attrs="{'invisible':[('state','=','cancelled')]}"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+                
+        <record id="project_checklist_tree_view_inherit" model="ir.ui.view">
+            <field name="name">project.checklist.tree.inh</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="custom_checklist" widget="progressbar"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="project_checklist_kanban_view_inherit" model="ir.ui.view">
+            <field name="name">project.checklist.kanban.inh</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="custom_checklist" string="Checklist Completed" widget="percentpie" style="height:30px;background:White;"/>
+                </field>
+                <xpath expr="//div[hasclass('o_kanban_primary_left')]" position="inside">
+                    <div class="o_primary">
+                        <span t-if="record.custom_checklist.value">
+                            <strong><t t-esc="record.custom_checklist.value"/></strong>
+                        </span>
+                    </div>
+                </xpath>
+            </field>    
+        </record>
+        
+        <record id="project_checklist_form_view" model="ir.ui.view">
+            <field name="name">project.checklist.form</field>
+            <field name="model">project.custom.checklist</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>                            
+                            </group>
+                            <group>
+                                <field name="description"/>                         
+                            </group>
+                        </group>
+                    </sheet>
+                </form>             
+            </field>    
+        </record>
+
+        <record id="project_checklist_tree_view" model="ir.ui.view">
+            <field name="name">project.checklist.tree</field>
+            <field name="model">project.custom.checklist</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>                            
+                    <field name="description"/>                         
+                </tree>             
+            </field>    
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_menu_project_checklist">
+            <field name="name">Project Checklist</field>            
+            <field name="res_model">project.custom.checklist</field>
+            <field name="view_mode">tree,form</field>
+       </record>        
+
+    </data> 
+    
+    <menuitem id ="menu_project_checklist" name="Project Checklist" action="action_menu_project_checklist" parent="project.menu_project_config" sequence="5"/> 
+</odoo>

@@ -1,0 +1,43 @@
+<odoo>
+    <!-- Installment form view -->
+    <record id="installment_view_form" model="ir.ui.view">
+        <field name="name">Installment Form View</field>
+        <field name="model">installment</field>
+        <field name="arch" type="xml">
+            <form string="installment">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- installment tree view -->
+    <record id="installment_view_tree" model="ir.ui.view">
+        <field name="name">installment Tree View</field>
+        <field name="model">installment</field>
+        <field name="arch" type="xml">
+            <tree string="Installment">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+        <!-- Action -->
+   <!--  <record id="action_installment" model="ir.actions.act_window">
+        <field name="name">Installment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">installment</field>
+        <field name="view_mode">tree,search,form</field>
+    </record> -->
+
+    <!-- Menu items-->
+   <!--  <menuitem id="installment_menu" name="installment" parent="settings_menu" action="action_installment"
+    sequence="4"/> -->
+
+
+</odoo>

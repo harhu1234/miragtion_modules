@@ -1,0 +1,99 @@
+<odoo>
+    <!-- Facility and service form view -->
+    <record id="view_facility_service_form" model="ir.ui.view">
+        <field name="name">Facility and Service Form View</field>
+        <field name="model">facility.services</field>
+        <field name="arch" type="xml">
+            <form string="Facility Name" create="false">
+                <sheet>
+                    <group>
+                        <group string="Facility and Service Name">
+                            <field name="name"/>
+                        </group>
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- Facility and service tree view -->
+    <record id="view_facility_and_service_tree" model="ir.ui.view">
+        <field name="name">Facility and Service Tree View</field>
+        <field name="model">facility.services</field>
+        <field name="arch" type="xml">
+            <tree string="Facility and Service">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+        <!-- Building Layout form view -->
+    <record id="view_layout_form" model="ir.ui.view">
+        <field name="name">Building and Layout Form View</field>
+        <field name="model">building.layout</field>
+        <field name="arch" type="xml">
+            <form string="Layout">
+                <sheet>
+                    <group>
+                        <group string="Layout">
+                            <field name="name"/>
+                           <!--  <field name="carpet_area"/>
+                            <field name="furnished"/>
+                        </group>
+                        <group>
+                            <field name="builtup_area"/>
+                            <field name="rooms"/>
+                            <field name="balconi"/>
+                            <field name="Price"/> -->
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- Building Layout tree view -->
+    <record id="view_building_layout_tree" model="ir.ui.view">
+        <field name="name">Bulding Layout Tree View</field>
+        <field name="model">building.layout</field>
+        <field name="arch" type="xml">
+            <tree string="Layout">
+                <field name="name"/>
+               <!--  <field name="carpet_area"/>
+                <field name="furnished"/>
+                <field name="builtup_area"/>
+                <field name="rooms"/>
+                <field name="balconi"/>
+                <field name="Price"/> -->
+            </tree>
+        </field>
+    </record>
+
+
+        <!-- Action -->
+    <record id="action_facility_service" model="ir.actions.act_window">
+        <field name="name">Facility and Service</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">facility.services</field>
+        <field name="view_mode">tree,search,form</field>
+    </record>
+
+    <record id="action_layout" model="ir.actions.act_window">
+        <field name="name">Building Layout</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">building.layout</field>
+        <field name="view_mode">tree,search,form</field>
+    </record>
+
+    <!-- Menu items-->
+    <menuitem id="settings_menu" name="Settings" parent="property_root_menu" sequence="5"/>
+
+    <menuitem id="faicility_submenu" name="Facility and Service" parent="settings_menu" action="action_facility_service"
+    sequence="2"/>
+
+     <menuitem id="layout_submenu" name="Building Layout" parent="settings_menu" action="action_layout"
+    sequence="2"/>
+
+</odoo>

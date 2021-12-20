@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res.partner.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='name']" position="after">
+                <group>
+                    <field name="is_tentant" attrs="{'invisible':[('is_tentant','=',False)]}"/>
+                    <field name="is_landlord" attrs="{'invisible':[('is_landlord','=',False)]}"/>
+                    <field name="is_customer" attrs="{'invisible':[('is_customer','=',False)]}"/>
+                </group>
+            </xpath>
+            
+        </field>
+    </record>
+    <record id="landlord_parnter_action" model="ir.actions.act_window">
+        <field name="name">Landlords</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('is_landlord', '=',True)]</field>
+        <field name="context">{'default_is_landlord':True}</field>
+    </record>
+    <record id="tenant_partner_action" model="ir.actions.act_window">
+        <field name="name">Tenant</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('is_tentant', '=',True)]</field>
+        <field name="context">{'default_is_tentant':True}</field>
+    </record>
+    <record id="purchase_partner_action" model="ir.actions.act_window">
+        <field name="name">vendee</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('is_customer', '=',True)]</field>
+        <field name="context">{'default_is_customer':True}</field>
+    </record>
+       
+    <menuitem
+        id="contacts_menu"
+        name="Contacts"
+        sequence="4"
+        parent="property_root_menu"
+    />
+
+    <menuitem
+        id="landord_menu"
+        name="Landlords"
+        action="landlord_parnter_action"
+        sequence="1"
+        parent="contacts_menu"
+    />
+    <menuitem
+        id="tenant_menu"
+        name="Tentant"
+        action="tenant_partner_action"
+        sequence="2"
+        parent="contacts_menu"
+    />
+
+    <menuitem
+        id="property_customer_menu"
+        name="vendee"
+        action="purchase_partner_action"
+        sequence="3"
+        parent="contacts_menu"
+    />
+</odoo>

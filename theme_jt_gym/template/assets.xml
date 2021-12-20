@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="assets_website" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Css Styles -->
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/bootstrap.min.css" type="text/css"/>
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/font-awesome.min.css" type="text/css"/>
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/flaticon.css" type="text/css"/>
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/owl.carousel.min.css" type="text/css"/>
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/barfiller.css" type="text/css"/>
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/magnific-popup.css" type="text/css"/>
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/slicknav.min.css" type="text/css"/>
+		    <link rel="stylesheet" href="/theme_jt_gym/static/src/css/style.css" type="text/css"/>
+
+		    <!-- Js Plugins -->
+		    <!-- <script src="/theme_jt_gym/static/src/js/jquery-3.3.1.min.js"></script> -->
+		    <script src="/theme_jt_gym/static/src/js/bootstrap.min.js"></script>
+		    <script src="/theme_jt_gym/static/src/js/jquery.magnific-popup.min.js"></script>
+		    <script src="/theme_jt_gym/static/src/js/masonry.pkgd.min.js"></script>
+		    <script src="/theme_jt_gym/static/src/js/jquery.barfiller.js"></script>
+		    <script src="/theme_jt_gym/static/src/js/jquery.slicknav.js"></script>
+		    <script src="/theme_jt_gym/static/src/js/owl.carousel.min.js"></script>
+		    <script src="/theme_jt_gym/static/src/js/main.js"></script>
+		</xpath>
+	</template>
+</odoo>

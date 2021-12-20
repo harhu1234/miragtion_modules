@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="car_layout" name="Main car layout" inherit_id="portal.frontend_layout">
+      <xpath expr="//header" position="replace">
+         <section id="topbar" class="d-none d-lg-block">
+            <div class="container clearfix">
+               <div class="contact-info float-left">
+                  <span class="fa fa-envelope-o"></span><a href="res_company.email">
+                  <t t-esc="res_company.email"/>
+                  </a>
+                  <span class="fa fa-phone"></span>
+                  <t t-esc="res_company.phone"/>
+               </div>
+               <div class="social-links float-right">
+                  <t t-if="website.social_twitter">
+                     <a class="twitter" t-att-href="website.social_twitter" t-if="website.social_twitter"><span class="fa fa-twitter"></span></a>
+                  </t>
+                  <t t-if="website.social_facebook">
+                     <a class="facebook" t-att-href="website.social_facebook" t-if="website.social_facebook"><span class="fa fa-facebook"></span></a>
+                  </t>
+                  <t t-if="website.social_linkedin">
+                     <a class="linkedin" t-att-href="website.social_linkedin" t-if="website.social_linkedin"><span class="fa fa-linkedin"></span></a>
+                  </t>
+                  <t t-if="website.social_instagram">
+                     <a class="instagram" t-att-href="website.social_instagram" t-if="website.social_instagram"><span class="fa fa-instagram"></span></a>
+                  </t>
+               </div>
+            </div>
+         </section>
+         <header id="header">
+            <div class="container">
+               <div id="logo" class="pull-left">
+                  <a href="/" class="logo scrollto"><span t-field="res_company.logo" t-options="{'widget': 'image', 'resize': '170x60'}" /></a>
+               </div>
+               <nav id="nav-menu-container">
+                  <ul class="nav-menu">
+                     <li class="menu-active"><a href="/">Home</a></li>
+                     <li><a href="#about">About Us</a></li>
+                     <li><a href="#services">Services</a></li>
+                     <li><a href="#portfolio">Gallery</a></li>
+                     <li><a href="#price">Price</a></li>
+                     <li><a href="#team">Our Team</a></li>
+                     <li><a href="#contact">Contact</a></li>
+                     <li groups="base.group_public">
+                        <a href="/web/login" >Sign In</a>
+                     </li>
+                     <li groups="base.group_user">
+                        <a href="/web/session/logout" >Sign Out</a>
+                     </li>
+                  </ul>
+               </nav>
+               <!-- #nav-menu-container -->
+            </div>
+         </header>
+         <!-- #header -->
+      </xpath>
+      <xpath expr="//footer" position="replace">
+         <footer id="footer">
+            <div class="container">
+               <div class="copyright">
+                  <p> Copyright © <span t-esc="time.strftime('%Y')"/> Developed &amp; Design By
+                  </p>
+               </div>
+               <div class="credits">
+                  <h5>
+                     <a href="res_company.website">
+                        <t t-esc="res_company.name"/>
+                     </a>
+                  </h5>
+               </div>
+            </div>
+         </footer>
+         <a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+      </xpath>
+   </template>
+</odoo>

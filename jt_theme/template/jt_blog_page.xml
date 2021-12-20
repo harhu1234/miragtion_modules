@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="jt_blog_page" name="Blog Page">
+		<t t-call="website.layout">
+            <div class="oe_structure oe_empty">
+            	<section class="hero-wrap hero-wrap-2" style="background-image: url('/jt_theme/static/src/images/bg_1.jpg');">
+				    <div class="overlay"></div>
+				    <div class="container">
+				        <div class="row no-gutters slider-text align-items-center justify-content-center">
+				            <div class="col-md-9 ftco-animate text-center">
+				                <h1 class="mb-2 bread">Blog</h1>
+				                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+				<section class="ftco-section">
+				    <div class="container">
+				    	<div class="row">
+				    		<nav t-attf-class="navbar navbar-expand-sm navbar-light #{additionnal_classes}">
+						        <div class="container">
+						            <ul class="navbar-nav">
+						                <li class="nav-item">
+						                    <span class="nav-link disabled pl-0">Blogs:</span>
+						                </li>
+						                <li class="nav-item">
+						                    <a href="/blog" t-attf-class="nav-link font-weight-bold #{(not blog) and 'active'}">All</a>
+						                </li>
+						                <li class="nav-item" t-foreach="blogs" t-as="nav_blog">
+						                    <a t-attf-href="/blog/#{slug(nav_blog)}"
+						                       t-attf-class="nav-link #{(blog and nav_blog.id == blog.id) and 'active' or ''}">
+						                        <b t-field="nav_blog.name"/>
+						                    </a>
+						                </li>
+						            </ul>
+						            <!-- 'Search Box' -->
+						            <!-- <form id="o_wblog_post_search" class="form-inline w-100 w-md-auto pt-2 pt-md-0 d-md-flex"
+						                  role="search" t-att-action="blog_url(tag=tag,search=search)" method="get">
+						                <t t-call="website.website_search_box">
+						                    <t t-set="_classes" t-valuef="w-100"/>
+						                </t>
+						            </form> -->
+						        </div>
+						    </nav>
+				    	</div>
+				    	<div class="row">
+						        <t t-set="head">
+						            <link t-if="blog" t-att-href="'/blog/%s/feed' % (blog.id)" type="application/atom+xml" rel="alternate" title="Atom Feed"/>
+						            <meta t-if="active_tag_ids" name="robots" t-attf-content="none"/>
+						        </t>
+						        <t t-set="opt_blog_cards_design" t-value="is_view_active('website_blog.opt_blog_cards_design')"/>
+						        <t t-set="opt_blog_list_view" t-value="is_view_active('website_blog.opt_blog_list_view')"/>
+						        <t t-set="opt_blog_readable" t-value="is_view_active('website_blog.opt_blog_readable')"/>
+						        <t t-set="opt_blog_sidebar_show" t-value="is_view_active('website_blog.opt_blog_sidebar_show')"/>
+
+						        <div id="o_wblog_blog_top">
+						            <t t-if="not tag and not date_begin">
+						                <div id="o_wblog_blog_top_droppable">
+						                    <t t-if="blog">
+						                        <t t-set="oe_structure_blog_single_header_description">Edit the '<t t-esc="blog.name"/>' page header.</t>
+						                        <div t-field="blog.content"
+						                            class="oe_structure"
+						                            t-attf-id="oe_structure_blog_single_header_#{blog.id}"
+						                            t-att-data-editor-sub-message="oe_structure_blog_single_header_description"/>
+						                    </t>
+						                    <t t-elif="blogs">
+						                        <t t-set="oe_structure_blog_all_header_description">Edit the 'All Blogs' page header.</t>
+						                        <div class="oe_structure"
+						                            id="oe_structure_blog_all_header"
+						                            t-att-data-editor-sub-message="oe_structure_blog_all_header_description"/>
+						                    </t>
+						                </div>
+						            </t>
+						            <t t-else="">
+						                <t t-set="oe_structure_blog_filtered_header_description">Edit the 'Filter Results' page header.</t>
+						                <div class="oe_structure"
+						                    id="oe_structure_blog_filtered_header"
+						                    t-att-data-editor-sub-message="oe_structure_blog_filtered_header_description"/>
+						            </t>
+						        </div>
+
+						        <section id="o_wblog_index_content" t-att-class="opt_blog_cards_design and 'o_wblog_page_cards_bg'">
+						            <div class="container py-4">
+						                <div t-attf-class="row #{opt_blog_sidebar_show and 'justify-content-between' or 'justify-content-center'}">
+						                    <div id="o_wblog_posts_loop_container" t-attf-class="col #{'o_container_small mx-0' if opt_blog_list_view else ''}">
+
+						                        <t t-call="website_blog.posts_loop">
+						                            <t t-if="not blog" t-set="posts_list_show_parent_blog" t-value="True"/>
+						                        </t>
+						                    </div>
+						                </div>
+						            </div>
+						        </section>
+				    	</div>
+				        <div class="row">
+				            <div class="col-md-6 col-lg-4 ftco-animate">
+				                <div class="blog-entry">
+				                    <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/jt_theme/static/src/images/image_1.jpg');">
+				                        <div class="meta-date text-center p-2">
+				                            <span class="day">15</span>
+				                            <span class="mos">Oct.</span>
+				                            <span class="yr">2019</span>
+				                        </div>
+				                    </a>
+				                    <div class="text border border-top-0 p-4">
+				                        <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+				                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                        <div class="d-flex align-items-center mt-4">
+				                            <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+				                            <p class="ml-auto mb-0">
+				                                <a href="#" class="mr-2">Admin</a>
+				                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				                            </p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-4 ftco-animate">
+				                <div class="blog-entry">
+				                    <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/jt_theme/static/src/images/image_2.jpg');">
+				                        <div class="meta-date text-center p-2">
+				                            <span class="day">15</span>
+				                            <span class="mos">Oct.</span>
+				                            <span class="yr">2019</span>
+				                        </div>
+				                    </a>
+				                    <div class="text border border-top-0 p-4">
+				                        <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+				                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                        <div class="d-flex align-items-center mt-4">
+				                            <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+				                            <p class="ml-auto mb-0">
+				                                <a href="#" class="mr-2">Admin</a>
+				                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				                            </p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-4 ftco-animate">
+				                <div class="blog-entry">
+				                    <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/jt_theme/static/src/images/image_3.jpg');">
+				                        <div class="meta-date text-center p-2">
+				                            <span class="day">15</span>
+				                            <span class="mos">Oct.</span>
+				                            <span class="yr">2019</span>
+				                        </div>
+				                    </a>
+				                    <div class="text border border-top-0 p-4">
+				                        <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+				                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                        <div class="d-flex align-items-center mt-4">
+				                            <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+				                            <p class="ml-auto mb-0">
+				                                <a href="#" class="mr-2">Admin</a>
+				                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				                            </p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-4 ftco-animate">
+				                <div class="blog-entry">
+				                    <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/jt_theme/static/src/images/image_4.jpg');">
+				                        <div class="meta-date text-center p-2">
+				                            <span class="day">15</span>
+				                            <span class="mos">Oct.</span>
+				                            <span class="yr">2019</span>
+				                        </div>
+				                    </a>
+				                    <div class="text border border-top-0 p-4">
+				                        <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+				                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                        <div class="d-flex align-items-center mt-4">
+				                            <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+				                            <p class="ml-auto mb-0">
+				                                <a href="#" class="mr-2">Admin</a>
+				                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				                            </p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-4 ftco-animate">
+				                <div class="blog-entry">
+				                    <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/jt_theme/static/src/images/image_5.jpg');">
+				                        <div class="meta-date text-center p-2">
+				                            <span class="day">15</span>
+				                            <span class="mos">Oct.</span>
+				                            <span class="yr">2019</span>
+				                        </div>
+				                    </a>
+				                    <div class="text border border-top-0 p-4">
+				                        <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+				                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                        <div class="d-flex align-items-center mt-4">
+				                            <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+				                            <p class="ml-auto mb-0">
+				                                <a href="#" class="mr-2">Admin</a>
+				                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				                            </p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-4 ftco-animate">
+				                <div class="blog-entry">
+				                    <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('/jt_theme/static/src/images/image_6.jpg');">
+				                        <div class="meta-date text-center p-2">
+				                            <span class="day">15</span>
+				                            <span class="mos">Oct.</span>
+				                            <span class="yr">2019</span>
+				                        </div>
+				                    </a>
+				                    <div class="text border border-top-0 p-4">
+				                        <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+				                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                        <div class="d-flex align-items-center mt-4">
+				                            <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+				                            <p class="ml-auto mb-0">
+				                                <a href="#" class="mr-2">Admin</a>
+				                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				                            </p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="row mt-5">
+				            <div class="col text-center">
+				                <div class="block-27">
+				                    <ul>
+				                        <li><a href="#">&lt;</a></li>
+				                        <li class="active"><span>1</span></li>
+				                        <li><a href="#">2</a></li>
+				                        <li><a href="#">3</a></li>
+				                        <li><a href="#">4</a></li>
+				                        <li><a href="#">5</a></li>
+				                        <li><a href="#">&gt;</a></li>
+				                    </ul>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+            </div>
+        </t>
+	</template>
+</odoo>

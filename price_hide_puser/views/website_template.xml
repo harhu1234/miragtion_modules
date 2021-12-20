@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_item_price_template" inherit_id="website_sale.products_item">
+        <xpath expr="//div[hasclass('product_price')]" position="attributes">
+            <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute>
+        </xpath>
+    </template>
+
+    <template id="product_price_template" inherit_id="website_sale.product_price">
+        <xpath expr="//div[hasclass('product_price')]" position="attributes">
+            <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute>
+        </xpath>
+    </template>
+    <template id="product_wishlist_in" inherit_id="website_sale_wishlist.product_wishlist">
+        <xpath expr="//tr/td[3]/t[2]" position="attributes">
+            <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute>
+        </xpath>
+    </template>
+    <template id="product_wishlist_addtocart_in" inherit_id="website_sale_wishlist.product_wishlist">
+        <xpath expr="//button[hasclass('o_wish_add')]" position="replace">
+        </xpath>
+    </template>
+
+    <template id="product_compare_in" inherit_id="website_sale_comparison.product_compare">
+        <xpath expr="//div[hasclass('product_summary')]/span" position="attributes">
+            <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute>
+        </xpath>
+    </template>
+    <template id="product_compare_addtocart_in" inherit_id="website_sale_comparison.product_compare">
+        <xpath expr="//form" position="replace">
+            
+        </xpath>
+    </template>
+    <template id="product_product_in" inherit_id="website_sale_comparison.product_product">
+        <xpath expr="//h6/span" position="attributes">
+            <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute>
+        </xpath>
+    </template>
+    <template id="product_in" inherit_id="website_sale.product">
+        <xpath expr="//a[hasclass('js_check_product')]" position="replace">
+        </xpath>
+    </template>
+    <template id="cart_lines_in" inherit_id="website_sale.cart_lines">
+        <xpath expr="//td[hasclass('td-price')]" position="attributes">
+           <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute> 
+        </xpath>
+    </template>
+    <template id="total_in" inherit_id="website_sale.total">
+        <xpath expr="//tr[@id='order_total_untaxed']/td[2]" position="attributes">
+           <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute> 
+        </xpath>
+        <xpath expr="//tr[@id='order_total_taxes']/td[2]" position="attributes">
+           <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute> 
+        </xpath>
+        <xpath expr="//tr[@id='order_total']/td[2]" position="attributes">
+           <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute> 
+        </xpath>
+    </template>
+    <template id="header_cart_link_in" inherit_id="website_sale.header_cart_link">
+        <xpath expr="//li[2]" position="replace">
+            <!-- <attribute name="t-if">(not website.hide_price) or (website.hide_price and not user_id._is_public())
+            </attribute>  -->
+        </xpath>
+    </template>
+    <template id="website_sale.products_add_to_cart" active="False" customize_show="False" name="Add to Cart">
+        <xpath expr="//div[hasclass('o_wsale_product_btn')]" position="inside">
+        </xpath>
+    </template>
+    <template id="website_sale.product_buy_now" active="False" customize_show="False" name="Buy Now Button">
+        <xpath expr="//a[@id='add_to_cart']" position="after">
+        </xpath>
+    </template>
+</odoo>

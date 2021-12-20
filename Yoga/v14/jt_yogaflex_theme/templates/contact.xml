@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="contact_template_page" name="Contact" >
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty" style="margin-top: -100px;">
+                <!-- start banner Area -->
+                <section class="banner-area relative about-banner" id="home">
+                    <img class="cta-img img-fluid" src="/jt_yogaflex_theme/static/src/img/cta-img.png" alt=""/>
+                    <div class="overlay overlay-bg"></div>
+                    <div class="container">
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <div class="about-content col-lg-12">
+                                <h1>
+                                    Contact
+                                </h1>
+                                <p class="link-nav"><a href="index.html">Home </a>
+                                    <span class="lnr lnr-arrow-right"></span> 
+                                    <a href="contact.html">
+                                        Contact</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End banner Area -->
+
+                <!-- Start contact-page Area -->
+                <section class="contact-page-area section-gap s_website_form" data-vcss="001" data-snippet="s_website_form">
+                    <div class="container">
+                        <div class="row">
+                            <div class="map-wrap">
+                                <iframe  style="width:1120px; height: 445px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5463559860978!2d70.76708391495453!3d22.295167785326328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb263a5d6ecb%3A0x859ddddfa9f2533a!2sJupical%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1568361279238!5m2!1sen!2sin" width="600"></iframe>
+                            </div>
+                            <div class="col-lg-4 d-flex flex-column address-wrap">
+                                <div class="single-contact-address d-flex flex-row">
+                                    <div class="icon">
+                                        <span class="lnr lnr-home"></span>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>208 Alpha plus,
+                                        </h5>
+                                        <p>
+                                            Nr.Raiya telephone Exg.
+                                            150 Ft.ring road,
+                                            Rajkot 360001,
+                                            Gujarat GJ, India.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-address d-flex flex-row">
+                                    <div class="icon">
+                                        <span class="lnr lnr-phone-handset"></span>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>+91 74054 49936</h5>
+                                        <p>Mon to Fri 9am to 6 pm</p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-address d-flex flex-row">
+                                    <div class="icon">
+                                        <span class="lnr lnr-envelope"></span>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>hello@jupical.com</h5>
+                                        <p>Send us your query anytime!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8" style="margin-top: -43px;">
+                                <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required" data-mark="*" data-editable-form="false">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity1">
+                                                    <span class="s_website_form_label_content">Your Name</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity2">
+                                                    <span class="s_website_form_label_content">Phone Number</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity3">
+                                                    <span class="s_website_form_label_content">Email</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity4">
+                                                    <span class="s_website_form_label_content">Your Company</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity5">
+                                                    <span class="s_website_form_label_content">Subject</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity6">
+                                                    <span class="s_website_form_label_content">Your Question</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                            <div style="width: 200px;" class="s_website_form_label"/>
+                                            <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                            <span id="s_website_form_result"></span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End contact-page Area -->
+            </div>
+        </t>
+    </template>
+</odoo> 

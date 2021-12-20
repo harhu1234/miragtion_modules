@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- form view for create model -->
+        <record id="create_form_view" model="ir.ui.view">
+            <field name="name">tenant.agreement.form.view</field>
+            <field name="model">create.tenant.agreement</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="4">
+                        <group>
+                            <field name="folio" invisible="1"/>
+                            <field name="property_id" context="{'default_property_id':context.get('active_id')}"/>
+                        </group>
+                        <group>
+                            <field name="tenant_id"/>
+                            <field name="landlord_id"/>
+                        </group>
+                        <group>
+                            <field name="tenancy_start_date"/>
+                            <field name="tenancy_end_date"/>
+                        </group>
+                        <group>
+                            <field name="agreement_date"/>
+                            <field name="rent"/>
+                            <field name="deposite"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Create" name="create_tenanancy_agreement" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- action for tenant agreement  views -->
+        <record id="action_for_the_create_agreement" model="ir.actions.act_window">
+            <field name="name">Create tentant Agreement</field>
+            <field name="res_model">create.tenant.agreement</field>
+            <field name="view_mode">form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,209 @@
+<odoo>
+    <!-- Property form view -->
+    <record id="view_property_form" model="ir.ui.view">
+        <field name="name">Property Form View</field>
+        <field name="model">property.mgmt</field>
+        <field name="arch" type="xml">
+            <form string="Property">
+                <header>
+                    <button string="Create Agreement" name="%(action_for_the_create_agreement)d" class="oe_highlight" type="action"  attrs="{'invisible':['|',('availaible_for','!=','rent'),('state','=','rented')]}"/>
+                    <button string="Buy Now" name="%(buy_property_action)d" class="oe_highlight" type="action"  attrs="{'invisible':['|',('availaible_for','!=','sale'),('state','=','sold')]}"/>
+                    <field name="state" string="Property Availability" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box"/>
+                    <widget name="web_ribbon" title="Sold" bg_color="bg-danger" attrs="{'invisible': [('state', '!=', 'sold')]}"/>
+                    <widget name="web_ribbon" title="Rented" bg_color="bg-warning" attrs="{'invisible': [('state', '!=', 'rented')]}"/>
+                    <widget name="web_ribbon" title="Available" bg_color="bg-success" attrs="{'invisible': [('state', '!=', 'available')]}"/>
+
+                    <div class="oe_title">
+                    <field name="p_image" widget="image" class="oe_avatar float-left" options="{&quot;preview_image&quot;: &quot;p_image&quot;}"/>
+                    <label for="name" class="oe_edit_only text-justify" string="Property Name"/>
+                    <h1><field name="name" class="text-justify" required="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Property Availablity">
+                            <field name="availablity" readonly="1"/>
+                            <field name="availaible_for" attrs="{'invisible':[('availablity','!=','available')]}"/>
+                        </group>
+                        <group string="Property Types">
+                            <field name="property_type" required="1"/>
+                            <field name="res_type" attrs="{'invisible':['|',('property_type','=','com'),('property_type','=',False)]}"/>
+                            <field name="com_type" attrs="{'invisible':['|',('property_type','=','res'),('property_type','=',False)]}"/>
+                            <field name="other" attrs="{'invisible':['&amp;',('res_type','!=','other'),('com_type','!=','other')]}"/>
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="About Project">
+                            <group>
+                                <field class="text-justify" name="desc" nolabel="1"/>
+                            </group>
+                        </page>
+
+                        <page string="Property Details" autofocus="autofocus">
+                            <group string="Owner Detail">
+                                <field name="landlord_id" domain="[('is_landlord','=',True)]" required="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                            </group>
+                             <group string="Property Price">
+                                    <field name="price" required="1"/>
+                            </group>
+                            <group string="Layout Details">
+                                    <group>
+                                        <field name="layout_id"  attrs="{'invisible':[('res_type','not in',('apart','in_house','farm'))]}"/>
+                                        <field name="furnished"/>
+                                        <field name="carpet_area" required="1"/>
+                                        <field name="total_project_area" required="1"/>
+                                        <field name="tower" attrs="{'invisible':[('res_type','!=','apart')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="number_floors" attrs="{'invisible':[('res_type','not in',('apart','farm'))]}"/>
+                                        <field name="units" attrs="{'invisible':[('res_type','!=','apart')]}"/>
+ 
+                                        <field name="rooms" attrs="{'invisible':[('res_type','not in',('apart','in_house','farm'))]}"/>
+                                        <field name="balconi"  attrs="{'invisible':[('res_type','not in',('apart','in_house','farm'))]}"/>
+                                        <fields name="bathrooms" attrs="{'invisible':[('res_type','not in',('apart','in_house','farm'))]}"/>
+                                        <field name="open_space"/>
+                                    </group>
+                                    <group  string="Facility and Service">
+                                        <field name="facility" widget="many2many_checkboxes"/>
+                                    </group>
+                            </group>
+                        </page>
+                        <page string="Location Details">
+                            <group string="Location">
+                                <group>
+                                    <field name="address1" placeholder="Address1" string="Address1"/>
+                                    <field name="address2" string="Address2"/>
+                                    <field name="city" placeholder="City" string="City"/>
+                                </group>
+                                <group>
+                                    <field name="state_id" string="State" placeholder="State" options="{'no_open': True, 'no_quick_create': True}"/>
+                                    <field name="state_code" invisible="1"/>
+                                    <field name="zip" placeholder="ZIP" string="Zip"/>
+                                    <field name="country_id" placeholder="Country" string="Country" options="{'no_open': True, 'no_create': True}"/>
+                                    <field name="country_code" invisible="1"/>
+                                </group>
+                            </group>
+
+                        </page>
+                        <page string="Property Images">
+                            <group>
+                                <field name="u_image" widget="many2many_binary"/>
+                            </group>
+                        </page>
+                        <page string="Tenancy Details" edit="false" attrs="{'invisible':[('state','!=','rented')]}">
+                            <group>
+                                <field name="tenancy_ids" nolabel="1" create="false" edit="false" >
+                                    <tree>
+                                        <field name="property_id"/>
+                                        <field name="tenant_id"/>
+                                        <field name="tenancy_start_date"/>
+                                        <field name="tenancy_end_date"/>
+                                        <field name="deposite"/>
+                                        <field name="rent"/>
+                                        <field name="paid_day"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="property_kanban_view" model="ir.ui.view">
+        <field name="name">property.kanban.view</field>
+        <field name="model">property.mgmt</field>
+        <field name="arch" type="xml">
+            <kanban sample="1">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="availaible_for"/>
+                <field name="state"/>
+                <field name="layout_id"/>
+                <field name="total_project_area"/>
+                <field name="price"/>
+                <field name="landlord_id"/>s
+               <!--  <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/> -->
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <img t-att-src="kanban_image('property.mgmt', 'p_image', record.id.raw_value)" alt="Product" class="o_image_64_contain"/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title">
+                                    <field name="name"/>
+                                </strong>
+                                <t t-if="record.res_type.value">[<field name="res_type"/>]</t>
+                                <div>
+                                    <strong>
+                                        <t t-esc="record.availaible_for.value"/>
+                                    </strong>
+                                </div>
+                                 <div>
+                                    <strong>
+                                       Total Project Area: <t t-esc="record.total_project_area.value"/>
+                                    </strong>
+                                </div>
+                                <div name="property_price" class="mt-1">
+                                    Price: <field name="price" widget="monetary" options="{'field_digits': True}"></field>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+        <!-- Property tree view -->
+    <record id="view_property_tree" model="ir.ui.view">
+        <field name="name">Property Tree View</field>
+        <field name="model">property.mgmt</field>
+        <field name="arch" type="xml">
+            <tree string="Property">
+                <field name="name"/>
+                <field name="address"/>
+                <field name="landlord_id"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Property search view -->
+    <record id="view_property_search" model="ir.ui.view">
+        <field name="name">Property search View</field>
+        <field name="model">property.mgmt</field>
+        <field name="arch" type="xml">
+            <search string="Property">
+                <field name="name"/>
+                <field name="price"/>
+                <group expand="1" string="Group By">
+                    <filter name="groupby_property_type" string="Property Type" domain="[]" context="{'group_by':'property_type'}"/>
+                    <filter name="groupby_res_type" string="Residential Type" domain="[]" context="{'group_by':'res_type'}"/>
+                    <filter name="groupby_state" string="State" domain="[]" context="{'group_by':'state_id'}"/>
+                    <filter name="groupby_country" string="Country" domain="[]" context="{'group_by':'country_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        <!-- Action -->
+    <record id="action_property_mgmt" model="ir.actions.act_window">
+        <field name="name">Property Management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">property.mgmt</field>
+        <field name="view_mode">kanban,tree,search,form</field>
+    </record>
+
+    <!-- Menu items-->
+    <menuitem id="property_root_menu" name="Property Management"/>
+    <menuitem id="property_details_menu" name="Property" parent="property_root_menu" sequence="1"/>
+    <menuitem id="Property_submenu" name="Property Details" parent="property_details_menu" action="action_property_mgmt"
+    sequence="1"/>
+
+
+</odoo>

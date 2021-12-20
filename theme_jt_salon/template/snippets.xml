@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="salon_snippets" name="Salon Snippets" inherit_id="website.snippets">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Salon</div>
+				<div class="o_panel_body">
+                    <t t-snippet="theme_jt_salon.salon_slide_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.breadcrumb_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.about_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.pricing_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.hairstyle_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.services_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.client_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.blog_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.quality_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.team_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                    <t t-snippet="theme_jt_salon.contact_snippet" t-thumbnail="/theme_jt_salon/static/src/img/about_us_2.png">
+                    </t>
+                </div>
+            </div>
+        </xpath>
+	</template>
+	<template id="salon_slide_snippet" name="Banner">
+		<section>
+			<div class="ftco-blocks-cover-1">
+			    <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('/theme_jt_salon/static/src/images/hero_1.jpg')">
+			        <div class="container">
+			            <div class="row align-items-center justify-content-center text-center">
+			                <div class="col-md-7">
+			                    <h1 class="mb-3">More Than Just A Haircut</h1>
+			                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
+			                    <p><a href="#" class="btn btn-primary">Learn More</a></p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="breadcrumb_snippet" name="Breadcrumb">
+		<section>
+			<div class="ftco-blocks-cover-1">
+			    <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('/theme_jt_salon/static/src/images/hero_1.jpg')">
+			        <div class="container">
+			            <div class="row align-items-center justify-content-center text-center">
+			                <div class="col-md-7">
+			                    <h1 class="mb-3">breadcrumb</h1>
+			                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
+			                    <p><a href="#" class="btn btn-primary">Learn More</a></p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="about_snippet" name="About">
+		<section>
+			<div class="site-section">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-lg-6 mb-5 mb-lg-0">
+			                <div class="img-years">
+			                    <img src="/theme_jt_salon/static/src/images/img_1.jpg" alt="Image" class="img-fluid"/>
+			                    <div class="year">
+			                        <span>3 <span>years in <br/>excellent service</span></span>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-5 ml-auto pl-lg-5 text-center">
+			                <h3 class="scissors text-center">Welcome To Barberz!</h3>
+			                <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum maxime neque!</p>
+			                <p><a href="#" class="btn btn-primary">Learn More</a></p>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="pricing_snippet" name="Pricing">
+		<section>
+			<div class="site-section bg-light">
+			    <div class="container">
+			        <div class="row justify-content-center  mb-5">
+			            <div class="col-md-7 text-center">
+			                <h3 class="scissors text-center">Services &amp; Pricing</h3>
+			                <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum maxime neque!</p>
+			                <p class="text-center">
+			                    <a href="#" class="btn btn-primary custom-prev">Prev</a>
+			                    <a href="#" class="btn btn-primary custom-next">Next</a>
+			                </p>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-12">
+			                <div class="nonloop-block-13 owl-carousel d-flex">
+			                    <div class="item-1 h">
+			                        <img src="/theme_jt_salon/static/src/images/img_1.jpg" alt="Image" class="img-fluid"/>
+			                        <div class="item-1-contents">
+			                            <h3>Haircut</h3>
+			                            <ul>
+			                                <li class="d-flex"><span>Men's Cut</span> <span class="price ml-auto">$29.00</span></li>
+			                                <li class="d-flex"><span>Men's Cut with Shampoo and Blow Dry</span><span class="price ml-auto">$10.00</span></li>
+			                                <li class="d-flex"><span>Ladie's Cut with Shampoo and Blow Dry</span><span class="price ml-auto">$32.00</span></li>
+			                                <li class="d-flex"><span>Head Shave</span><span class="price ml-auto">$23.00</span></li>
+			                                <li class="d-flex"><span>Hair Art</span><span class="price ml-auto">$54.00</span></li>
+			                            </ul>
+			                        </div>
+			                    </div>
+			                    <div class="item-1 h">
+			                        <img src="/theme_jt_salon/static/src/images/img_2.jpg" alt="Image" class="img-fluid"/>
+			                        <div class="item-1-contents">
+			                            <h3>Hair Styling</h3>
+			                            <ul>
+			                                <li class="d-flex"><span>Shampoo</span> <span class="price ml-auto">$29.00</span></li>
+			                                <li class="d-flex"><span>Blow Dry</span><span class="price ml-auto">$10.00</span></li>
+			                                <li class="d-flex"><span>Iron</span><span class="price ml-auto">$32.00</span></li>
+			                                <li class="d-flex"><span>Brazilian Blow Out</span><span class="price ml-auto">$23.00</span></li>
+			                                <li class="d-flex"><span>Hair Art</span><span class="price ml-auto">$54.00</span></li>
+			                            </ul>
+			                        </div>
+			                    </div>
+			                    <div class="item-1 h">
+			                        <img src="/theme_jt_salon/static/src/images/img_3.jpg" alt="Image" class="img-fluid"/>
+			                        <div class="item-1-contents">
+			                            <h3>Hair Scalp Care</h3>
+			                            <ul>
+			                                <li class="d-flex"><span>Shampoo</span> <span class="price ml-auto">$29.00</span></li>
+			                                <li class="d-flex"><span>Blow Dry</span><span class="price ml-auto">$10.00</span></li>
+			                                <li class="d-flex"><span>Iron</span><span class="price ml-auto">$32.00</span></li>
+			                                <li class="d-flex"><span>Brazilian Blow Out</span><span class="price ml-auto">$23.00</span></li>
+			                                <li class="d-flex"><span>Hair Art</span><span class="price ml-auto">$54.00</span></li>
+			                            </ul>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="hairstyle_snippet" name="Hair Style">
+		<section>
+			<div class="site-section">
+			    <div class="container">
+			        <div class="row justify-content-center mb-5">
+			            <div class="col-md-7 text-center">
+			                <h3 class="scissors text-center">More Hair Styles</h3>
+			                <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum maxime neque!</p>
+			            </div>
+			        </div>
+			        <div class="row hair-style">
+			            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			                <a href="#" class="place">
+			                    <img src="/theme_jt_salon/static/src/images/img_1.jpg" alt="Image placeholder"/>
+			                    <h2>Beard Shaving</h2>
+			                    <span>$50.00 only</span>
+			                </a>
+			            </div>
+			            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			                <a href="#" class="place">
+			                    <img src="/theme_jt_salon/static/src/images/img_2.jpg" alt="Image placeholder"/>
+			                    <h2>Crew Cut</h2>
+			                    <span>$50.00 only</span>
+			                </a>
+			            </div>
+			            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			                <a href="#" class="place">
+			                    <img src="/theme_jt_salon/static/src/images/img_3.jpg" alt="Image placeholder"/>
+			                    <h2>Beard Trim</h2>
+			                    <span>$50.00 only</span>
+			                </a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- END section -->
+		</section>
+	</template>
+	<template id="services_snippet" name="Services">
+		<section>
+			<div class="site-section section-3" style="background-image: url('/theme_jt_salon/static/src/images/hero_2.jpg');">
+			    <div class="container">
+			        <div class="row justify-content-center text-center">
+			            <div class="col-7 text-center mb-5">
+			                <h2 class="text-white scissors primary-color-icon text-center">More Services</h2>
+			                <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quo doloribus, suscipit libero, voluptate aliquam.</p>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="service-1">
+			                    <span class="service-1-icon">
+			                    <span class="flaticon-bald"></span>
+			                    </span>
+			                    <div class="service-1-contents">
+			                        <h3>Hair Cut</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, laboriosam.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="service-1">
+			                    <span class="service-1-icon">
+			                    <span class="flaticon-beard"></span>
+			                    </span>
+			                    <div class="service-1-contents">
+			                        <h3>Facial &amp; Body Care</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, laboriosam.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="service-1">
+			                    <span class="service-1-icon">
+			                    <span class="flaticon-scissors"></span>
+			                    </span>
+			                    <div class="service-1-contents">
+			                        <h3>Massages</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, laboriosam.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="service-1">
+			                    <span class="service-1-icon">
+			                    <span class="flaticon-hair-spray"></span>
+			                    </span>
+			                    <div class="service-1-contents">
+			                        <h3>Hair Cut</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, laboriosam.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="service-1">
+			                    <span class="service-1-icon">
+			                    <span class="flaticon-hair"></span>
+			                    </span>
+			                    <div class="service-1-contents">
+			                        <h3>Facial &amp; Body Care</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, laboriosam.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="service-1">
+			                    <span class="service-1-icon">
+			                    <span class="flaticon-barber-shop"></span>
+			                    </span>
+			                    <div class="service-1-contents">
+			                        <h3>Massages</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, laboriosam.</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="client_snippet" name="Clients">
+		<section>
+			<div class="site-section bg-light">
+			    <div class="container">
+			        <div class="row justify-content-center text-center mb-5">
+			            <div class="col-7 text-center mb-5">
+			                <h2 class="scissors text-center">Our Top Client Says</h2>
+			                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda, dolorum necessitatibus eius earum voluptates sed!</p>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-4 mb-4 mb-lg-0">
+			                <div class="testimonial-2">
+			                    <div class="d-flex v-card align-items-center mb-4">
+			                        <img src="/theme_jt_salon/static/src/images/person_1.jpg" alt="Image" class="img-fluid mr-3"/>
+			                        <span>Mike Fisher</span>
+			                    </div>
+			                    <blockquote>
+			                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+			                    </blockquote>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 mb-4 mb-lg-0">
+			                <div class="testimonial-2">
+			                    <div class="d-flex v-card align-items-center mb-4">
+			                        <img src="/theme_jt_salon/static/src/images/person_2.jpg" alt="Image" class="img-fluid mr-3"/>
+			                        <span>Jean Stanley</span>
+			                    </div>
+			                    <blockquote>
+			                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+			                    </blockquote>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 mb-4 mb-lg-0">
+			                <div class="testimonial-2">
+			                    <div class="d-flex v-card align-items-center mb-4">
+			                        <img src="/theme_jt_salon/static/src/images/person_3.jpg" alt="Image" class="img-fluid mr-3"/>
+			                        <span>Katie Rose</span>
+			                    </div>
+			                    <blockquote>
+			                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+			                    </blockquote>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="blog_snippet" name="Blog">
+		<section>
+			<div class="site-section bg-white">
+			    <div class="container">
+			        <div class="row justify-content-center text-center mb-5">
+			            <div class="col-7 text-center mb-5">
+			                <h2 class="scissors text-center">Our Blog</h2>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda, dolorum necessitatibus eius earum voluptates sed!</p>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="post-entry-1 h-100">
+			                    <a href="single.html">
+			                    <img src="/theme_jt_salon/static/src/images/img_1.jpg" alt="Image"
+			                        class="img-fluid"/>
+			                    </a>
+			                    <div class="post-entry-1-contents">
+			                        <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+			                        <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="post-entry-1 h-100">
+			                    <a href="single.html">
+			                    <img src="/theme_jt_salon/static/src/images/img_2.jpg" alt="Image" class="img-fluid"/>
+			                    </a>
+			                    <div class="post-entry-1-contents">
+			                        <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+			                        <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-4">
+			                <div class="post-entry-1 h-100">
+			                    <a href="single.html">
+			                    <img src="/theme_jt_salon/static/src/images/img_3.jpg" alt="Image" class="img-fluid"/>
+			                    </a>
+			                    <div class="post-entry-1-contents">
+			                        <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+			                        <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="quality_snippet" name="Quality">
+		<section>
+			<div class="site-section section-3" style="background-image: url('/theme_jt_salon/static/src/images/hero_1.jpg');">
+			    <div class="container">
+			        <div class="row justify-content-center text-center">
+			            <div class="col-7 text-center mb-5">
+			                <h2 class="text-white scissors primary-color-icon text-center">Quality Haircut</h2>
+			                <p class="lead text-white mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quo doloribus, suscipit libero, voluptate aliquam.</p>
+			                <p><a href="#" class="btn btn-primary">Contact Us Now</a></p>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="team_snippet" name="Team">
+		<section>
+			<div class="site-section bg-light">
+			    <div class="container">
+			        <div class="row justify-content-center text-center mb-5 section-2-title">
+			            <div class="col-md-6">
+			                <h3 class="scissors text-center">Meet Our Team</h3>
+			                <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum maxime neque!</p>
+			            </div>
+			        </div>
+			        <div class="row align-items-stretch">
+			            <div class="col-lg-4 col-md-6 mb-5">
+			                <div class="post-entry-1 h-100 person-1">
+			                    <img src="/theme_jt_salon/static/src/images/person_1.jpg" alt="Image" class="img-fluid"/>
+			                    <div class="post-entry-1-contents">
+			                        <span class="meta">Founder</span>
+			                        <h2>James Doe</h2>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-5">
+			                <div class="post-entry-1 h-100 person-1">
+			                    <img src="/theme_jt_salon/static/src/images/person_2.jpg" alt="Image" class="img-fluid"/>
+			                    <div class="post-entry-1-contents">
+			                        <span class="meta">Founder</span>
+			                        <h2>James Doe</h2>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-5">
+			                <div class="post-entry-1 h-100 person-1">
+			                    <img src="/theme_jt_salon/static/src/images/person_3.jpg" alt="Image" class="img-fluid"/>
+			                    <div class="post-entry-1-contents">
+			                        <span class="meta">Founder</span>
+			                        <h2>James Doe</h2>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-5">
+			                <div class="post-entry-1 h-100 person-1">
+			                    <img src="/theme_jt_salon/static/src/images/person_4.jpg" alt="Image" class="img-fluid"/>
+			                    <div class="post-entry-1-contents">
+			                        <span class="meta">Founder</span>
+			                        <h2>James Doe</h2>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-5">
+			                <div class="post-entry-1 h-100 person-1">
+			                    <img src="/theme_jt_salon/static/src/images/person_5.jpg" alt="Image" class="img-fluid"/>
+			                    <div class="post-entry-1-contents">
+			                        <span class="meta">Founder</span>
+			                        <h2>James Doe</h2>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-5">
+			                <div class="post-entry-1 h-100 person-1">
+			                    <img src="/theme_jt_salon/static/src/images/person_1.jpg" alt="Image" class="img-fluid"/>
+			                    <div class="post-entry-1-contents">
+			                        <span class="meta">Founder</span>
+			                        <h2>James Doe</h2>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+	<template id="contact_snippet" name="Contact">
+		<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+			<div class="site-section bg-light" id="contact-section">
+			    <div class="container">
+			        <div class="row justify-content-center text-center">
+			            <div class="col-7 text-center mb-5">
+			                <h2>Contact Us Or Use This Form To Rent A Car</h2>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda, dolorum necessitatibus eius earum voluptates sed!</p>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-8 mb-5" >
+			                <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/thank-you" class="o_mark_required" data-mark="*" data-editable-form="false">
+                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity1">
+                                            <span class="s_website_form_label_content">Your Name</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity2">
+                                            <span class="s_website_form_label_content">Phone Number</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity3">
+                                            <span class="s_website_form_label_content">Email</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity4">
+                                            <span class="s_website_form_label_content">Your Company</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity5">
+                                            <span class="s_website_form_label_content">Subject</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity6">
+                                            <span class="s_website_form_label_content">Your Question</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                    <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+			            </div>
+			            <div class="col-lg-4 ml-auto">
+			                <div class="bg-white p-3 p-md-5">
+			                    <h3 class="text-black mb-4">Contact Info</h3>
+			                    <ul class="list-unstyled footer-link">
+			                        <li class="d-block mb-3">
+			                            <span class="d-block text-black">Address:</span>
+			                            <span>34 Street Name, City Name Here, United States</span>
+			                        </li>
+			                        <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>+1 242 4942 290</span></li>
+			                        <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>info@yourdomain.com</span></li>
+			                    </ul>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+	</template>
+</odoo>

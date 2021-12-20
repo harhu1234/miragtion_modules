@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="myproject_layout" name="Main layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <!-- start header Area -->
+            <header id="header">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
+                                <ul>
+                                    <li><t t-if="website.social_facebook">
+                                    <a class="facebook" t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook"></i></a>
+                                    </t></li>
+
+                                    <li><t t-if="website.social_twitter">
+                                        <a class="twitter" t-att-href="website.social_twitter" t-if="website.social_twitter">
+                                        <i class="fa fa-twitter"></i></a>
+                                        </t>
+                                        </li>
+
+                                    <li><t t-if="website.social_instagram">
+                                        <a class="instagram" t-att-href="website.social_instagram" t-if="website.social_instagram">
+                                        <i class="fa fa-instagram"></i></a>
+                                        </t>
+                                    </li>
+
+                                    <li><t t-if="website.social_youtube">
+                                        <a t-if="website.social_youtube" t-att-href="website.social_youtube">
+                                        <i class="fa fa-youtube-play"></i></a>
+                                    </t>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
+                                <a href="tel:+880 1234 654 953">
+                                    <span class="text">+ 917405449936
+                                    </span>
+                                </a>
+                                <a class="book-now" href="/web/login">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container main-menu">
+                    <div class="row align-items-center justify-content-between d-flex">
+                        <div id="logo">
+                            <a href="/home"><img src="/jt_yogaflex_theme/static/src/img/logo.png" alt="" title="" /></a>
+                        </div>
+                        <nav id="nav-menu-container">
+                            <ul class="nav-menu">
+                                <li><a class="active" href="/home">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/trainers">Trainers</a></li>
+                                <li class="menu-has-children"><a href="">Blog</a>
+                                    <ul>
+                                        <li><a href="/blog-home">Blog Home</a></li>
+                                        <li><a href="/blog-single">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-has-children"><a href="">Pages</a>
+                                    <ul>
+                                        <li><a href="/schedule">Schedule</a></li>
+                                        <li><a href="/courses">Courses</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li groups="base.group_public" >
+                                    <a href="/web/login" >Login</a>
+
+                                   
+                                </li>
+                                <li groups="base.group_user">
+                                    <a href="/web/session/logout" >Logout</a>
+                                </li>      
+                            </ul>
+                        </nav><!-- #nav-menu-container -->
+                    </div>
+                </div>
+            </header>
+            <!-- end header Area -->
+            <div style="padding-top: 100px;">
+            </div>
+        </xpath>
+        
+        <xpath expr="//footer" position="replace">
+            <!-- start footer Area -->
+            <footer class="footer-area section-gap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3  col-md-6 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h4>About Us</h4>
+                                <p>
+                                    The state of Utah in the United States is home to lots of beautiful National Parks, &amp; Bryce Canyon National Park ranks as
+                                    three of the magnificent &amp; awe inspiring.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-6 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h4>Contact Us</h4>
+                                <p>
+                                    <div style="color:white;" t-field="   res_company.partner_id" t-options='{
+                                    "widget": "contact","fields": ["name", "address", "phone", "mobile", "email"]}'/>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5  col-md-6 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h4>Newsletter</h4>
+                                <p>You can trust us. we only send offers, not a single spam.</p>
+                                <div class="d-flex flex-row" id="mc_embed_signup">
+
+                                    <form class="navbar-form" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                     method="get">
+                                        <div class="input-group add-on align-items-center d-flex">
+                                            <input class="form-control" name="email" placeholder="Your Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email address'"
+                                             required="" type="email"/>
+                                            <div style="position: absolute; left: -5000px;">
+                                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text"/>
+                                            </div>
+                                            <div class="input-group-btn">
+                                                <button class="genric-btn"><span class="lnr lnr-arrow-right"></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="info mt-20"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom row align-items-center">
+                        <p class="footer-text m-0 col-lg-6 col-md-12">© 2019 
+                        <b style="color:white;" t-esc="res_company.name"/> .All rights reserved 
+                            
+                        </p>
+                        <div class="col-lg-6 col-sm-12 footer-social">
+                            
+                            <t t-if="website.social_facebook">
+                            <a class="facebook" t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook"></i></a>
+                            </t>
+
+                            <t t-if="website.social_twitter">
+                                <a class="twitter" t-att-href="website.social_twitter" t-if="website.social_twitter">
+                                <i class="fa fa-twitter"></i></a>
+                            </t>    
+
+                            <t t-if="website.social_instagram">
+                                <a class="instagram" t-att-href="website.social_instagram" t-if="website.social_instagram">
+                                <i class="fa fa-instagram"></i></a>
+                            </t>
+
+                            <t t-if="website.social_youtube">
+                                <a t-if="website.social_youtube" t-att-href="website.social_youtube">
+                                <i class="fa fa-youtube-play"></i></a>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End footer Area -->
+        </xpath>
+    </template>
+</odoo>

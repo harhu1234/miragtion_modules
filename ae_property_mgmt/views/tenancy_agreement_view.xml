@@ -1,0 +1,74 @@
+<odoo>
+    <!-- Tenanacy agreemnt form view -->
+    <record id="agreemnt_view_form" model="ir.ui.view">
+        <field name="name">Tenany Agreement Form View</field>
+        <field name="model">tenancy.agreement</field>
+        <field name="arch" type="xml">
+            <form string="Tenany Agreement" create="false">
+                <header>
+                    <button string="Create Invoice" name="%(create_tenant_invoice)d" class="oe_highlight" type="action"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="folio" class="text-justify"/></h1>
+                    </div>
+                    <group>
+                        <group string="Agreement Details">
+                            <field name="property_id" options="{'no_create': True, 'no_create_edit': True}" required="1"/>
+                            <field name="tenant_id" options="{'no_create': True, 'no_create_edit': True}" required="1"/>
+                            <field name="deposite" required="1"/>
+                            <field name="rent" required="1"/>
+                        </group>
+                        <group>
+                            <field name="agreement_date" required="1"/>
+                            <field name="tenancy_start_date" required="1"/>
+                            <field name="tenancy_end_date" required="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Invoices" name="accounts">
+                            <field name="move_ids" readonly="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    <field name="invoice_date"/>
+                                    <field name="amount_total_signed" string="Payment"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- Property tree view -->
+    <record id="agreemnt_view_tree" model="ir.ui.view">
+        <field name="name">Tenancy agreement Tree View</field>
+        <field name="model">tenancy.agreement</field>
+        <field name="arch" type="xml">
+            <tree string="Tenany Agreement" create="false">
+                <field name="property_id"/>
+                <field name="tenant_id"/>
+                <field name="agreement_date"/>
+                <field name="deposite"/>
+                <field name="tenancy_start_date" required="1"/>
+                <field name="tenancy_end_date" required="1"/>            
+            </tree>
+        </field>
+    </record>
+
+        <!-- Action -->
+    <record id="action_agreement_mgmt" model="ir.actions.act_window">
+        <field name="name">Tenany Agreement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tenancy.agreement</field>
+        <field name="view_mode">tree,search,form</field>
+    </record>
+
+    <!-- Menu items-->
+    <menuitem id="tentant_main_menu" name="Tenancy Details" parent="property_root_menu" sequence="3"/>
+    <menuitem id="tentant_agreement_menu" name="Tenancy Agreement" parent="tentant_main_menu" action="action_agreement_mgmt"
+    sequence="2"/>
+</odoo>

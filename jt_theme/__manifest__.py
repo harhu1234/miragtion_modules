@@ -1,0 +1,26 @@
+{
+    "name": "Jupical Theme Management",
+    "summary": "Website Theme",
+    'description': '',
+    'version': '14.0.0.1',
+    'category': 'Theme/Jupical',
+    'author': 'Jupical Technologies Pvt. Ltd.',
+    'maintainer': 'Jupical Technologies Pvt. Ltd.',
+    "webiste": "www.jupical.com",
+    "depends": ['website','website_blog','website_crm','crm'],
+    'data': [
+            'template/assets.xml',
+            'template/layout.xml',
+            'template/jt_home_page.xml',
+            'template/jt_about_page.xml',
+            'template/jt_team_page.xml',
+            'template/jt_project_page.xml',
+            'template/jt_services_page.xml',
+            'template/jt_blog_page.xml',
+            'template/jt_contact_page.xml',
+            'template/jt_snippets.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+
+}

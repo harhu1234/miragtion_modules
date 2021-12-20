@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="team_page" name="Team Page">
+		<t t-call="website.layout">
+            <div class="oe_structure oe_empty">
+            	<section class="hero-wrap hero-wrap-2" style="background-image: url('/theme_jupical/static/src/images/bg_1.jpg');">
+				    <div class="overlay"></div>
+				    <div class="container">
+				        <div class="row no-gutters slider-text align-items-center justify-content-center">
+				            <div class="col-md-9 ftco-animate text-center">
+				                <h1 class="mb-2 bread">Professional Staff</h1>
+				                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa ion-ios-arrow-forward"></i></a></span> <span>Team <i class="fa ion-ios-arrow-forward"></i></span></p>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+				<section class="ftco-section">
+				    <div class="container">
+				        <div class="row">
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-1.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Lloyd Wilson</h3>
+				                        <span class="position mb-2">Accountant</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-2.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Rachel Parker</h3>
+				                        <span class="position mb-2">Manager</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-3.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Ian Smith</h3>
+				                        <span class="position mb-2">Advisor</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-4.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Alicia Henderson</h3>
+				                        <span class="position mb-2">Financial</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-5.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Lloyd Wilson</h3>
+				                        <span class="position mb-2">Advisor</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-6.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Rachel Parker</h3>
+				                        <span class="position mb-2">Accountant</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-7.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Ian Smith</h3>
+				                        <span class="position mb-2">Financial</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="fa icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col-md-6 col-lg-3 ftco-animate">
+				                <div class="staff border">
+				                    <div class="img-wrap d-flex align-items-stretch">
+				                        <section class="img align-self-stretch" style="background-image: url(/theme_jupical/static/src/images/staff-8.jpg);"></section>
+				                    </div>
+				                    <div class="text pt-3 px-3 pb-4 text-center">
+				                        <h3>Fred Henderson</h3>
+				                        <span class="position mb-2">Advisor</span>
+				                        <div class="faded">
+				                            <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+				                            <ul class="ftco-social text-center">
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-google-plus"></span></a></li>
+				                                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-instagram"></span></a></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+				<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb s_website_form" data-vcss="001" data-snippet="s_website_form" style="background-image: url(/theme_jupical/static/src/images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+				    <div class="overlay"></div>
+				    <div class="container">
+				        <div class="row justify-content-start">
+				            <div class="col-md-6 py-5 px-md-5">
+				                <div class="py-md-5">
+				                    <div class="heading-section heading-section-white ftco-animate mb-5">
+				                        <h2 class="mb-4">Request A Quote</h2>
+				                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                    </div>
+				                    <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="appointment-form ftco-animate o_mark_required" data-mark="*" data-editable-form="false">
+		                                <div class="s_website_form_rows row s_col_no_bgcolor">
+		                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor d-md-flex">
+		                                            <div class="col-sm form-group">
+		                                                <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required="" placeholder="Your Name*"/>
+		                                            </div>
+		                                            <div class="col-sm form-group">
+		                                                <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" placeholder="Email*"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor d-md-flex">
+		                                            <div class="col-sm form-group">
+		                                                <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" placeholder="Phone Number"/>
+		                                            </div>
+		                                            <div class="col-sm form-group">
+		                                                <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" placeholder="Your Company"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <div class="col-sm form-group">
+		                                                <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" placeholder="Subject*"/>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+		                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+		                                            <div class="col-sm form-group">
+		                                                <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required="" placeholder="Your Question*"></textarea>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+		                                        <div style="width: 200px;" class="s_website_form_label"/>
+		                                        <a href="#" role="button" class="btn btn-white py-3 px-4 btn-lg s_website_form_send">Request A Quote</a>
+		                                        <span id="s_website_form_result"></span>
+		                                    </div>
+		                                </div>
+		                            </form>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+				<section class="ftco-section testimony-section">
+				    <div class="container-fluid px-md-5">
+				        <div class="row justify-content-center mb-5">
+				            <div class="col-md-8 text-center heading-section ftco-animate">
+				                <span class="subheading">Testimonies</span>
+				                <h2 class="mb-4">Our Clients Says</h2>
+				                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+				            </div>
+				        </div>
+				        <div class="row ftco-animate justify-content-center">
+				            <div class="col-md-12">
+				                <div class="carousel-testimony owl-carousel">
+				                    <div class="item">
+				                        <div class="testimony-wrap d-flex">
+				                            <section class="user-img" style="background-image: url(/theme_jupical/static/src/images/person_1.jpg)">
+				                            </section>
+				                            <div class="text pl-4">
+				                                <span class="quote d-flex align-items-center justify-content-center">
+				                                <i class="fa icon-quote-left"></i>
+				                                </span>
+				                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                                <p class="name">Racky Henderson</p>
+				                                <span class="position">Father</span>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="item">
+				                        <div class="testimony-wrap d-flex">
+				                            <section class="user-img" style="background-image: url(/theme_jupical/static/src/images/person_2.jpg)">
+				                            </section>
+				                            <div class="text pl-4">
+				                                <span class="quote d-flex align-items-center justify-content-center">
+				                                <i class="fa icon-quote-left"></i>
+				                                </span>
+				                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                                <p class="name">Henry Dee</p>
+				                                <span class="position">Businesswoman</span>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="item">
+				                        <div class="testimony-wrap d-flex">
+				                            <section class="user-img" style="background-image: url(/theme_jupical/static/src/images/person_3.jpg)">
+				                            </section>
+				                            <div class="text pl-4">
+				                                <span class="quote d-flex align-items-center justify-content-center">
+				                                <i class="fa icon-quote-left"></i>
+				                                </span>
+				                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                                <p class="name">Mark Huff</p>
+				                                <span class="position">Businesswoman</span>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="item">
+				                        <div class="testimony-wrap d-flex">
+				                            <section class="user-img" style="background-image: url(/theme_jupical/static/src/images/person_4.jpg)">
+				                            </section>
+				                            <div class="text pl-4">
+				                                <span class="quote d-flex align-items-center justify-content-center">
+				                                <i class="fa icon-quote-left"></i>
+				                                </span>
+				                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                                <p class="name">Rodel Golez</p>
+				                                <span class="position">Businesswoman</span>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <div class="item">
+				                        <div class="testimony-wrap d-flex">
+				                            <section class="user-img" style="background-image: url(/theme_jupical/static/src/images/person_1.jpg)">
+				                            </section>
+				                            <div class="text pl-4">
+				                                <span class="quote d-flex align-items-center justify-content-center">
+				                                <i class="fa icon-quote-left"></i>
+				                                </span>
+				                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				                                <p class="name">Ken Bosh</p>
+				                                <span class="position">Businesswoman</span>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</section>
+            </div>
+        </t>
+	</template>
+	</odoo>

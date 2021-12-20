@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="schedule_template_page" name="Schedule">
+        <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty" style="margin-top: -100px;">
+        	<!-- start banner Area -->
+			<section class="banner-area relative about-banner" id="home">
+				<img class="cta-img img-fluid" src="/jt_yogaflex_theme/static/src/img/cta-img.png" alt=""/>
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1>
+								Schedule
+							</h1>
+							<p class="link-nav"><a href="index.html">Home </a>
+								<span class="lnr lnr-arrow-right"></span> <a href="schedule.html">
+									Schedule</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<!-- Start schedule Area -->
+			<section class="schedule-area section-gap">
+				<img class="featured-img img-fluid" src="/jt_yogaflex_theme/static/src/img/featured-class/feature-img.png" alt=""/>
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-lg-12">
+							<div class="section-title-wrap text-center">
+								<h1>Schedule your Fitness Process</h1>
+								<p>Who are in extremely love with eco friendly system.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-center">
+						<div class="table-wrap col-lg-10">
+							<table class="schdule-table table table-bordered">
+								<thead class="thead-light">
+									<tr>
+										<th class="head" scope="col">Course name</th>
+										<th class="head" scope="col">mon</th>
+										<th class="head" scope="col">tue</th>
+										<th class="head" scope="col">wed</th>
+										<th class="head" scope="col">thu</th>
+										<th class="head" scope="col">fri</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="name" scope="row">Fitness Aero</th>
+										<td>02.00</td>
+										<td>10.00</td>
+										<td>02.00</td>
+										<td>02.00</td>
+										<td>10.00</td>
+									</tr>
+									<tr>
+										<th class="name" scope="row">Senior Fitness</th>
+										<td>02.00</td>
+										<td>10.00</td>
+										<td>02.00</td>
+										<td>02.00</td>
+										<td>10.00</td>
+									</tr>
+									<tr>
+										<th class="name" scope="row">Fitness Aero</th>
+										<td>02.00</td>
+										<td>10.00</td>
+										<td>02.00</td>
+										<td>02.00</td>
+										<td>10.00</td>
+									</tr>
+									<tr>
+										<th class="name" scope="row">Senior Fitness</th>
+										<td>02.00</td>
+										<td>10.00</td>
+										<td>02.00</td>
+										<td>02.00</td>
+										<td>10.00</td>
+									</tr>
+									<tr>
+										<th class="name" scope="row">Senior Fitness</th>
+										<td>02.00</td>
+										<td>10.00</td>
+										<td>02.00</td>
+										<td>02.00</td>
+										<td>10.00</td>
+									</tr>
+									<tr>
+										<th class="name" scope="row">Senior Fitness</th>
+										<td>02.00</td>
+										<td>10.00</td>
+										<td>02.00</td>
+										<td>02.00</td>
+										<td>10.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End schedule Area -->
+
+       	</div>
+    		
+        </t>
+    </template>
+</odoo>	

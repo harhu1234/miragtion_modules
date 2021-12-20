@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='social_default_image_setting']" position="after">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label string="Apple App Link" for="apple_app_store_link"/>
+                            <div class="text-muted">
+                                if set, Apple App link to be display in website footer
+                            </div>
+                            <field name="apple_app_store_link" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label string="Android App Link" for="google_app_store_link"/>
+                            <div class="text-muted">
+                                if set, Android App link to be display in website footer
+                            </div>
+                            <field name="google_app_store_link" />
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_company_view_form_inh" model="ir.ui.view">
+            <field name="name">res.company.view.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='social_instagram']" position="after">
+                    <field name="google_app_store_link" string="Google Play Store App link"/>
+                    <field name="apple_app_store_link" string="Apple Store App Link"/>
+                    <field name="footer_image" widget="image" string="Copmany Image for website footer"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_form_custom_header" model="ir.ui.view">
+            <field name="name">res.config.settings.custom.header</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='website_settings']" position="after">
+                    <h2>Custom Header and Footer</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12  o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="allow_custom_header"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label string="Website Header" for="allow_custom_header"/>
+                                <div class="text-muted">
+                                    Allow Custom Header for Website
+                                </div>
+                            </div><br/>
+                            <div class="o_setting_left_pane">
+                                <field name="allow_custom_footer"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label string="Website Footer" for="allow_custom_footer"/>
+                                <div class="text-muted">
+                                    Allow Custom Footer for Website
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- form view for purchase property -->
+        <record id="create_payment_form_view" model="ir.ui.view">
+            <field name="name">Buy Now</field>
+            <field name="model">buy.property</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="4">
+                        <group colspan="2">
+                            <field name="property_id"/>
+                            <field name="buyer_id" string="Purhase by" domain="[('is_customer','=',True)]"/>
+                        </group>
+                        <group colspan="2">
+                            <field name="payment"/>
+                            <field name="payment_date"/>
+                        </group>
+                        
+                    </group>
+                    <footer>
+                        <button string="Create Invoice" name="create_invoice" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- action for buy the property views -->
+        <record id="buy_property_action" model="ir.actions.act_window">
+            <field name="name">Buy Now Property</field>
+            <field name="res_model">buy.property</field>
+            <field name="view_mode">form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+    </data>
+</odoo>

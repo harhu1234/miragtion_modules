@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ht_theme_layout" name="Harhu Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <!-- header-start -->
+            <header>
+                <div class="wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 d-flex align-items-center">
+                                <p class="mb-0 phone pl-md-2">
+                                    <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a> 
+                                    <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+                                </p>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-md-end">
+                                <div class="social-media">
+                                    <p class="mb-0 d-flex">
+                                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">Counselor</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="oi oi-menu"></span> Menu
+                        </button>
+                        <div class="collapse navbar-collapse" id="ftco-nav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                                <li class="nav-item"><a href="/counselor" class="nav-link">Counselor</a></li>
+                                <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
+                                <li class="nav-item"><a href="/pricing" class="nav-link">Pricing</a></li>
+                                <!-- <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li> -->
+                                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- END nav -->
+            </header>
+            <!-- header-end -->
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <!-- Footer Starts Here -->
+            <footer class="ftco-footer">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div class="col-sm-12 col-md">
+                            <div class="ftco-footer-widget mb-4">
+                                <h2 class="ftco-heading-2 logo"><a href="#">Counselor</a></h2>
+                                <p>Far far away, behind the word mountains, far from the countries.</p>
+                                <ul class="ftco-footer-social list-unstyled mt-2">
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md">
+                            <div class="ftco-footer-widget mb-4 ml-md-4">
+                                <h2 class="ftco-heading-2">Explore</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md">
+                            <div class="ftco-footer-widget mb-4 ml-md-4">
+                                <h2 class="ftco-heading-2">Legal</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Join us</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Privacy &amp; Policy</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Term &amp; Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md">
+                            <div class="ftco-footer-widget mb-4">
+                                <h2 class="ftco-heading-2">Company</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+                                    <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md">
+                            <div class="ftco-footer-widget mb-4">
+                                <h2 class="ftco-heading-2">Have a Questions?</h2>
+                                <div class="block-23 mb-3">
+                                    <ul>
+                                        <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                                        <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                                        <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid px-0 py-5 bg-black">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="mb-0" style="color: rgba(255,255,255,.5);">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &amp;copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+</odoo>

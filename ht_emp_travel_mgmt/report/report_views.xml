@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report 
+            id="report_employee_travel_print"
+            string="Travel Request"
+            model="travel.request" 
+            report_type="qweb-pdf"
+            file="ht_emp_travel_mgmt.report_travel" 
+            name="ht_emp_travel_mgmt.report_travel"    
+        /> 
+    </data>
+</odoo>

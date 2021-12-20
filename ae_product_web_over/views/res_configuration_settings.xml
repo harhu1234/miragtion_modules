@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data>
+        <record id="stock_config_settings_view_form" model="ir.ui.view">
+            <field name="name">stock.config.settings.view.form.inherit.stock</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]//div[@data-key='stock']" position="inside">
+                    <h2>Product Detail Popover</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="stock_popover"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="stock_popover"/>
+                                <div class="text-muted">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sale_config_settings_view_form" model="ir.ui.view">
+            <field name="name">sale.config.settings.view.form.inherit.stock</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]//div[@data-key='sale_management']" position="inside">
+                    <h2>Product Detail Popover</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="sale_popover"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sale_popover"/>
+                                <div class="text-muted">
+
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="purchase_config_settings_view_form" model="ir.ui.view">
+            <field name="name">purchase.config.settings.view.form.inherit.stock</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]//div[@data-key='purchase']" position="inside">
+                    <h2>Product Detail Popover</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="purchase_popover"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="purchase_popover"/>
+                                <div class="text-muted">
+
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="account_invoicing_config_settings_view_form" model="ir.ui.view">
+            <field name="name">account.invoicing.config.settings.view.form.inherit.stock</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]//div[@data-key='account']" position="inside">
+                    <h2>Product Detail Popover</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="invoice_popover"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="invoice_popover"/>
+                                <div class="text-muted">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_order_form_editable_list_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form.editable.list.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree//field[@name='product_id']" position="attributes">
+                    <attribute name="class">product_class</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_purchase_order_form_editable_list_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.form.editable.list.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree//field[@name='product_id']" position="attributes">
+                    <attribute name="class">product_class</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_account_move_order_form_editable_list_inherit" model="ir.ui.view">
+            <field name="name">account.move.form.editable.list.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line_ids']/tree//field[@name='product_id']" position="attributes">
+                    <attribute name="class">product_class</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_stock_picking_order_form_editable_list_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.form.editable.list.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='move_ids_without_package']/tree//field[@name='product_id']" position="attributes">
+                    <attribute name="class">product_class</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+

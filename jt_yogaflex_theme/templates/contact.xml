@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="contact_template_page" name="Contact" >
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty" style="margin-top: -100px;">
+                <!-- start banner Area -->
+                <section class="banner-area relative about-banner" id="home">
+                    <img class="cta-img img-fluid" src="/jt_yogaflex_theme/static/src/img/cta-img.png" alt=""/>
+                    <div class="overlay overlay-bg"></div>
+                    <div class="container">
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <div class="about-content col-lg-12">
+                                <h1>
+                                    Contact
+                                </h1>
+                                <p class="link-nav"><a href="index.html">Home </a>
+                                    <span class="lnr lnr-arrow-right"></span> 
+                                    <a href="contact.html">
+                                        Contact</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End banner Area -->
+
+                <!-- Start contact-page Area -->
+                <section class="contact-page-area section-gap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="map-wrap">
+                                <iframe  style="width:1120px; height: 445px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5463559860978!2d70.76708391495453!3d22.295167785326328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb263a5d6ecb%3A0x859ddddfa9f2533a!2sJupical%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1568361279238!5m2!1sen!2sin" width="600"></iframe>
+                            </div>
+                            <div class="col-lg-4 d-flex flex-column address-wrap">
+                                <div class="single-contact-address d-flex flex-row">
+                                    <div class="icon">
+                                        <span class="lnr lnr-home"></span>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>208 Alpha plus,
+                                        </h5>
+                                        <p>
+                                            Nr.Raiya telephone Exg.
+                                            150 Ft.ring road,
+                                            Rajkot 360001,
+                                            Gujarat GJ, India.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-address d-flex flex-row">
+                                    <div class="icon">
+                                        <span class="lnr lnr-phone-handset"></span>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>+91 74054 49936</h5>
+                                        <p>Mon to Fri 9am to 6 pm</p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-address d-flex flex-row">
+                                    <div class="icon">
+                                        <span class="lnr lnr-envelope"></span>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>hello@jupical.com</h5>
+                                        <p>Send us your query anytime!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8" style="margin-top: -43px;">
+                                <form action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/contactus-thank-you" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-editable-form="false">
+                                    <div class="form-group row form-field o_website_form_required_custom">
+                                        <label class="col-lg-3 col-md-4 col-form-label" for="contact_name">Your Name</label>
+                                        <div class="col-lg-7 col-md-8">
+                                            <input type="text" class="form-control o_website_form_input" name="contact_name" t-att-value="request.params.get('contact_name', '')" required=""/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row form-field">
+                                        <label class="col-lg-3 col-md-4 col-form-label" for="phone">Phone Number</label>
+                                        <div class="col-lg-7 col-md-8">
+                                            <input type="text" class="form-control o_website_form_input" name="phone" t-att-value="request.params.get('phone', '')" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row form-field o_website_form_required_custom">
+                                        <label class="col-lg-3 col-md-4 col-form-label" for="email_from">Email</label>
+                                        <div class="col-lg-7 col-md-8">
+                                            <input type="text" class="form-control o_website_form_input" name="email_from" required="" t-att-value="request.params.get('email_from', '')" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row form-field o_website_form_required_custom">
+                                        <label class="col-lg-3 col-md-4 col-form-label" for="partner_name">Your Company</label>
+                                        <div class="col-lg-7 col-md-8">
+                                            <input type="text" class="form-control o_website_form_input" name="partner_name" required="" t-att-value="request.params.get('partner_name', '')" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row form-field o_website_form_required">
+                                        <label class="col-lg-3 col-md-4 col-form-label" for="name">Subject</label>
+                                        <div class="col-lg-7 col-md-8">
+                                            <input type="text" class="form-control o_website_form_input" name="name" required="" t-att-value="request.params.get('name', '')" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row form-field o_website_form_required_custom">
+                                        <label class="col-lg-3 col-md-4 col-form-label" for="description">Your Question</label>
+                                        <div class="col-lg-7 col-md-8">
+                                            <textarea class="form-control o_website_form_input" name="description" required=""><t t-esc="request.params.get('description', '')"/></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                            <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Send</a>
+                                            <span id="o_website_form_result"></span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End contact-page Area -->
+            </div>
+        </t>
+    </template>
+</odoo> 

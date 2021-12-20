@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets" name="Gym">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Gym</div>
+				<div class="o_panel_body">
+                    <t t-snippet="theme_ht_gym.gym_slide_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.breadcrumb_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.category_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.features_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.offer_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.pricing_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.gallery_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.viewmore_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.team_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.big_offer_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.contact_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                    <t t-snippet="theme_ht_gym.thank_you_snippet" t-thumbnail="/theme_ht_gym/static/src/img/svg_icon/1.svg">
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <template id="gym_slide_snippet" name="Slider">
+    	<section>
+			<!-- slider_area_start -->
+		    <div class="slider_area">
+		        <div class="slider_active owl-carousel">
+		            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
+		                <div class="container">
+		                    <div class="row align-items-center justify-content-center">
+		                        <div class="col-xl-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+		                            <div class="slider_text text-center">
+		                                <span>Build Up Your</span>
+		                                <h3>Body Shape</h3>
+		                                <p>Build Your Body and Fitness with Professional Touch</p>
+		                                <a href="#" class="boxed-btn3">Join Us</a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="single_slider  d-flex align-items-center slider_bg_2 overlay">
+		                <div class="container">
+		                    <div class="row align-items-center justify-content-center">
+		                        <div class="col-xl-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+		                            <div class="slider_text text-center">
+		                                <span>Build Up Your</span>
+		                                <h3>Strength</h3>
+		                                <p>Build Your Body and Fitness with Professional Touch</p>
+		                                <a href="#" class="boxed-btn3">Join Us</a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
+		                <div class="container">
+		                    <div class="row align-items-center justify-content-center">
+		                        <div class="col-xl-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+		                            <div class="slider_text text-center">
+		                                <span>Build Up Your</span>
+		                                <h3>Body Shape</h3>
+		                                <p>Build Your Body and Fitness with Professional Touch</p>
+		                                <a href="#" class="boxed-btn3">Join Us</a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="single_slider  d-flex align-items-center slider_bg_2 overlay">
+		                <div class="container">
+		                    <div class="row align-items-center justify-content-center">
+		                        <div class="col-xl-12">
+		                            <div class="slider_text text-center">
+		                                <span>Build Up Your</span>
+		                                <h3>Strength</h3>
+		                                <p>Build Your Body and Fitness with Professional Touch</p>
+		                                <a href="#" class="boxed-btn3">Join Us</a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <!-- slider_area_end -->
+		</section>
+    </template>
+    <template id="breadcrumb_snippet" name="Breadcrumb">
+    	<section>
+			<!-- bradcam_area -->
+	        <div class="bradcam_area">
+	                <div class="single_bradcam  d-flex align-items-center bradcam_bg_2 overlay">
+	                        <div class="container">
+	                            <div class="row align-items-center justify-content-center">
+	                                <div class="col-xl-9 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+	                                    <div class="bradcam_text text-center">
+	                                        <h3>breadcrumb</h3>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	        </div>
+	        <!-- bradcam_area end -->
+	    </section>
+    </template>
+    <template id="category_snippet" name="Categories">
+    	<section>
+			<!-- catagory_area  -->
+		    <div class="catagory_area">
+		        <div class="container-fluid p-0">
+		            <div class="row no-gutters">
+		                <div class="col-lg-6 col-md-6 o_colored_level o_animate_preview o_animate o_anim_bounce_in_left">
+		                    <div class="single_catagory text-center overlay2 cat_bg_1">
+		                        <h3>For Girl</h3>
+		                        <p>There are many variations of passages of lorem <br/> Ipsum available, but the majority have suffered <br/> alteration.</p>
+		                        <a href="#" class="boxed-btn3">Join Now</a>
+		                    </div>
+		                </div>
+		                <div class="col-lg-6 col-md-6 o_colored_level o_animate_preview o_animate o_anim_bounce_in_right">
+		                    <div class="single_catagory text-center overlay2 cat_bg_2">
+		                        <h3>For Boys</h3>
+		                        <p>There are many variations of passages of lorem <br/> Ipsum available, but the majority have suffered <br/> alteration.</p>
+		                        <a href="#" class="boxed-btn3">Join Now</a>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <!--/ catagory_area  -->
+		</section>
+    </template>
+    <template id="features_snippet" name="Feautures">
+    	<section>
+			<!-- features_area_start  -->
+			<div class="features_area">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-xl-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+			                <div class="section_title text-center mb-73">
+			                    <h3>Our Features</h3>
+			                    <p>There are many variations of passages of lorem Ipsum available, but the majority <br/> have suffered alteration.</p>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-3 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_feature text-center mb-73">
+			                    <div class="icon">
+			                        <img src="/theme_ht_gym/static/src/img/svg_icon/1.svg" alt=""/>
+			                    </div>
+			                    <h4>Weightlifting</h4>
+			                    <p>There are many variations of passages of lorem Ipsum available.</p>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_feature text-center">
+			                    <div class="icon">
+			                        <img src="/theme_ht_gym/static/src/img/svg_icon/2.svg" alt=""/>
+			                    </div>
+			                    <h4>Specific Muscles</h4>
+			                    <p>There are many variations of passages of lorem Ipsum available.</p>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_feature text-center">
+			                    <div class="icon">
+			                        <img src="/theme_ht_gym/static/src/img/svg_icon/3.svg" alt=""/>
+			                    </div>
+			                    <h4>Flex Your Muscles</h4>
+			                    <p>There are many variations of passages of lorem Ipsum available.</p>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_feature text-center">
+			                    <div class="icon">
+			                        <img src="/theme_ht_gym/static/src/img/svg_icon/4.svg" alt=""/>
+			                    </div>
+			                    <h4>Cardio Exercises</h4>
+			                    <p>There are many variations of passages of lorem Ipsum available.</p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		<!-- features_area_end  -->
+		</section>
+    </template>
+    <template id="offer_snippet" name="Offers">
+    	<section>
+			<div class="offer_area offer_bg">
+			    <div class="container">
+			        <div class="row justify-content-end">
+			            <div class="col-lg-6 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+			                <div class="offer_text">
+			                    <h4>A Big Offer for <br/>
+			                        This Summer
+			                    </h4>
+			                    <h3>50% Off</h3>
+			                    <p>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
+			                    <a href="#" class="boxed-btn3">Join Now</a>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+    </template>
+    <template id="pricing_snippet" name="Pricing">
+    	<section>
+			<div class="priscing_area">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-xl-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+			                <div class="section_title text-center mb-73">
+			                    <h3>Our Pricing</h3>
+			                    <p>There are many variations of passages of lorem Ipsum available, but the majority <br/> have suffered alteration.</p>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-4 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_prising text-center">
+			                    <div class="prising_header">
+			                        <h3>Beginner</h3>
+			                        <span>$45/m</span>
+			                    </div>
+			                    <div class="pricing_body">
+			                        <ul>
+			                            <li>24h unlimited access</li>
+			                            <li>Trainer Advice</li>
+			                            <li class="off-color">Locker + Bathroom</li>
+			                            <li class="off-color">Personal trainer</li>
+			                        </ul>
+			                    </div>
+			                    <div class="pricing_btn">
+			                        <a href="#" class="boxed-btn3">Join Now</a>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_prising text-center">
+			                    <div class="prising_header">
+			                        <h3>Expert</h3>
+			                        <span>$45/m</span>
+			                    </div>
+			                    <div class="pricing_body">
+			                        <ul>
+			                            <li>24h unlimited access</li>
+			                            <li>Trainer Advice</li>
+			                            <li class="off-color">Locker + Bathroom</li>
+			                            <li class="off-color">Personal trainer</li>
+			                        </ul>
+			                    </div>
+			                    <div class="pricing_btn">
+			                        <a href="#" class="boxed-btn3">Join Now</a>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_prising text-center">
+			                    <div class="prising_header">
+			                        <h3>Pro</h3>
+			                        <span>$45/m</span>
+			                    </div>
+			                    <div class="pricing_body">
+			                        <ul>
+			                            <li>24h unlimited access</li>
+			                            <li>Trainer Advice</li>
+			                            <li class="off-color">Locker + Bathroom</li>
+			                            <li class="off-color">Personal trainer</li>
+			                        </ul>
+			                    </div>
+			                    <div class="pricing_btn">
+			                        <a href="#" class="boxed-btn3">Join Now</a>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+    </template>
+    <template id="gallery_snippet" name="Gallery">
+    	<section>
+			<!-- gallery_start -->
+			<div class="gallery_area o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			    <div class="single_gallery big_img">
+			        <div class="hover_pop">
+			            <a class="popup-image" href="/theme_ht_gym/static/src/img/gallery/1.png">
+			            <i class="ti-plus"></i>
+			            </a>
+			        </div>
+			        <img src="/theme_ht_gym/static/src/img/gallery/1.png" alt=""/>
+			    </div>
+			    <div class="single_gallery big_img">
+			        <div class="hover_pop">
+			            <a class="popup-image" href="/theme_ht_gym/static/src/img/gallery/2.png">
+			            <i class="ti-plus"></i>
+			            </a>
+			        </div>
+			        <img src="/theme_ht_gym/static/src/img/gallery/2.png" alt=""/>
+			    </div>
+			    <div class="single_gallery small_img">
+			        <div class="hover_pop">
+			            <a class="popup-image" href="/theme_ht_gym/static/src/img/gallery/3.png">
+			            <i class="ti-plus"></i>
+			            </a>
+			        </div>
+			        <img src="/theme_ht_gym/static/src/img/gallery/3.png" alt=""/>
+			    </div>
+			    <div class="single_gallery small_img">
+			        <div class="hover_pop">
+			            <a class="popup-image" href="/theme_ht_gym/static/src/img/gallery/4.png">
+			            <i class="ti-plus"></i>
+			            </a>
+			        </div>
+			        <img src="/theme_ht_gym/static/src/img/gallery/4.png" alt=""/>
+			    </div>
+			    <div class="single_gallery big_img">
+			        <div class="hover_pop">
+			            <a class="popup-image" href="/theme_ht_gym/static/src/img/gallery/5.png">
+			            <i class="ti-plus"></i>
+			            </a>
+			        </div>
+			        <img src="/theme_ht_gym/static/src/img/gallery/5.png" alt=""/>
+			    </div>
+			    <div class="single_gallery big_img">
+			        <div class="hover_pop">
+			            <a class="popup-image" href="/theme_ht_gym/static/src/img/gallery/6.png">
+			            <i class="ti-plus"></i>
+			            </a>
+			        </div>
+			        <img src="/theme_ht_gym/static/src/img/gallery/6.png" alt=""/>
+			    </div>
+			</div>
+		</section>
+		<!-- gallery_area_end  -->
+    </template>
+    <template id="viewmore_snippet" name="View More">
+    	<section>
+			<a href="/" class="view_pore boxed-btn3">View More</a>
+		</section>
+    </template>
+    <template id="team_snippet" name="Team">
+    	<section>
+			<!-- team_area_start  -->
+			<div class="team_area team_bg_1 overlay2">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-xl-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+			                <div class="section_title text-center mb-73">
+			                    <h3>Our Trainers</h3>
+			                    <p>There are many variations of passages of lorem Ipsum available, but the majority <br/> have suffered alteration.</p>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-4 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_team">
+			                    <div class="team_thumb">
+			                        <img src="/theme_ht_gym/static/src/img/team/1.png" alt=""/>
+			                        <div class="team_hover">
+			                            <div class="hover_inner text-center">
+			                                <ul>
+			                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+			                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+			                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+			                                </ul>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="team_title text-center">
+			                        <h3>Jessica Mino</h3>
+			                        <p>Woman Trainer</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_team">
+			                    <div class="team_thumb">
+			                        <img src="/theme_ht_gym/static/src/img/team/2.png" alt=""/>
+			                        <div class="team_hover">
+			                            <div class="hover_inner text-center">
+			                                <ul>
+			                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+			                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+			                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+			                                </ul>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="team_title text-center">
+			                        <h3>Amit Khan</h3>
+			                        <p>Men Trainer</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 o_colored_level o_animate_preview o_animate o_anim_zoom_in">
+			                <div class="single_team">
+			                    <div class="team_thumb">
+			                        <img src="/theme_ht_gym/static/src/img/team/3.png" alt=""/>
+			                        <div class="team_hover">
+			                            <div class="hover_inner text-center">
+			                                <ul>
+			                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+			                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+			                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+			                                </ul>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="team_title text-center">
+			                        <h3>Paulo Rolac</h3>
+			                        <p>Men Trainer</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- team_area_end  -->
+		</section>
+    </template>
+    <template id="big_offer_snippet" name="Big Offer">
+    	<section>
+			<!-- big_offer_area start  -->
+			<div class="big_offer_area">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-xl-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+			                <div class="offter_text text-center">
+			                    <h3>A Big Offer for <br/>
+			                        This Summer
+			                    </h3>
+			                    <a href="#" class="boxed-btn3">Join Now</a>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- big_offer_area end  -->
+		</section>
+    </template>
+    <template id="contact_snippet" name="Contact">
+    	<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+	    	<div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-8 o_colored_level o_animate_preview o_animate o_anim_bounce_in_left">
+                        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/thank-you" data-pre-fill="true">
+                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact1">
+                                            <span class="s_website_form_label_content">Your Name</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" data-fill-with="name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact2">
+                                            <span class="s_website_form_label_content">Phone Number</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact2" type="tel" class="form-control s_website_form_input" name="phone" data-fill-with="phone"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact3">
+                                            <span class="s_website_form_label_content">Your Email</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact3" type="email" class="form-control s_website_form_input" name="email_from" required="" data-fill-with="email"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact4">
+                                            <span class="s_website_form_label_content">Your Company</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact4" type="text" class="form-control s_website_form_input" name="company" data-fill-with="commercial_company_name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact5">
+                                            <span class="s_website_form_label_content">Subject</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact5" type="text" class="form-control s_website_form_input" name="subject" required=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact6">
+                                            <span class="s_website_form_label_content">Your Question</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <textarea id="contact6" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_dnone">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact7">
+                                            <span class="s_website_form_label_content">Email To</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact7" type="hidden" class="form-control s_website_form_input" name="email_to"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                    <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1 o_colored_level o_animate_preview o_animate o_anim_bounce_in_right">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>Buttonwood, California.</h3>
+                                <p>Rosemead, CA 91770</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3>+1 253 565 2365</h3>
+                                <p>Mon to Fri 9am to 6pm</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3>support@colorlib.com</h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	 	</section>
+	    <!-- ================ contact section end ================= -->
+    </template>
+    <template id="thank_you_snippet" name="Thank You">
+    	<section class="s_text_block pt40 pb40 o_colored_level " data-snippet="s_text_block">
+            <div class="container s_allow_columns">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6 mr-lg-auto">
+                        <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/><br/>
+                        <h1 class="text-center">Thank You!</h1>
+                        <div class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">
+                            <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                        </div>
+                        <h5 class="text-center">
+                            <span class="fa fa-check-circle"/>
+                            <span>Your message has been sent <b>successfully</b></span>
+                        </h5>
+                        <p class="text-center">We will get back to you shortly.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled mb-0 pl-2">
+                            <li>My Company</li>
+                            <li><i class="fa fa-map-marker fa-fw mr-2"/><span class="o_force_ltr">Chaussée de Namur 40</span></li>
+                            <li><i class="fa fa-phone fa-fw mr-2"/><span class="o_force_ltr">+ 32 81 81 37 00</span></li>
+                            <li><i class="fa fa-1x fa-fw fa-envelope mr-2"/><span>info@yourcompany.example.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

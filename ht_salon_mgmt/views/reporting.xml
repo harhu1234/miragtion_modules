@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!--Booking Menu for Reporting Menu -->
+    <menuitem id="main_menu_reporting" parent="main_menu_salon" name="Reporting" sequence="4"/>
+    <menuitem id="booking_main_menu" name="Booking" parent="main_menu_reporting" sequence="1"/>
+    <menuitem id="menu_booking_appointment_view" name="Appointment" parent="booking_main_menu" action="action_booking_view" sequence="1"/>
+    <menuitem id="menu_select_attendee_view" name="Select Attendee" parent="booking_main_menu" action="action_select_attendee_view" sequence="2"/>
+    <menuitem id="menu_report_attendee_view" name="Attendee Report" parent="booking_main_menu" action="action_attendee_report_view" sequence="3"/>
+
+    <!-- Service Menu for Reporting Menu -->
+    <menuitem id="service_main_menu" name="Service" parent="main_menu_reporting" sequence="2"/>
+    <menuitem id="menu_services_view" name="Services" parent="service_main_menu" action="action_services_view" sequence="1"/>
+
+    <!-- Package Menu for Reporting Menu -->
+    <menuitem id="package_main_menu" name="Package" parent="main_menu_reporting" sequence="3"/>
+    <menuitem id="menu_package_view" name="Package" parent="package_main_menu" action="action_package_view" sequence="1"/>
+
+    <!-- Offer Menu for Reporting Menu -->
+    <menuitem id="offer_main_menu" name="Offer" parent="main_menu_reporting" sequence="4"/>
+    <menuitem id="menu_offer_view" name="Offer" parent="offer_main_menu" action="action_offer_wizard_view" sequence="1"/>
+
+    <!-- Coupon Menu for Reporting Menu -->
+    <menuitem id="coupon_main_menu" name="Coupon" parent="main_menu_reporting" sequence="5"/>
+    <menuitem id="menu_coupon_view" name="Coupon" parent="coupon_main_menu" action="action_coupon_wizard_view" sequence="1"/>
+</odoo>

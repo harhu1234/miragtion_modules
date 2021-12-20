@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<!-- configuration Menu -->
+	<menuitem id="main_menu_configuration" parent="main_menu_salon" name="Configuration" sequence="5"/>
+
+	<!--Main Menu of Service Coupon-->
+        <menuitem id="view_menu_service_coupon" action="action_service_coupon_view" name="Service Coupon" parent="main_menu_configuration" sequence="1"/>
+
+    <!-- Main Menu of Service -->
+    <menuitem id="main_menu_service" parent="main_menu_configuration" action="action_service_view" name="Services" sequence="2"/>
+
+    <!-- Main Menu of Package -->
+    <menuitem id="main_menu_pacakge" parent="main_menu_configuration" action="action_pacakge_view" name="Package" sequence="3"/>
+
+    <!--Main Menu of Offer Service-->
+    <menuitem id="main_menu_offer" parent="main_menu_configuration" action="action_offer_view" sequence="4"/>
+
+</odoo>

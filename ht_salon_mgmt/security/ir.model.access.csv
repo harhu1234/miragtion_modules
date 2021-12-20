@@ -1,0 +1,22 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_customer_appointment,Customer Appointment,model_customer_appointment,,1,1,1,1
+access_coupon_code,Coupon Code,model_coupon_code,,1,1,1,1
+access_customer_service,Customer Service,model_customer_service,,1,1,1,1
+access_service_service,Service Service,model_service_service,,1,1,1,1
+access_membership_membership,Membership,model_membership_membership,,1,1,1,1
+access_pacakge_package,Package,model_pacakge_package,,1,1,1,1
+access_pacakge_services,Package Services,model_pacakge_services,,1,1,1,1
+access_offer_service,Offer Service,model_offer_service,,1,1,1,1
+access_booking_wizard,Booking Wizard,model_booking_wizard,,1,1,1,1
+access_select_attendee_wizard,Select Attendee Wizard,model_select_attendee_wizard,,1,1,1,1
+access_attendee_report_wizard,Attendee Report Wizard,model_attendee_report_wizard,,1,1,1,1
+access_service_wizard,Service Wizard,model_service_wizard,,1,1,1,1
+access_package_service_wizard,Package Service Wizard,model_package_service_wizard,,1,1,1,1
+access_offer_wizard,Offer Wizard,model_offer_wizard,,1,1,1,1
+access_coupon_wizard,Coupon Wizard,model_coupon_wizard,,1,1,1,1
+access_export_excel_appointment,export.excel.appointment,model_export_excel_appointment,,1,1,1,1
+access_export_excel_coupon,export.excel.coupon,model_export_excel_coupon,,1,1,1,1
+access_export_excel_services,export.excel.services,model_export_excel_services,,1,1,1,1
+access_export_excel_membership,export.excel.membership,model_export_excel_membership,,1,1,1,1
+access_export_excel_package,export.excel.package,model_export_excel_package,,1,1,1,1
+access_export_excel_offers,export.excel.offers,model_export_excel_offers,,1,1,1,1

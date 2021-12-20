@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_appointment_details">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <div class="row">
+                    <div class="col">
+                        <h1><strong>Name : </strong>
+                        <span t-field="doc.customer_id"/></h1>
+                    </div>
+                    <div class="col text-right">
+                        <strong>Invoice Date :</strong>
+                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+                        <br/>
+                        <strong>Appintment Date : </strong>
+                        <span t-field="doc.schedue_time"/>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="row">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th name="th_type">Type</th>
+                                <th name="th_service">Service</th>
+                                <th name="th_pack">Package</th>
+                                <th name="th_pack_description">Package description</th>
+                                <th name="th_product">Product</th>
+                                <th name="th_description">Discription</th>
+                                <th name="th_code">Code</th>
+                                <th name="th_offer_price">Offer Price</th>
+                                <th name="th_price">Price</th>
+                                <th name="th_total">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="doc.services_ids" t-as="service">
+                                <tr>
+                                    <td><span t-field="service.service_type"/></td>
+                                    <td><span t-field="service.services_id"/></td>
+                                    <td><span t-field="service.package_id"/></td>
+                                    <td><span t-field="service.package_desc"/></td>
+                                    <td><span t-field="service.product_id"/></td>
+                                    <td><span t-field="service.description"/></td>
+                                    <td><span t-field="service.coupon_code"/></td>
+                                    <td><span t-field="service.offer_price"/></td>
+                                    <td><span t-field="service.price"/></td>
+                                    <td><span t-field="service.sum"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col text-right">
+                        <strong>Amount : </strong>
+                        <span t-field="doc.amount"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="report_appointment">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="ht_salon_mgmt.report_appointment_details" t-lang="doc.customer_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>

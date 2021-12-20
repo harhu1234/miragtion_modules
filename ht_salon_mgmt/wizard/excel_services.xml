@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="excel_services_form_view" model="ir.ui.view">
+            <field name="name">Excel Services Form View</field>
+            <field name="model">export.excel.services</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="excel_file" filename="filename" readonly="1"/>
+                                <field name="filename" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="print_services_excel" type="object" string="Print Excel" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel" class="btn btn-default"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_services_excel" model="ir.actions.act_window">
+            <field name="name">Services Excel</field>
+            <field name="res_model">export.excel.services</field>
+            <field name="binding_model_id" ref="model_service_service"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

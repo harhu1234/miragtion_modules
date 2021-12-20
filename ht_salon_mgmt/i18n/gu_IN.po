@@ -1,0 +1,1660 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ht_salon_mgmt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-18 13:35+0000\n"
+"PO-Revision-Date: 2021-08-18 13:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ht_salon_mgmt
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_template
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_templatee
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_templates
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_templatese
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_templatess
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_templatesss
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_templatet
+#: model:mail.template,body_html:ht_salon_mgmt.appointment_email_templatse
+#: model:mail.template,body_html:ht_salon_mgmt.appointments_email_template
+#: model:mail.template,body_html:ht_salon_mgmt.appointments_email_templates
+#: model:mail.template,body_html:ht_salon_mgmt.appointments_email_templatess
+#: model:mail.template,body_html:ht_salon_mgmt.template_appointment_email
+#: model:mail.template,body_html:ht_salon_mgmt.template_appointment_emails
+msgid ""
+"\n"
+"                <p>Hi,</p>\n"
+"                <br/>\n"
+"                <p>Your appointment has been booked Successfully. Come as per your appointment Date.</p>\n"
+"                <br/>\n"
+"                 \n"
+"           "
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:mail.template,body_html:ht_salon_mgmt.appointmentss_email_template
+msgid ""
+"\n"
+"                <p>Hi</p>\n"
+"                <br/>\n"
+"                <p>Here is the details of open invoices Appointment</p>\n"
+"                <br/>\n"
+"                 \n"
+"           "
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.report_appointment_info
+msgid "'Appointment - %s' %(object.schedue_time)"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+msgid ""
+"<br/>\n"
+"                                    <strong>Appintment Date : </strong>"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.service_kanban_view
+msgid ""
+"<br/>\n"
+"                                    Gender :"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.pacakge_kanban_view
+msgid ""
+"<br/>\n"
+"                                    Package :"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_kanban_view
+msgid ""
+"<br/>\n"
+"                                    Schedual :"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_kanban_view
+msgid ""
+"<br/>\n"
+"                                    Service :"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.membership_kanban_view
+msgid ""
+"<br/>\n"
+"                                    Type :"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+msgid "<strong>Amount : </strong>"
+msgstr "<strong> રકમ: </strong>"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+msgid "<strong>Invoice Date :</strong>"
+msgstr "<strong>ભરતિયું તારીખ :</strong>"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+msgid "<strong>Name : </strong>"
+msgstr "<strong> નામ: </strong>"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_needaction
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_needaction
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_needaction
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_needaction
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_needaction
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__amount
+msgid "Amount"
+msgstr "રકમ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: model:ir.ui.menu,name:ht_salon_mgmt.menu_booking_appointment_view
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__appointment_id
+#: model:ir.ui.menu,name:ht_salon_mgmt.view_menu_appointment
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_tree_view
+msgid "Appointment"
+msgstr "નિમણૂક"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.server,name:ht_salon_mgmt.cron_appointment_book_ir_actions_server
+msgid "Appointment Cron Job"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__schedue_time
+msgid "Appointment Date"
+msgstr "નિમણૂકની તારીખ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_appointment_view
+msgid "Appointment Details"
+msgstr "નિમણૂકની વિગતો"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.report_appointment_info
+msgid "Appointment Information"
+msgstr "નિમણૂકની માહિતી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_attachment_count
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_attachment_count
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_attachment_count
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_attachment_count
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_attachment_count
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_attachment_count
+msgid "Attachment Count"
+msgstr "જોડાણ ગણતરી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_attendee
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__attendee_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_select_attendee_wizard__attendee_id
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Attendee"
+msgstr "હાજરી આપનાર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__customer_type__bride
+msgid "Bride"
+msgstr "કન્યા"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__membership_membership__type__bronze
+msgid "Bronze"
+msgstr "કાંસ્ય"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__state__cancel
+msgid "Cancelled"
+msgstr "રદ કર્યું"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__category
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_service
+msgid "Category"
+msgstr "શ્રેણી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__offer_service__state__close
+msgid "Close"
+msgstr "બંધ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__coupon_code
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Code"
+msgstr "કોડ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__state__confirm
+msgid "Confirm"
+msgstr "ખાતરી કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__count_service
+msgid "Count"
+msgstr "ગણતરી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_coupon_code
+msgid "Coupon Code"
+msgstr "કુપનનૉ ગુપ્ત્તાન્ક"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__create_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__create_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__create_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__create_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__create_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__create_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__create_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__create_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__create_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__create_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__create_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__create_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__create_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__create_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__customer_id
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon_service
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Customer"
+msgstr "ગ્રાહક"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_customer_appointment
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_calendar_view
+msgid "Customer Appointment"
+msgstr "ગ્રાહક નિમણૂક"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__cust_img
+msgid "Customer Image"
+msgstr "ગ્રાહક છબી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_customer_service
+msgid "Customer Service"
+msgstr "ગ્રાહક સેવા"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__customer_type
+msgid "Customer Type"
+msgstr "ગ્રાહક પ્રકાર"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_coupon.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_package.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__description
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__description
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__description
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__description
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__description
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__description
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_package
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_service
+msgid "Description"
+msgstr "વર્ણન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__pacakge_package__package_type__dimond
+msgid "Dimond"
+msgstr "ડિમોન્ડ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_coupon.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_membership.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__discount_value
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__discount
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__discount
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon
+msgid "Discount"
+msgstr "ડિસ્કાઉન્ટ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+msgid "Discription"
+msgstr "વર્ણન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_product_template__display_name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__display_name
+msgid "Display Name"
+msgstr "પ્રદર્શન નામ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__state__done
+msgid "Done"
+msgstr "થઈ ગયું"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__offer_service__state__draft
+msgid "Draft"
+msgstr "ડ્રાફ્ટ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_offers.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_attendee_report_wizard__end_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_booking_wizard__end_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_wizard__end_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__end_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_select_attendee_wizard__end_date
+msgid "End Date"
+msgstr "અંતિમ તારીખ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/models/customer_appointment.py:0
+#, python-format
+msgid "Enter Code Number of characters must 6"
+msgstr "અક્ષરોનો કોડ નંબર 6 દાખલ કરવો આવશ્યક છે"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/models/customer_appointment.py:0
+#, python-format
+msgid "Enter Valide Coupon Code"
+msgstr "માન્ય કૂપન કોડ દાખલ કરો"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/models/customer_appointment.py:0
+#, python-format
+msgid "Enter Valide Coupon Code."
+msgstr "માન્ય કૂપન કોડ દાખલ કરો."
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/models/customer_appointment.py:0
+#, python-format
+msgid "Enter Valide Date"
+msgstr "માન્ય તારીખ દાખલ કરો"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_membership.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__fees
+msgid "Fees"
+msgstr "ફી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_code__discount_type__fixed
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__offer_service__type__fixed
+msgid "Fixed"
+msgstr "સ્થિર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_follower_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_follower_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_follower_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_follower_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_follower_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_follower_ids
+msgid "Followers"
+msgstr "અનુયાયીઓ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_channel_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_channel_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_channel_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_channel_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_channel_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "અનુયાયીઓ (ચેનલ)"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_partner_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_partner_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_partner_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_partner_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_partner_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "અનુયાયીઓ (ભાગીદારો)"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__service_to
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_service
+msgid "Gender"
+msgstr "જાતિ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_form_view
+msgid "Generate Appointment"
+msgstr "નિમણૂક પેદા કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__membership_membership__type__gold
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__pacakge_package__package_type__gold
+msgid "Gold"
+msgstr "સોનું"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__customer_type__groom
+msgid "Grooms"
+msgstr "વરરાજા"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_service__category__hair
+msgid "Hair"
+msgstr "વાળ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_service__category__handfeet
+msgid "Hands & Feet"
+msgstr "હાથ અને પગ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_product_template__id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__id
+msgid "ID"
+msgstr "ઓળખ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,help:ht_salon_mgmt.field_coupon_code__message_needaction
+#: model:ir.model.fields,help:ht_salon_mgmt.field_coupon_code__message_unread
+#: model:ir.model.fields,help:ht_salon_mgmt.field_customer_appointment__message_needaction
+#: model:ir.model.fields,help:ht_salon_mgmt.field_customer_appointment__message_unread
+#: model:ir.model.fields,help:ht_salon_mgmt.field_membership_membership__message_needaction
+#: model:ir.model.fields,help:ht_salon_mgmt.field_membership_membership__message_unread
+#: model:ir.model.fields,help:ht_salon_mgmt.field_offer_service__message_needaction
+#: model:ir.model.fields,help:ht_salon_mgmt.field_offer_service__message_unread
+#: model:ir.model.fields,help:ht_salon_mgmt.field_pacakge_package__message_needaction
+#: model:ir.model.fields,help:ht_salon_mgmt.field_pacakge_package__message_unread
+#: model:ir.model.fields,help:ht_salon_mgmt.field_service_service__message_needaction
+#: model:ir.model.fields,help:ht_salon_mgmt.field_service_service__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,help:ht_salon_mgmt.field_coupon_code__message_has_error
+#: model:ir.model.fields,help:ht_salon_mgmt.field_customer_appointment__message_has_error
+#: model:ir.model.fields,help:ht_salon_mgmt.field_membership_membership__message_has_error
+#: model:ir.model.fields,help:ht_salon_mgmt.field_offer_service__message_has_error
+#: model:ir.model.fields,help:ht_salon_mgmt.field_pacakge_package__message_has_error
+#: model:ir.model.fields,help:ht_salon_mgmt.field_service_service__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__image
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__image
+msgid "Image"
+msgstr "છબી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__offer_service__state__in_progess
+msgid "In Progess"
+msgstr "પ્રગતિમાં છે"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__state__progress
+msgid "In Progress"
+msgstr "પ્રગતિમાં છે"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_is_follower
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_is_follower
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_is_follower
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_is_follower
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_is_follower
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_is_follower
+msgid "Is Follower"
+msgstr "અનુયાયી છે"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_product_template____last_update
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__write_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__write_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__write_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__write_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__write_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__write_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__write_uid
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__write_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__write_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__write_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__write_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__write_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__write_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__write_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_main_attachment_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_main_attachment_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_main_attachment_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_main_attachment_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_main_attachment_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "મુખ્ય જોડાણ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__total_person
+msgid "Members"
+msgstr "સભ્યો"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_membership.py:0
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_membership_view
+#: model:ir.model,name:ht_salon_mgmt.model_membership_membership
+msgid "Membership"
+msgstr "સભ્યપદ"
+
+#. module: ht_salon_mgmt
+#: model:ir.ui.menu,name:ht_salon_mgmt.main_menu_membership
+msgid "Memberships"
+msgstr "સભ્યપદ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_service__service_to__men
+msgid "Men"
+msgstr "પુરુષો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_has_error
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_has_error
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_has_error
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_has_error
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_has_error
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_ids
+msgid "Messages"
+msgstr "સંદેશાઓ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__name
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__name
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.membership_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.pacakge_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.service_form_view
+msgid "Name"
+msgstr "નામ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_kanban_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.membership_kanban_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.pacakge_kanban_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.service_kanban_view
+msgid "Name :"
+msgstr "નામ:"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__state__draft
+msgid "New"
+msgstr "નવું"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_needaction_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_needaction_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_needaction_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_needaction_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_needaction_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_has_error_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_has_error_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_has_error_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_has_error_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_has_error_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,help:ht_salon_mgmt.field_coupon_code__message_needaction_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_customer_appointment__message_needaction_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_membership_membership__message_needaction_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_offer_service__message_needaction_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_pacakge_package__message_needaction_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_service_service__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,help:ht_salon_mgmt.field_coupon_code__message_has_error_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_customer_appointment__message_has_error_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_membership_membership__message_has_error_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_offer_service__message_has_error_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_pacakge_package__message_has_error_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_service_service__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,help:ht_salon_mgmt.field_coupon_code__message_unread_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_customer_appointment__message_unread_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_membership_membership__message_unread_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_offer_service__message_unread_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_pacakge_package__message_unread_counter
+#: model:ir.model.fields,help:ht_salon_mgmt.field_service_service__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_offers.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__offer_price
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__offer_price
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Offer Price"
+msgstr "ઓફર કિંમત"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_offer_service
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_wizard__offers_service
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.offer_service_calendar_view
+msgid "Offer Service"
+msgstr "સેવા આપે છે"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_offer_view
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_offer
+#: model:ir.ui.menu,name:ht_salon_mgmt.main_menu_offer
+msgid "Offers"
+msgstr "ઓફર કરે છે"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_pacakge_view
+#: model:ir.model,name:ht_salon_mgmt.model_pacakge_package
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__package_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__package_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_package_service_wizard__package
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_service__service_type__package
+#: model:ir.ui.menu,name:ht_salon_mgmt.main_menu_pacakge
+#: model:ir.ui.menu,name:ht_salon_mgmt.menu_package_view
+#: model:ir.ui.menu,name:ht_salon_mgmt.package_main_menu
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Package"
+msgstr "પેકેજ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__package_desc
+msgid "Package Description"
+msgstr "પેકેજ વર્ણન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_pacakge_services
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_package_service_wizard__package_service
+msgid "Package Service"
+msgstr "પેકેજ સેવા"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Package description"
+msgstr "પેકેજ વર્ણન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_code__discount_type__percentage
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__offer_service__type__percentage
+msgid "Percentage"
+msgstr "ટકાવારી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__pacakge_package__package_type__platanium
+msgid "Platanium"
+msgstr "પ્લેટેનિયમ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__membership_membership__type__platinum
+msgid "Platinum"
+msgstr "પ્લેટિનમ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/models/customer_appointment.py:0
+#, python-format
+msgid "Please Enter Your Package"
+msgstr "કૃપા કરીને તમારું પેકેજ દાખલ કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__package_price
+msgid "Prackage Price"
+msgstr "પેકેજની કિંમત"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_package.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__price
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__price
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__price
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon_service
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_package
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_service
+msgid "Price"
+msgstr "કિંમત"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__product_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__product_id
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_service
+msgid "Product"
+msgstr "ઉત્પાદન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_product_template
+msgid "Product Template"
+msgstr "ઉત્પાદન નમૂનો"
+
+#. module: ht_salon_mgmt
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_template
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_templatee
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_templates
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_templatese
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_templatess
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_templatesss
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_templatet
+#: model:mail.template,subject:ht_salon_mgmt.appointment_email_templatse
+#: model:mail.template,subject:ht_salon_mgmt.appointments_email_template
+#: model:mail.template,subject:ht_salon_mgmt.appointments_email_templates
+#: model:mail.template,subject:ht_salon_mgmt.appointments_email_templatess
+#: model:mail.template,subject:ht_salon_mgmt.template_appointment_email
+#: model:mail.template,subject:ht_salon_mgmt.template_appointment_emails
+msgid "Ref ${object.customer_id.name or 'n/a' }"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:mail.template,subject:ht_salon_mgmt.appointmentss_email_template
+msgid "Ref ${object.name or 'n/a' }"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_appointment__customer_type__regular
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__customer_service__service_type__regular
+msgid "Regular"
+msgstr "નિયમિત"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__regular_price
+msgid "Regular Price"
+msgstr "નિયમિત ભાવ"
+
+#. module: ht_salon_mgmt
+#: model:ir.ui.menu,name:ht_salon_mgmt.main_menu_salon
+msgid "salon"
+msgstr "સલૂન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_product_product__salon_product
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_product_template__salon_product
+msgid "salon Product"
+msgstr "સલૂન ઉત્પાદન"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_form_view
+msgid "Send Mail"
+msgstr "સંદેશો મોકલો"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_offers.py:0
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_service_view
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__services_id
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_services__service_id
+#: model:ir.ui.menu,name:ht_salon_mgmt.service_main_menu
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon_service
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_package
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Service"
+msgstr "સેવા"
+
+#. module: ht_salon_mgmt
+#: model:ir.ui.menu,name:ht_salon_mgmt.view_menu_service_coupon
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.service_coupon_tree_view
+msgid "Service Coupon"
+msgstr "સેવા કૂપન"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_service_coupon_view
+msgid "Service Coupon Details"
+msgstr "સેવા કૂપન વિગતો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__service_price
+msgid "Service Price"
+msgstr "સેવાની કિંમત"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_service_service
+msgid "Service Service"
+msgstr "સેવા સેવા"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_services.py:0
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_service
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__services_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__service_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__line_ids
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_wizard__services
+#: model:ir.ui.menu,name:ht_salon_mgmt.main_menu_service
+#: model:ir.ui.menu,name:ht_salon_mgmt.menu_services_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.customer_appointment_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.pacakge_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_service
+msgid "Services"
+msgstr "સેવાઓ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__membership_membership__type__silver
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__pacakge_package__package_type__silver
+msgid "Silver"
+msgstr "ચાંદીના"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_offers.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_wizard__start_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__start_date
+msgid "Start Date"
+msgstr "પ્રારંભ તારીખ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__state
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__state
+msgid "Status"
+msgstr "સ્થિતિ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_membership.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_services.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__sum
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Total"
+msgstr "કુલ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_appointment.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_coupon.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_membership.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_offers.py:0
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__discount_type
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_service__service_type
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__type
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__type
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__package_type
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_appointment_details
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_package
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "Type"
+msgstr "પ્રકાર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_unread
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_unread
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_unread
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_unread
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_unread
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_code__message_unread_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_customer_appointment__message_unread_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_membership_membership__message_unread_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__message_unread_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_pacakge_package__message_unread_counter
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_service_service__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_service__service_to__women
+msgid "Women"
+msgstr "મહિલાઓ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/models/customer_appointment.py:0
+#, python-format
+msgid "Your Coupon Amount is Grater of Price Amount"
+msgstr "તમારી કૂપન એમાઉન્ટ એ ગ્રાટર ઓફ પ્રાઈસ એમાઉન્ટ છે"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_service__category__makeup
+msgid "makeup"
+msgstr "શનગાર"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.server,name:ht_salon_mgmt.cron_offer_action_ir_actions_server
+#: model:ir.cron,cron_name:ht_salon_mgmt.cron_offer_action
+#: model:ir.cron,name:ht_salon_mgmt.cron_offer_action
+msgid "offer Cron Job"
+msgstr "ક્રોન જોબ ઓફર કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_offer_service__image
+msgid "offer Image"
+msgstr "છબી ઓફર કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_service__category__skin
+msgid "skin"
+msgstr "ત્વચા"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+msgid ""
+"<br/>\n"
+"                                End Date :"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+msgid ""
+"<br/>\n"
+"                                Offer Prise :"
+msgstr "ઓફર કિંમત :"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+msgid ""
+"<br/>\n"
+"            <strong>Date :</strong>"
+msgstr ""
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.appointment_report
+msgid "<strong>Customer :</strong>"
+msgstr "<strong> ગ્રાહક: </strong>"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_select_attendee
+msgid "<strong>Date :</strong>"
+msgstr "<strong> તારીખ: </strong>"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_package
+msgid "<strong>Package : </strong>"
+msgstr "<strong> પેકેજ: </strong>"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_service
+msgid "<strong>Service : </strong>"
+msgstr "<strong> સેવા: </strong>"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_sel__list_coupon
+msgid "All Coupon"
+msgstr "બધા કૂપન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__offer_wizard__offers_service__all_offer
+msgid "All Offer"
+msgstr "તમામ ઓફર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__package_service_wizard__package_service__all_package
+msgid "All Package"
+msgstr "બધા પેકેજ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_wizard__services__all_service
+msgid "All Services"
+msgstr "તમામ સેવાઓ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_booking_wizard__appointment_month
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_wizard__coupon_month
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_select_attendee_wizard__appointment_month
+msgid "Appintment Month"
+msgstr "એપિમેન્ટ મહિનો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_booking_wizard__appointment_by
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_select_attendee_wizard__appointment_by
+msgid "Appointment By"
+msgstr "દ્વારા નિમણૂક"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_booking_wizard__appointment_day
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_select_attendee_wizard__appointment_day
+msgid "Appointment Day"
+msgstr "નિમણૂક દિવસ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_appointment_excel
+msgid "Appointment Excel"
+msgstr "નિમણૂક એક્સેલ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__04
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__04
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__04
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__04
+msgid "April"
+msgstr "એપ્રિલ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_attendee_report_wizard__attendee_by
+msgid "Attendee By"
+msgstr "દ્વારા હાજરી આપનાર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_attendee_report_wizard__attendee_day
+msgid "Attendee Day"
+msgstr "હાજરી આપનાર દિવસ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_attendee_report_wizard__attendee_month
+msgid "Attendee Month"
+msgstr "હાજરી આપનાર મહિનો"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_attendee_report
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_attendee_report
+#: model:ir.ui.menu,name:ht_salon_mgmt.menu_report_attendee_view
+msgid "Attendee Report"
+msgstr "હાજરી આપનાર અહેવાલ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_attendee_report_view
+msgid "Attendee Report Wizard"
+msgstr "હાજરી આપનાર અહેવાલ વિઝાર્ડ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_attendee
+msgid "Attendee Services"
+msgstr "હાજરી આપતી સેવાઓ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_select_attendee
+msgid "Attendee Summary"
+msgstr "હાજરી આપનાર સારાંશ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__08
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__08
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__08
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__08
+msgid "August"
+msgstr "ઓગસ્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.ui.menu,name:ht_salon_mgmt.booking_main_menu
+msgid "Booking"
+msgstr "બુકિંગ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_booking_report
+msgid "Booking Appointments Report"
+msgstr "બુકિંગ એપોઇન્ટમેન્ટ રિપોર્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_booking_report
+msgid "Booking Report"
+msgstr "બુકિંગ રિપોર્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_booking_view
+msgid "Booking Wizard"
+msgstr "બુકિંગ વિઝાર્ડ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_booking_appointment
+msgid "Booking summary"
+msgstr "બુકિંગ સારાંશ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.attendee_report_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.booking_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.coupon_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_coupon_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_membership_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_offers_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_package_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_services_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.generate_excel_appointment_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.offer_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.package_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.select_attendee_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.service_wizard_form_view
+msgid "Cancel"
+msgstr "રદ કરો"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_coupon.py:0
+#: code:addons/ht_salon_mgmt/wizard/excel_coupon.py:0
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_coupon
+#: model:ir.ui.menu,name:ht_salon_mgmt.coupon_main_menu
+#: model:ir.ui.menu,name:ht_salon_mgmt.menu_coupon_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon_service
+#, python-format
+msgid "Coupon"
+msgstr "કુપન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_wizard__coupon_discount
+msgid "Coupon Discount"
+msgstr "કૂપન ડિસ્કાઉન્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_coupon_report
+msgid "Coupon Report"
+msgstr "કૂપન રિપોર્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_coupon_service_report
+msgid "Coupon Service Report"
+msgstr "કૂપન સેવા અહેવાલ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_coupon_service
+msgid "Coupon Services"
+msgstr "કૂપન સેવાઓ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_coupon_wizard_view
+msgid "Coupon Wizard"
+msgstr "કૂપન વિઝાર્ડ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_wizard__coupon_sel
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon
+msgid "Coupons"
+msgstr "કુપન્સ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_coupon_wizard__coupon_day
+msgid "Date"
+msgstr "તારીખ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_by__date_range
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_by__date_range
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_discount__date_range
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_by__date_range
+msgid "Date Range"
+msgstr "તારીખ શ્રેણી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_by__day
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_by__day
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_discount__day
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_by__day
+msgid "Day"
+msgstr "દિવસ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__12
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__12
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__12
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__12
+msgid "December"
+msgstr "ડિસેમ્બર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_sel__discount_coupon
+msgid "Discount Coupon"
+msgstr "ડિસ્કાઉન્ટ કૂપન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__offer_wizard__offers_service__discount_offer
+msgid "Discount Offer"
+msgstr "ડિસ્કાઉન્ટ ઓફર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_export_excel_appointment
+msgid "Excel Appointment"
+msgstr "એક્સેલ એપોઇન્ટમેન્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_excel_coupon
+#: model:ir.model,name:ht_salon_mgmt.model_export_excel_coupon
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_coupon_form_view
+msgid "Excel Coupon"
+msgstr "એક્સેલ કૂપન"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_excel_membership
+#: model:ir.model,name:ht_salon_mgmt.model_export_excel_membership
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_membership_form_view
+msgid "Excel Membership"
+msgstr "એક્સેલ મેમ્બરશિપ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_excel_offers
+#: model:ir.model,name:ht_salon_mgmt.model_export_excel_offers
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_offers_form_view
+msgid "Excel Offers"
+msgstr "એક્સેલ ઓફર"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_package_excel
+#: model:ir.model,name:ht_salon_mgmt.model_export_excel_package
+    msgid "Excel Package"
+msgstr "એક્સેલ પેકેજ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_export_excel_services
+msgid "Excel Services"
+msgstr "એક્સેલ સેવાઓ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__02
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__02
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__02
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__02
+msgid "February"
+msgstr "ફેબ્રુઆરી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_appointment__excel_file
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_coupon__excel_file
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_membership__excel_file
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_offers__excel_file
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_package__excel_file
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_services__excel_file
+msgid "File"
+msgstr "ફાઇલ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_membership__filename
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_package__filename
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_services__filename
+msgid "File Name"
+msgstr "ફાઈલનું નામ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_appointment__filename
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_coupon__filename
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_export_excel_offers__filename
+msgid "File name"
+msgstr "ફાઈલનું નામ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__01
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__01
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__01
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__01
+msgid "January"
+msgstr "જાન્યુઆરી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__07
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__07
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__07
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__07
+msgid "July"
+msgstr "જુલાઈ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__06
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__06
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__06
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__06
+msgid "June"
+msgstr "જૂન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__03
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__03
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__03
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__03
+msgid "March"
+msgstr "કુચ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__05
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__05
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__05
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__05
+msgid "May"
+msgstr "મે"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__09
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__09
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__09
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__09
+msgid "September"
+msgstr "સપ્ટેમ્બર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__10
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__10
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__10
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__10
+msgid "October"
+msgstr "ઓક્ટોબર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_month__11
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_month__11
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_month__11
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_month__11
+msgid "November"
+msgstr "નવેમ્બર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__attendee_report_wizard__attendee_by__month
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__booking_wizard__appointment_by__month
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__coupon_wizard__coupon_discount__month
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__select_attendee_wizard__appointment_by__month
+msgid "Month"
+msgstr "માસ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/excel_offers.py:0
+#: model:ir.ui.menu,name:ht_salon_mgmt.menu_offer_view
+#: model:ir.ui.menu,name:ht_salon_mgmt.offer_main_menu
+#, python-format
+msgid "Offer"
+msgstr "ઓફર"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+msgid "Offer :"
+msgstr "ઓફર :"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_offer_discount_report
+msgid "Offer Discount Report"
+msgstr "ડિસ્કાઉન્ટ રિપોર્ટ ઓફર કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_offer_report
+msgid "Offer Report"
+msgstr "Offફર રિપોર્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_offer_wizard_view
+msgid "Offer Service Wizard"
+msgstr "Assistant d'offre de service"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_offer_wizard
+msgid "Offer Wizard"
+msgstr "વિઝાર્ડ ઓફર"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_offer_discount
+msgid "Offers Discount"
+msgstr "ડિસ્કાઉન્ટ ઓફર"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_package
+msgid "Pacakge"
+msgstr "પેકેજ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_package_report
+msgid "Pacakge Report"
+msgstr "પેકેજ રિપોર્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_package_service_wizard
+msgid "Pacakge Service wizard"
+msgstr "પેકેજ સેવા વિઝાર્ડ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_package_form_view
+msgid "Package Excel"
+msgstr "એક્સેલ પેકેજ"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_report_ht_salon_mgmt_report_package
+msgid "Packages"
+msgstr "પેકેજો"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.excel_services_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.generate_excel_appointment_view
+msgid "Print Excel"
+msgstr "એક્સેલ છાપો"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.attendee_report_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.booking_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.coupon_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.offer_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.package_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.select_attendee_form_view
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.service_wizard_form_view
+msgid "Report"
+msgstr "રિપોર્ટ"
+
+#. module: ht_salon_mgmt
+#: model:ir.ui.menu,name:ht_salon_mgmt.main_menu_reporting
+msgid "Reporting"
+msgstr "જાણ"
+
+#. module: ht_salon_mgmt
+#: model:ir.ui.menu,name:ht_salon_mgmt.menu_select_attendee_view
+msgid "Select Attendee"
+msgstr "હાજરી આપનાર પસંદ કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_select_attendee_report
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_select_attendee_report
+msgid "Select Attendee Report"
+msgstr "એટેન્ડી રિપોર્ટ પસંદ કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_select_attendee_view
+msgid "Select Attendee Wizard"
+msgstr "હાજરી આપનાર વિઝાર્ડ પસંદ કરો"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__package_service_wizard__package_service__select_package
+msgid "Select Package"
+msgstr "પેકેજ પસંદ કરો"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+msgid "Service Price :"
+msgstr "સેવા કિંમત:"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,name:ht_salon_mgmt.action_service_report
+msgid "Service Report"
+msgstr "સેવા અહેવાલ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_services_view
+msgid "Service Wizard"
+msgstr "સેવા વિઝાર્ડ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.act_window,name:ht_salon_mgmt.action_services_excel
+msgid "Services Excel"
+msgstr "સેવાઓ એક્સેલ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_offer_discount
+msgid "Start Date :"
+msgstr "પ્રારંભ તારીખ:"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields.selection,name:ht_salon_mgmt.selection__service_wizard__services__top_services
+msgid "Top Services"
+msgstr "ટોચની સેવાઓ"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/attendee_report_wizard.py:0
+#: code:addons/ht_salon_mgmt/wizard/booking_wizard.py:0
+#, python-format
+msgid "We Don't have Any Booking Appointment on this Date"
+msgstr "અમારી પાસે આ તારીખે કોઈ બુકિંગ એપોઇન્ટમેન્ટ નથી"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/attendee_report_wizard.py:0
+#: code:addons/ht_salon_mgmt/wizard/booking_wizard.py:0
+#, python-format
+msgid "We Don't have Any Booking Appointment on this Date Range"
+msgstr "અમારી પાસે આ તારીખ રેન્જ પર કોઈ બુકિંગ એપોઇન્ટમેન્ટ નથી"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/attendee_report_wizard.py:0
+#: code:addons/ht_salon_mgmt/wizard/booking_wizard.py:0
+#, python-format
+msgid "We Don't have Any Booking Appointment on this Month"
+msgstr "અમારી પાસે આ મહિને કોઈ બુકિંગ એપોઇન્ટમેન્ટ નથી"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/coupon_wizard.py:0
+#, python-format
+msgid "We Don't have Any Coupon Discount on this Date Range."
+msgstr "અમારી પાસે આ તારીખ રેન્જ પર કોઈ કૂપન ડિસ્કાઉન્ટ નથી."
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/coupon_wizard.py:0
+#, python-format
+msgid "We Don't have Any Coupon Discount on this Date."
+msgstr "અમારી પાસે આ તારીખે કોઈ કૂપન ડિસ્કાઉન્ટ નથી."
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/coupon_wizard.py:0
+msgid "We Don't have Any Coupon Discount on this Month."
+msgstr "અમારી પાસે આ મહિને કોઈ કુપન ડિસ્કાઉન્ટ નથી."
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/select_attendee_wizard.py:0
+msgid "We Don't have Any Select Attendee Appointment on this Date"
+msgstr "અમારી પાસે આ તારીખે કોઈ પસંદગીની હાજરી આપનાર નિમણૂક નથી"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/select_attendee_wizard.py:0
+msgid "We Don't have Any Select Attendee Appointment on this Date Range"
+msgstr "અમારી પાસે આ તારીખ રેન્જ પર કોઈ પસંદગીની હાજરી આપનાર વ્યક્તિની નિમણૂક નથી"
+
+#. module: ht_salon_mgmt
+#: code:addons/ht_salon_mgmt/wizard/select_attendee_wizard.py:0
+msgid "We Don't have Any Select Attendee Appointment on this Month"
+msgstr "અમારી પાસે આ મહિને કોઈ પસંદગીની હાજરી આપનારની નિમણૂક નથી"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_attendee_report_wizard
+msgid "attendee.report.wizard"
+msgstr "attendee.report.wizard"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_booking_wizard
+msgid "booking.wizard"
+msgstr "બુકિંગ વિઝાર્ડ"
+
+#. module: ht_salon_mgmt
+#: model_terms:ir.ui.view,arch_db:ht_salon_mgmt.report_coupon
+msgid "coupon"
+msgstr "કૂપન"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_coupon_wizard
+msgid "coupon.wizard"
+msgstr "કૂપન.વિઝાર્ડ"
+
+#. module: ht_salon_mgmt
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_coupon_report
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_coupon_service_report
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_offer_discount_report
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_offer_report
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_package_report
+#: model:ir.actions.report,print_report_name:ht_salon_mgmt.action_service_report
+msgid "object.name"
+msgstr "object.name"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_select_attendee_wizard
+msgid "select.attendee.wizard"
+msgstr "select.attendee.wizard"
+
+#. module: ht_salon_mgmt
+#: model:ir.model,name:ht_salon_mgmt.model_service_wizard
+msgid "service.wizard"
+msgstr "service.wizard"
+
+#. module: ht_salon_mgmt
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_attendee_report_wizard__start_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_booking_wizard__start_date
+#: model:ir.model.fields,field_description:ht_salon_mgmt.field_select_attendee_wizard__start_date
+msgid "start Date"
+msgstr "પ્રારંભ તારીખ"

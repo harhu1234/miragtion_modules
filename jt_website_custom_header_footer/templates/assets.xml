@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- assets -->
+    <template id="assets_website" inherit_id="website.compiled_assets_wysiwyg">
+        <xpath expr="." position="inside">
+            <t t-call-assets="jt_website_custom_header_footer.assets_wysiwyg"/>
+        </xpath>
+    </template>
+</odoo>
+
+

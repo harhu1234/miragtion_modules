@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets" name="salon">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Salon</div>
+				<div class="o_panel_body">
+                    <t t-snippet="theme_ht_salon.sln_slide_snippet" t-thumbnail="/theme_ht_salon/static/src/images/snipp1.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_breadcrumb_snp" t-thumbnail="/theme_ht_salon/static/src/images/snipp2.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_our_sloon" t-thumbnail="/theme_ht_salon/static/src/images/snipp3.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_service_menu" t-thumbnail="/theme_ht_salon/static/src/images/snipp4.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_appointment_form" t-thumbnail="/theme_ht_salon/static/src/images/snipp5.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_gallery_snp" t-thumbnail="/theme_ht_salon/static/src/images/snipp6.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_pricing_snp" t-thumbnail="/theme_ht_salon/static/src/images/snipp7.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_blog_snp" t-thumbnail="/theme_ht_salon/static/src/images/snipp8.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_testimony_snp" t-thumbnail="/theme_ht_salon/static/src/images/snipp9.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_contact_snp" t-thumbnail="/theme_ht_salon/static/src/images/snipp10.png">
+                    </t>
+                    <t t-snippet="theme_ht_salon.sln_thank_you" t-thumbnail="/theme_ht_salon/static/src/images/snipp11.png">
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <template id="sln_slide_snippet" name="salon Slide">
+        <!-- Slide Of Section -->
+        <section class="hero-wrap js-fullheight" style="background-image: url(/theme_ht_salon/static/src/images/bg-2.jpg);" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+                    <div class="col-lg-12 o_colored_level o_animate_preview o_animate o_anim_fade_in_up d-flex align-items-center">
+                        <div class="text text-center">
+                            <span class="subheading">Welcome to Haircare</span>
+                            <h1 class="mb-4">We are professional care for your hair</h1>
+                            <p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-2">Book now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End slide Section -->
+    </template>
+    <template id="sln_breadcrumb_snp" name="Breadcrumb">
+        <!--Breadcrumb Section -->
+        <section class="hero-wrap hero-wrap-2" style="background-image: url('/theme_ht_salon/static/src/images/bg-1.jpg');" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+                    <div class="col-md-9 o_colored_level o_animate_preview o_animate o_anim_fade_in_up pb-5 text-center">
+                        <h2 class="mb-0 bread">Breadcrumb</h2>
+                        <p class="breadcrumbs">
+                            <span class="mr-2">
+                                <a href="/">Home <i class="ion-ios-arrow-round-forward"></i></a>
+                            </span>
+                            <span>Breadcrumb <i class="ion-ios-arrow-round-forward"></i></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Breadcrumb Section -->
+    </template>
+    <template id="sln_our_sloon" name="Our salon">
+        <section class="ftco-section ftco-no-pt ftco-no-pb">
+            <div class="container-fluid px-0">
+                <div class="row no-gutters">
+                    <div class="col-md text-center d-flex align-items-stretch">
+                        <div class="services-wrap d-flex align-items-center img" style="background-image: url(/theme_ht_salon/static/src/images/formen.jpg);">
+                            <div class="text">
+                                <h3>For Men</h3>
+                                <p>
+                                    <a href="#" class="btn-custom">See pricing <span class="ion-ios-arrow-round-forward"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center d-flex align-items-stretch">
+                        <div class="text-about py-5 px-4">
+                            <h1 class="logo">
+                                <a href="#"><span class="flaticon-scissors-in-a-hair-salon-badge"></span>Haircare</a>
+                            </h1>
+                            <h2>Welcome to our Salon</h2>
+                            <p>
+                                A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Far far away, behind the word
+                                mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                            </p>
+                            <p class="mt-3"><a href="#" class="btn btn-primary btn-outline-primary">Read more</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md text-center d-flex align-items-stretch">
+                        <div class="services-wrap d-flex align-items-center img" style="background-image: url(/theme_ht_salon/static/src/images/forwomen.jpg);">
+                            <div class="text">
+                                <h3>For Women</h3>
+                                <p>
+                                    <a href="#" class="btn-custom">See pricing <span class="ion-ios-arrow-round-forward"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="sln_service_menu" name="Service Menu">
+        <!-- Service Section -->
+        <section class="services-section ftco-section">
+            <div class="container">
+                <div class="row justify-content-center pb-3">
+                    <div class="col-md-10 heading-section text-center o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <span class="subheading">Services</span>
+                        <h2 class="mb-4">Services Menu</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    </div>
+                </div>
+                <div class="row no-gutters d-flex">
+                    <div class="col-md-6 col-lg-3 d-flex align-self-stretch o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="media block-6 services d-block text-center">
+                            <div class="icon"><span class="flaticon-male-hair-of-head-and-face-shapes"></span></div>
+                            <div class="media-body">
+                                <h3 class="heading mb-3">Haircut &amp; Styling</h3>
+                                <p>A small river named Duden flows by their place and supplies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-self-stretch o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="media block-6 services d-block text-center">
+                            <div class="icon"><span class="flaticon-beard"></span></div>
+                            <div class="media-body">
+                                <h3 class="heading mb-3">Beard</h3>
+                                <p>A small river named Duden flows by their place and supplies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-self-stretch o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="media block-6 services d-block text-center">
+                            <div class="icon"><span class="flaticon-beauty-products"></span></div>
+                            <div class="media-body">
+                                <h3 class="heading mb-3">Makeup</h3>
+                                <p>A small river named Duden flows by their place and supplies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-self-stretch o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="media block-6 services d-block text-center">
+                            <div class="icon"><span class="flaticon-healthy-lifestyle-logo"></span></div>
+                            <div class="media-body">
+                                <h3 class="heading mb-3">Body Treatment</h3>
+                                <p>A small river named Duden flows by their place and supplies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Service Section -->
+    </template>
+    <template id="sln_appointment_form" name="Appointment Form">
+        <!-- Appointment Section -->
+        <section class="ftco-section ftco-booking bg-light">
+            <div class="container ftco-relative">
+                <div class="row justify-content-center pb-3">
+                    <div class="col-md-10 heading-section text-center o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <span class="subheading">Booking</span>
+                        <h2 class="mb-4">Make an Appointment</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    </div>
+                </div>
+                <h3 class="vr">Call Us: 012-3456-7890</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-10 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <form action="#" class="appointment-form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="appointment_name" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="appointment_email" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control appointment_date" placeholder="Date" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control appointment_time" placeholder="Time" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Professional Makeup</option>
+                                                <option value="">Manicure Pedicure</option>
+                                                <option value="">Body Treatment</option>
+                                                <option value="">Haircut &amp; Coloring</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="phone" placeholder="Phone" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Make an Appointment" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Appointment Section -->
+    </template>
+    <template id="sln_artist_snp" name="Makeup Artist">
+        <!-- Artist Section -->
+        <section class="ftco-section ftco-team">
+            <div class="container-fluid px-md-5">
+                <div class="row justify-content-center pb-3">
+                    <div class="col-md-10 heading-section text-center o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <span class="subheading">Artistic Director</span>
+                        <h2 class="mb-4">Makeup Artist</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a href="#" class="team text-center">
+                            <div class="img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-1.jpg);"></div>
+                            <h2>Danica Lewis</h2>
+                            <span class="position">Hair Stylist</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a href="#" class="team text-center">
+                            <div class="img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-2.jpg);"></div>
+                            <h2>Nicole Simon</h2>
+                            <span class="position">Nail Master</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a href="#" class="team text-center">
+                            <div class="img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-3.jpg);"></div>
+                            <h2>Cloe Meyer</h2>
+                            <span class="position">Director</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <a href="#" class="team text-center">
+                            <div class="img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-5.jpg);"></div>
+                            <h2>Dave Buff</h2>
+                            <span class="position">Barber</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Artist Section -->
+    </template>
+    <template id="sln_gallery_snp" name="Gallery">
+        <!-- Gallery Section-->
+        <section class="ftco-section ftco-no-pt ftco-no-pb">
+            <div class="container">
+                <div class="row no-gutters justify-content-center mb-5 pb-2">
+                    <div class="col-md-6 text-center heading-section o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <span class="subheading">Gallery</span>
+                        <h2 class="mb-4">Our gallery</h2>
+                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-1.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Stylist</span>
+                                <h3><a href="project.html">Beard</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-2.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Beauty</span>
+                                <h3><a href="project.html">Haircut</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-3.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Beauty</span>
+                                <h3><a href="project.html">Hairstylist</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-4.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Beauty</span>
+                                <h3><a href="project.html">Haircut</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-5.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Beauty</span>
+                                <h3><a href="project.html">Makeup</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-6.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Fashion</span>
+                                <h3><a href="project.html">Model</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-7.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Beauty</span>
+                                <h3><a href="project.html">Makeup</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="project">
+                            <img src="/theme_ht_salon/static/src/images/work-8.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <div class="text">
+                                <span>Beauty</span>
+                                <h3><a href="project.html">Makeup</a></h3>
+                            </div>
+                            <a href="/theme_ht_salon/static/src/images/work-8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                                <span class="icon-expand"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Gallery Section -->
+    </template>
+    <template id="sln_pricing_snp" name="Our Pricing">
+        <!-- Pricing Section -->
+        <section class="ftco-section ftco-pricing">
+            <div class="container">
+                <div class="row justify-content-center pb-3">
+                    <div class="col-md-10 heading-section text-center o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <span class="subheading">Pricing</span>
+                        <h2 class="mb-4">Our Prices</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="pricing-entry pb-5 text-center">
+                            <div>
+                                <h3 class="mb-4">Hair Style</h3>
+                                <p><span class="price">$50.00</span> <span class="per">/ session</span></p>
+                            </div>
+                            <ul>
+                                <li>Hair Dryer</li>
+                                <li>Hair Coloring</li>
+                                <li>Hair Cut</li>
+                                <li>Hair Dresser</li>
+                                <li>Hair Spa</li>
+                            </ul>
+                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="pricing-entry pb-5 text-center">
+                            <div>
+                                <h3 class="mb-4">Manicure Pedicure</h3>
+                                <p><span class="price">$34.50</span> <span class="per">/ session</span></p>
+                            </div>
+                            <ul>
+                                <li>Manicure</li>
+                                <li>Pedicure</li>
+                                <li>Coloring</li>
+                                <li>Nails</li>
+                                <li>Nail Cut</li>
+                            </ul>
+                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="pricing-entry active pb-5 text-center">
+                            <div>
+                                <h3 class="mb-4">Makeup</h3>
+                                <p><span class="price">$54.50</span> <span class="per">/ session</span></p>
+                            </div>
+                            <ul>
+                                <li>Makeup</li>
+                                <li>Professional Makeup</li>
+                                <li>Blush On</li>
+                                <li>Facial Massage</li>
+                                <li>Facial Spa</li>
+                            </ul>
+                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="pricing-entry pb-5 text-center">
+                            <div>
+                                <h3 class="mb-4">Body Treatment</h3>
+                                <p><span class="price">$89.50</span> <span class="per">/ session</span></p>
+                            </div>
+                            <ul>
+                                <li>Massage</li>
+                                <li>Spa</li>
+                                <li>Foot Spa</li>
+                                <li>Body Spa</li>
+                                <li>Relaxing</li>
+                            </ul>
+                            <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Pricing Section -->
+    </template>
+    <template id="sln_testimony_snp" name="Testimony">
+        <!-- Testimony Section -->
+        <section class="testimony-section bg-light">
+            <div class="container">
+                <div class="row o_colored_level o_animate_preview o_animate o_anim_fade_in_up justify-content-center">
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="testimony-img" style="background-image: url(/theme_ht_salon/static/src/images/testimony-img.jpg);"></div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 py-5 pl-md-5">
+                        <div class="py-md-5">
+                            <div class="heading-section o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <span class="subheading">Testimony</span>
+                                <h2 class="mb-0">Happy Customer</h2>
+                            </div>
+                            <div class="carousel-testimony owl-carousel o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="item">
+                                    <div class="testimony-wrap pb-4">
+                                        <div class="text">
+                                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="user-img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-1.jpg);"></div>
+                                            <div class="pos ml-3">
+                                                <p class="name">Jeff Nucci</p>
+                                                <span class="position">Businessman</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimony-wrap pb-4">
+                                        <div class="text">
+                                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="user-img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-2.jpg);"></div>
+                                            <div class="pos ml-3">
+                                                <p class="name">Jeff Nucci</p>
+                                                <span class="position">Businessman</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimony-wrap pb-4">
+                                        <div class="text">
+                                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="user-img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-3.jpg);"></div>
+                                            <div class="pos ml-3">
+                                                <p class="name">Jeff Nucci</p>
+                                                <span class="position">Businessman</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimony-wrap pb-4">
+                                        <div class="text">
+                                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="user-img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-4.jpg);"></div>
+                                            <div class="pos ml-3">
+                                                <p class="name">Jeff Nucci</p>
+                                                <span class="position">Businessman</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimony-wrap pb-4">
+                                        <div class="text">
+                                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="user-img" style="background-image: url(/theme_ht_salon/static/src/images/stylist-5.jpg);"></div>
+                                            <div class="pos ml-3">
+                                                <p class="name">Jeff Nucci</p>
+                                                <span class="position">Businessman</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimony Section -->
+    </template>
+    <template id="sln_blog_snp" name="Blog">
+        <!-- Blog Section -->
+        <section class="ftco-section ftco-degree-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="row">
+                            <div class="col-md-12 d-flex o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="blog-entry align-self-stretch d-md-flex">
+                                    <a href="blog-single.html" class="block-20" style="background-image: url('/theme_ht_salon/static/src/images/work-1.jpg');"> </a>
+                                    <div class="text d-block pl-md-4">
+                                        <div class="meta mb-3">
+                                            <div><a href="#">Sept. 12, 2019</a></div>
+                                            <div><a href="#">Admin</a></div>
+                                            <div>
+                                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                            </div>
+                                        </div>
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p><a href="blog-single.html" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="blog-entry align-self-stretch d-md-flex">
+                                    <a href="blog-single.html" class="block-20" style="background-image: url('/theme_ht_salon/static/src/images/work-2.jpg');"> </a>
+                                    <div class="text d-block pl-md-4">
+                                        <div class="meta mb-3">
+                                            <div><a href="#">Sept. 12, 2019</a></div>
+                                            <div><a href="#">Admin</a></div>
+                                            <div>
+                                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                            </div>
+                                        </div>
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p><a href="blog-single.html" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="blog-entry align-self-stretch d-md-flex">
+                                    <a href="blog-single.html" class="block-20" style="background-image: url('/theme_ht_salon/static/src/images/work-3.jpg');"> </a>
+                                    <div class="text d-block pl-md-4">
+                                        <div class="meta mb-3">
+                                            <div><a href="#">Sept. 12, 2019</a></div>
+                                            <div><a href="#">Admin</a></div>
+                                            <div>
+                                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                            </div>
+                                        </div>
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p><a href="blog-single.html" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="blog-entry align-self-stretch d-md-flex">
+                                    <a href="blog-single.html" class="block-20" style="background-image: url('/theme_ht_salon/static/src/images/work-4.jpg');"> </a>
+                                    <div class="text d-block pl-md-4">
+                                        <div class="meta mb-3">
+                                            <div><a href="#">Sept. 12, 2019</a></div>
+                                            <div><a href="#">Admin</a></div>
+                                            <div>
+                                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                            </div>
+                                        </div>
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p><a href="blog-single.html" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="blog-entry align-self-stretch d-md-flex">
+                                    <a href="blog-single.html" class="block-20" style="background-image: url('/theme_ht_salon/static/src/images/work-5.jpg');"> </a>
+                                    <div class="text d-block pl-md-4">
+                                        <div class="meta mb-3">
+                                            <div><a href="#">Sept. 12, 2019</a></div>
+                                            <div><a href="#">Admin</a></div>
+                                            <div>
+                                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                            </div>
+                                        </div>
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p><a href="blog-single.html" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="blog-entry align-self-stretch d-md-flex">
+                                    <a href="blog-single.html" class="block-20" style="background-image: url('/theme_ht_salon/static/src/images/work-6.jpg');"> </a>
+                                    <div class="text d-block pl-md-4">
+                                        <div class="meta mb-3">
+                                            <div><a href="#">Sept. 12, 2019</a></div>
+                                            <div><a href="#">Admin</a></div>
+                                            <div>
+                                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                            </div>
+                                        </div>
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p><a href="blog-single.html" class="btn btn-primary py-2 px-3">Read more</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col">
+                                <div class="block-27">
+                                    <ul>
+                                        <li><a href="#">&lt;</a></li>
+                                        <li class="active"><span>1</span></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">&gt;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .col-md-8 -->
+                    <div class="col-lg-4 sidebar o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <div class="sidebar-box bg-light">
+                            <form action="#" class="search-form bg-light">
+                                <div class="form-group">
+                                    <span class="icon ion-ios-search"></span>
+                                    <input type="text" class="form-control" placeholder="Search..." />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="sidebar-box bg-light o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                            <h3 class="heading-2">Categories</h3>
+                            <ul class="categories">
+                                <li>
+                                    <a href="#">Bags <span>(12)</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Shoes <span>(22)</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Dress <span>(37)</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Accessories <span>(42)</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Makeup <span>(14)</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Beauty <span>(140)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-box bg-light o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                            <h3 class="heading-2">Recent Blog</h3>
+                            <div class="block-21 mb-4 d-flex">
+                                <a class="blog-img mr-4" style="background-image: url(/theme_ht_salon/static/src/images/work-1.jpg);"></a>
+                                <div class="text">
+                                    <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                    <div class="meta">
+                                        <div>
+                                            <a href="#"><span class="icon-calendar"></span> Sept. 12, 2019</a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><span class="icon-person"></span> Admin</a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><span class="icon-chat"></span> 19</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-21 mb-4 d-flex">
+                                <a class="blog-img mr-4" style="background-image: url(/theme_ht_salon/static/src/images/work-2.jpg);"></a>
+                                <div class="text">
+                                    <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                    <div class="meta">
+                                        <div>
+                                            <a href="#"><span class="icon-calendar"></span> Sept. 12, 2019</a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><span class="icon-person"></span> Admin</a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><span class="icon-chat"></span> 19</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-21 mb-4 d-flex">
+                                <a class="blog-img mr-4" style="background-image: url(/theme_ht_salon/static/src/images/work-3.jpg);"></a>
+                                <div class="text">
+                                    <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                                    <div class="meta">
+                                        <div>
+                                            <a href="#"><span class="icon-calendar"></span> Sept. 12, 2019</a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><span class="icon-person"></span> Admin</a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><span class="icon-chat"></span> 19</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-box bg-light o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                            <h3 class="heading-2">Tag Cloud</h3>
+                            <div class="tagcloud">
+                                <a href="#" class="tag-cloud-link">donate</a>
+                                <a href="#" class="tag-cloud-link">charity</a>
+                                <a href="#" class="tag-cloud-link">non-profit</a>
+                                <a href="#" class="tag-cloud-link">organization</a>
+                                <a href="#" class="tag-cloud-link">child</a>
+                                <a href="#" class="tag-cloud-link">abuse</a>
+                                <a href="#" class="tag-cloud-link">help</a>
+                                <a href="#" class="tag-cloud-link">volunteer</a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-box bg-light o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                            <h3 class="heading-2">Paragraph</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit
+                                cupiditate numquam!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog Section -->
+    </template>
+    <template id="sln_contact_snp" name="Contact">
+        <!-- Contact Section -->
+         <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+            <div class="container">
+                <div class="row justify-content-center pb-3">
+                    <div class="col-md-10 heading-section text-center o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <span class="subheading">Contact</span>
+                        <h2 class="mb-4">Get In Touch</h2>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                    </div>
+                </div>
+                <h3 class="vr">Call Us: 012-3456-7890</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-10 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contact-thank-you" data-pre-fill="true">
+                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact1">
+                                            <span class="s_website_form_label_content">Your Name</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" data-fill-with="name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact2">
+                                            <span class="s_website_form_label_content">Phone Number</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact2" type="tel" class="form-control s_website_form_input" name="phone" data-fill-with="phone"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact3">
+                                            <span class="s_website_form_label_content">Your Email</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact3" type="email" class="form-control s_website_form_input" name="email_from" required="" data-fill-with="email"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact4">
+                                            <span class="s_website_form_label_content">Your Company</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact4" type="text" class="form-control s_website_form_input" name="company" data-fill-with="commercial_company_name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact5">
+                                            <span class="s_website_form_label_content">Subject</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact5" type="text" class="form-control s_website_form_input" name="subject" required=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact6">
+                                            <span class="s_website_form_label_content">Your Question</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <textarea id="contact6" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_dnone">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact7">
+                                            <span class="s_website_form_label_content">Email To</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact7" type="hidden" class="form-control s_website_form_input" name="email_to"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                    <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Conatct Section -->
+    </template>
+    <template id="sln_thank_you" name="Thank You">
+        <section class="s_text_block pt40 pb40 o_colored_level " data-snippet="s_text_block">
+            <div class="container s_allow_columns">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6 mr-lg-auto">
+                        <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/><br/>
+                        <h1 class="text-center">Thank You!</h1>
+                        <div class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">
+                            <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                        </div>
+                        <h5 class="text-center">
+                            <span class="fa fa-check-circle"/>
+                            <span>Your message has been sent <b>successfully</b></span>
+                        </h5>
+                        <p class="text-center">We will get back to you shortly.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled mb-0 pl-2">
+                            <li>My Company</li>
+                            <li><i class="fa fa-map-marker fa-fw mr-2"/><span class="o_force_ltr">Chaussée de Namur 40</span></li>
+                            <li><i class="fa fa-phone fa-fw mr-2"/><span class="o_force_ltr">+ 32 81 81 37 00</span></li>
+                            <li><i class="fa fa-1x fa-fw fa-envelope mr-2"/><span>info@yourcompany.example.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

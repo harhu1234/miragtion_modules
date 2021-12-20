@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- View for Coupon Form view -->
+    <record id="coupon_wizard_form_view" model="ir.ui.view">
+        <field name="name">Coupon Wizard Form View</field>
+        <field name="model">coupon.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="coupon_sel"/>
+                            <field name="coupon_discount" attrs="{'invisible':[('coupon_sel','!=','discount_coupon')]}"/>
+                            <field name="coupon_day" attrs="{'invisible':[('coupon_discount','!=','day')]}"/>
+                            <field name="coupon_month" attrs="{'invisible':[('coupon_discount','!=','month')]}"/>
+                            <field name="start_date" attrs="{'invisible':[('coupon_discount','!=','date_range')]}"/>
+                            <field name="end_date" attrs="{'invisible':[('coupon_discount','!=','date_range')]}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="coupon_service_report" type="object" string="Report" class="oe_highlight"></button>
+                    <button special="cancel" type="object" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action For Coupon Wizard -->
+    <record id="action_coupon_wizard_view" model="ir.actions.act_window">
+        <field name="name">Coupon Wizard</field>
+        <field name="res_model">coupon.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="coupon_wizard_form_view"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

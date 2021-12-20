@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <!-- Report Offer for reporting menu -->
+    <template id="report_offer_discount">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col">
+                                Offer : <strong><span t-field="doc.name"/></strong>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-6">
+                                Start Date : <span t-field="doc.start_date"/>
+                                <br/>
+                                End Date : <span t-field="doc.end_date"/>
+                            </div>
+                            <div class="col-6 text-right">
+                                Service Price : <span t-field="doc.service_price"/>
+                                <br/>
+                                Offer Prise : <span t-field="doc.offer_price"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th name="th_customer">Customer</th>
+                                        <th name="th_type">Type</th>
+                                        <th name="th_gender">Gender</th>
+                                        <th name="th_service">Service</th>
+                                        <th name="th_category">Category</th>
+                                        <th name="th_price">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.service_ids" t-as="service">
+                                        <t t-foreach="customers" t-as="customer">
+                                            <t t-if="customer.schedue_time &gt;= doc.start_date and customer.schedue_time &lt;= doc.end_date">
+                                                <t t-foreach="customer.services_ids" t-as="cust_service">
+                                                    <t t-if="cust_service.services_id.name == service.name">
+                                                        <tr>
+                                                            <td><span t-field="customer.customer_id.name"/></td>
+                                                            <td><span t-field="doc.type"/></td>
+                                                            <td><span t-field="service.service_to"/></td>
+                                                            <td><span t-field="service.name"/></td>
+                                                            <td><span t-field="service.category"/></td>
+                                                            <td><span t-field="service.price"/></td>
+                                                        </tr>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                        </t>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_offer_discount_report" model="ir.actions.report">
+        <field name="name">Offer Discount Report</field>
+        <field name="model">offer.service</field>
+        <field name="report_name">ht_salon_mgmt.report_offer_discount</field>
+        <field name="report_file">ht_salon_mgmt.report_offer_discount</field>
+        <field name="print_report_name">object.name</field>
+    </record>
+</odoo>

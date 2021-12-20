@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="membership_card_report">
+		<t t-call="web.html_container">
+			<t t-call="web.basic_layout">
+				<t t-foreach="docs" t-as="o">
+					<t t-if="o.type == 'gold'">
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/124.png'); background-size:195mm 110mm; width:195mm; height:110mm;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+							<div class="row text-center">
+								<div class="col-12" style="margin-top:30px;">
+									<h2><b><span t-field="o.name"/></b></h2>
+								</div>
+							</div>
+							<br/>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;" t-field="o.name.street"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;" t-field="o.name.state_id"/>
+									<span class="p-3" style="font-size:17px;" t-field="o.name.country_id"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;" t-field="o.name.website"/>
+								</div>
+							</div>
+						</div>
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/125.png'); background-size:195mm 110mm; width:195mm; height:110mm;">
+							<br/>
+							<div class="row">
+								<div class="col-6">
+									<t t-if="o.start_date">
+										<strong class="ml-4" style="font-size:17px;">Start Date</strong> : <span style="font-size:17px;" t-field="o.start_date"/>
+									</t>
+								</div>
+								<div class="col-6 text-right">
+									<t t-if="o.end_date">
+										<strong style="font-size:17px;">End Date</strong> : <span style="font-size:17px;" class="mr-4" t-field="o.end_date"/>
+									</t>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<strong class="ml-4" style="font-size:17px;">Services</strong> : <span style="font-size:17px;" t-field="o.service_ids"/>
+								</div>
+							</div>
+						</div>
+					</t>
+					<t t-elif="o.type == 'silver'">
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/123.png'); background-size:195mm 110mm; width:195mm; height:110mm;">
+							<div class="row text-center">
+								<div class="col-12" style="color:#d2d9d9;margin-top:40px;">
+									<h2><b><span t-field="o.name"/></b></h2>
+								</div>
+							</div>
+							<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#d2d9d9;" t-field="o.name.street"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#d2d9d9;" t-field="o.name.state_id"/>
+									<span class="p-3" style="font-size:17px;color:#d2d9d9;" t-field="o.name.country_id"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#d2d9d9;" t-field="o.name.website"/>
+								</div>
+							</div>
+						</div>
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/122.png'); background-size:195mm 105mm; width:195mm; height:105mm;"><br/><br/><br/><br/><br/><br/><br/>
+							<div class="row">
+								<div class="col-6">
+									<t t-if="o.start_date">
+										<strong class="ml-4" style="font-size:17px;color:#d2d9d9;">Start Date</strong> : <span style="font-size:17px;color:#d2d9d9;" t-field="o.start_date"/>
+									</t>
+								</div>
+								<div class="col-6 text-right">
+									<t t-if="o.end_date">
+										<strong style="font-size:17px;color:#d2d9d9;">End Date</strong> : <span style="font-size:17px;color:#d2d9d9;" class="mr-4" t-field="o.end_date"/>
+									</t>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<strong class="ml-4" style="font-size:17px;color:#d2d9d9;">Services</strong> : <span style="font-size:17px;color:#d2d9d9;" t-field="o.service_ids"/>
+								</div>
+							</div>
+						</div>
+					</t>
+					<t t-elif="o.type == 'bronze'">
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/120.png'); background-size:195mm 110mm; width:195mm; height:110mm;">
+						<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+							<div class="row text-center">
+								<div class="col-12" style="color:#feec93;margin-top:10px">
+									<h2><b><span t-field="o.name"/></b></h2>
+								</div>
+							</div>
+							<br/>
+							<div class="row text-center" style="margin-top:15px">
+								<div class="col-12">
+									<span style="font-size:17px;color:#430603;" t-field="o.name.street"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#430603;" t-field="o.name.state_id"/>
+									<span class="p-3" style="font-size:17px;color:#430603;" t-field="o.name.country_id"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#430603;" t-field="o.name.website"/>
+								</div>
+							</div>	
+						</div>
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/121.png'); background-size:195mm 110mm; width:195mm; height:110mm;margin-top:20px;">
+							<br/><br/><br/><br/><br/><br/><br/>
+							<div class="row">
+								<div class="col-6">
+									<t t-if="o.start_date">
+										<strong class="ml-4" style="font-size:17px;color:#feec93;">Start Date</strong> : <span style="font-size:17px;color:#feec93;" t-field="o.start_date"/>
+									</t>
+								</div>
+								<div class="col-6 text-right">
+									<t t-if="o.end_date">
+										<strong style="font-size:17px;color:#feec93;">End Date</strong> : <span style="font-size:17px;color:#feec93;" class="mr-4" t-field="o.end_date"/>
+									</t>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<strong class="ml-4" style="font-size:17px;color:#feec93;">Services</strong> : <span style="font-size:17px;color:#feec93;" t-field="o.service_ids"/>
+								</div>
+							</div>
+						</div>
+					</t>
+					<t t-elif="o.type == 'platinum'">
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/119.png'); background-size:195mm 109mm; width:195mm; height:109mm;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+							<div class="row text-center">
+								<div class="col-12" style="color:#542b21;">
+									<h3><b><span t-field="o.name"/></b></h3>
+								</div>
+							</div>
+						</div>
+						<div class="page" t-attf-style="background-image:url('/ht_salon_mgmt/static/src/images/118.png'); background-size:195mm 107mm; width:195mm; height:107mm;"
+						>
+						<br/><br/><br/>
+							<div class="row">
+								<div class="col-12">
+									<t t-if="o.start_date">
+										<strong class="ml-4" style="font-size:17px;color:#542b21;">Start Date</strong> : <span style="font-size:17px;color:#542b21;" t-field="o.start_date"/>
+									</t>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-12">
+									<t t-if="o.end_date">
+										<strong class="ml-4" style="font-size:17px;color:#542b21;">End Date</strong> : <span style="font-size:17px;color:#542b21;" t-field="o.end_date"/>
+									</t>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-12">
+									<strong class="ml-4" style="font-size:17px;color:#542b21;">Services</strong> : <span style="font-size:17px;color:#542b21;" t-field="o.service_ids"/>
+								</div>
+							</div>
+							<br/><br/><br/><br/><br/>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#542b21;" t-field="o.name.street"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#542b21;" t-field="o.name.state_id"/>
+									<span class="p-3" style="font-size:17px;color:#542b21;" t-field="o.name.country_id"/>
+								</div>
+							</div>
+							<div class="row text-center">
+								<div class="col-12">
+									<span style="font-size:17px;color:#542b21;" t-field="o.name.website"/>
+								</div>
+							</div>
+						</div>
+					</t>
+				</t>
+			</t>
+		</t>
+	</template>
+
+	<record id="paperformat_membership_card" model="report.paperformat">
+		<field name="name">membership card</field>
+		<field name="default" eval="True"/>
+		<field name="format">custom</field>
+		<field name="page_height">165</field>
+		<field name="page_width">90</field>
+		<field name="orientation">Landscape</field>
+		<field name="margin_top">0</field>
+		<field name="margin_bottom">0</field>
+		<field name="margin_left">0</field>
+		<field name="margin_right">0</field>
+		<field name="header_line" eval="False"/>
+		<field name="header_spacing">40</field>
+		<field name="dpi">90</field>
+	</record>
+
+
+	<record id="membership_card" model="ir.actions.report">
+		<field name="name">Membership Card</field>
+		<field name="model">membership.membership</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">ht_salon_mgmt.membership_card_report</field>
+		<field name="report_file">ht_salon_mgmt.membership_card_report</field>
+		<field name="print_report_name">'Membership Card - %s' % (object.name)</field>
+		<field name="paperformat_id" ref="ht_salon_mgmt.paperformat_membership_card"/>
+	</record>
+	</odoo>

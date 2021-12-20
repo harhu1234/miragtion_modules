@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="service_kanban_view" model="ir.ui.view">
+            <field name="name">service.service.kanban</field>
+            <field name="model">service.service</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <field name="image" widget="image"/>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                    Name : <field name="name"/><br/>
+                                    Gender : <field name="service_to"/><br/>
+                                    <field name="category" readonly="1"/>
+                                    </strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <record id="service_search_view" model="ir.ui.view">
+            <field name="name">service.service.search</field>
+            <field name="model">service.service</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="service_to"/>
+                    <field name="category"/>
+                    <field name="product_id"/>
+                    <filter string="Men" name="men" domain="[('service_to', '=','men')]"/>
+                    <filter string="Women" name="women" domain="[('service_to', '=','women')]"/>
+                    <group string="Group By">
+                              <filter string="Gender" name="group_gender" context="{'group_by':'service_to'}"/>
+                              <filter string="Category" name="group_category" context="{'group_by':'category'}"/>
+                              <filter string="Product" name="group_product" context="{'group_by':'product_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="service_form_view" model="ir.ui.view">
+            <field name="name">service.service.form.view</field>
+            <field name="model">service.service</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="image" class="oe_avatar" widget="image"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Name" required="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="category"/>
+                                <field name="product_id" domain="[('salon_product','=',True)]"/>
+                                <field name="price"/>
+                            </group>
+                            <group>
+                                <field name="service_to"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="service_tree_view" model="ir.ui.view">
+            <field name="name">service.service.tree.view</field>
+            <field name="model">service.service</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="service_to"/>
+                    <field name="description"/>
+                    <field name="product_id"/>
+                    <field name="price"/>
+                    <field name="category"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_service_view" model="ir.actions.act_window">
+            <field name="name">Service</field>
+            <field name="res_model">service.service</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <!--salon Product-->
+        <record id="salon_product_view" model="ir.ui.view">
+            <field name="name">salon.product.view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="sale_ok" position="before">
+                    <div>
+                        <field name="salon_product"/>
+                        <label for="salon_product"/>
+                    </div>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

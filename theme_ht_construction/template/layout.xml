@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="construction_theme_layout" name="Construction Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <!-- header-start -->
+            <header>
+                <div class="bg-top navbar-light">
+                    <div class="container">
+                        <div class="row no-gutters d-flex align-items-center align-items-stretch">
+                            <div class="col-md-4 d-flex align-items-center py-4">
+                                <a class="navbar-brand" href="index.html"><span class="flaticon-bee mr-1"></span>Bee.</a>
+                            </div>
+                            <div class="col-lg-8 d-block">
+                                <div class="row d-flex">
+                                    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                                        <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                                        <div class="text d-flex align-items-center">
+                                            <span>youremail@email.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                                        <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                                        <div class="text d-flex align-items-center">
+                                            <span>Call Us: + 1235 2355 98</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md topper d-flex align-items-center align-items-stretch">
+                                        <p class="mb-0 d-flex d-block">
+                                            <a href="#" class="btn btn-primary d-flex align-items-center justify-content-center">
+                                            <span>Request A Quote</span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+                    <div class="container d-flex align-items-center">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="oi oi-menu"></span> Menu
+                        </button>
+                        <form action="#" class="searchform order-lg-last">
+                            <div class="form-group d-flex">
+                                <input type="text" class="form-control pl-3" placeholder="Search"/>
+                                <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+                            </div>
+                        </form>
+                        <div class="collapse navbar-collapse" id="ftco-nav">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active"><a href="/" class="nav-link pl-0">Home</a></li>
+                                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                                <li class="nav-item"><a href="/project" class="nav-link">Project</a></li>
+                                <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+                                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- END nav -->
+            </header>
+            <!-- header-end -->
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <!-- footer_start  -->
+            <footer class="ftco-footer ftco-bg-dark ftco-section">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div class="col-md">
+                            <div class="ftco-footer-widget mb-5">
+                                <h2 class="ftco-heading-2 logo"><span class="flaticon-bee"></span>Bee.</h2>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                                    <li class="o_colored_level o_animate_preview o_animate o_anim_fade_in_up"><a href="#"><span class="icon-twitter"></span></a></li>
+                                    <li class="o_colored_level o_animate_preview o_animate o_anim_fade_in_up"><a href="#"><span class="icon-facebook"></span></a></li>
+                                    <li class="o_colored_level o_animate_preview o_animate o_anim_fade_in_up"><a href="#"><span class="icon-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="ftco-footer-widget mb-5 ml-md-4">
+                                <h2 class="ftco-heading-2">Services</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Construction</a></li>
+                                    <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Renovation</a></li>
+                                    <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Painting</a></li>
+                                    <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Interior Design</a></li>
+                                    <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Exterior Design</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="ftco-footer-widget mb-5">
+                                <h2 class="ftco-heading-2">Recent Blog</h2>
+                                <div class="block-21 mb-4 d-flex">
+                                    <a class="blog-img mr-4" style="background-image: url(/theme_ht_construction/static/src/images/image_1.jpg);"></a>
+                                    <div class="text">
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                                        <div class="meta">
+                                            <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
+                                            <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                            <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-21 mb-5 d-flex">
+                                    <a class="blog-img mr-4" style="background-image: url(/theme_ht_construction/static/src/images/image_2.jpg);"></a>
+                                    <div class="text">
+                                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                                        <div class="meta">
+                                            <div><a href="#"><span class="icon-calendar"></span> Feb. 07, 2018</a></div>
+                                            <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                            <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="ftco-footer-widget mb-5">
+                                <h2 class="ftco-heading-2">Newsletter</h2>
+                                <form action="#" class="subscribe-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address"/>
+                                        <input type="submit" value="Subscribe" class="form-control submit px-3"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &amp;copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://jupical.com" target="_blank">Jupical</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer_end  -->
+        </xpath>
+    </template>
+</odoo>

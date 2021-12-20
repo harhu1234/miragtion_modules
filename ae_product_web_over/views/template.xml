@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <template name="Product Popover" id="aspl_product_popover_template">
+            <div class="row" style="position:relative;">
+                <div class="col-md-8">
+                    <h3>
+                        <t t-esc="product.display_name"/>
+                    </h3>
+                </div>
+                <div class="col-md-4">
+                    <span t-esc="product.image_128" t-options="{'widget':'image'}" t-if="product.image_128"/>
+                </div>
+                <div class="col-md-12">
+                    <p style="margin:0px;">
+                        <strong>Category :</strong>
+                        <t t-esc="product.categ_id.name"/>
+                    </p>
+                    <p style="margin:0px;">
+                        <strong>Sale Price :</strong>
+                        <t t-esc="product.lst_price"/>
+                    </p>
+                    <p style="margin:0px;">
+                        <strong>Cost :</strong>
+                        <t t-esc="product.standard_price"/>
+                    </p>
+                    <p style="margin:0px;">
+                        <strong>Internal Reference :</strong>
+                        <t t-esc="product.default_code"/>
+                    </p>
+                    <p style="margin:0px;">
+                        <strong>On Hand Qty :</strong>
+                        <t t-esc="product.qty_available"/>
+                    </p>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_coupon_service">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th name="th_customer">Customer</th>
+                                        <th name="th_service">Service</th>
+                                        <th name="th_coupon">Coupon</th>
+                                        <th name="th_price">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="customers" t-as="customer">
+                                        <t t-foreach="customer.services_ids" t-as="service">
+                                            <t t-if="service.coupon_code">
+                                                <tr>
+                                                    <td><span t-field="customer.customer_id.name"/></td>
+                                                    <td><span t-field="service.services_id.name"/></td>
+                                                    <td><span t-field="service.coupon_code"/></td>
+                                                    <td><span t-field="service.price"/></td>
+                                                </tr>
+                                            </t>
+                                        </t>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            </t>
+        </t>
+    </template>
+    <record id="action_coupon_service_report" model="ir.actions.report">
+        <field name="name">Coupon Service Report</field>
+        <field name="model">customer.service</field>
+        <field name="report_name">ht_salon_mgmt.report_coupon_service</field>
+        <field name="report_file">ht_salon_mgmt.report_coupon_service</field>
+        <field name="print_report_name">object.name</field>
+    </record>
+</odoo>

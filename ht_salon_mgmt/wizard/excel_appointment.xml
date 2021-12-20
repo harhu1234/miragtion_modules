@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="generate_excel_appointment_view" model="ir.ui.view">
+            <field name="name">Excel Appointment</field>
+            <field name="model">export.excel.appointment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="excel_file" filename="filename" readonly="1"/>
+                                <field name="filename" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="print_appointment_excel" class="oe_highlight" string="Print Excel" type="object"/>
+                        <button special="cancel" string="Cancel" class="btn btn-default"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_appointment_excel" model="ir.actions.act_window">
+            <field name="name">Appointment Excel</field>
+            <field name="res_model">export.excel.appointment</field>
+            <field name="binding_model_id" ref="model_customer_appointment"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

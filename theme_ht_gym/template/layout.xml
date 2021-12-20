@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="gym_theme_layout" name="Gym Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <!-- header-start -->
+            <header>
+                <div class="header-area ">
+                    <div id="sticky-header" class="main-header-area">
+                        <div class="container-fluid ">
+                            <div class="header_bottom_border">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-3 col-lg-2">
+                                        <div class="logo">
+                                            <a href="index.html">
+                                                <img src="/theme_ht_gym/static/src/img/logo.png" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-7">
+                                        <div class="main-menu  d-none d-lg-block">
+                                            <nav>
+                                                <ul id="navigation">
+                                                    <li><a href="/">home</a></li>
+                                                    <li><a href="/about">about</a></li>
+                                                    <li><a href="/pricing">pricing</a></li>
+                                                    <li><a href="/gallery">gallery</a></li>
+                                                    <li><a href="/blog">blog</a></li>
+                                                    <li><a href="/contact">Contact</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                        <div class="Appointment">
+                                            <div class="book_btn d-none d-lg-block">
+                                                <a href="#">Join Us</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mobile_menu d-block d-lg-none"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header-end -->
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <!-- footer_start  -->
+            <footer class="footer">
+                <div class="footer_top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6 col-lg-3 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="footer_widget">
+                                    <div class="footer_logo">
+                                        <a href="#">
+                                            <img src="/theme_ht_gym/static/src/img/footer_logo.png" alt=""/>
+                                        </a>
+                                    </div>
+                                    <p>5th flora, 700/D kings road, green <br/> lane New York-1782 <br/>
+                                        <a href="#">+10 367 826 2567</a> <br/>
+                                        <a href="#">contact@carpenter.com</a>
+                                    </p>
+                                    <p>
+
+
+
+                                    </p>
+                                    <div class="socail_links">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-twitter-alt"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-pinterest"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-youtube-play"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-lg-4 offset-xl-1 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="footer_widget">
+                                    <h3 class="footer_title">
+                                        Useful Links
+                                    </h3>
+                                    <ul class="links">
+                                        <li><a href="/pricing">Pricing</a></li>
+                                        <li><a href="/about">About</a></li>
+                                        <li><a href="/gallery"> Gallery</a></li>
+                                        <li><a href="/contact"> Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-lg-4 o_colored_level o_animate_preview o_animate o_anim_fade_in_up">
+                                <div class="footer_widget">
+                                    <h3 class="footer_title">
+                                        Subscribe
+                                    </h3>
+                                    <form action="#" class="newsletter_form">
+                                        <input type="text" placeholder="Enter your mail"/>
+                                        <button type="submit">Subscribe</button>
+                                    </form>
+                                    <p class="newsletter_text">Esteem spirit temper too say adieus who direct esteem esteems
+                                        luckily.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </footer>
+            <!-- footer_end  -->
+        </xpath>
+    </template>
+</odoo>

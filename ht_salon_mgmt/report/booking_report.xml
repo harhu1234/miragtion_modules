@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="appointment_report">
+        <div class="page">
+            <strong>Customer :</strong> <span t-field="appointment.customer_id"/>
+            <br/>
+            <strong>Date :</strong> <span t-field="appointment.schedue_time"/>
+            <t t-if="appointment.services_ids">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th name="th_type">Type</th>
+                            <th name="th_service">Service</th>
+                            <th name="th_pack">Package</th>
+                            <th name="th_pack_description">Package description</th>
+                            <th name="th_product">Product</th>
+                            <th name="th_description">Discription</th>
+                            <th name="th_code">Code</th>
+                            <th name="th_offer_price">Offer Price</th>
+                            <th name="th_price">Price</th>
+                            <th name="th_total">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="appointment.services_ids" t-as="service">
+                            <tr>
+                                <td><span t-field="service.service_type"/></td>
+                                <td><span t-field="service.services_id"/></td>
+                                <td><span t-field="service.package_id"/></td>
+                                <td><span t-field="service.package_desc"/></td>
+                                <td><span t-field="service.product_id"/></td>
+                                <td><span t-field="service.description"/></td>
+                                <td><span t-field="service.coupon_code"/></td>
+                                <td><span t-field="service.offer_price"/></td>
+                                <td><span t-field="service.price"/></td>
+                                <td><span t-field="service.sum"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </t>
+        </div>
+    </template>
+
+    <!-- Report Template for Booking Appointment -->
+    <template id="report_booking_appointment">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="row">
+                    <div class="col">
+                        <center><h1>Appointment</h1></center>
+                    </div>
+                </div>
+                <br/>
+                <t t-foreach="docs" t-as="appointment">
+                    <t t-call="ht_salon_mgmt.appointment_report"/>
+                </t>
+            </t>
+        </t>
+    </template>
+
+     <!-- action Booking Report -->
+     <record id="action_booking_report" model="ir.actions.report">
+         <field name="name">Booking Report</field>
+         <field name="model">customer.appointment</field>
+         <field name="report_type">qweb-pdf</field>
+         <field name="report_name">ht_salon_mgmt.report_booking_appointment</field>
+         <field name="report_file">ht_salon_mgmt.report_booking_appointment</field>
+         <field name="print_report_name">Booking Appointments Report</field>
+    </record>
+
+</odoo>

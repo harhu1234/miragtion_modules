@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="offer_form_view" model="ir.ui.view">
+        <field name="name">Offer wizard form view</field>
+        <field name="model">offer.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="offers_service"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="offer_service_report" class="oe_highlight" string="Report" type="object"/>
+                    <button special="cancel" string="Cancel" type="object" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_offer_wizard_view" model="ir.actions.act_window">
+        <field name="name">Offer Service Wizard</field>
+        <field name="res_model">offer.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="offer_form_view"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

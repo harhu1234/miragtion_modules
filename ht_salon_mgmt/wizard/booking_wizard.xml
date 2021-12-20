@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="booking_form_view" model="ir.ui.view">
+        <field name="name">Booking Form View</field>
+        <field name="model">booking.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="appointment_by" required="1"/>
+                            <field name="appointment_day" attrs="{'invisible':[('appointment_by','!=','day')]}"/>
+                            <field name="appointment_month" attrs="{'invisible':[('appointment_by','!=','month')]}"/>
+                            <field name="start_date" attrs="{'invisible':[('appointment_by','!=','date_range')]}"/>
+                            <field name="end_date" attrs="{'invisible':[('appointment_by','!=','date_range')]}"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="booking_report" string="Report" type="object" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel" type="object" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_booking_view" model="ir.actions.act_window">
+        <field name="name">Booking Wizard</field>
+        <field name="res_model">booking.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="booking_form_view"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

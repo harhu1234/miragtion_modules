@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="report_attendee">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="appointment">
+                    <div class="row">
+                        <div class="col">
+                            <center><h1>Attendee Services</h1></center>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <strong>Date :</strong> <span t-field="appointment.schedue_time"/>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th name="th_attendee">Attendee</th>
+                                    <th name="th_type">Type</th>
+                                    <th name="th_service">Service</th>
+                                    <th name="th_pack">Package</th>
+                                    <th name="th_pack_description">Package description</th>
+                                    <th name="th_product">Product</th>
+                                    <th name="th_description">Discription</th>
+                                    <th name="th_code">Code</th>
+                                    <th name="th_offer_price">Offer Price</th>
+                                    <th name="th_price">Price</th>
+                                    <th name="th_total">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="appointment.services_ids" t-as="service">
+                                    <tr>
+                                        <td><span t-field="appointment.attendee_id"/> </td>
+                                        <td><span t-field="service.service_type"/></td>
+                                        <td><span t-field="service.services_id"/></td>
+                                        <td><span t-field="service.package_id"/></td>
+                                        <td><span t-field="service.package_desc"/></td>
+                                        <td><span t-field="service.product_id"/></td>
+                                        <td><span t-field="service.description"/></td>
+                                        <td><span t-field="service.coupon_code"/></td>
+                                        <td><span t-field="service.offer_price"/></td>
+                                        <td><span t-field="service.price"/></td>
+                                        <td><span t-field="service.sum"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+
+    <record id="action_attendee_report" model="ir.actions.report">
+        <field name="name">Attendee Report</field>
+        <field name="model">customer.appointment</field>
+        <field name="report_type">qweb-pdf</field>
+         <field name="report_name">ht_salon_mgmt.report_attendee</field>
+         <field name="report_file">ht_salon_mgmt.report_attendee</field>
+         <field name="print_report_name">Attendee Report</field>
+    </record>
+
+</odoo>

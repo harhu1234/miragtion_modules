@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_coupon">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="row">
+                    <div class="col">
+                        <center><h1>Coupons</h1></center>
+                    </div>
+                </div>
+                <br/>
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <div class="row">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th name="th_coupon">coupon</th>
+                                        <th name="th_type">Type</th>
+                                        <th name="th_discount">Discount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span t-field="doc.name"/></td>
+                                        <td><span t-field="doc.discount_type"/></td>
+                                        <td><span t-field="doc.discount_value"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="action_coupon_report" model="ir.actions.report">
+        <field name="name">Coupon Report</field>
+        <field name="model">coupon.code</field>
+        <field name="report_name">ht_salon_mgmt.report_coupon</field>
+        <field name="report_file">ht_salon_mgmt.report_coupon</field>
+        <field name="print_report_name">object.name</field>
+    </record>
+</odoo>

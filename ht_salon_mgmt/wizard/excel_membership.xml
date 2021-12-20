@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data>
+        <record id="excel_membership_form_view" model="ir.ui.view">
+            <field name="name">Excel Membership Form Wizard</field>
+            <field name="model">export.excel.membership</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="excel_file" filename="filename" readonly="1"/>
+                                <field name="filename" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="print_membership_excel" string="Excel Membership" class="oe_highlight" type="object"/>
+                        <button special="cancel" class="btn btn-default" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_excel_membership" model="ir.actions.act_window">
+                    <field name="name">Excel Membership</field>
+                    <field name="res_model">export.excel.membership</field>
+                    <field name="binding_model_id" ref="model_membership_membership"/>
+                    <field name="view_mode">form</field>
+                    <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

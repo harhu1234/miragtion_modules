@@ -1,0 +1,84 @@
+
+#custom_header{
+	background: linear-gradient(#5500df, #5098ef) !important;
+	border-radius: 0 0 100px 1000px/30px;	
+}
+#custom_header .custom_main_nav{
+	width: 100%;
+	vertical-align: middle;
+}
+#custom_header .custom_main_nav .class_comp_name{
+	float: left;
+}
+#custom_header .custom_main_nav .class_comp_name img{
+	height: 100px;
+	max-width: 200px;
+}
+
+#custom_header .custom_main_nav .class_signin{
+	float: right;
+	height: 70px;
+	width: 250px;
+	margin-top: 20px;
+	margin-right: 20px;
+	text-align: right;
+}
+
+#custom_header .custom_main_nav .class_signin .signin_inner{
+	list-style: none;
+	height: 70px;
+	width: 80px;
+	float: right;
+	margin-left: 10px;
+	background-image: url('/jt_website_custom_header_footer/static/src/img/user_icon.png');
+	background-repeat: no-repeat !important;
+    background-size: 70px 70px !important;
+}
+
+#custom_header .page_name_style{
+	padding-top: 10px;
+}
+
+#custom_header .page_name_style h1{
+	padding-left: 50px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: 5px 8px #5500df;
+	text-transform: uppercase;
+}
+
+#footer_customm {
+	background-color: #e4f3fd !important;
+	padding: 20px 0;
+	border-radius: 1000px/30px 50px 0 0;
+}
+#footer_customm .cmp_logo img{
+	height: 100px;
+	max-width: 200px;
+}
+#footer_customm .fa-2x{
+	color: #36aee5;
+}
+#footer_customm .store_icon_div{
+	margin-top: 20px;
+}
+#footer_customm .store_icon_div a img{
+	height: 55px;
+	width: 150px;
+}
+#footer_customm .store_icon_div div{
+	margin-top: 20px;
+	margin-right: 50px;
+}
+}
+#footer_menu{
+	color: #36aee5;
+	font-size: 25px;
+	margin-right: 20px;
+}
+#footer_menu:hover{
+	color: #168cbf;
+	text-decoration: none;
+	font-weight: bold;

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<template id="package_menu_report_tmp">
+		<t t-call="web.html_container">
+            <t t-call="web.external_layout">
+            	<t t-set="count" t-value="0"/>
+            	<t t-set="count2" t-value="0"/>
+        		<div class="page">
+        			<div class="row">
+        				<div class="col-5" style="margin-top:25px;">
+        					<t t-foreach="docs" t-as="doc">
+        						<t t-set="count" t-value="count + 1"/>
+        						<t t-if="(count % 2) != 0">	
+	            					<div class="row">
+	            						<div class="col-12 border border-warning" style="background-color:#200031">
+	            							<div class="row">
+	            								<div class="col-12 text-center">
+	            									<h1 style="color:#ebd186;text-decoration:underline;"><span t-field="doc.name"/></h1>
+	            								</div>
+			            					</div>
+			            					<br/>
+			            					<div class="row">
+			            						<div class="col" style="color:#d3b89b">
+			            							<ul>
+			            								<t t-foreach="doc.line_ids" t-as="service_line">
+			            								<li>
+			            									<span style="color:white" t-field="service_line.name"/>
+			            								</li>
+			            								</t>
+			            							</ul>
+			            						</div>
+			            					</div>
+			            					<br/>
+			            					<div class="row">
+			            						<div class="col text-center">
+			            							<hr color="#ebd186"/>
+			            						</div>
+			            					</div>
+			            					<div class="row">
+			            						<div class="col text-center">
+			            							<h1 style="color:#ebd186;">RS.<span t-field="doc.package_price"/></h1>
+			            						</div>
+			            					</div>
+			            					<br/>
+			            				</div>
+		            				</div>
+	            				</t>
+	            				<br/>
+            				</t>
+        				</div>
+        				<div class="col-2">
+        				</div>
+        				<div class="col-5">
+        					<t t-foreach="docs" t-as="doc">
+        						<t t-set="count2" t-value="count2 + 1"/>
+        						<t t-if="(count2 % 2) == 0">	
+	            					<div class="row">
+	            						<div class="col-12 border border-warning" style="background-color:#200031">
+			            					<div class="row">
+	            								<div class="col-12 text-center">
+	            									<h1 style="color:#ebd186;text-decoration:underline;"><span t-field="doc.name"/></h1>
+	            								</div>
+			            					</div>
+			            					<br/>
+			            					<div class="row">
+			            						<div class="col" style="color:#d3b89b">
+			            							<ul>
+			            								<t t-foreach="doc.line_ids" t-as="service_line">
+			            								<li>
+			            									<span style="color:white" t-field="service_line.name"/>
+			            								</li>
+			            								</t>
+			            							</ul>
+			            						</div>
+			            					</div>
+			            					<br/>
+			            					<div class="row">
+			            						<div class="col text-center">
+			            							<hr color="#ebd186"/>
+			            						</div>
+			            					</div>
+			            					<div class="row">
+			            						<div class="col text-center">
+			            							<h1 style="color:#ebd186;">RS.<span t-field="doc.package_price"/></h1>
+			            						</div>
+			            					</div>
+			            					<br/>
+			            				</div>
+		            				</div>
+	            				</t>
+	            				<br/>
+            				</t>
+        				</div>
+        			</div>
+        		</div>
+            </t>
+        </t>
+	</template>
+
+
+	<record id="package_menu_report" model="ir.actions.report">
+		<field name="name">Package Menu</field>
+		<field name="model">pacakge.package</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">ht_salon_mgmt.package_menu_report_tmp</field>
+		<field name="report_file">ht_salon_mgmt.package_menu_report_tmp</field>
+		<field name="print_report_name">'Package Menu - %s' % (object.name)</field>
+	</record>
+</odoo>

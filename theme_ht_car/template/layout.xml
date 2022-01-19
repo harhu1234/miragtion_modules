@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ht_theme_layout" name="Harhu Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <!-- header -->
+          <header>
+             <!-- header inner -->
+             <div class="header">
+                <div class="container-fluid">
+                   <div class="row">
+                      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                         <div class="full">
+                            <div class="center-desk">
+                               <div class="logo">
+                                  <a href="/"><img src="/theme_ht_car/static/src/images/logo.png" alt="#" /></a>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                         <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                               <ul class="navbar-nav mr-auto">
+                                  <li class="nav-item active">
+                                     <a class="nav-link" href="/"> Home  </a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a class="nav-link" href="/about">About</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a class="nav-link" href="/furnitures">Furnitures</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a class="nav-link" href="/testimonial">Testimonial</a>
+                                  </li>
+                                  <li class="nav-item">
+                                     <a class="nav-link" href="/contact">Contact Us</a>
+                                  </li>
+                                  <li class="nav-item d_none">
+                                     <a class="nav-link" href="/web/login"><i class="fa fa-user-circle padd_right" ></i>Login/Register</a>
+                                  </li>
+                                  <li class="nav-item d_none">
+                                     <a class="nav-link" href="#"><i class="fa fa-search" ></i></a>
+                                  </li>
+                               </ul>
+                            </div>
+                         </nav>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </header>
+          <!-- end header inner -->
+          <!-- end header -->
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <!--  footer -->
+              <footer id="contact">
+                 <div class="footer">
+                  <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                    <div class="container">
+                       <div class="row">
+                          <div class="col-md-4">
+                             <div class="titlepage">
+                                <h2>Contact Us</h2>
+                             </div>
+                          </div>
+                          <div class="col-md-8">
+                             <ul class="location_icon">
+                                <li><a href="#"><i class="fa fa-map-marker" ></i></a> Locatins</li>
+                                <li><a href="#"><i class="fa fa-volume-control-phone" ></i></a> +71 9087654321</li>
+                                <li><a href="#"><i class="fa fa-envelope" ></i></a>demo@gmail.com</li>
+                             </ul>
+                          </div>
+                             <div class="col-md-6">
+                                <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required main_form" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="contact1">
+                                                    <!-- <span class="s_website_form_label_content">Your Name</span>
+                                                    <span class="s_website_form_mark"> *</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="contact1" type="text" class="form-control s_website_form_input contactus" name="name" required="" data-fill-with="name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="contact2">
+                                                    <!-- <span class="s_website_form_label_content">Phone Number</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="contact2" type="tel" class="form-control s_website_form_input contactus" name="phone" data-fill-with="phone"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="contact3">
+                                                    <!-- <span class="s_website_form_label_content">Your Email</span>
+                                                    <span class="s_website_form_mark"> *</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="contact3" type="email" class="form-control s_website_form_input contactus" name="email_from" required="" data-fill-with="email"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="contact4">
+                                                    <!-- <span class="s_website_form_label_content">Your Company</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="contact4" type="text" class="form-control s_website_form_input contactus" name="company" data-fill-with="commercial_company_name"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="contact5">
+                                                    <!-- <span class="s_website_form_label_content">Subject</span>
+                                                    <span class="s_website_form_mark"> *</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="contact5" type="text" class="form-control s_website_form_input contactus" name="subject" required="" placeholder="Subject"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="contact6">
+                                                    <!-- <span class="s_website_form_label_content">Your Question</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <textarea id="contact6" class="form-control s_website_form_input contactus" name="description" required="" placeholder="Your Question"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_dnone">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="contact7">
+                                                    <span class="s_website_form_label_content">Email To</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="contact7" type="hidden" class="form-control s_website_form_input" name="email_to"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-6 s_website_form_submit" data-name="Submit Button">
+                                            <div style="width: 200px;" class="s_website_form_label"/>
+                                            <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send send_btn">Send</a>
+                                            <span id="s_website_form_result"></span>
+                                        </div>
+                                        <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                         <ul class="social_icon">
+                                            <li><a t-attf-href="{{res_company.social_facebook}}"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a t-attf-href="{{res_company.social_twitter}}"><i class="fa fa-twitter" ></i></a></li>
+                                            <li><a t-attf-href="{{res_company.social_linkedin}}"><i class="fa fa-linkedin-square" ></i></a></li>
+                                            <li><a t-attf-href="{{res_company.social_instagram}}"><i class="fa fa-instagram" ></i></a></li>
+                                         </ul>
+                                      </div>
+                                    </div>
+                                </form>
+                             </div>
+                          <div class="col-md-6">
+                             <div class="map">
+                                <figure><img src="/theme_ht_car/static/src/images/map.jpg" alt="#"/></figure>
+                             </div>
+                             <form class="bottom_form">
+                                <h3>Newsletter</h3>
+                                <input class="enter" placeholder="Enter your email" type="text" name="Enter your email"/>
+                                <button class="sub_btn">subscribe</button>
+                             </form>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="copyright">
+                       <div class="container">
+                          <div class="row">
+                             <div class="col-md-12">
+                                <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free  html Templates</a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    </section>
+                 </div>
+              </footer>
+              <!-- end footer -->
+        </xpath>
+    </template>
+</odoo>

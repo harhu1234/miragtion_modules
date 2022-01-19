@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_tentant_agreement" model="ir.sequence">
+            <field name="name">tentant agreement sequence</field>
+            <field name="code">create.tenant.agreement</field>
+            <field name="prefix">#T/%(range_year)s</field>
+            <field eval="1" name="number_next"/>
+            <field eval="True" name="use_date_range"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+            <field name="padding">4</field>
+        </record>
+        <record id="sequence_create_payment" model="ir.sequence">
+            <field name="name">Create Payment sequence</field>
+            <field name="code">create.payment.wizard</field>
+            <field name="prefix">Inv/%(range_year)s</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+        </record>
+        <record id="sequence_buy_property" model="ir.sequence">
+            <field name="name">Buy property sequence</field>
+            <field name="code">buy.property</field>
+            <field name="prefix">Inv/%(range_year)s</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+            <field eval="False" name="company_id"/>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</odoo>

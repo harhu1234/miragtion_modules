@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- form view for create model -->
+        <record id="create_tenant_payment_form_view" model="ir.ui.view">
+            <field name="name">create.tentant.payment.form.view</field>
+            <field name="model">create.payment.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="4">
+                        <group>
+                            <field name="folio" invisible="1"/>
+                            <field name="agreement_id"  context="{'default_property_id':context.get('active_id')}" invisible="1"/>
+                            <field name="payment"/>
+                        </group>
+                        <group>
+                            <field name="payment_date"/>
+                        </group>
+                        
+                        
+                    </group>
+                    <footer>
+                        <button string="Create Invoice" name="create_tent_invoice" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- action for buy the property views -->
+        <record id="create_tenant_invoice" model="ir.actions.act_window">
+            <field name="name">Create Invoice</field>
+            <field name="res_model">create.payment.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ht_theme_layout" name="Harhu Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <!-- header -->
+          <header>
+            <div class="theme-fx theme-fx--full-width">
+                    <div class="fx-header">
+                        <div class="fx-header__wrapper" role="banner">
+                            <div class="fx-header__column fx-header__column--first fx-sm-hidden">
+                                <!--rndr:Navi/Elements/Fx/StaticLinks-->
+                                <ul class="static-links">
+                                    <li class="static-links__item">
+                                        <a href="/" class="static-links__link fx-typography-meta js-header-link-service">
+                                        Service
+                                        </a>
+                                    </li>
+                                    <li class="static-links__item">
+                                        <a href="intl/in/compinfo_contact_sid_42812c5d3b0da46ffaac5f481308f5ff.html" class="static-links__link fx-typography-meta">
+                                        Contact us
+                                        </a>
+                                    </li>
+                                    <li class="static-links__item">
+                                        <a href="intl/in/compinfo_sid_42812c5d3b0da46ffaac5f481308f5ff.html" class="static-links__link fx-typography-meta js-header-link-about">
+                                        About Us
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- <script type="text/javascript">tho.bootstrapModule('navi.fx.staticLinks', [], []);</script> -->
+                                <!--rndr:Navi/Elements/Fx/EntryPoints-->
+                                <div class="entry-points">
+                                    <div class="entry-points__menu js-entry-points-menu">
+                                        <svg class="fx-icon fx-icon-navi entry-points__icon fx-size--medium">
+                                            <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#navi"></use> -->
+                                        </svg>
+                                    </div>
+                                    <ul class="link-list fx-text fx-text--semi-bold">
+                                        <li class="link-list__item js-entry-points-categories fx-lg-hidden"><a class="link-list__text" href="#">Categories</a></li>
+                                        <li class="link-list__item"><a class="link-list__text" href="intl/in/hotdeals_sid_42812c5d3b0da46ffaac5f481308f5ff.html">Hot Deals</a></li>
+                                        <li class="link-list__item"><a class="link-list__text" href="intl/in/prodnews_sid_42812c5d3b0da46ffaac5f481308f5ff.html">New</a></li>
+                                        <li class="link-list__item"><a class="link-list__text" href="intl/in/topseller_sid_42812c5d3b0da46ffaac5f481308f5ff.html">Top-Seller</a></li>
+                                        <li class="link-list__item"><a class="link-list__text" href="intl/in/blowouts_sid_42812c5d3b0da46ffaac5f481308f5ff.html">Bargains</a></li>
+                                    </ul>
+                                </div>
+                                <!-- <script type="text/javascript">tho.bootstrapModule('navi.fx.entryPoints', [], []);</script> -->
+                            </div>
+                            <div class="fx-header__column fx-header__column--second">
+                                <!--rndr:Navi/Elements/Fx/Logo-->
+                                <div class="header-logo ">
+                                    <a id="cyberstore-logo" class="header-logo__link" href="/theme_ht_mcit/static/src/intl/in/index_sid_42812c5d3b0da46ffaac5f481308f5ff.html" aria-label="Homepage">
+                                        <div class="header-logo__container">
+                                            <img class="header-logo__image " src="/theme_ht_mcit/static/src/pics/images/logos/thomann-cyan-black.svg" alt="Thomann" width="156" height="29" title=""/>
+                                        </div>
+                                        <div class="header-logo__placeholder"></div>
+                                    </a>
+                                </div>
+                                
+                                    <section>
+                                        <div class="search-box">
+                                             <t t-call="website.website_search_box_input">
+                                                <t t-set="_form_classes" t-valuef="o_wsale_products_searchbar_form w-100 w-md-auto mr-auto mb-2"/>
+                                                <t t-set="_classes" t-valuef=" "/>
+                                                <t t-set="search_type" t-valuef="products"/>
+                                                <!-- <t t-set="action" t-value="keep('/shop'+ ('/category/'+slug(category)) if category else None, search=0) or '/shop'"/> -->
+                                                <t t-set="display_image" t-valuef="true"/>
+                                                <t t-set="display_description" t-valuef="true"/>
+                                                <t t-set="display_extra_link" t-valuef="true"/>
+                                                <t t-set="display_detail" t-valuef="true"/>
+                                                <t t-if="attrib_values">
+                                                    <t t-foreach="attrib_values" t-as="a">
+                                                        <input type="hidden" name="attrib" t-att-value="'%s-%s' % (a[0], a[1])" />
+                                                    </t>
+                                                </t>
+                                            </t>
+                                        </div>
+                                    </section>
+
+                                <!-- <div class="search-box">
+                                    <form class="search-box__form" method="get" action="" name="searchform">
+                                        <div class="search-input">
+                                            <svg class="fx-icon fx-icon-search search-input__magnifier js-search-input-magnifier">
+                                                <title>search</title>
+                                                <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#search"></use>
+                                            </svg>
+                                            <input class="search-input__field fx-text js-search-input-field" placeholder="Search" type="search" name="sw" id="fsearch-sw" autocomplete="off" value="" role="search"/>
+                                            <input type="hidden" name="smcs" value="0"/>
+                                            <div class="search-input__preview" id="js-search-input-preview"></div>
+                                        </div>
+                                    </form>
+                                    <div class="main-navigation fx-md-hidden fx-lg-hidden js-search-box-menu">
+                                        <svg class="fx-icon fx-icon-navi main-navigation__icon">
+                                            <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#navi"></use>
+                                        </svg>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="fx-header__column fx-header__column--third">
+                                <!--rndr:Navi/Elements/Fx/TickerAndUsp-->
+                                <ul class="ticker fx-sm-hidden">
+                                    <li class="ticker__item">
+                                        <a class="ticker__link fx-typography-meta" href="intl/in/helpdesk_warranty_sid_42812c5d3b0da46ffaac5f481308f5ff.html">
+                                        3-Year Thomann Warranty
+                                        </a>
+                                    </li>
+                                    <li class="ticker__item">
+                                        <a class="ticker__link fx-typography-meta" href="intl/in/helpdesk_satisfaction_sid_42812c5d3b0da46ffaac5f481308f5ff.html">
+                                        Satisfaction Guarantee
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!--rndr:Navi/Elements/Fx/UserNavigation-->
+
+
+                                <div class="user-navigation js-user-navigation">
+                                    <div class="user-navigation__item shop-country js-user-navigation-shop" aria-label="Country and Language">
+                                        <span class="shop-country__stats fx-typography-meta">
+                                        en ·
+                                        </span>
+                                        <section>
+                                          <t id="language_selector_call" t-call="portal.language_selector">
+                                                <t t-set="_div_classes" t-value="(_div_classes or '') + ' dropup'"/>
+                                            </t>
+                                        </section>
+                                    </div>
+                                    <div class="user-navigation__item js-user-navigation-customer-center">
+                                        <a href="intl/in/mythomann_sid_42812c5d3b0da46ffaac5f481308f5ff.html" aria-label="Customer Centre" tabindex="0" aria-owns="fx-flyin-customer" aria-expanded="false" role="button">
+                                            <svg class="fx-icon fx-icon-profile user-navigation__icon fx-size--md2-lg">
+                                                <title>customer-center</title>
+                                                <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#profile"></use> -->
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="user-navigation__item js-user-navigation-wishlist">
+                                        <a href="intl/in/wishlist_sid_42812c5d3b0da46ffaac5f481308f5ff.html" aria-label="Go to Wish List" tabindex="0">
+                                            <svg class="fx-icon fx-icon-heart user-navigation__icon fx-size--md2-lg">
+                                                <title>wishlist</title>
+                                                <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#heart"></use> -->
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="user-navigation__item js-user-navigation-basket">
+                                        <a href="intl/in/basket_sid_42812c5d3b0da46ffaac5f481308f5ff.html" aria-label="To My Shopping Basket" tabindex="0">
+                                            <svg class="fx-icon fx-icon-cart user-navigation__icon js-user-navigation-basket-icon-cart fx-size--md2-lg">
+                                                <title>basket</title>
+                                                <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#cart"></use> -->
+                                            </svg>
+                                            <svg class="fx-icon fx-icon-cart-selected user-navigation__icon js-user-navigation-basket-icon-cart-selected fx-size--md2-lg fx-hidden">
+                                                <title>basket</title>
+                                                <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#cart-selected"></use> -->
+                                            </svg>
+                                            <svg class="fx-icon fx-icon-cart-selected-99plus user-navigation__icon js-user-navigation-basket-icon-cart-99plus fx-size--md2-lg fx-hidden">
+                                                <title>basket</title>
+                                                <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#cart-selected-99plus"></use> -->
+                                            </svg>
+                                            <span class="user-navigation__basket-amount  fx-typography-teaser js-user-navigation-basket-amount">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- <script type="text/javascript">tho.bootstrapModule('navi.fx.userNavigation', [], []);</script> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                   .categories-list li:hover {
+                        background: rgb(126, 0, 243);
+                        height:30px;
+                        cursor: pointer;
+                    }
+                    ul li ul {
+                        list-style-type: none;
+                        background: gray;
+                        height:auto;
+                        visibility: hidden;
+                        min-width: 5rem;
+                        position: absolute;
+                        transition: all 0.5s ease;
+                        margin-top: 1rem;
+                        left: 0;
+                        display: block;
+                    }
+
+                    ul li:hover > ul,
+                    ul li ul:hover {
+                      visibility: visible;
+                      opacity: 1;
+                      display: block;
+                    }
+
+                    ul li ul li {
+                        clear: both;
+                      width: 100%;
+                    }
+                </style>
+                <div class="fx-header-categories fx-sm-hidden fx-md-hidden" style="height: 50px;">
+                        <div class="fx-header-categories__wrapper js-header-categories">
+                            <ul class="categories-list js-categories-list">
+                                <t t-set="shop_categorys" t-value="request.env['product.public.category'].sudo().search([])"/>
+                                <t t-foreach="shop_categorys" t-as="category">
+                                    <t t-if="not category.parent_id">
+                                        <t t-set="slug_name" t-value="slug(category)"/>
+                                        <li class="itm-0" style="margin-top: 8px;"><a style="color:white;" class="has-submenu" t-att-href="'/shop/category/' + slug_name"><t t-esc="category.name"/></a>
+                                            
+                                            <t t-if="len(category.child_id.ids) > 0">
+                                                <ul class="dropdown sub-menu cat-0001 sm-level-1">
+                                                    <t t-foreach="category.child_id" t-as="child">
+                                                        <t t-set="childslug_name" t-value="slug(child)"/>
+                                                        <li class="itm-0"><a t-att-href="'/shop/category/' + childslug_name"><t t-esc="child.name"/></a>
+                                                       
+                                                        <t t-if="child.child_id">
+                                                            <ul class="sub-menu cat-0001 sm-level-1">
+                                                                <t t-foreach="child.child_id" t-as="subchild">
+                                                                    <t t-set="subchildslug_name" t-value="slug(subchild)"/>
+                                                                    <li class="megacard itm-0"><a t-att-href="'/shop/category/' + subchildslug_name"><t t-esc="subchild.name"/></a>
+                                                                    
+                                                                    <t t-if="subchild.child_id">
+                                                                        <ul class="sub-menu cat-0001 sm-level-1">
+                                                                            <t t-foreach="subchild.child_id" t-as="subchild_child">
+                                                                                <t t-set="subchild_child_slug" t-value="slug(subchild_child)"/>
+                                                                                <li class="megacard itm-0"><a t-att-href="'/shop/category/' + subchild_child_slug"><t t-esc="subchild_child.name"/></a>
+                                                                                
+                                                                            </li>
+                                                                            </t>
+                                                                        </ul>
+                                                                    </t>    
+                                                                </li>
+                                                                </t>
+                                                            </ul>
+                                                        </t>
+                                                        </li>
+                                                    </t>
+                                                </ul>
+                                            </t>
+                                        </li>
+                                    </t>
+                                </t>
+                            </ul>
+                        </div>
+                    </div>
+          </header>
+          <!-- end header -->
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <!--  footer -->
+            <footer>
+                <div class="theme-fx theme-fx--full-width">
+                    <div class="fx-content-footer" role="contentinfo">
+                        <!--rndr:Footer/Elements/Share-->
+                        <div class="share">
+                            <h4 class="fx-headline fx-headline--4 fx-space-bottom--l">
+                                Do you like what you're seeing?
+                            </h4>
+                            <div class="actions">
+                                <div class="actions__item">
+                                    <button type="button" class="fx-button fx-button--secondary fx-button--icon-left actions__button actions__button--secondary " rel="facebook">
+                                        <i class="fa fa-facebook-square"></i>&amp;nbsp&amp;nbsp&amp;nbsp Share
+                                        <!-- <svg class="fx-icon fx-icon-facebook-filled fx-button__icon"> -->
+                                            <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#facebook-filled"></use> -->
+                                        <!-- </svg> -->
+                                        <!-- Share -->
+                                    </button>
+                                </div>
+                                <div class="actions__item">
+                                    <button type="button" class="fx-button fx-button--secondary fx-button--icon-left actions__button actions__button--secondary " rel="twitter">
+                                        <i class="fa fa-twitter"></i>&amp;nbsp&amp;nbsp&amp;nbsp Twitter
+                                        <!-- <svg class="fx-icon fx-icon-twitter fx-button__icon"> -->
+                                            <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#twitter"></use> -->
+                                        <!-- </svg>
+                                        Twitter -->
+                                    </button>
+                                </div>
+                                <div class="actions__item">
+                                    <button type="button" class="fx-button fx-button--secondary fx-button--icon-left actions__button actions__button--secondary " rel="mail">
+                                        <i class="fa fa-envelope-o"></i>&amp;nbsp&amp;nbsp&amp;nbsp Email
+                                        <!-- <svg class="fx-icon fx-icon-envelope fx-button__icon"> -->
+                                            <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#envelope"></use> -->
+                                        <!-- </svg>
+                                        Email -->
+                                    </button>
+                                </div>
+                                <div class="actions__item">
+                                    <button type="button" class="fx-button fx-button--primary fx-button--icon-left actions__button actions__button--primary ">
+                                        <i class="fa fa-bullhorn"></i>&amp;nbsp&amp;nbsp&amp;nbsp Give Feedback
+                                        <!-- <svg class="fx-icon fx-icon-megaphone fx-button__icon"> -->
+                                            <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#megaphone"></use> -->
+                                        <!-- </svg>
+                                        Give Feedback -->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <script type="text/javascript">tho.bootstrapModule('footer.share', [{"actions":[{"name":"facebook","icon":"facebook-filled","snippet":"nc_general.share","type":"share","url":"https:\/\/www.facebook.com\/share.php?u=%SHARE_URL%"},{"name":"twitter","icon":"twitter","snippet":"nc_general.twitter","type":"share","url":"https:\/\/twitter.com\/share?url=%SHARE_URL%&amp;text=%SHARE_DESC%"},{"name":"mail","icon":"envelope","snippet":"nc_general.mail","type":"share","url":"mailto:?subject=%SHARE_DESC%&amp;body=%SHARE_URL%"},{"name":"feedback","icon":"megaphone","snippet":"nc_general.give.feedback","type":"feedback","url":null}]}], []);</script> -->
+                        <!--rndr:Fx/Common/Components/FlyIn-->
+                        <div id="fx-flyin-footer-feedback" class="theme-fx theme-fx--full-width fx-flyin  fx-flyin--is-right" role="dialog" aria-modal="true" aria-hidden="true">
+                            <div class="backdrop fx-overlay"></div>
+                            <div class="content-holder">
+                                <div class="content fx-flyin-content">
+                                    <div class="content__header fx-flyin-content__header">
+                                        <!--rndr:Common/Elements/FlyInSidebar/FlyInHeaderBar-->
+                                        <div class="fx-flyin__header-bar">
+                                            <div class="header">
+                                                <span class="header__title fx-headline fx-headline--3">Your Feedback</span>
+                                            </div>
+                                            <a class="close-button">
+                                                <svg class="fx-icon fx-icon-remove fx-size--md-md-lg button-icon">
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#remove"></use> -->
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- <script type="text/javascript">tho.bootstrapModule('common.flyInHeaderBar', ["footer-feedback"], []);</script> -->
+                                    </div>
+                                    <div class="content__body fx-flyin-content__body">
+                                        <!--rndr:Footer/Elements/Feedback-->
+                                        <div id="fx-feedback-flyin">
+                                        </div>
+                                        <!-- <script type="text/javascript">tho.bootstrapModule('footer.feedback', [], {"nc_general.shoutbox.introtext.strong":"Found an error or want to give us feedback about this page?","nc_forms.yourfeedback.submittext":"send","nc_general.shoutbox.introtext":"We're looking forward to hearing from you and aim to solve any problems as soon as we can. ","nc_general.close":"Close","nc_navigation.footer.feedback.cta":"Please write a comment.","general.form.optional":"optional","general.kundencenter.login.wrongemail":"Please enter a valid e-mail address.","general.feedback.comment":"Comment","general.emailAddress":"Email Address"});</script> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <script type="text/javascript">tho.bootstrapModule('common.flyIn', ["footer-feedback"], []);</script> -->
+                        <!--rndr:Footer/Elements/PointsOfInterest-->
+                        <div class="fx-background-color--grey-grey-05 points-of-interest-wrapper">
+                            <div class="fx-container fx-container--with-margin">
+                                <div class="points-of-interest">
+                                    <div class="section section--payment">
+                                        <h4 class="intro fx-text fx-text--bold-plus">
+                                            Shop and pay safely
+                                        </h4>
+                                        <a class="methods" href="intl/in/helpdesk_paymentmethods.html">
+                                            <div class="methods__item">
+                                                <img style="max-width: 100%;height: 50px;" src="/theme_ht_mcit/static/src/paypal.png"/>
+                                                <!-- <svg class="rs-icon rs-icon-paypal methods__icon methods__icon-paypal"> -->
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/icons.svg?v=75#paypal"></use> -->
+                                                <!-- </svg> -->
+                                            </div>
+                                            <div class="methods__item">
+                                                <img style="max-width: 100%;height: 50px;" src="/theme_ht_mcit/static/src/amazonpay.png"/>
+                                                <!-- <svg class="rs-icon rs-icon-amazonpay methods__icon methods__icon-amazonpay"> -->
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/icons.svg?v=75#amazonpay"></use> -->
+                                                <!-- </svg> -->
+                                            </div>
+                                            <div class="methods__item">
+                                                <img style="max-width: 100%;height: 50px;" src="/theme_ht_mcit/static/src/visa.png"/>
+                                                <!-- <svg class="rs-icon rs-icon-visa methods__icon methods__icon-visa"> -->
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/icons.svg?v=75#visa"></use> -->
+                                                <!-- </svg> -->
+                                            </div>
+                                            <div class="methods__item">
+                                                <img style="max-width: 100%;height: 50px;" src="/theme_ht_mcit/static/src/mastercard.png"/>
+                                                <!-- <svg class="rs-icon rs-icon-mastercard methods__icon methods__icon-mastercard"> -->
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/icons.svg?v=75#mastercard"></use> -->
+                                                <!-- </svg> -->
+                                            </div>
+                                            <div class="methods__item">
+                                                <img style="max-width: 100%;height: 75px;" src="/theme_ht_mcit/static/src/american-express-logo.png"/>
+                                                <!-- <svg class="rs-icon rs-icon-amex-alternative methods__icon methods__icon-amex-alternative"> -->
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/icons.svg?v=75#amex-alternative"></use> -->
+                                                <!-- </svg> -->
+                                            </div>
+                                            <div class="methods__item">
+                                                <img style="max-width: 100%;height: 50px;" src="/theme_ht_mcit/static/src/kindpng.png"/>
+                                                <!-- <svg class="rs-icon rs-icon-dinersclub methods__icon methods__icon-dinersclub"> -->
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/icons.svg?v=75#dinersclub"></use> -->
+                                                <!-- </svg> -->
+                                            </div>
+                                            <div class="methods__item">
+                                                <img style="max-width: 100%;height: 50px;" src="/theme_ht_mcit/static/src/PngItem.png"/>
+                                                <!-- <svg class="rs-icon rs-icon-ueberweisung methods__icon methods__icon-ueberweisung"> -->
+                                                    <!-- <use href="/theme_ht_mcit/static/src/icons/icons.svg?v=75#ueberweisung"></use> -->
+                                                <!-- </svg> -->
+                                            </div>
+                                        </a>
+                                        <p class="outro fx-text fx-text--size-medium">
+                                            Payment can be made safely and securely with PayPal, Amazon Pay, Credit Card or Bank Transfer.
+                                        </p>
+                                    </div>
+                                    <div class="section section--benefits">
+                                        <h4 class="intro fx-text fx-text--bold-plus">
+                                            Your benefits
+                                        </h4>
+                                        <ul class="benefits">
+                                            <li class="benefits__item">
+                                                <a href="intl/in/helpdesk_warranty.html">
+                                                    <img style="height:20px;width-max:100%;" src="/theme_ht_mcit/static/src/icons/tick.png"/> 
+                                                    <!-- <svg class="fx-icon fx-icon-check fx-size-md benefits__icon"> -->
+                                                        <title>3 Years Thomann Warranty</title>
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#check"></use> -->
+                                                    <!-- </svg> -->
+                                                    <span class="benefits__text fx-text fx-text--size-medium">3 Years Thomann Warranty</span>
+                                                </a>
+                                            </li>
+                                            <li class="benefits__item">
+                                                <a href="intl/in/helpdesk_moneyback.html">
+                                                    <img style="height:20px;width-max:100%;" src="/theme_ht_mcit/static/src/icons/tick.png"/> 
+                                                    <!-- <svg class="fx-icon fx-icon-check fx-size-md benefits__icon"> -->
+                                                        <title>30-Day Money-Back Guarantee</title>
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#check"></use> -->
+                                                    <!-- </svg> -->
+                                                    <span class="benefits__text fx-text fx-text--size-medium">30-Day Money-Back Guarantee</span>
+                                                </a>
+                                            </li>
+                                            <li class="benefits__item">
+                                                <a href="intl/in/helpdesk_repair.html">
+                                                    <img style="height:20px;width-max:100%;" src="/theme_ht_mcit/static/src/icons/tick.png"/> 
+                                                    <!-- <svg class="fx-icon fx-icon-check fx-size-md benefits__icon"> -->
+                                                        <title>Repair Service</title>
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#check"></use> -->
+                                                    <!-- </svg> -->
+                                                    <span class="benefits__text fx-text fx-text--size-medium">Repair Service</span>
+                                                </a>
+                                            </li>
+                                            <li class="benefits__item">
+                                                <a href="intl/in/compinfo_contact.html">
+                                                    <img style="height:20px;width-max:100%;" src="/theme_ht_mcit/static/src/icons/tick.png"/> 
+                                                    <!-- <svg class="fx-icon fx-icon-check fx-size-md benefits__icon"> -->
+                                                        <title>Advice from our experts</title>
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#check"></use> -->
+                                                    <!-- </svg> -->
+                                                    <span class="benefits__text fx-text fx-text--size-medium">Advice from our experts</span>
+                                                </a>
+                                            </li>
+                                            <li class="benefits__item">
+                                                <a href="intl/in/helpdesk_satisfaction.html">
+                                                    <img style="height:20px;width-max:100%;" src="/theme_ht_mcit/static/src/icons/tick.png"/> 
+                                                    <!-- <svg class="fx-icon fx-icon-check fx-size-md benefits__icon"> -->
+                                                        <title>Satisfaction Guarantee</title>
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#check"></use> -->
+                                                    <!-- </svg> -->
+                                                    <span class="benefits__text fx-text fx-text--size-medium">Satisfaction Guarantee</span>
+                                                </a>
+                                            </li>
+                                            <li class="benefits__item">
+                                                <a href="intl/in/helpdesk_warehouse.html">
+                                                    <img style="height:20px;width-max:100%;" src="/theme_ht_mcit/static/src/icons/tick.png"/> 
+                                                    <!-- <svg class="fx-icon fx-icon-check fx-size-md benefits__icon"> -->
+                                                        <title>Europe’s Largest Warehouse</title>
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#check"></use> -->
+                                                    <!-- </svg> -->
+                                                    <span class="benefits__text fx-text fx-text--size-medium">Europe’s Largest Warehouse</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="section section--service">
+                                        <h4 class="intro fx-text fx-text--bold-plus">
+                                            Service
+                                        </h4>
+                                        <ul class="services">
+                                            <li class="services__item">
+                                                <a href="intl/in/helpdesk_shipping.html">
+                                                <span class="services__text fx-text fx-text--size-medium">Shipping Costs and Delivery Times</span>
+                                                </a>
+                                            </li>
+                                            <li class="services__item">
+                                                <a href="intl/in/helpdesk.html">
+                                                <span class="services__text fx-text fx-text--size-medium">Help Centre</span>
+                                                </a>
+                                            </li>
+                                            <li class="services__item">
+                                                <a href="intl/in/search_gk_zugagg.html">
+                                                <span class="services__text fx-text fx-text--size-medium">Vouchers</span>
+                                                </a>
+                                            </li>
+                                            <li class="services__item">
+                                                <a href="intl/in/compinfo_contact.html">
+                                                <span class="services__text fx-text fx-text--size-medium">Contact us</span>
+                                                </a>
+                                            </li>
+                                            <li class="services__item">
+                                                <a href="intl/in/compinfo_route.html">
+                                                <span class="services__text fx-text fx-text--size-medium">Walk-in Store </span>
+                                                </a>
+                                            </li>
+                                            <li class="services__item">
+                                                <a href="intl/in/helpdesk_service.html">
+                                                <span class="services__text fx-text fx-text--size-medium">Service Overview</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fx-background-color--grey-dark-grey">
+                            <div class="fx-container fx-container--with-margin">
+                                <div class="fx-content-footer__pair">
+                                    <!--rndr:Footer/Elements/Navigation-->
+                                    <div class="navigation">
+                                        <div class="section section--left">
+                                            <ul class="links">
+                                                <li class="links__pair">
+                                                    <div class="links__item">
+                                                        <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo_terms.html">
+                                                        Terms &amp; Conditions
+                                                        </a>
+                                                    </div>
+                                                    /         
+                                                    <div class="links__item">
+                                                        <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo_imprint.html">
+                                                        Imprint
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo_privacy.html">
+                                                    Privacy Policy
+                                                    </a>
+                                                </li>
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="#cookie-privacy-settings">
+                                                    Cookie Settings
+                                                    </a>
+                                                </li>
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo_cancellation.html">
+                                                    Right of Withdrawal
+                                                    </a>
+                                                </li>
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo_orders.html">
+                                                    Online Ordering Process
+                                                    </a>
+                                                </li>
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo_liability.html">
+                                                    Statutory Warranty Rights
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="section section--right">
+                                            <div class="socials">
+                                                <a class="socials__item socials__item--facebook-filled" href="https://www.facebook.com/Thomann-International-1381235922177962" target="_blank" rel="publisher" tsi="footer.socialShare" ta="click" tad="{&quot;socialPlatform&quot;: &quot;Facebook&quot;}" taa="{&quot;triggers&quot;: [&quot;click&quot;]}" title="Facebook">
+                                                    <svg class="fx-icon fx-icon-facebook-filled socials__icon fx-size--md-lg-lg fx-button__icon">
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#facebook-filled"></use> -->
+                                                    </svg>
+                                                </a>
+                                                <a class="socials__item socials__item--youtube" href="https://www.youtube.com/channel/UCxcO3VWjuUlX7mQV_f5cMhg" target="_blank" rel="publisher" tsi="footer.socialShare" ta="click" tad="{&quot;socialPlatform&quot;: &quot;YouTube&quot;}" taa="{&quot;triggers&quot;: [&quot;click&quot;]}" title="YouTube">
+                                                    <svg class="fx-icon fx-icon-youtube socials__icon fx-size--md-lg-lg fx-button__icon">
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#youtube"></use> -->
+                                                    </svg>
+                                                </a>
+                                                <a class="socials__item socials__item--instagram" href="https://instagram.com/thomann.music/" target="_blank" rel="publisher" tsi="footer.socialShare" ta="click" tad="{&quot;socialPlatform&quot;: &quot;Instagram&quot;}" taa="{&quot;triggers&quot;: [&quot;click&quot;]}" title="Instagram">
+                                                    <svg class="fx-icon fx-icon-instagram socials__icon fx-size--md-lg-lg fx-button__icon">
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#instagram"></use> -->
+                                                    </svg>
+                                                </a>
+                                                <a class="socials__item socials__item--twitter" href="http://www.twitter.com/thomann" target="_blank" rel="publisher" tsi="footer.socialShare" ta="click" tad="{&quot;socialPlatform&quot;: &quot;Twitter&quot;}" taa="{&quot;triggers&quot;: [&quot;click&quot;]}" title="Twitter">
+                                                    <svg class="fx-icon fx-icon-twitter socials__icon fx-size--md-lg-lg fx-button__icon">
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#twitter"></use> -->
+                                                    </svg>
+                                                </a>
+                                                <a class="socials__item socials__item--pinterest" href="https://www.pinterest.com/thomannde/" target="_blank" rel="publisher" tsi="footer.socialShare" ta="click" tad="{&quot;socialPlatform&quot;: &quot;Pinterest&quot;}" taa="{&quot;triggers&quot;: [&quot;click&quot;]}" title="Pinterest">
+                                                    <svg class="fx-icon fx-icon-pinterest socials__icon fx-size--md-lg-lg fx-button__icon">
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#pinterest"></use> -->
+                                                    </svg>
+                                                </a>
+                                                <a class="socials__item socials__item--tblog" href="blog/en.html" target="_blank" tsi="footer.socialShare" ta="click" tad="{&quot;socialPlatform&quot;: &quot;t.blog&quot;}" taa="{&quot;triggers&quot;: [&quot;click&quot;]}" title="t.blog">
+                                                    <svg class="fx-icon fx-icon-tblog socials__icon fx-size--md-lg-lg fx-button__icon">
+                                                        <!-- <use href="/theme_ht_mcit/static/src/icons/fxicons.svg?v=75#tblog"></use> -->
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <ul class="links">
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo.html">
+                                                    About Us
+                                                    </a>
+                                                </li>
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="intl/in/compinfo_youatthomann.html">
+                                                    Jobs &amp; Careers
+                                                    </a>
+                                                </li>
+                                                <li class="links__item">
+                                                    <a class="links__text fx-text fx-text--size-medium" href="intl/in/classified.html">
+                                                    Classified&amp;nbsp;Ads
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="cookie-consent-bar-configure-options-popup" class="rs-common-popup rs-popup state-closed" data-lazy-href="cookie_configuration.html"></div>
+                                    </div>
+                                    <!-- <script type="text/javascript">tho.bootstrapModule('footer.cookieConsentPopup', [], []);</script><script type="text/javascript">tho.bootstrapModule('common.refForwarder', [], []);</script> -->
+                                    <!--rndr:Footer/Elements/Copyright-->
+                                    <div class="copyright">
+                                        <div class="section section--copyright">
+                                            <span class="text fx-text fx-text--size-medium">
+                                            &amp;copy; 1996&amp;ndash;2022&amp;nbsp;Thomann GmbH.
+                                            </span>
+                                            <span class="for-those-about-to-rock">
+                                            <span class="fx-text fx-text--size-medium fx-text--bold">
+                                            Thomann loves you, <span class="you-rock">because you rock!</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <div class="section section--badges">
+                                            <div class="apps">
+                                                <span class="apps__item">
+                                                <a href="https://apps.apple.com/in/app/id1035256782" target="_blank">
+                                                <img class="fx-thomannapp-badge fx-thomannapp-badge-ios" alt="" src="/theme_ht_mcit/static/src/thumb/convert/pics/images/footer/download-app-store.svg" title=""/>
+                                                </a>
+                                                </span>
+                                                <span class="apps__item">
+                                                <a href="https://play.google.com/store/apps/details?id=de.thomann" target="_blank">
+                                                <img class="fx-thomannapp-badge fx-thomannapp-badge-android" alt="" src="/theme_ht_mcit/static/src/thumb/convert/pics/images/footer/download-google-play.svg" title=""/>
+                                                </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <script type="text/javascript">tho.bootstrapModule('footer.doge', [], []);</script> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </footer>
+              <!-- end footer -->
+        </xpath>
+    </template>
+    <template id="website_search_box_attr_style" inherit_id="website.website_search_box">
+        <xpath expr="//input[@name='search']" position="attributes">
+            <attribute name="style">text-align: center;padding: 12px 58px 12px 0;border-radius: 25px;border: none;</attribute>
+        </xpath>
+        <xpath expr="//button" position="attributes">
+            <attribute name="style">border-radius: 20px;background: black;</attribute>
+        </xpath>
+    </template> 
+</odoo>

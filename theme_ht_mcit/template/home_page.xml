@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="home_page" name="Home Page" inherit_id="website.homepage">
+		<xpath expr="//div[@id='wrap']" position="replace">
+			<div class="oe_structure oe_empty">
+				<section>
+					 <div class="fx-container">
+	                    <div class="fx-grid fx-grid--page">
+	                        <div class="fx-grid__col fx-col--12">
+	                        	<div class="usp-badges-wrapper">
+                                    <div class="usp-badges">
+                                        <div class="usp-badges__inner-flex">
+                                            <div class="usp-badge">
+                                                <a class="fx-link usp-badge__link" href="intl/in/helpdesk_moneyback.html">
+                                                    <img class="usp-badge__icon" src="/theme_ht_mcit/static/src/pics/images/common/badges/money_back.svg" alt="Days Money-Back"/>
+                                                    <div class="usp-badge__text">Days Money-Back</div>
+                                                </a>
+                                            </div>
+                                            <div class="usp-badge">
+                                                <a class="fx-link usp-badge__link" href="intl/in/helpdesk_warranty.html">
+                                                    <img class="usp-badge__icon" src="/theme_ht_mcit/static/src/pics/images/common/badges/warranty.svg" alt="Years warranty"/>
+                                                    <div class="usp-badge__text">Years warranty</div>
+                                                </a>
+                                            </div>
+                                            <div class="usp-badge">
+                                                <a class="fx-link usp-badge__link" href="intl/in/helpdesk_shipping.html">
+                                                    <img class="usp-badge__icon" src="/theme_ht_mcit/static/src/pics/images/common/badges/shipping.svg" alt=" shipping costs"/>
+                                                    <div class="usp-badge__text">₹4,200 shipping costs</div>
+                                                </a>
+                                            </div>
+                                            <div class="usp-badge">
+                                                <a class="fx-link usp-badge__link" href="intl/in/helpdesk_service.html">
+                                                    <img class="usp-badge__icon" src="/theme_ht_mcit/static/src/pics/images/common/badges/service_repair.svg" alt="Best service in Europe"/>
+                                                    <div class="usp-badge__text">Best service in Europe</div>
+                                                </a>
+                                            </div>
+                                            <div class="usp-badge">
+                                                <a class="fx-link usp-badge__link" href="intl/in/helpdesk_warehouse.html">
+                                                    <img class="usp-badge__icon" src="/theme_ht_mcit/static/src/pics/images/common/badges/biggest_warehouse.svg" alt="Europe’s Largest Warehouse"/>
+                                                    <div class="usp-badge__text">Europe’s Largest Warehouse</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <div class="main-categories-overview">
+	                                <h2 class="fx-headline fx-headline--2 fx-space-bottom--s fx-text-align--center">Our Categories</h2>
+	                                <!-- <div class="container">
+										<div class="row">
+											<t t-set="shop_categorys" t-value="request.env['product.public.category'].sudo().fetch_category()"/>
+											<div class="col-12">
+												<div class="row">
+													<div class="col-lg-4">
+														<t t-foreach="shop_categorys[0:6]" t-as="category">
+														<t t-set="slug_name" t-value="slug(category)"/>
+															<img class="fx-image" src="/theme_ht_mcit/static/src/thumb/thumb250x250/pics/images/category/icons/main/gi.jpg" style="height: 85px;" alt="Guitars and Basses"/>
+															<a t-att-href="'/shop/category/' + slug_name"><t t-esc="category.name"/></a>
+														<br/>
+														<hr/>
+														</t>
+													</div>
+													<div class="col-lg-4">
+														<t t-foreach="shop_categorys[6:12]" t-as="category">
+														<t t-set="slug_name" t-value="slug(category)"/>
+															<img class="fx-image" src="/theme_ht_mcit/static/src/thumb/thumb250x250/pics/images/category/icons/main/gi.jpg" style="height: 85px;" alt="Guitars and Basses"/>
+															<a class="has-submenu" t-att-href="'/shop/category/' + slug_name"><t t-esc="category.name"/></a>
+														<br/>
+														<hr/>
+														</t>
+													</div>
+													<div class="col-lg-4">
+														<t t-foreach="shop_categorys[12:18]" t-as="category">
+														<t t-set="slug_name" t-value="slug(category)"/>
+															<img class="fx-image" src="/theme_ht_mcit/static/src/thumb/thumb250x250/pics/images/category/icons/main/gi.jpg" style="height: 85px;" alt="Guitars and Basses"/>
+															<a class="has-submenu" t-att-href="'/shop/category/' + slug_name"><t t-esc="category.name"/></a>
+														<br/>
+														<hr/>
+														</t>
+													</div>
+												</div>
+											</div>
+						            	</div>
+						        	</div> -->
+	                            </div>
+	                        </div>
+	                    </div>
+                    </div>
+				</section>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h2 style="font-size: 36px;font-weight:700;">Product Highlights</h2>
+                            </div>
+                            <div class="col-12">
+                                <section data-snippet="s_dynamic_snippet" class="s_dynamic_snippet_products s_dynamic pt32 pb32 o_colored_level s_product_product_borderless_1 d-none" data-name="Products" style="background-image: none;" data-filter-id="1" data-template-key="website_sale.dynamic_filter_template_product_product_borderless_1" data-product-category-id="all" data-number-of-elements="4" data-number-of-elements-small-devices="1" data-number-of-records="16" data-carousel-interval="5000">
+                                <div class="container o_not_editable">
+                                  <div class="css_non_editable_mode_hidden">
+                                    <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                                Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br/>
+                                            </div>
+                                  </div>
+                                  <div class="dynamic_snippet_template"/>
+                                </div>
+                              </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+				<section>
+					<div class="container">
+					<div id="fx-groupie-carousel" class="fx-groupie-carousel">
+                        <div id="groupies" class="fx-carousel t-carousel rs-carousel-slide fx-carousel--skin-bleed fx-carousel--skin-groupie">
+                            <div class="fx-carousel__background"></div>
+                            <h2 class="fx-carousel__headline fx-headline fx-headline--2 fx-space-bottom--s fx-text-align--center">In Your Own Words</h2>
+                            <div class="control">
+                                <div class="holder control__holder">
+                                    <div class="track-holder">
+                                        <div class="track track-holder__track">
+                                            <div class="view fx-carousel__view fx-carousel--thirds sized-3-3">
+                                                <div class="fx-carousel__item">
+                                                    <div class="fx-infobox fx-groupiebox fx-infobox--with-icon ">
+                                                        <span class="fx-infobox__icon fx-background-color--basic-white">
+                                                        <img class="fx-icon" src="/theme_ht_mcit/static/src/pics/images/common/emoji/emoji-cool.svg"/>
+                                                        </span>
+                                                        <div class="fx-infobox__content  ">
+                                                            <div class="fx-text fx-groupiebox__quote">Great products fast posting will come back.</div>
+                                                            <div class="fx-text fx-text--bold fx-groupiebox__author">C. S. 08.12.2021</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fx-carousel__item">
+                                                    <div class="fx-infobox fx-groupiebox fx-infobox--with-icon ">
+                                                        <span class="fx-infobox__icon fx-background-color--basic-white">
+                                                        <img class="fx-icon" src="/theme_ht_mcit/static/src/pics/images/common/emoji/emoji-hug.svg"/>
+                                                        </span>
+                                                        <div class="fx-infobox__content  ">
+                                                            <div class="fx-text fx-groupiebox__quote">Very professional and excellent service. Thanks</div>
+                                                            <div class="fx-text fx-text--bold fx-groupiebox__author">J. B. 18.12.2021</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fx-carousel__item">
+                                                    <div class="fx-infobox fx-groupiebox fx-infobox--with-icon ">
+                                                        <span class="fx-infobox__icon fx-background-color--basic-white">
+                                                        <img class="fx-icon" src="/theme_ht_mcit/static/src/pics/images/common/emoji/emoji-smile.svg"/>
+                                                        </span>
+                                                        <div class="fx-infobox__content  ">
+                                                            <div class="fx-text fx-groupiebox__quote">Great service</div>
+                                                            <div class="fx-text fx-text--bold fx-groupiebox__author">L. E. 25.11.2021</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="view fx-carousel__view fx-carousel--thirds sized-3-3">
+                                                <div class="fx-carousel__item">
+                                                    <div class="fx-infobox fx-groupiebox fx-infobox--with-icon ">
+                                                        <span class="fx-infobox__icon fx-background-color--basic-white">
+                                                        <img class="fx-icon" src="/theme_ht_mcit/static/src/pics/images/common/emoji/emoji-cool.svg"/>
+                                                        </span>
+                                                        <div class="fx-infobox__content  ">
+                                                            <div class="fx-text fx-groupiebox__quote">Delighted with my purchase. Delivery was prompt if not sooner than expected. 10/10</div>
+                                                            <div class="fx-text fx-text--bold fx-groupiebox__author">T. C. 05.01.2022</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fx-carousel__item">
+                                                    <div class="fx-infobox fx-groupiebox fx-infobox--with-icon ">
+                                                        <span class="fx-infobox__icon fx-background-color--basic-white">
+                                                        <img class="fx-icon" src="/theme_ht_mcit/static/src/pics/images/common/emoji/emoji-hug.svg"/>
+                                                        </span>
+                                                        <div class="fx-infobox__content  ">
+                                                            <div class="fx-text fx-groupiebox__quote">Hi, Just a note to say that I'm very happy to be able to use Thomann again after all the Brexit rubbish that has gone down.</div>
+                                                            <div class="fx-text fx-text--bold fx-groupiebox__author">P. W. 07.10.2021</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fx-carousel__item">
+                                                    <div class="fx-infobox fx-groupiebox fx-infobox--with-icon ">
+                                                        <span class="fx-infobox__icon fx-background-color--basic-white">
+                                                        <img class="fx-icon" src="/theme_ht_mcit/static/src/pics/images/common/emoji/emoji-smile.svg"/>
+                                                        </span>
+                                                        <div class="fx-infobox__content  ">
+                                                            <div class="fx-text fx-groupiebox__quote">Exceptional customer service. Contacted Thomann after being let down by another supplier and delivery arrived just in time for Christmas. Highly recommended.</div>
+                                                            <div class="fx-text fx-text--bold fx-groupiebox__author">M. H. 20.12.2021</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="controls-holder">
+                                        <div class="control-indicators">
+                                            <ul class="control-indicators-track">
+                                                <li class="control-indicators-track__item">
+                                                    <div class="control-indicators-track__mover"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="control-direction">
+                                            <button class="fx-button fx-button--primary fx-button--circle fx-button--icon fx-size--md2-lg control-direction__button control-direction--previous">
+                                                <svg class="fx-icon fx-icon-chevron control-buttons___icon fx-button__icon fx-icon--size-large fx-icon--rotate-180">
+                                                    <!-- <use xlink:href="/static/icons/fxicons.svg?v=75#chevron"></use> -->
+                                                </svg>
+                                            </button>
+                                            <button class="fx-button fx-button--primary fx-button--circle fx-button--icon fx-size--md2-lg control-direction__button control-direction--next">
+                                                <svg class="fx-icon fx-icon-chevron control-buttons___icon fx-button__icon fx-icon--size-large">
+                                                    <!-- <use xlink:href="/static/icons/fxicons.svg?v=75#chevron"></use> -->
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				</section>
+				<section>
+					<div class="container">
+					<div id="thomann-news" class="fx-media-teaser-grid">
+                        <div class="fx-media-teaser-grid__header">
+                            <h2 class="fx-headline fx-headline--2 fx-text-align--center fx-space-bottom--xl">
+                                Thomann News 
+                            </h2>
+                        </div>
+                        <div class="fx-grid fx-media-teaser-grid__content">
+                            <a href="https://www.youtube.com/watch?v=SzDi_tdl_kA" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(min-width: 600px)" srcset="/theme_ht_mcit/static/src/vi/SzDi_tdl_kA/hqdefault.jpg" data-srcset="/theme_ht_mcit/static/src/vi/SzDi_tdl_kA/hqdefault.jpg"/>
+                                    <source media="(max-width: 599px)" srcset="https://i.ytimg.com/vi/SzDi_tdl_kA/mqdefault.jpg" data-srcset="https://i.ytimg.com/vi/SzDi_tdl_kA/mqdefault.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/vi/SzDi_tdl_kA/hqdefault.jpg" data-src="/theme_ht_mcit/static/src/vi/SzDi_tdl_kA/hqdefault.jpg" alt=""/>
+                                    <div class="fx-media-teaser__tag">
+                                        <div class="fx-tag fx-tag--youtube">
+                                            YouTube
+                                        </div>
+                                    </div>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        How Does Ageing Effect the Voice? | Music Without Theory | Episode 22 | Thomann
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/theme_ht_mcit/static/src/blog/en/hello-new-gear-january-2022.html" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/HelloNewGear_header_770x425_jan2022-472x260.png" data-srcset="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/HelloNewGear_header_770x425_jan2022-472x260.png"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/HelloNewGear_header_770x425_jan2022-472x260.png" data-src="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/HelloNewGear_header_770x425_jan2022-472x260.png" alt=""/>
+                                    <div class="fx-media-teaser__tag">
+                                        <div class="fx-tag fx-tag--blog">
+                                            Blog
+                                        </div>
+                                    </div>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        Hello New Gear - January 2022
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=2VBrXtoH56s" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(min-width: 600px)" srcset="/theme_ht_mcit/static/src/vi/2VBrXtoH56s/hqdefault.jpg" data-srcset="/theme_ht_mcit/static/src/vi/2VBrXtoH56s/hqdefault.jpg"/>
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/vi/2VBrXtoH56s/mqdefault.jpg" data-srcset="/theme_ht_mcit/static/src/vi/2VBrXtoH56s/mqdefault.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/vi/2VBrXtoH56s/hqdefault.jpg" data-src="/theme_ht_mcit/static/src/vi/2VBrXtoH56s/hqdefault.jpg" alt=""/>
+                                    <div class="fx-media-teaser__tag">
+                                        <div class="fx-tag fx-tag--youtube">
+                                            YouTube
+                                        </div>
+                                    </div>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        Billie Eilish - No Time to Die | Sax Cover | Alexandra Ilieva | Thomann
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/theme_ht_mcit/static/src/blog/en/10-reasons-to-love-david-bowie.html" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/bowiebday_header_770x425_a1-472x260.jpg" data-srcset="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/bowiebday_header_770x425_a1-472x260.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/bowiebday_header_770x425_a1-472x260.jpg" data-src="/theme_ht_mcit/static/src/blog/wp-content/uploads/2022/01/bowiebday_header_770x425_a1-472x260.jpg" alt=""/>
+                                    <div class="fx-media-teaser__tag">
+                                        <div class="fx-tag fx-tag--blog">
+                                            Blog
+                                        </div>
+                                    </div>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        10 Reasons to love David Bowie
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=07EJTV0g8VE" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(min-width: 600px)" srcset="/theme_ht_mcit/static/src/vi/07EJTV0g8VE/hqdefault.jpg" data-srcset="/theme_ht_mcit/static/src/vi/07EJTV0g8VE/hqdefault.jpg"/>
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/vi/07EJTV0g8VE/mqdefault.jpg" data-srcset="/theme_ht_mcit/static/src/vi/07EJTV0g8VE/mqdefault.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/vi/07EJTV0g8VE/hqdefault.jpg" data-src="/theme_ht_mcit/static/src/vi/07EJTV0g8VE/hqdefault.jpg" alt=""/>
+                                    <div class="fx-media-teaser__tag">
+                                        <div class="fx-tag fx-tag--youtube">
+                                            YouTube
+                                        </div>
+                                    </div>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        Ed Sheeran x Apple | Music Challenge | Random Access Melodies w/ Brother Alfred | Thomann
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/theme_ht_mcit/static/src/blog/en/quiz-find-out-your-musical-new-years-resolution-for-2022.html" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/blog/wp-content/uploads/2021/01/Quiz_nyresolutions_header_770x425_a2-472x260.jpg" data-srcset="/theme_ht_mcit/static/src/blog/wp-content/uploads/2021/01/Quiz_nyresolutions_header_770x425_a2-472x260.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/blog/wp-content/uploads/2021/01/Quiz_nyresolutions_header_770x425_a2-472x260.jpg" data-src="/theme_ht_mcit/static/src/blog/wp-content/uploads/2021/01/Quiz_nyresolutions_header_770x425_a2-472x260.jpg" alt=""/>
+                                    <div class="fx-media-teaser__tag">
+                                        <div class="fx-tag fx-tag--blog">
+                                            Blog
+                                        </div>
+                                    </div>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        Quiz - Find out your musical new year's resolution for 2022!
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="intl/in/faq_question_how_can_i_pay.html" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(min-width: 940px)" srcset="/theme_ht_mcit/static/src/thumb/thumb640x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb640x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg"/>
+                                    <source media="(min-width: 600px)" srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg"/>
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg" data-src="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_paypal/tour_paypal.jpg" alt=""/>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        PayPal
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCxcO3VWjuUlX7mQV_f5cMhg" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(min-width: 940px)" srcset="/theme_ht_mcit/static/src/thumb/thumb640x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb640x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg"/>
+                                    <source media="(min-width: 600px)" srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg"/>
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg" data-src="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/thomann_auf_youtube/thomann_on_youtube.jpg" alt=""/>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        Thomann on YouTube
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="intl/in/faq_question_what_are_creative_bundles.html" target="_blank" class="fx-media-teaser fx-grid__col fx-col--12  fx-col--md-6  fx-col--lg-4  fx-media-teaser--title-only fx-media-teaser--has-image-big">
+                                <picture class="fx-media-teaser__image-wrapper">
+                                    <source media="(min-width: 940px)" srcset="/theme_ht_mcit/static/src/thumb/thumb640x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb640x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg"/>
+                                    <source media="(min-width: 600px)" srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg"/>
+                                    <source media="(max-width: 599px)" srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg" data-srcset="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg"/>
+                                    <img class="fx-media-teaser__image fx-mix-blend-mode--multiply fx-image responsive-image" src="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg" data-src="/theme_ht_mcit/static/src/thumb/thumb300x/pics/cms/image/teasertool/en/translate_creative_bundles/tour_creative_bundles.jpg" alt=""/>
+                                </picture>
+                                <div class="body">
+                                    <div class="body__title">
+                                        Creative Bundles
+                                    </div>
+                                    <div class="body__text">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+				</section>
+			</div>
+		</xpath>
+	</template>
+</odoo>

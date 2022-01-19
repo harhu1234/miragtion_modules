@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Ebene 1" viewBox="0 0 366 394">
+    <defs>
+        <linearGradient id="a" x2="366" y1="197" y2="197" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#e84b39"/>
+            <stop offset="1" stop-color="#eec233"/>
+        </linearGradient>
+        <linearGradient id="b" x1="183" x2="183" y1="1" y2="393" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#dddb00"/>
+            <stop offset="0" stop-color="#dddb00" stop-opacity=".9"/>
+            <stop offset=".2" stop-color="#dddb00" stop-opacity=".7"/>
+            <stop offset=".3" stop-color="#dddb00" stop-opacity=".5"/>
+            <stop offset=".5" stop-color="#dddb00" stop-opacity=".3"/>
+            <stop offset=".6" stop-color="#dddb00" stop-opacity=".2"/>
+            <stop offset=".7" stop-color="#dddb00" stop-opacity=".1"/>
+            <stop offset=".9" stop-color="#dddb00" stop-opacity="0"/>
+            <stop offset="1" stop-color="#dddb00" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <path fill="url(#a)" d="M335.4 316.5l-123.2 68.9a59.8 59.8 0 0 1-58.4 0l-123.2-69a59.8 59.8 0 0 1-30.6-52V129.7a59.8 59.8 0 0 1 30.6-52.2L153.8 8.6a59.8 59.8 0 0 1 58.4 0l123.2 69a59.8 59.8 0 0 1 30.6 52.1v134.6a59.8 59.8 0 0 1-30.6 52.2z"/>
+    <path fill="url(#b)" d="M335.4 316.5l-123.2 68.9a59.8 59.8 0 0 1-58.4 0l-123.2-69a59.8 59.8 0 0 1-30.6-52V129.7a59.8 59.8 0 0 1 30.6-52.2L153.8 8.6a59.8 59.8 0 0 1 58.4 0l123.2 69a59.8 59.8 0 0 1 30.6 52.1v134.6a59.8 59.8 0 0 1-30.6 52.2z"/>
+    <path fill="#fff" d="M208.7 169.7h-39v36.7a13.3 13.3 0 0 0-5.6-1.3c-6.6 0-12 4.8-12 10.6s5.4 10.6 12 10.6 12-4.7 12-10.6v-31.4h26v22a13.3 13.3 0 0 0-5.6-1.2c-6.6 0-12 4.8-12 10.6s5.4 10.6 12 10.6 12-4.8 12-10.6z"/>
+    <path fill="#fff" d="M167.5 82.7l-8 28a90 90 0 0 0-20.6 8.5l-25.4-14.1-22.8 22.7 14.2 25.5a90 90 0 0 0-8.5 20.6l-28 8V214l28 8a90 90 0 0 0 8.5 20.6l-14.2 25.5 22.8 22.7 25.4-14.1a90 90 0 0 0 20.7 8.5l7.9 28h32.3l7.9-28a90 90 0 0 0 20.6-8.5l25.5 14.1 22.7-22.7-14.1-25.5a90 90 0 0 0 8.5-20.6l28-8v-32l-28-8a90 90 0 0 0-8.5-20.6l14.2-25.5-22.8-22.7-25.5 14.1a90 90 0 0 0-20.6-8.5l-8-28zm16.1 60.3a55 55 0 1 1-55 55 55.1 55.1 0 0 1 55-55z"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" viewBox="0 0 30 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #75cbf7;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #28b6ff;
+      }
+
+      .cls-3 {
+        fill: #158dcb;
+      }
+    </style>
+  </defs>
+  <path id="z_Kopie" data-name="z Kopie" class="cls-1" d="M7.722,31.03l-3.508.451,2.777-4.84-0.232-1.8-6.622.852,0.286,2.227,3.292-.424-2.908,5,0.214,1.661,6.987-.9Z"/>
+  <path id="z_Kopie-2" data-name="z Kopie" class="cls-2" d="M14.455,18.932H9.4l4.818-6.353v-2.6H4.679v3.209H9.422L4.389,19.748v2.393H14.455V18.932Z"/>
+  <path id="z_Kopie-3" data-name="z Kopie" class="cls-3" d="M28.43,13.5l-6.507-.666,7.04-7.543,0.342-3.343L17.024,0.685,16.6,4.816l6.106,0.625-7.343,7.778L15.049,16.3l12.959,1.327Z"/>
+</svg>

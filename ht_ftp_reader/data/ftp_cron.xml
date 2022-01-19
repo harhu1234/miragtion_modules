@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_create_invoice" model="ir.cron">
+        <field name="name">Create Vendor Bill</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="ht_ftp_reader.model_account_edi_format"/>
+        <field name="code">model.ftp_file_reader()</field>
+        <field name="doall" eval="False"/>
+        <field name="state">code</field>
+    </record>
+</odoo>

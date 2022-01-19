@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets" name="Loan">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Loan</div>
+				<div class="o_panel_body">
+					<t t-snippet="theme_ht_loan.ht_slide_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_breadcrumb_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_slide_ft_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_about_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_service_snipet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_our_company_snipet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_type_loan_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_team_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_quote_snip" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_blog_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_loan.ht_contact_snippet" t-thumbnail="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+                    </t>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+	<template id="ht_slide_snippet" name="Slide">
+		<section>
+			<div class="row slider-area slider-height" data-background="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg">
+				<div class="col-md-6">
+				    <div class="slider-active">
+				        <!-- Single Slider -->
+				        <div class="single-slider">
+				            <div class="slider-cap-wrapper">
+				                <div class="hero__caption">
+				                    <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
+				                    <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
+				                    <!-- Hero Btn -->
+				                    <a href="apply.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+				<div class="col-md-6">
+					<section class="s_carousel_wrapper" data-vxml="001">
+				        <div id="myCarousel" class="s_carousel s_carousel_default carousel slide" data-interval="10000">
+				            <!-- Indicators -->
+				            <!-- <ol class="carousel-indicators">
+				                <li data-target="#myCarousel" data-slide-to="0" class="active"/>
+				                <li data-target="#myCarousel" data-slide-to="1"/>
+				                <li data-target="#myCarousel" data-slide-to="2"/>
+				            </ol> -->
+				            <!-- Content -->
+				            <div class="carousel-inner">
+				                <!-- #01 -->
+				                <div class="carousel-item active oe_img_bg pt152 pb152" style="background-image: url('/theme_ht_loan/static/src/assets/img/hero/hero_img.jpg');" data-name="Slide">
+				                    <div class="container">
+				                        <div class="row content">
+				                            <div class="carousel-content col-lg-6">
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				                <!-- #02 -->
+				                <div class="carousel-item oe_img_bg pt96 pb96" style="background-image: url('/theme_ht_loan/static/src/assets/img/hero/hero_img2.jpg');" data-name="Slide">
+				                    <div class="container">
+				                        <div class="row content">
+				                            <div class="carousel-content col-lg-8 offset-lg-2 text-center pt48 pb40">
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				                <!-- #03 -->
+				                <div class="carousel-item oe_img_bg pt128 pb128" style="background-image: url('/web/image/website.s_carousel_default_image_3');" data-name="Slide">
+				                    <div class="container">
+				                        <div class="row content">
+				                            <div class="carousel-content col-lg-6 offset-lg-6"><br/><br/><br/><br/><br/><br/><br/><br/>
+				                            <br/><br/><br/><br/><br/>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				            <!-- Controls -->
+				            <a class="carousel-control-prev o_not_editable" contenteditable="false" href="#myCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+				                <span class="carousel-control-prev-icon"/>
+				                <span class="sr-only">Previous</span>
+				            </a>
+				            <a class="carousel-control-next o_not_editable" contenteditable="false" href="#myCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+				                <span class="carousel-control-next-icon"/>
+				                <span class="sr-only">Next</span>
+				            </a>
+				        </div>
+				    </section>
+				</div>
+			</div>
+		</section>
+	</template>
+	<template id="ht_breadcrumb_snippet" name="Breadcrumb">
+		<section>
+        	<!-- Hero Start-->
+	        <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-xl-12">
+	                        <div class="hero-cap text-center pt-50">
+	                            <h2>Breadcrumb..</h2>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <!--Hero End -->
+        </section>
+	</template>
+	<template id="ht_slide_ft_snippet" name="Slide Features">
+		<section>
+		<!-- slider Area Start-->
+			<div class="slider-area slider-height" data-background="/theme_ht_loan/static/src/assets/img/hero/h1_hero.jpg" style="padding-top:0px;">
+			    <!-- slider-footer Start -->
+			    <div class="slider-footer section-bg d-none d-sm-block">
+			        <div class="footer-wrapper">
+			            <!-- single -->
+			            <div class="single-caption">
+			                <div class="single-img">
+			                    <img src="/theme_ht_loan/static/src/assets/img/hero/hero_footer.png" alt=""/>
+			                </div>
+			            </div>
+			            <!-- single -->
+			            <div class="single-caption">
+			                <div class="caption-icon">
+			                    <span class="flaticon-clock"></span>
+			                </div>
+			                <div class="caption">
+			                    <p>Quick &amp; Easy Loan</p>
+			                    <p>Approvals</p>
+			                </div>
+			            </div>
+			            <!-- single -->
+			            <div class="single-caption">
+			                <div class="caption-icon">
+			                    <span class="flaticon-like"></span>
+			                </div>
+			                <div class="caption">
+			                    <p>Quick &amp; Easy Loan</p>
+			                    <p>Approvals</p>
+			                </div>
+			            </div>
+			            <!-- single -->
+			            <div class="single-caption">
+			                <div class="caption-icon">
+			                    <span class="flaticon-money"></span>
+			                </div>
+			                <div class="caption">
+			                    <p>Quick &amp; Easy Loan</p>
+			                    <p>Approvals</p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <!-- slider-footer End -->
+			</div>
+			<!-- slider Area End-->
+		</section>
+	</template>
+	<template id="ht_about_snippet" name="About">
+		<section>
+			<!-- About Law Start-->
+			<div class="about-low-area section-padding2">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-lg-6 col-md-12">
+			                <div class="about-caption mb-50">
+			                    <!-- Section Tittle -->
+			                    <div class="section-tittle mb-35">
+			                        <span>About Our Company</span>
+			                        <h2>Building a Brighter financial Future &amp; Good Support.</h2>
+			                    </div>
+			                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eniminixm, quis nostrud exercitation ullamco laboris nisi ut aliquip exeaoauat. Duis aute irure dolor in reprehe.</p>
+			                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et dolore magna aliq.</p>
+			                    <a href="apply.html" class="btn">Apply for Loan</a>
+			                </div>
+			            </div>
+			            <div class="col-lg-6 col-md-12">
+			                <!-- about-img -->
+			                <div class="about-img ">
+			                    <div class="about-font-img d-none d-lg-block">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/about2.png" alt=""/>
+			                    </div>
+			                    <div class="about-back-img ">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/about1.png" alt=""/>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- About Law End-->
+		</section>
+	</template>
+	<template id="ht_service_snipet" name="Service">
+		<section>
+			<!-- Services Area Start -->
+			<div class="services-area pt-150 pb-150" data-background="/theme_ht_loan/static/src/assets/img/gallery/section_bg02.jpg">
+			    <div class="container">
+			        <div class="row justify-content-center">
+			            <div class="col-lg-6 col-md-10">
+			                <!-- Section Tittle -->
+			                <div class="section-tittle text-center mb-80">
+			                    <span>Services that we are providing</span>
+			                    <h2>High Performance Services For All Industries.</h2>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-3 col-md-6 col-sm-6">
+			                <div class="single-cat text-center mb-50">
+			                    <div class="cat-icon">
+			                        <span class="flaticon-work"></span>
+			                    </div>
+			                    <div class="cat-cap">
+			                        <h5><a href="services.html">Business Loan</a></h5>
+			                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-6 col-sm-6">
+			                <div class="single-cat text-center mb-50">
+			                    <div class="cat-icon">
+			                        <span class="flaticon-loan"></span>
+			                    </div>
+			                    <div class="cat-cap">
+			                        <h5><a href="services.html">Commercial Loans</a></h5>
+			                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-6 col-sm-6">
+			                <div class="single-cat text-center mb-50">
+			                    <div class="cat-icon">
+			                        <span class="flaticon-loan-1"></span>
+			                    </div>
+			                    <div class="cat-cap">
+			                        <h5><a href="services.html">Construction Loans</a></h5>
+			                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-6 col-sm-6">
+			                <div class="single-cat text-center mb-50">
+			                    <div class="cat-icon">
+			                        <span class="flaticon-like"></span>
+			                    </div>
+			                    <div class="cat-cap">
+			                        <h5><a href="services.html">Business Loan</a></h5>
+			                        <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Services Area End -->
+		</section>
+	</template>
+	<template id="ht_our_company_snipet" name="Our Company">
+		<section>
+			<!-- Support Company Start-->
+			<div class="support-company-area section-padding3 fix">
+			    <div class="container">
+			        <div class="row align-items-center">
+			            <div class="col-xl-6 col-lg-6">
+			                <div class="support-location-img mb-50">
+			                    <img src="/theme_ht_loan/static/src/assets/img/gallery/single2.jpg" alt=""/>
+			                    <div class="support-img-cap">
+			                        <span>Since 1992</span>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-xl-6 col-lg-6">
+			                <div class="right-caption">
+			                    <!-- Section Tittle -->
+			                    <div class="section-tittle">
+			                        <span>Why Choose Our Company</span>
+			                        <h2>We Promise Sustainable  Future For You.</h2>
+			                    </div>
+			                    <div class="support-caption">
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+			                        <div class="select-suport-items">
+			                            <label class="single-items">Aorem ipsum dgolor sitnfd amet dfgbn fbsdg
+			                            <input type="checkbox" checked="checked active"/>
+			                            <span class="checkmark"></span>
+			                            </label>
+			                            <label class="single-items">Consectetur adipisicing bfnelit, sedb dvbnfo
+			                            <input type="checkbox" checked="checked active"/>
+			                            <span class="checkmark"></span>
+			                            </label>
+			                            <label class="single-items">Eiusmod tempor incididunt vmgldupout labore
+			                            <input type="checkbox" checked="checked active"/>
+			                            <span class="checkmark"></span>
+			                            </label>
+			                            <label class="single-items">Admkde mibvnim veniam, quivds cnostrud.
+			                            <input type="checkbox" checked="checked active"/>
+			                            <span class="checkmark"></span>
+			                            </label>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Support Company End-->
+		</section>		
+	</template>
+	<template id="ht_type_loan_snippet" name="Loan Type">
+		<section>
+			<!-- Application Area Start -->
+			<div class="application-area pt-150 pb-140" data-background="/theme_ht_loan/static/src/assets/img/gallery/section_bg03.jpg">
+			    <div class="container">
+			        <div class="row justify-content-center">
+			            <div class="col-lg-6 col-md-10">
+			                <!-- Section Tittle -->
+			                <div class="section-tittle section-tittle2 text-center mb-45">
+			                    <span>Apply in Three Easy Steps</span>
+			                    <h2>Easy Application Process For Any Types of Loan</h2>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="row justify-content-center">
+			            <div class="col-lg-9 col-xl-8">
+			                <!--Hero form -->
+			                <form action="#" class="search-box">
+			                    <div class="select-form">
+			                        <div class="select-itms">
+			                            <select name="select" id="select1">
+			                                <option value="">Select Amount</option>
+			                                <option value="">$120</option>
+			                                <option value="">$700</option>
+			                                <option value="">$750</option>
+			                                <option value="">$250</option>
+			                            </select>
+			                        </div>
+			                    </div>
+			                    <div class="select-form">
+			                        <div class="select-itms">
+			                            <select name="select" id="select1">
+			                                <option value="">Duration Month</option>
+			                                <option value="">7 Days</option>
+			                                <option value="">10 Days</option>
+			                                <option value="">14 Days Days</option>
+			                                <option value="">20 Days</option>
+			                            </select>
+			                        </div>
+			                    </div>
+			                    <div class="input-form">
+			                        <input type="text" placeholder="Return Amount"/>
+			                    </div>
+			                    <div class="search-form">
+			                        <a href="apply.html">Apply for Loan</a>
+			                    </div>
+			                </form>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Application Area End -->
+		</section>
+	</template>
+	<template id="ht_team_snippet" name="Team">
+		<section>
+			<!--Team Ara Start -->
+			<div class="team-area section-padding30">
+			    <div class="container">
+			        <div class="row justify-content-center">
+			            <div class="cl-xl-7 col-lg-8 col-md-10">
+			                <!-- Section Tittle -->
+			                <div class="section-tittle text-center mb-70">
+			                    <span>Our Loan Section Team Mambers</span>
+			                    <h2>Take a look to our professional team members.</h2>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-lg-3 col-md-4 col-sm-6">
+			                <div class="single-team mb-30">
+			                    <div class="team-img">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/home_blog1.png" alt=""/>
+			                        <!-- Blog Social -->
+			                        <div class="team-social">
+			                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                        </div>
+			                    </div>
+			                    <div class="team-caption">
+			                        <h3><a href="#">Bruce Roberts</a></h3>
+			                        <p>Volunteer leader</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-4 col-sm-6">
+			                <div class="single-team mb-30">
+			                    <div class="team-img">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/home_blog2.png" alt=""/>
+			                        <!-- Blog Social -->
+			                        <div class="team-social">
+			                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                        </div>
+			                    </div>
+			                    <div class="team-caption">
+			                        <h3><a href="#">Bruce Roberts</a></h3>
+			                        <p>Volunteer leader</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-4 col-sm-6">
+			                <div class="single-team mb-30">
+			                    <div class="team-img">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/home_blog3.png" alt=""/>
+			                        <!-- Blog Social -->
+			                        <div class="team-social">
+			                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                        </div>
+			                    </div>
+			                    <div class="team-caption">
+			                        <h3><a href="#">Bruce Roberts</a></h3>
+			                        <p>Volunteer leader</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-3 col-md-4 col-sm-6">
+			                <div class="single-team mb-30">
+			                    <div class="team-img">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/home_blog4.png" alt=""/>
+			                        <!-- Blog Social -->
+			                        <div class="team-social">
+			                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                        </div>
+			                    </div>
+			                    <div class="team-caption">
+			                        <h3><a href="#">Bruce Roberts</a></h3>
+			                        <p>Volunteer leader</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Team Ara End -->
+		</section>
+	</template>
+	<template id="ht_quote_snip" name="Quote">
+		<section class="s_quotes_carousel_wrapper" data-vxml="001" data-vcss="001">
+	        <div id="myQuoteCarousel" class="s_quotes_carousel s_carousel_default carousel slide bg-200" data-interval="10000">
+	            <!-- Indicators -->
+	            <ol class="carousel-indicators">
+	                <li data-target="#myQuoteCarousel" data-slide-to="0" class="active"></li>
+	                <li data-target="#myQuoteCarousel" data-slide-to="1"></li>
+	                <li data-target="#myQuoteCarousel" data-slide-to="2"></li>
+	            </ol>
+	            <!-- Content -->
+	            <div class="carousel-inner">
+	                <!-- #01 -->
+	                <div class="carousel-item active pt80 pb80" data-name="Slide">
+	                    <div class="container">
+	                        <blockquote class="s_blockquote s_blockquote_classic blockquote mx-auto w-50" data-name="Blockquote">
+	                            <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+	                            <div class="s_blockquote_content o_cc1">
+	                                <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+	                                <footer class="blockquote-footer">
+	                                    <img src="/web/image/website.s_quotes_carousel_demo_image_3" class="s_blockquote_avatar img rounded-circle mr-2" alt=""/>
+	                                    <span class="s_blockquote_author"><b>Jane DOE</b> • CEO of MyCompany</span>
+	                                </footer>
+	                            </div>
+	                        </blockquote>
+	                    </div>
+	                </div>
+	                <!-- #02 -->
+	                <div class="carousel-item pt80 pb80" data-name="Slide">
+	                    <div class="container">
+	                        <blockquote class="s_blockquote s_blockquote_classic blockquote mx-auto w-50" data-name="Blockquote">
+	                            <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+	                            <div class="s_blockquote_content o_cc1">
+	                                <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+	                                <footer class="blockquote-footer">
+	                                    <img src="/web/image/website.s_quotes_carousel_demo_image_3" class="s_blockquote_avatar img rounded-circle mr-2" alt=""/>
+	                                    <span class="s_blockquote_author"><b>Jane DOE</b> • CEO of MyCompany</span>
+	                                </footer>
+	                            </div>
+	                        </blockquote>
+	                    </div>
+	                </div>
+	                <!-- #03 -->
+	                <div class="carousel-item pt80 pb80" data-name="Slide">
+	                    <div class="container">
+	                        <blockquote class="s_blockquote s_blockquote_classic blockquote mx-auto w-50" data-name="Blockquote">
+	                            <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+	                            <div class="s_blockquote_content o_cc1">
+	                                <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+	                                <footer class="blockquote-footer">
+	                                    <img src="/web/image/website.s_quotes_carousel_demo_image_3" class="s_blockquote_avatar img rounded-circle mr-2" alt=""/>
+	                                    <span class="s_blockquote_author"><b>Jane DOE</b> • CEO of MyCompany</span>
+	                                </footer>
+	                            </div>
+	                        </blockquote>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- Controls -->
+	            <div class="carousel-control-prev o_not_editable" data-target="#myQuoteCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+	                <span class="carousel-control-prev-icon"/>
+	                <span class="sr-only">Previous</span>
+	            </div>
+	            <div class="carousel-control-next o_not_editable" data-target="#myQuoteCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+	                <span class="carousel-control-next-icon"/>
+	                <span class="sr-only">Next</span>
+	            </div>
+	        </div>
+	    </section>
+	</template>
+	<template id="ht_blog_snippet" name="Blog">
+		<section>
+			<!-- Blog Ara Start -->
+			<div class="home-blog-area section-padding30">
+			    <div class="container">
+			        <div class="row justify-content-center">
+			            <div class="col-lg-7 col-md-10">
+			                <!-- Section Tittle -->
+			                <div class="section-tittle text-center mb-70">
+			                    <span>News form our latest blog</span>
+			                    <h2>News from around the world selected by us.</h2>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="col-xl-6 col-lg-6 col-md-6">
+			                <!-- single-david -->
+			                <div class="single-blogs mb-30">
+			                    <div class="blog-images">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/blog1.png" alt=""/>
+			                    </div>
+			                    <div class="blog-captions">
+			                        <span>January 28, 2020</span>
+			                        <h2><a href="blog_details.html">The advent of pesticides brought 
+			                            in its benefits and pitfalls.</a>
+			                        </h2>
+			                        <p>October 6, a2020by Steve</p>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-xl-6 col-lg-6 col-md-6">
+			                <!-- single-david -->
+			                <div class="single-blogs mb-30">
+			                    <div class="blog-images">
+			                        <img src="/theme_ht_loan/static/src/assets/img/gallery/blog2.png" alt=""/>
+			                    </div>
+			                    <div class="blog-captions">
+			                        <span>January 28, 2020</span>
+			                        <h2><a href="blog_details.html">The advent of pesticides brought 
+			                            in its benefits and pitfalls.</a>
+			                        </h2>
+			                        <p>October 6, a2020by Steve</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Blog Ara End -->
+		</section>
+	</template>
+	<template id="ht_contact_snippet" name="Conatct">
+		<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+        	<div class="container">
+				<div class="row">
+				    <div class="col-12">
+				        <h2 class="contact-title">Get in Touch</h2>
+				    </div>
+				    <div class="col-lg-8">
+				        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/thank-you" data-pre-fill="true">
+                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact1">
+                                            <span class="s_website_form_label_content">Your Name</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" data-fill-with="name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact2">
+                                            <span class="s_website_form_label_content">Phone Number</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact2" type="tel" class="form-control s_website_form_input" name="phone" data-fill-with="phone"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact3">
+                                            <span class="s_website_form_label_content">Your Email</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact3" type="email" class="form-control s_website_form_input" name="email_from" required="" data-fill-with="email"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact4">
+                                            <span class="s_website_form_label_content">Your Company</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact4" type="text" class="form-control s_website_form_input" name="company" data-fill-with="commercial_company_name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact5">
+                                            <span class="s_website_form_label_content">Subject</span>
+                                            <span class="s_website_form_mark"> *</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact5" type="text" class="form-control s_website_form_input" name="subject" required=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact6">
+                                            <span class="s_website_form_label_content">Your Question</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <textarea id="contact6" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_field s_website_form_dnone">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact7">
+                                            <span class="s_website_form_label_content">Email To</span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input id="contact7" type="hidden" class="form-control s_website_form_input" name="email_to"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                    <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                    <span id="s_website_form_result"></span>
+                                </div>
+                            </div>
+                        </form>
+				    </div>
+				    <div class="col-lg-3 offset-lg-1">
+				        <div class="media contact-info">
+				            <span class="contact-info__icon"><i class="ti-home"></i></span>
+				            <div class="media-body">
+				                <h3>Buttonwood, California.</h3>
+				                <p>Rosemead, CA 91770</p>
+				            </div>
+				        </div>
+				        <div class="media contact-info">
+				            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+				            <div class="media-body">
+				                <h3>+1 253 565 2365</h3>
+				                <p>Mon to Fri 9am to 6pm</p>
+				            </div>
+				        </div>
+				        <div class="media contact-info">
+				            <span class="contact-info__icon"><i class="ti-email"></i></span>
+				            <div class="media-body">
+				                <h3>support@colorlib.com</h3>
+				                <p>Send us your query anytime!</p>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+        </section>
+	</template>
+</odoo>

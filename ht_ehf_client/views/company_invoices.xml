@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="ehf_client_invoice_form_view" model="ir.ui.view">
+            <field name="name">ehf.client.invoice.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//group[@id='header_left_group']/field[@name='payment_reference']" position="after">
+                    <field name="invoice_status"/>
+                    <field name="is_ehf_customer"/>
+            	</xpath>
+
+                <!-- <xpath expr="//button[@name='action_invoice_sent']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('is_ehf_customer','=',True)]}</attribute>
+                </xpath> -->
+                <xpath expr="//button[@name='action_invoice_sent']" position="after">
+                        <button name="action_sent_invoice_ehf" type="object" string="Send EHF" attrs="{'invisible':[('is_ehf_customer','=',False)]}" groups="account.group_account_invoice"/>
+                </xpath>
+            </field>
+
+
+        </record>
+    </data>
+</odoo>

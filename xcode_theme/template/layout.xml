@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="theme_loan_layout" name="Harhu Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <header>
+                <!-- Header Start -->
+                <!-- Navbar Start -->
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+                    <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+                    </a>
+                    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto p-4 p-lg-0">
+                            <a href="/" class="nav-item nav-link active">Home</a>
+                            <a href="/about" class="nav-item nav-link">About</a>
+                            <a href="/courses" class="nav-item nav-link">Courses</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Team</a>
+                                <div class="dropdown-menu fade-down m-0">
+                                    <a href="/team" class="dropdown-item">Our Team</a>
+                                    <a href="/testimonial" class="dropdown-item">Testimonial</a>
+                                </div>
+                            </div>
+                            <a href="/contact" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="/contact" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                    </div>
+                </nav>
+                <!-- Navbar End -->
+                <!-- Header End -->
+            </header>
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <footer>
+            <!-- Footer Start -->
+            <div class="container-fluid bg-dark text-light footer pt-5 mt-5" data-wow-delay="0.1s">
+                <div class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-3">Quick Link</h4>
+                            <a class="btn btn-link" href="/about">About Us</a>
+                            <a class="btn btn-link" href="/contact">Contact Us</a>
+                            <a class="btn btn-link" href="/">Privacy Policy</a>
+                            <a class="btn btn-link" href="/">Terms &amp; Condition</a>
+                            <a class="btn btn-link" href="/">FAQs &amp; Help</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-3">Contact</h4>
+                            <p class="mb-2"><i class="fa fa-map-marker me-3"></i><span class="text"><t t-esc="res_company.street"/>&#160;<t t-esc="res_company.state_id.name"/>&#160;<t t-esc="res_company.country_id.name"/></span></p>
+                            <p class="mb-2"><i class="fa fa-phone me-3"></i><span><t t-esc="res_company.phone"/></span></p>
+                            <p class="mb-2"><i class="fa fa-envelope me-3"></i><span><t t-esc="res_company.email"/></span></p>
+                            <div class="d-flex pt-2">
+                                <a class="btn btn-outline-light btn-social" t-attf-href="{{res_company.social_twitter}}"><i class="fab fa fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-social" t-attf-href="{{res_company.social_facebook}}"><i class="fab fa fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-social" t-attf-href="{{res_company.social_youtube}}"><i class="fab fa fa-youtube"></i></a>
+                                <a class="btn btn-outline-light btn-social" t-attf-href="{{res_company.social_linkedin}}"><i class="fab fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-3">Gallery</h4>
+                            <div class="row g-2 pt-2">
+                                <div class="col-4">
+                                    <img class="img-fluid bg-light p-1" src="/xcode_theme/static/src/img/course-1.jpg" alt=""/>
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid bg-light p-1" src="/xcode_theme/static/src/img/course-2.jpg" alt=""/>
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid bg-light p-1" src="/xcode_theme/static/src/img/course-3.jpg" alt=""/>
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid bg-light p-1" src="/xcode_theme/static/src/img/course-2.jpg" alt=""/>
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid bg-light p-1" src="/xcode_theme/static/src/img/course-3.jpg" alt=""/>
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid bg-light p-1" src="/xcode_theme/static/src/img/course-1.jpg" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-white mb-3">Newsletter</h4>
+                            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                            <div class="position-relative mx-auto" style="max-width: 400px;">
+                                <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
+                                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &amp;copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br/><br/>
+                                Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="footer-menu">
+                                    <a href="">Home</a>
+                                    <a href="">Cookies</a>
+                                    <a href="">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </footer>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="about_page" name="About Page">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty">
+				<section>
+					<!-- Hero Start-->
+			        <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+			            <div class="container">
+			                <div class="row">
+			                    <div class="col-xl-12">
+			                        <div class="hero-cap text-center pt-50">
+			                            <h2>About us</h2>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			        <!--Hero End -->
+				</section>
+				<section>
+					<!-- About Law Start-->
+			        <div class="about-low-area section-padding2">
+			            <div class="container">
+			                <div class="row">
+			                    <div class="col-lg-6 col-md-12">
+			                        <div class="about-caption mb-50">
+			                            <!-- Section Tittle -->
+			                            <div class="section-tittle mb-35">
+			                                <span>About Our Company</span>
+			                                <h2>Building a Brighter financial Future &amp; Good Support.</h2>
+			                            </div>
+			                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eniminixm, quis nostrud exercitation ullamco laboris nisi ut aliquip exeaoauat. Duis aute irure dolor in reprehe.</p>
+			                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et dolore magna aliq.</p>
+			                            <a href="apply.html" class="btn">Apply for Loan</a>
+			                        </div>
+			                    </div>
+			                    <div class="col-lg-6 col-md-12">
+			                        <!-- about-img -->
+			                        <div class="about-img ">
+			                            <div class="about-font-img d-none d-lg-block">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/about2.png" alt=""/>
+			                            </div>
+			                            <div class="about-back-img ">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/about1.png" alt=""/>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			        <!-- About Law End-->
+				</section>
+				<section>
+					<!-- Support Company Start-->
+			        <div class="support-company-area section-padding3 fix">
+			            <div class="container">
+			                <div class="row align-items-center">
+			                    <div class="col-xl-6 col-lg-6">
+			                        <div class="support-location-img mb-50">
+			                            <img src="theme_ht_loan/static/src/assets/img/gallery/single2.jpg" alt=""/>
+			                            <div class="support-img-cap">
+			                                <span>Since 1992</span>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="col-xl-6 col-lg-6">
+			                        <div class="right-caption">
+			                            <!-- Section Tittle -->
+			                            <div class="section-tittle">
+			                                <span>Why Choose Our Company</span>
+			                                <h2>We Promise Sustainable  Future For You.</h2>
+			                            </div>
+			                            <div class="support-caption">
+			                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+			                                <div class="select-suport-items">
+			                                    <label class="single-items">Aorem ipsum dgolor sitnfd amet dfgbn fbsdg
+			                                        <input type="checkbox" checked="checked active"/>
+			                                        <span class="checkmark"></span>
+			                                    </label>
+			                                    <label class="single-items">Consectetur adipisicing bfnelit, sedb dvbnfo
+			                                        <input type="checkbox" checked="checked active"/>
+			                                        <span class="checkmark"></span>
+			                                    </label>
+			                                    <label class="single-items">Eiusmod tempor incididunt vmgldupout labore
+			                                        <input type="checkbox" checked="checked active"/>
+			                                        <span class="checkmark"></span>
+			                                    </label>
+			                                    <label class="single-items">Admkde mibvnim veniam, quivds cnostrud.
+			                                        <input type="checkbox" checked="checked active"/>
+			                                        <span class="checkmark"></span>
+			                                    </label>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			        <!-- Support Company End-->
+				</section>
+				<section>
+					<!-- Application Area Start -->
+			        <div class="application-area pt-150 pb-140" data-background="theme_ht_loan/static/src/assets/img/gallery/section_bg03.jpg">
+			            <div class="container">
+			                <div class="row justify-content-center">
+			                    <div class="col-lg-6 col-md-10">
+			                        <!-- Section Tittle -->
+			                        <div class="section-tittle section-tittle2 text-center mb-45">
+			                            <span>Apply in Three Easy Steps</span>
+			                            <h2>Easy Application Process For Any Types of Loan</h2>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div class="row justify-content-center">
+			                    <div class="col-lg-9 col-xl-8">
+			                        <!--Hero form -->
+			                        <form action="#" class="search-box">
+			                            <div class="select-form">
+			                                <div class="select-itms">
+			                                    <select name="select" id="select1">
+			                                        <option value="">Select Amount</option>
+			                                        <option value="">$120</option>
+			                                        <option value="">$700</option>
+			                                        <option value="">$750</option>
+			                                        <option value="">$250</option>
+			                                    </select>
+			                                </div>
+			                            </div>
+			                            <div class="select-form">
+			                                <div class="select-itms">
+			                                    <select name="select" id="select1">
+			                                        <option value="">Duration Month</option>
+			                                        <option value="">7 Days</option>
+			                                        <option value="">10 Days</option>
+			                                        <option value="">14 Days Days</option>
+			                                        <option value="">20 Days</option>
+			                                    </select>
+			                                </div>
+			                            </div>
+			                            <div class="input-form">
+			                                <input type="text" placeholder="Return Amount"/>
+			                            </div>
+			                            <div class="search-form">
+			                                <a href="apply.html">Apply for Loan</a>
+			                            </div>	
+			                        </form>	
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			        <!-- Application Area End -->
+				</section>
+				<section>
+					<!--Team Ara Start -->
+			        <div class="team-area section-padding30">
+			            <div class="container">
+			                <div class="row justify-content-center">
+			                    <div class="cl-xl-7 col-lg-8 col-md-10">
+			                        <!-- Section Tittle -->
+			                        <div class="section-tittle text-center mb-70">
+			                            <span>Our Loan Section Team Mambers</span>
+			                            <h2>Take a look to our professional team members.</h2>
+			                        </div> 
+			                    </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-lg-3 col-md-4 col-sm-6">
+			                        <div class="single-team mb-30">
+			                            <div class="team-img">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/home_blog1.png" alt=""/>
+			                                <!-- Blog Social -->
+			                                <div class="team-social">
+			                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                                </div>
+			                            </div>
+			                            <div class="team-caption">
+			                                <h3><a href="#">Bruce Roberts</a></h3>
+			                                <p>Volunteer leader</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="col-lg-3 col-md-4 col-sm-6">
+			                        <div class="single-team mb-30">
+			                            <div class="team-img">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/home_blog2.png" alt=""/>
+			                                <!-- Blog Social -->
+			                                <div class="team-social">
+			                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                                </div>
+			                            </div>
+			                            <div class="team-caption">
+			                                <h3><a href="#">Bruce Roberts</a></h3>
+			                                <p>Volunteer leader</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="col-lg-3 col-md-4 col-sm-6">
+			                        <div class="single-team mb-30">
+			                            <div class="team-img">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/home_blog3.png" alt=""/>
+			                                <!-- Blog Social -->
+			                                <div class="team-social">
+			                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                                </div>
+			                            </div>
+			                            <div class="team-caption">
+			                                <h3><a href="#">Bruce Roberts</a></h3>
+			                                <p>Volunteer leader</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="col-lg-3 col-md-4 col-sm-6">
+			                        <div class="single-team mb-30">
+			                            <div class="team-img">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/home_blog4.png" alt=""/>
+			                                <!-- Blog Social -->
+			                                <div class="team-social">
+			                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
+			                                </div>
+			                            </div>
+			                            <div class="team-caption">
+			                                <h3><a href="#">Bruce Roberts</a></h3>
+			                                <p>Volunteer leader</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			        <!-- Team Ara End -->
+				</section>
+				<section class="s_quotes_carousel_wrapper" data-vxml="001" data-vcss="001">
+			        <div id="myQuoteCarousel" class="s_quotes_carousel s_carousel_default carousel slide bg-200" data-interval="10000">
+			            <!-- Indicators -->
+			            <ol class="carousel-indicators">
+			                <li data-target="#myQuoteCarousel" data-slide-to="0" class="active"></li>
+			                <li data-target="#myQuoteCarousel" data-slide-to="1"></li>
+			                <li data-target="#myQuoteCarousel" data-slide-to="2"></li>
+			            </ol>
+			            <!-- Content -->
+			            <div class="carousel-inner">
+			                <!-- #01 -->
+			                <div class="carousel-item active pt80 pb80" data-name="Slide">
+			                    <div class="container">
+			                        <blockquote class="s_blockquote s_blockquote_classic blockquote mx-auto w-50" data-name="Blockquote">
+			                            <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+			                            <div class="s_blockquote_content o_cc1">
+			                                <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+			                                <footer class="blockquote-footer">
+			                                    <img src="/web/image/website.s_quotes_carousel_demo_image_3" class="s_blockquote_avatar img rounded-circle mr-2" alt=""/>
+			                                    <span class="s_blockquote_author"><b>Jane DOE</b> • CEO of MyCompany</span>
+			                                </footer>
+			                            </div>
+			                        </blockquote>
+			                    </div>
+			                </div>
+			                <!-- #02 -->
+			                <div class="carousel-item pt80 pb80" data-name="Slide">
+			                    <div class="container">
+			                        <blockquote class="s_blockquote s_blockquote_classic blockquote mx-auto w-50" data-name="Blockquote">
+			                            <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+			                            <div class="s_blockquote_content o_cc1">
+			                                <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+			                                <footer class="blockquote-footer">
+			                                    <img src="/web/image/website.s_quotes_carousel_demo_image_3" class="s_blockquote_avatar img rounded-circle mr-2" alt=""/>
+			                                    <span class="s_blockquote_author"><b>Jane DOE</b> • CEO of MyCompany</span>
+			                                </footer>
+			                            </div>
+			                        </blockquote>
+			                    </div>
+			                </div>
+			                <!-- #03 -->
+			                <div class="carousel-item pt80 pb80" data-name="Slide">
+			                    <div class="container">
+			                        <blockquote class="s_blockquote s_blockquote_classic blockquote mx-auto w-50" data-name="Blockquote">
+			                            <i class="fa fa-1x fa-quote-left rounded float-left bg-o-color-2 s_blockquote_icon"/>
+			                            <div class="s_blockquote_content o_cc1">
+			                                <p>Write a quote here from one of your customers. Quotes are a great way to build confidence in your products or services.</p>
+			                                <footer class="blockquote-footer">
+			                                    <img src="/web/image/website.s_quotes_carousel_demo_image_3" class="s_blockquote_avatar img rounded-circle mr-2" alt=""/>
+			                                    <span class="s_blockquote_author"><b>Jane DOE</b> • CEO of MyCompany</span>
+			                                </footer>
+			                            </div>
+			                        </blockquote>
+			                    </div>
+			                </div>
+			            </div>
+			            <!-- Controls -->
+			            <div class="carousel-control-prev o_not_editable" data-target="#myQuoteCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+			                <span class="carousel-control-prev-icon"/>
+			                <span class="sr-only">Previous</span>
+			            </div>
+			            <div class="carousel-control-next o_not_editable" data-target="#myQuoteCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+			                <span class="carousel-control-next-icon"/>
+			                <span class="sr-only">Next</span>
+			            </div>
+			        </div>
+			    </section>
+				<section>
+					<!-- Blog Ara Start -->
+			        <div class="home-blog-area section-padding30">
+			            <div class="container">
+			                <div class="row justify-content-center">
+			                    <div class="col-lg-7 col-md-10">
+			                        <!-- Section Tittle -->
+			                        <div class="section-tittle text-center mb-70">
+			                            <span>News form our latest blog</span>
+			                            <h2>News from around the world selected by us.</h2>
+			                        </div> 
+			                    </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-xl-6 col-lg-6 col-md-6">
+			                        <!-- single-david -->
+			                        <div class="single-blogs mb-30">
+			                            <div class="blog-images">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/blog1.png" alt=""/>
+			                            </div>
+			                            <div class="blog-captions">
+			                                <span>January 28, 2020</span>
+			                                <h2><a href="blog_details.html">The advent of pesticides brought 
+			                                    in its benefits and pitfalls.</a></h2>
+			                                <p>October 6, a2020by Steve</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="col-xl-6 col-lg-6 col-md-6">
+			                        <!-- single-david -->
+			                        <div class="single-blogs mb-30">
+			                            <div class="blog-images">
+			                                <img src="theme_ht_loan/static/src/assets/img/gallery/blog2.png" alt=""/>
+			                            </div>
+			                            <div class="blog-captions">
+			                                <span>January 28, 2020</span>
+			                                <h2><a href="blog_details.html">The advent of pesticides brought 
+			                                    in its benefits and pitfalls.</a></h2>
+			                                <p>October 6, a2020by Steve</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			        <!-- Blog Ara End -->
+				</section>
+			</div>
+		</t>
+	</template>
+</odoo>

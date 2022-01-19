@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="assets_website" inherit_id="website.assets_frontend">
+        <xpath expr="//link[last()]" position="after">
+        	 <!-- <link rel="stylesheet" type="text/css" href="/ht_theme/static/src/css/custom.css"/> -->
+        	<link rel="stylesheet" href="/business_website/static/src/css/bootstrap.css"/>
+        	<link rel="stylesheet" href="/business_website/static/src/css/fontawesome-all.css"/>
+        	<link rel="stylesheet" href="/business_website/static/src/css/magnific-popup.css"/>
+        	<link rel="stylesheet" href="/business_website/static/src/css/styles.css"/>
+        	<link rel="stylesheet" href="/business_website/static/src/css/swiper.css"/>
+        	<script type="text/javascript" src="/business_website/static/src/js/jquery.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/popper.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/bootstrap.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/jquery.easing.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/swiper.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/jquery.magnific-popup.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/morphext.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/isotope.pkgd.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/validator.min.js"></script>
+        	<script type="text/javascript" src="/business_website/static/src/js/scripts.js"></script>
+        </xpath>
+    </template>
+</odoo>

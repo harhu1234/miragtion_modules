@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="assets_report_form_view" model="ir.ui.view">
+            <field name="name">assets.report.view.form</field>
+            <field name="model">assets.report</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="file_formats" filename="" invisible="1"/>
+                    <div>
+                        <group>
+                            <field name="name" colspan="4" invisible="1"/>
+                            <field name="report" filename="name" colspan="4"/>
+                        </group>
+                    </div>
+                    <footer>
+                        <button string="Cancel" class="oe_link oe_highlight" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

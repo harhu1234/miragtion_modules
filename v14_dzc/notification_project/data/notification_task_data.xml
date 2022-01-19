@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_task_notification_template" model="mail.template">
+        <field name="name">Achterstallige taken</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="model_id" ref="notification_project.model_project_task"/>
+        <field name="body_html"><![CDATA[
+            <table border="1" style="border-color:rgba(150, 150, 220, 0.3);border-collapse: collapse;" width="100%">
+                <tbody>
+                    <tr style="background-color:#b163a3;font-color:#ffffff">
+                        <td colspan="2" width="80%" style="padding:2%;text-align: center;border-bottom:0px;">
+                            <strong><big>
+                                <font color="#ffffff"><a style="color:#ffffff;">Achterstallige taken</a></font>
+                            </big></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="border-top:0px;border-bottom:0px;">
+
+                            <table border="1" style="border-color:rgba(150, 150, 220, 0.3);border-collapse: collapse;" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            <strong>Taak</strong>
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            <strong>Termijn</strong>
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            <strong>Vertragingen</strong>
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            <strong>Verantwoordelijk</strong>
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            <strong>Project</strong>
+                                        </td>
+                                    </tr>
+                                    % for o in ctx['task_ids']:
+                                    <tr>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            <a href="${ object.get_task_url(o) }">
+                                                % if o.name:
+                                                    <i>${o.name}</i>
+                                                % endif
+                                                % if not o.name:
+                                                    <i>${o.res_name} - ${o.summary}</i>
+                                                % endif
+                                            </a>&nbsp;&nbsp;&nbsp;
+                                            <a href="${ object.get_task_url(o) }" style="background-color: #5cb85c;padding: 2px 6px 2px 6px;border-top: 1px solid #4cae4c;border-right: 1px solid #4cae4c;border-bottom: 1px solid #4cae4c;border-left: 1px solid #4cae4c;text-decoration:none;border-radius: 5px;">
+                                                <span style="color:#FFFFFF;">&gt;</span>
+                                            </a>
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            ${o.date_deadline}
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            ${(ctx['datetime'].now()-ctx['datetime'].strptime(o.date_deadline,'%Y-%m-%d')).days}
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            ${o.user_id.name}
+                                        </td>
+                                        <td style="padding:2%;border-color:rgba(150, 150, 220, 0.3);">
+                                            % if o.project_id:
+                                                ${o.project_id.name}
+                                            % endif
+                                            % if not o.project_id and not o.name:
+                                                Activiteitsnotitie:  ${o.note|safe}
+                                            % endif
+                                        </td>
+                                    </tr>
+                                    % endfor
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        ]]></field>
+    </record>
+
+<!--    <record id="notify_project_task_deadline" model="ir.cron">-->
+<!--        <field name="name">Notify users about overdue tasks</field>-->
+<!--        <field name="interval_number">1</field>-->
+<!--        <field name="interval_type">days</field>-->
+<!--        <field name="numbercall">-1</field>-->
+<!--        <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 7:00:00')" />-->
+<!--        <field name="model" eval="'project.task'"/>-->
+<!--        <field name="model_id" ref="project.model_project_task"/>-->
+<!--        <field name="doall" eval="False" />-->
+<!--        <field name="state">code</field>-->
+<!--        <field name="code">-->
+<!--model.search([]).cron_notify()-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

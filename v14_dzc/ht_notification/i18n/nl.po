@@ -1,0 +1,150 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ht_notification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-18 09:44+0000\n"
+"PO-Revision-Date: 2021-12-18 09:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ht_notification
+#: model:ir.actions.server,name:ht_notification.ir_cron_notification_ir_actions_server
+#: model:ir.cron,cron_name:ht_notification.ir_cron_notification
+#: model:ir.cron,name:ht_notification.ir_cron_notification
+msgid "CRM Notification"
+msgstr "CRM-melding"
+
+#. module: ht_notification
+#: model:ir.model.fields.selection,name:ht_notification.selection__notification_notification__mail_option__coach
+msgid "Coach"
+msgstr ""
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__create_uid
+msgid "Created by"
+msgstr "Gemaakt door"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__create_date
+msgid "Created on"
+msgstr "Gemaakt op"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__mail_text
+msgid "Custom Mail Message"
+msgstr "Aangepast e-mailbericht"
+
+#. module: ht_notification
+#: model:ir.model.fields.selection,name:ht_notification.selection__notification_notification__duration__days
+msgid "Days"
+msgstr "dagen"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__duration
+msgid "Duration"
+msgstr "Looptijd"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__write_date
+msgid "Laatst bijgewerkt on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: ht_notification
+#: model:ir.model.fields.selection,name:ht_notification.selection__notification_notification__mail_option__lead
+msgid "Lead"
+msgstr ""
+
+#. module: ht_notification
+#: model_terms:ir.ui.view,arch_db:ht_notification.view_notification_form
+msgid "Mail Message"
+msgstr "E-mailbericht"
+
+#. module: ht_notification
+#: model:ir.model,name:ht_notification.model_notification_notification
+msgid "Notificaion"
+msgstr "Kennisgeving"
+
+#. module: ht_notification
+#: model_terms:ir.ui.view,arch_db:ht_notification.view_notification_form
+#: model_terms:ir.ui.view,arch_db:ht_notification.view_notification_tree
+msgid "Notification"
+msgstr "Kennisgeving"
+
+#. module: ht_notification
+#: model_terms:ir.ui.view,arch_db:ht_notification.view_notification_form
+msgid "Notification Parameters"
+msgstr "Meldingsparameters"
+
+#. module: ht_notification
+#: model:ir.actions.act_window,name:ht_notification.action_notification_view
+#: model:ir.ui.menu,name:ht_notification.menu_action_notification_view
+msgid "Notification setting"
+msgstr "Automatische e-mail"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__partner_ids
+msgid "Notify Partners"
+msgstr "Partners informeren"
+
+#. module: ht_notification
+#: model:ir.model.fields.selection,name:ht_notification.selection__notification_notification__mail_option__referral
+msgid "Referral"
+msgstr "verwijzingen"
+
+#. module: ht_notification
+#: model_terms:ir.ui.view,arch_db:ht_notification.view_notification_form
+msgid "Responsible"
+msgstr "Verantwoordelijk"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__stage_ids
+msgid "Stages"
+msgstr ""
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__subject
+msgid "Subject"
+msgstr "Onderwerp"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__mail_option
+msgid "To"
+msgstr "To"
+
+#. module: ht_notification
+#: model:ir.model.fields,field_description:ht_notification.field_notification_notification__value_duration
+msgid "Value of Duration"
+msgstr "Waarde van duur"
+
+#. module: ht_notification
+#: model:ir.model.fields.selection,name:ht_notification.selection__notification_notification__duration__week
+msgid "Week"
+msgstr "Week"

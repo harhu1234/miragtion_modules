@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form View -->
+        <record id="view_notification_form" model="ir.ui.view">
+            <field name="name">view.notification.form</field>
+            <field name="model">notification.notification</field>
+            <field name="arch" type="xml">
+                <form string="Notification">
+                    <sheet>
+                        <group>
+                            <group string="Notification Parameters" name="notification_para">                                
+                                <field name="stage_ids" widget="many2many_tags"/>
+                                <field name="duration"/>
+                                <field name="value_duration"/>
+                                <!-- <field name="email_from"/> -->
+                            </group>
+                            <group name="responsible" string="Responsible">
+                                <field name="mail_option"/>
+                                <field name="partner_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Mail Message">
+                                <group>
+                                    <field name="subject" required="1"/>
+                                    <field name="mail_text"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_notification_tree" model="ir.ui.view">
+            <field name="name">view.notification.tree</field>
+            <field name="model">notification.notification</field>
+            <field name="arch" type="xml">
+                <tree string="Notification">
+                    <field name="subject"/>
+                    <field name="partner_ids" widget="many2many_tags"/>
+                    <field name="stage_ids" widget="many2many_tags"/>
+                    <field name="value_duration"/>
+                    <field name="duration"/>
+                    <!-- <field name="email_from"/> -->
+                    <field name="mail_option"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_notification_view" model="ir.actions.act_window">
+            <field name="name">Notification setting</field>
+            <field name="res_model">notification.notification</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_notification_view" id="menu_action_notification_view" parent="crm.crm_menu_config" sequence="20"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_task_type_view_form" model="ir.ui.view">
+        <field name="name">project.task.type.form</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit"/>
+        <field name="arch" type="xml">
+            <field name="fold" position="after">
+                <field name="is_notify"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="mail_activity_action" model="ir.actions.act_window">
+        <field name="name">Activities</field>
+        <field name="res_model">mail.activity</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

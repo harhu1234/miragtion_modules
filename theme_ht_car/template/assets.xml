@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="theme_ht_corporate_assets" name="Harhu Theme Management" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Css Styles -->
+	      	<link rel="stylesheet" href="/theme_ht_car/static/src/css/bootstrap.min.css"/>
+	      <!-- style css -->
+	      	<link rel="stylesheet" href="/theme_ht_car/static/src/css/style.css"/>
+	      <!-- Responsive-->
+	      	<link rel="stylesheet" href="/theme_ht_car/static/src/css/responsive.css"/>
+	      <!-- Scrollbar Custom CSS -->
+	      	<link rel="stylesheet" href="/theme_ht_car/static/src/css/jquery.mCustomScrollbar.min.css"/>
+
+
+
+		    <script src="/theme_ht_car/static/src/js/jquery-migrate-3.0.1.min.js"></script>
+		    <script src="/theme_ht_car/static/src/js/bootstrap.bundle.min.js"></script>
+		    <script src="/theme_ht_car/static/src/js/popper.min.js"></script>
+		    <!-- <script src="/theme_ht_car/static/src/js/jquery-3.0.0.min.js"></script> -->
+		    <script src="/theme_ht_car/static/src/js/jquery.mCustomScrollbar.concat.min.js"></script>
+		    <script src="/theme_ht_car/static/src/js/custom.js"></script>
+
+		</xpath>
+	</template>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_matrix_public,crm_matrix,model_crm_matrix,,1,1,1,1
+access_matrix.file.parser.line.wizard,matrix.file.parser.line.wizard,model_matrix_file_parser_line_wizard,,1,1,1,1
+access_matrix_file_parser_wizard_public,matrix_file_parser_wizard,model_matrix_file_parser_wizard,,1,1,1,1

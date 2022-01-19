@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="hr_contract_view_form_signup">
+            <field name="name">hr.contract.form.view</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='salary_and_advantages']" position="after">
+                     <group name="signup_detail">
+                        <field name="step"/>
+                        <field name="salary_increase"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_employee_view_form_coach_type">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="coach" string="Coach Type"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_employee_view_search_coach">
+            <field name="name">hr.emp.search.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='inactive']" position="after">
+                     <filter string="Junior Coach" name="junior_coach"
+                            domain="[('coach', '=', 'junior')]"/>
+                     <filter string="Senior Coach" name="senior_coach"
+                            domain="[('coach', '=', 'senior')]"/>
+                </xpath>
+                <xpath expr="//filter[@name='group_job']" position="after">
+                    <filter string="Coach" name="coach_group"
+                            context="{'group_by':'coach'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_applicant_view_form">
+            <field name="name">hr.applicant.form.view</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+                <field name="department_id" position="after">
+                    <field name="timesheet_cost"/>
+                </field>
+                <xpath expr="//header" position="inside">
+                    <button type="object" name="resend_contract_link" string="Resend Link" class="btn btn-primary"
+                        attrs="{'invisible': [('emp_id', '=', False)]}"/>
+                </xpath>
+                <!-- <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="userr_id" string="User"/>
+                    <field name="check_expiry_date" invisible="1"/>
+                </xpath> -->
+                <xpath expr="//field[@name='description']" position="after">
+                    <field name="sign" string="Digital Sign" widget="signature"/>
+                </xpath>
+                <xpath expr="//sheet" position="inside">
+                    <notebook>
+                        <page string="Contract" name="contract_info">
+                            <group>
+                                <field name="signed_contract" string="Contract Signed?" readonly="1"/>
+                                <field name="contract_content" string="Contract" readonly="1" invisible="1"/>
+                                <field name="contract_content_pdf" string="Contract" readonly="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_applicant_view_search">
+            <field name="name">hr.applicant.search.view</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_search_bis"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_name']" position="after">
+                    <field name="contract_content" string="Contract"/>
+                </xpath>
+                <xpath expr="//filter[@name='inactive']" position="after">
+                    <filter string="Signed Contract" name="signed_contract_filter"
+                            domain="[('contract_content', '=', True)]"/>
+                </xpath>
+                <xpath expr="//filter[@name='responsible']" position="before">
+                    <filter string="Signed Contract" name="signed_contract_group"
+                            context="{'group_by':'contract_content'}"/>
+                </xpath>
+            </field>
+        </record>
+
+<!--        <menuitem id="hr_timesheet.timesheet_menu_activity_all"-->
+<!--            name="All Timesheets"-->
+<!--            parent="hr_timesheet.menu_hr_time_tracking"-->
+<!--            action="hr_timesheet.timesheet_action_all" groups="group_all_timesheet"/>-->
+
+<!--        <menuitem-->
+<!--        id="mail.mail_channel_menu_root_chat"-->
+<!--        name="Discuss"-->
+<!--        action="mail.mail_channel_action_client_chat"-->
+<!--        web_icon="mail,static/description/icon.png"-->
+<!--        groups="-base.group_user,group_allow_discuss_rec_contact_cal_web"-->
+<!--        sequence="2"/>-->
+
+<!--         <menuitem-->
+<!--        name="Recruitment"-->
+<!--        id="hr_recruitment.menu_hr_recruitment_root"-->
+<!--        web_icon="hr_recruitment,static/description/icon.png"-->
+<!--        groups="-hr_recruitment.group_hr_recruitment_user,group_allow_discuss_rec_contact_cal_web"-->
+<!--        sequence="80"/>-->
+
+<!--        <menuitem id="hr_timesheet.timesheet_menu_root"-->
+<!--            name="Timesheets"-->
+<!--            sequence="1"-->
+<!--            groups="hr_timesheet.group_hr_timesheet_user"-->
+<!--            web_icon="hr_timesheet,static/description/icon_timesheet.png"/>-->
+
+<!--        <menuitem name="Contacts"-->
+<!--        id="contacts.menu_contacts"-->
+<!--        sequence="4"-->
+<!--        web_icon="contacts,static/description/icon.png"-->
+<!--        groups="-base.group_user,-base.group_partner_manager,group_allow_discuss_rec_contact_cal_web"/>-->
+
+<!--        <record id="action_calendar_event_for_app_user" model="ir.actions.act_window">-->
+<!--            <field name="name">Meetings</field>-->
+<!--            <field name="res_model">calendar.event</field>-->
+<!--            <field name="view_mode">calendar,tree,form</field>-->
+<!--            <field name="view_id" ref="calendar.view_calendar_event_calendar"/>-->
+<!--            <field name="search_view_id" ref="calendar.view_calendar_event_search"/>-->
+<!--            <field name="domain">[('user_id','=',uid)]</field>-->
+<!--            <field name="help" type="html">-->
+<!--              <p class="oe_view_nocontent_create">-->
+<!--                Click to schedule a new meeting.-->
+<!--              </p><p>-->
+<!--                The calendar is shared between employees and fully integrated with-->
+<!--                other applications such as the employee leaves or the business-->
+<!--                opportunities.-->
+<!--              </p>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <menuitem-->
+<!--        id="calendar.mail_menu_calendar"-->
+<!--        name="Calendar"-->
+<!--        sequence="2"-->
+<!--        action="calendar.action_calendar_event"-->
+<!--        web_icon="calendar,static/description/icon.png"-->
+<!--        groups="-base.group_user,group_allow_discuss_rec_contact_cal_web"/>-->
+
+<!--        <menuitem-->
+<!--        id="mail_menu_calendar_for_app_user"-->
+<!--        name="Calendar"-->
+<!--        sequence="2"-->
+<!--        action="action_calendar_event_for_app_user"-->
+<!--        web_icon="calendar,static/description/icon.png"-->
+<!--        groups="group_application_user"/>-->
+
+<!--        <menuitem name="Website"-->
+<!--            id="website.menu_website_configuration"-->
+<!--            sequence="9"-->
+<!--            groups="-base.group_user,group_allow_discuss_rec_contact_cal_web"-->
+<!--            web_icon="website,static/description/icon.png"/>-->
+
+        <template id="report_contract_detail">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Contract Details</h2>
+                            <p>This object's name is <span t-field="o.contract_content"/></p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <report
+            id="contract_detail"
+            model="hr.applicant"
+            string="Contract Details"
+            report_type="qweb-pdf"
+            name="jt_signup_contract.report_contract_detail"
+            file="jt_signup_contract.report_contract_detail"
+            print_report_name="'Contract Details - %s' % (object.partner_name)"
+            menu="False"
+        />
+
+        <record id="update_contract_content_in_pdf" model="ir.actions.server">
+            <field name="name">Update Contract in pdf</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="binding_model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="state">code</field>
+            <field name="code">
+                records.update_contract_content_in_pdf()
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets_inherit" inherit_id="website.snippets">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Custom Snippets</div>
+				<div class="o_panel_body">
+                    <t t-snippet="ht_theme_website.custom_snippets" t-thumbnail="/ht_theme_website/static/src/images/about.jpg">
+                    </t>
+                    <t t-snippet="ht_theme_website.custom_snippets_imgg" t-thumbnail="/ht_theme_website/static/src/images/project-1.jpg">
+                    </t>
+                </div>
+			</div>
+		</xpath>
+	</template>
+	<template id="custom_snippets" name="Custom Snippets">
+		<section>
+			<div class="container">
+				<center>
+					<span>Aashish</span>
+				</center>
+			</div>
+		</section>
+	</template>
+	<template id="custom_snippets_imgg" name="Custom Image">
+		<section>
+			<div class="container">
+				<img src="/ht_theme_website/static/src/images/project-1.jpg"/>
+			</div>
+		</section>
+	</template>
+</odoo>

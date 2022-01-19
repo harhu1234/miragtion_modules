@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_student_details,student.details,model_student_details,,1,1,1,1
+access_project_info,project.info,model_project_info,,1,1,1,1
+access_department_details,department.details,model_department_details,,1,1,1,1
+access_college_details,college.details,model_college_details,,1,1,1,1
+access_professor_details,professor_details,model_professor_details,,1,1,1,1
+
+

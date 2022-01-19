@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_signup_contract_template_user,access_signup_contract_template_user,model_signup_contract_template,base.group_user,1,1,0,0
+access_signup_contract_template_public,access_signup_contract_template_public,model_signup_contract_template,base.group_public,1,0,0,0

@@ -1,0 +1,327 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* jt_signup_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-26 09:59+0000\n"
+"PO-Revision-Date: 2019-07-26 09:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: jt_signup_contract
+#: model:mail.template,body_html:jt_signup_contract.mail_template_application_portal_welcome
+msgid "\n"
+"<p>\n"
+"    Beste ${object.name or ''},\n"
+"</p>\n"
+"<p>\n"
+"    Welkom bij Bijlesleraar.\n"
+"</p>\n"
+"<p>\n"
+"    Om toegang te krijgen tot onze Bijlesleraar’s Portaal, dien je als 1ste stap op onderstaande link te klikken:\n"
+"</p>\n"
+"<ul>\n"
+"    <li><a href="${object.signup_url}">${object.signup_url}</a></li>\n"
+"</ul>\n"
+"<p>\n"
+"<p>\n"
+"Mocht je vragen hebben, dan zijn wij uiteraard te bereiken op info@bijlesleraar.nl of 088 - 08 08 400.\n"
+"</p>\n"
+msgstr "\n"
+"<p>\n"
+"    Beste ${object.name or ''},\n"
+"</p>\n"
+"<p>\n"
+"    Welkom bij Bijlesleraar.\n"
+"</p>\n"
+"<p>\n"
+"    Om toegang te krijgen tot onze Bijlesleraar’s Portaal, dien je als 1ste stap op onderstaande link te klikken:\n"
+"</p>\n"
+"<ul>\n"
+"    <li><a href=\"${object.signup_url}\">${object.signup_url}</a></li>\n"
+"</ul>\n"
+"<p>\n"
+"<p>\n"
+"Mocht je vragen hebben, dan zijn wij uiteraard te bereiken op info@bijlesleraar.nl of 088 - 08 08 400.\n"
+"</p>\n"
+
+
+#. module: jt_signup_contract
+#: model:mail.template,body_html:jt_signup_contract.template_send_signup_link
+msgid "<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"			    <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;border-collapse:collapse;background:inherit;color:inherit\">\n"
+"			        <tbody><tr>\n"
+"			            <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"			                <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"			            </td>\n"
+"			        </tr></tbody>\n"
+"			    </table>\n"
+"			</div>\n"
+"			<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"			    <p>Dear ${object.partner_name},</p>\n"
+"			    <p>\n"
+"			        Your application has been successfully submitted and verified!\n"
+"			    </p>\n"
+"			    <p>\n"
+"			        Please sign a online contract by using following link:\n"
+"			    </p>\n"
+"			    <div style=\"text-left: center; margin-top: 16px;\">\n"
+"			        <a href=\"${object.get_current_root_url()}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Sign Contract</a>\n"
+"			    </div>\n"
+"			    <p>Best regards,</p>\n"
+"			</div>\n"
+"			<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"			    ${user.name | safe}\n"
+"			    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"			        <strong>Sent by ${user.company_id.name}</strong>\n"
+"			    </p>\n"
+"			</div>\n"
+"		"
+msgstr "<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"			    <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;border-collapse:collapse;background:inherit;color:inherit\">\n"
+"			        <tbody><tr>\n"
+"			            <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"			                <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"			            </td>\n"
+"			        </tr></tbody>\n"
+"			    </table>\n"
+"			</div>\n"
+"			<div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"			    <p>Dear ${object.partner_name},</p>\n"
+"			    <p>\n"
+"			        Your application has been successfully submitted and verified!\n"
+"			    </p>\n"
+"			    <p>\n"
+"			        Please sign a online contract by using following link:\n"
+"			    </p>\n"
+"			    <div style=\"text-left: center; margin-top: 16px;\">\n"
+"			        <a href=\"${object.get_current_root_url()}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Sign Contract</a>\n"
+"			    </div>\n"
+"			    <p>Best regards,</p>\n"
+"			</div>\n"
+"			<div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"			    ${user.name | safe}\n"
+"			    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"			        <strong>Sent by ${user.company_id.name}</strong>\n"
+"			    </p>\n"
+"			</div>\n"
+"		"
+
+#. module: jt_signup_contract
+#: model:ir.ui.view,arch_db:jt_signup_contract.website_contract_template
+msgid "<strong>  i accept terms and conditions</strong><br/><br/>"
+msgstr "<strong>  Ik accepteer de condities, voorwaarden en privacyverklaring.</strong><br/><br/>"
+
+#. module: jt_signup_contract
+#: code:addons/jt_signup_contract/controllers/main.py:91
+#, python-format
+msgid "Another user is already registered using this email address."
+msgstr "Another user is already registered using this email address."
+
+#. module: jt_signup_contract
+#: model:ir.model,name:jt_signup_contract.model_hr_applicant
+msgid "Applicant"
+msgstr "Kandidaat"
+
+#. module: jt_signup_contract
+#: model:res.groups,name:jt_signup_contract.group_application_user
+msgid "Application User"
+msgstr "Application User"
+
+#. module: jt_signup_contract
+#: model:ir.ui.menu,name:jt_signup_contract.mail_menu_calendar_for_app_user
+msgid "Calendar"
+msgstr "Agenda"
+
+#. module: jt_signup_contract
+#: model:ir.actions.act_window,help:jt_signup_contract.action_calendar_event_for_app_user
+msgid "Click to schedule a new meeting."
+msgstr "Klik om een nieuwe afspraak in te plannen."
+
+#. module: jt_signup_contract
+#: model:ir.model,name:jt_signup_contract.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_content
+msgid "Content"
+msgstr "Inhoud"
+
+#. module: jt_signup_contract
+#: model:ir.ui.view,arch_db:jt_signup_contract.hr_applicant_view_form
+#: model:ir.ui.view,arch_db:jt_signup_contract.hr_applicant_view_search
+msgid "Contract"
+msgstr "Abonnement"
+
+#. module: jt_signup_contract
+#: model:ir.ui.view,arch_db:jt_signup_contract.signup_contract_template_view_form
+msgid "Contract Content"
+msgstr "Contract Content"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_hr_applicant_signed_contract
+#: model:ir.ui.view,arch_db:jt_signup_contract.hr_applicant_view_form
+msgid "Contract Signed?"
+msgstr "Contract Signed?"
+
+#. module: jt_signup_contract
+#: code:addons/jt_signup_contract/controllers/main.py:95
+#, python-format
+msgid "Could not create a new account."
+msgstr "Could not create a new account."
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_hr_applicant_sign
+#: model:ir.ui.view,arch_db:jt_signup_contract.hr_applicant_view_form
+msgid "Digital Sign"
+msgstr "Digital Sign"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_portal_wizard_emp_id
+msgid "Emp"
+msgstr "Emp"
+
+#. module: jt_signup_contract
+#: code:addons/jt_signup_contract/wizard/portal_wizard.py:120
+#, python-format
+msgid "Group %s is not a portal"
+msgstr "Group %s is not a portal"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_id
+msgid "ID"
+msgstr "ID"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template___last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: jt_signup_contract
+#: model:ir.actions.act_window,name:jt_signup_contract.action_calendar_event_for_app_user
+msgid "Meetings"
+msgstr "Afspraken"
+
+#. module: jt_signup_contract
+#: model:ir.ui.view,arch_db:jt_signup_contract.website_contract_template
+msgid "Message"
+msgstr "Bericht"
+
+#. module: jt_signup_contract
+#: model:ir.model,name:jt_signup_contract.model_signup_contract_template
+msgid "Model to store signup contract template content"
+msgstr "Model to store signup contract template content"
+
+#. module: jt_signup_contract
+#: model:ir.ui.view,arch_db:jt_signup_contract.signup_contract_template_view_form
+#: model:ir.ui.view,arch_db:jt_signup_contract.signup_contract_template_view_tree
+msgid "Name"
+msgstr "Naam"
+
+#. module: jt_signup_contract
+#: model:ir.model,name:jt_signup_contract.model_portal_wizard
+msgid "Portal Access Management"
+msgstr "Portaal toegangsbeheer"
+
+#. module: jt_signup_contract
+#: model:ir.model,name:jt_signup_contract.model_portal_wizard_user
+msgid "Portal User Config"
+msgstr "Portaal gebruikers instellingen"
+
+#. module: jt_signup_contract
+#: model:ir.model,name:jt_signup_contract.model_project_project
+msgid "Project"
+msgstr "Project"
+
+#. module: jt_signup_contract
+#: model:ir.ui.view,arch_db:jt_signup_contract.website_contract_template
+msgid "Sign Contract"
+msgstr "Contract"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_hr_applicant_contract_content
+#: model:ir.ui.view,arch_db:jt_signup_contract.hr_applicant_view_search
+msgid "Signed Contract"
+msgstr "Signed Contract"
+
+#. module: jt_signup_contract
+#: model:ir.model.fields,field_description:jt_signup_contract.field_signup_contract_template_name
+msgid "Signup Contact Template"
+msgstr "Signup Contact Template"
+
+#. module: jt_signup_contract
+#: model:ir.actions.act_window,name:jt_signup_contract.action_signup_contract_template
+#: model:ir.ui.menu,name:jt_signup_contract.menu_signup_contract_template
+msgid "Signup Contract Template"
+msgstr "Signup Contract Template"
+
+#. module: jt_signup_contract
+#: model:ir.model,name:jt_signup_contract.model_project_task
+msgid "Task"
+msgstr "Taak"
+
+#. module: jt_signup_contract
+#: model:ir.actions.act_window,help:jt_signup_contract.action_calendar_event_for_app_user
+msgid "The calendar is shared between employees and fully integrated with\n"
+"                other applications such as the employee leaves or the business\n"
+"                opportunities."
+msgstr "The calendar is shared between employees and fully integrated with\n"
+"                other applications such as the employee leaves or the business\n"
+"                opportunities."
+
+#. module: jt_signup_contract
+#: model:res.groups,comment:jt_signup_contract.group_application_user
+msgid "The user will be able to read and write own aplication, read own projects and read and\n"
+"        write own timesheet."
+msgstr "The user will be able to read and write own aplication, read own projects and read and\n"
+"        write own timesheet."
+
+#. module: jt_signup_contract
+#: model:mail.template,subject:jt_signup_contract.template_send_signup_link
+msgid "Welcome to ${object.company_id.name}!"
+msgstr "Welkom tot ${object.company_id.name}!"
+
+#. module: jt_signup_contract
+#: model:mail.template,subject:jt_signup_contract.mail_template_application_portal_welcome
+msgid "Welkom bij Bijlesleraar"
+msgstr "Welkom bij Bijlesleraar"
+
+#. module: jt_signup_contract
+#: code:addons/jt_signup_contract/wizard/portal_wizard.py:46
+#, python-format
+msgid "You must have an email address in your User Preferences to send emails."
+msgstr "You must have an email address in your User Preferences to send emails."
+

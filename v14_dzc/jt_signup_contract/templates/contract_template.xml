@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+    <data>
+        <template id="website_contract_template" name="Popup Template">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('.submit_btn').click(function(){
+                                if($('.acceptt').is(":checked")){
+                                    console.log("CHECKED")
+                                }
+                                else{
+                                    alert("Please accept terms and conditions");
+                                }
+                            });
+                        });
+                    </script>
+                    <div class="oe_structure">
+                        <div class="container">
+                            <center>
+                                <div style="border:1px solid grey;border-radius: 10px">
+                                    <h1>Sign Contract</h1>
+                                    <form t-attf-action="/contract_sign_controller">
+                                        <textarea class="form-control" rows="15" required="required"
+                                               placeholder="Message" readonly="readonly"><t t-esc="content"/>
+                                        </textarea>
+                                        <input type="checkbox" required="required" class="acceptt" name="accept"/>
+                                        <strong>&#160; i accept terms and conditions</strong><br/><br/>
+                                        <input class="submit_btn" type="submit"/>
+                                    </form>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

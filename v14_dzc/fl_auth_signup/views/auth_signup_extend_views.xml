@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="auth_signup_fields_extend" inherit_id="auth_signup.fields" name="Signup Fields Extend">
+            <xpath expr="//div[hasclass('field-confirm_password')]" position="after">
+                <t t-if="employee">
+                    <div class="form-group">
+                        <label for="bank" class="control-label">
+                           Bank Account Number
+                        </label>
+                        <input type="text" name="bank" class="form-control" required="required" id="bank_account_no"
+                               t-att-value="employee.bank_account_id.acc_number if employee else ''"
+                               t-att-autofocus="'autofocus' if login and not only_passwords else None"/>
+                    </div>
+                     <div class="form-group field-id" style="display:none">
+                        <label for="emp" class="control-label">Employee</label>
+                        <input type="text" name="emp" id="emp"
+                               class="form-control" required="required"
+                               t-att-value="employee.id if employee else ''"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+                    <div class="form-group field-id">
+                        <label for="emp_id" class="control-label">Identification number</label>
+                        <input type="text" name="emp_id" id="emp_id"
+                               class="form-control" required="required"
+                               t-att-value="employee.identification_id if employee else ''"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+                    <div class="form-group field-id">
+                        <label for="id" class="control-label">For verification we would like to receive a copy of your passport or ID(not mandatory for self-employed persons)</label>
+                        <input type="text" name="passport_no"
+                               id="passport_no" class="form-control"
+                               t-att-value="employee.passport_id if employee else ''"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+                     <div class="form-group field-nationality">
+                        <label for="nationality" class="control-label">Nationality</label>
+                        <select name="nationality" class="form-control" required="required"
+                            t-att-autofocus="'autofocus' if login and not only_passwords else None">
+                            <option value="">Select</option>
+                            <t t-foreach="countries or []" t-as="country">
+                                <option t-att-value="country.id"
+                                        t-att-selected="country.id == employee.country_id.id if employee else None">
+                                    <t t-esc="country.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                    <div class="form-group field-phone">
+                        <label for="phone" class="control-label">Phone</label>
+                        <input type="text" name="phone" t-att-value="partner.phone if partner else ''" id="phone"
+                               class="form-control" required="required"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+                    <div class="form-group field-street_name">
+                        <label for="street" class="control-label">Street</label>
+                        <input type="text" name="street" t-att-value="partner.street if partner else ''" id="street"
+                               class="form-control" required="required"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+<!--                    <div class="form-group field-street">-->
+<!--                        <label for="street2" class="control-label">Street2</label>-->
+<!--                        <input type="text" name="street2" t-att-value="partner.street2 if partner else ''" id="street2"-->
+<!--                               class="form-control"-->
+<!--                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />-->
+<!--                    </div>-->
+                    <div class="form-group field-zip">
+                        <label for="zip" class="control-label">Zip</label>
+                        <input type="text" name="zip" id="zip" class="form-control" required="required"
+                               t-att-value="partner.zip if partner else ''"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+                    <div class="form-group field-city">
+                        <label for="city" class="control-label">City</label>
+                        <input type="text" name="city" t-att-value="partner.city if partner else ''" id="city"
+                               class="form-control" required="required"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+                    <!-- <div class="form-group field-country">
+                        <label for="state_id" class="control-label">State</label>
+                        <select name="state_id" class="form-control" required="required"
+                            t-att-autofocus="'autofocus' if login and not only_passwords else None">
+                            <option value="">Select</option>
+                            <t t-foreach="states or []" t-as="state">
+                                <option t-att-value="state.id"
+                                        t-att-selected="state.id == partner.state_id.id if partner else None">
+                                    <t t-esc="state.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </div> -->
+                    <div class="form-group field-country">
+                        <label for="country_id" class="control-label">Country</label>
+                        <select name="country_id" class="form-control" required="required"
+                            t-att-autofocus="'autofocus' if login and not only_passwords else None">
+                            <option value="">Select</option>
+                            <t t-foreach="countries or []" t-as="country">
+                                <option t-att-value="country.id"
+                                        t-att-selected="country.id == partner.country_id.id if partner else None">
+                                    <t t-esc="country.name" />
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                    <div class="form-group field-birthday">
+                        <label for="birthday" class="control-label">Your Birthday</label>
+                        <input type="date" name="birthday" t-att-value="employee.birthday if employee else ''"
+                               id="birthday"
+                               class="form-control" required="required"
+                        t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+                    </div>
+                     <div class="form-group">
+                         <label class="control-label" for="gender">Sex</label>
+                         <input type="radio" name="gender" value="male"
+                         t-att-checked="'checked' if employee and employee.gender == 'male' else None"/>
+                         <label>Male</label>
+                         <input type="radio" name="gender" value="female"
+                                 t-att-checked="'checked' if employee and employee.gender == 'female' else None"/>
+                         <label>Female</label>
+                          <input type="radio" name="gender" value="other"
+                             t-att-checked="'checked' if employee and employee.gender == 'other' else None"/>
+                             <label>Other</label>
+                    </div>
+                    <div t-attf-class="form-group">
+                        <label class="control-label" for="image">Driving licence Front and Back</label>
+                            <input required="required" id="uploadLicensef" name="upload_licence_f" type="file" class="file"
+                                   multiple="true"/>
+                    </div>
+
+                    <div t-attf-class="form-group">
+                        <label class="control-label" for="image">VOG no older than 3 months</label>
+                            <input required="required" id="uploadVOG" name="upload_vog_3old" type="file" class="file"
+                                   multiple="true"/>
+                    </div>
+                    <div t-attf-class="form-group">
+                        <label class="control-label" for="image">Car insurance policy sheet</label>
+                            <input required="required" id="uploadCARINS" name="upload_car_ins" type="file" class="file"
+                                   multiple="true"/>
+                    </div>
+
+
+                    <div t-attf-class="form-group">
+                        <label class="control-label" for="image">Registration to the Chamber of Commerce</label>
+                            <input required="required" id="uploadREGCC" name="upload_reg_CC" type="file" class="file"
+                                   multiple="true"/>
+                    </div>
+
+                     <div t-attf-class="form-group">
+                        <label class="control-label" for="image">Professional liability insurance policy sheet</label>
+                            <input required="required" id="uploadPLIPS" name="upload_plips" type="file" class="file"
+                                   multiple="true"/>
+                    </div>
+
+                    <div t-attf-class="form-group">
+                        <label class="control-label" for="image">Image</label>
+                            <input required="required" id="uploadImage" name="image" type="file" class="file"
+                                   multiple="true"/>
+                    </div>
+                    <div t-attf-class="form-group">
+<!--                        <label>For verification we would like to receive a copy of your passport or ID</label>-->
+                        <input type="hidden" name="csrf_token"
+                               t-att-value="request.csrf_token()" required="1"/>
+<!--                        <input type="file" name="upload_file" id="upload_file"-->
+<!--                               class="file" multiple="true" data-show-upload="true"-->
+<!--                               data-show-caption="true"-->
+<!--                               data-show-preview="true" required="1"/>-->
+                        <input type="hidden" name="employee_id"
+                               t-att-value="employee"/>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+        <template inherit_id="auth_signup.signup" id="auth_signup_form_inh">
+            <xpath expr="//form" position="attributes">
+                <attribute name="enctype">multipart/form-data</attribute>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

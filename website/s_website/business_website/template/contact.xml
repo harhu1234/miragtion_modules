@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="contact_theme" name="Contact Details">
+   		<!-- <t t-call="website.layout">
+		    <div class="oe_structure oe_empty">
+		      <div class="container">
+		        <br />
+		        <center><h3>Contact Harhu Techno...</h3></center>
+		        <br />
+		      </div>
+		    </div>
+		</t> -->
+	</template>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="create_contacts_to_mass_mailing" model="ir.actions.server">
+        <field name="name">Subscribe</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.create_contacts_mailing_list()
+        </field>
+    </record>
+
+    <record id="inherit_partner_for_referrel" model="ir.ui.view">
+        <field name="name">res.partner.referrel</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='website']" position="before">
+                <field name="referral" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="inherit_partner_filter_referrel" model="ir.ui.view">
+        <field name="name">res.partner.referrel</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='type_company']" position="after">
+                <filter string="Referral" name="referral" domain="[('referral','=',1)]"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

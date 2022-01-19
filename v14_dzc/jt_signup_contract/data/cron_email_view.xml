@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<odoo>
+
+    <!-- Cron function to notify internal user for the upcoming due contracts -->
+    <record id="contract_due_notification" model="ir.cron">
+        <field name="name">Notification on contract due</field>
+        <field name="model_id" ref="model_hr_contract"/>
+        <field name="state">code</field>
+        <field name="code">model.contract_due_notify()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+    </record>
+</odoo>

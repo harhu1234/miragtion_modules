@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+	<record id="view_project_info_form" model="ir.ui.view">
+ 		<field name="name">project.info.form</field>
+            <field name="model">project.info</field>
+            <field name="arch" type="xml">
+            	<form>
+            		<sheet>
+	            		<group>
+                            <field name="college_id"/>
+                            <field name="department_id" domain="[('college_id','=',college_id)]"/>
+                            <field name="dep_desc" readonly="1"/>
+	                    	<field name="name"/>
+	                		<field name="desc"/>
+	            		</group>
+            		</sheet>
+            	</form>
+            </field>
+           	
+	</record>
+
+
+    <record id="view_project_info_tree" model="ir.ui.view">
+        <field name="name">project.info.tree</field>
+        <field name="model">project.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="desc"/>
+                <field name="college_id"/>
+                <field name="department_id"/>
+            </tree>
+        </field>         
+    </record>
+
+
+
+
+	<record id="action_project_info" model="ir.actions.act_window">
+		<field name="name">Project Information</field>
+		<field name="res_model">project.info</field>
+            <field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_student_root" name="Student"/>
+	<menuitem id="menu_project_main" name="Project" action="action_project_info" parent="menu_student_root"/>
+
+</odoo>

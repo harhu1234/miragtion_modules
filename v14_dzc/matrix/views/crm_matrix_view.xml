@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_matrix_search_form_view" model="ir.ui.view">
+        <field name="name">crm.matrix.search.form</field>
+        <field name="model">crm.matrix</field>
+        <field name="arch" type="xml">
+            <search string="Matrix">
+                <field name="age"/>
+                <field name="place"/>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="view_product_matrix_form" model="ir.ui.view">
+        <field name="name">crm.matrix.form</field>
+        <field name="model">crm.matrix</field>
+        <field name="arch" type="xml">
+            <form string="Matrix">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="age"/>
+                            <field name="place"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_product_matrix_tree" model="ir.ui.view">
+        <field name="name">crm.matrix.tree</field>
+        <field name="model">crm.matrix</field>
+        <field name="arch" type="xml">
+
+            <tree string="Matrix">
+                <field name="age"/>
+                <field name="place"/>
+            </tree>
+
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_matrix">
+        <field name="name">Matrix</field>
+        <field name="res_model">crm.matrix</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Matrix"
+              id="menu_matrix"
+              action="action_matrix"
+              parent="crm.menu_crm_config_lead"/>
+
+</odoo>

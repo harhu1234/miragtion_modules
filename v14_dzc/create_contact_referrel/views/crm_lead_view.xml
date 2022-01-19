@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="create_contacts_from_note" model="ir.actions.server">
+            <field name="name">Create Contacts from Note</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="binding_model_id" ref="crm.model_crm_lead"/>
+            <field name="state">code</field>
+            <field name="code">
+                records.create_contacts_from_note()
+            </field>
+        </record>
+        <!-- <record id="action_server_module_immediate_install" model="ir.actions.server">
+                <field name="name">Install Modules</field>
+                <field name="type">ir.actions.server</field>
+                <field name="model_id" ref="model_ir_module_module" />
+                <field name="binding_model_id" ref="model_ir_module_module" />
+                <field name="state">code</field>
+                <field name="code">records.button_immediate_install()</field>
+        </record> -->
+
+        <record id="inherit_lead_form_for_referrel" model="ir.ui.view">
+            <field name="name">lead.referrel.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="referral" string="Referral">
+                        <group>
+                            <field name="referrel_name"/>
+                            <field name="referrel_telephone"/>
+                            <field name="referrel_email"/>
+                            <field name="referrel_adres"/>
+                            <field name="referrel_postcode"/>
+                            <field name="referrel_plaats"/>
+                            <field name="referrel_locatie"/>
+                        </group>
+                    </page>
+                    <page name="parent_guardian" string="Parent / Guardian">
+                        <group>
+                            <field name="cd_name"/>
+                            <field name="cd_email"/>
+                            <field name="cd_phone"/>
+                        </group>
+                    </page>
+                    <page name="other_contact" string="Others">
+                        <group>
+                            <field name="oc_name"/>
+                            <field name="oc_email"/>
+                            <field name="oc_phone"/>
+                        </group>
+                    </page>
+                    <page name="marketing" string="Marketing">
+                        <group>
+                            <field name="campaign_id"/>
+                            <field name="medium_id"/>
+                            <field name="source_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.server" id="server_action_update_crm_note">
+            <field name="name">Update Crm Note</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="binding_model_id" ref="crm.model_crm_lead"/>
+            <field name="state">code</field>
+            <field name="code">
+                records.action_update_crm_note()
+            </field>
+        </record>
+
+        <record model="ir.actions.server" id="server_action_clear_lead_age">
+            <field name="name">Clear Age</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="binding_model_id" ref="crm.model_crm_lead"/>
+            <field name="state">code</field>
+            <field name="code">
+                records.clear_lead_age()
+            </field>
+        </record>
+        
+    
+        <record id="application_report_questions" model="ir.actions.act_window">
+        	<field name="name">Last Two Questions Report</field>
+            <field name="res_model">questions.export.wizard</field>
+            <field name="binding_model_id" ref="model_crm_lead"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

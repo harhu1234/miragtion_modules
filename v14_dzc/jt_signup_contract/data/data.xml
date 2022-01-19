@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<!-- Signup Contract Content Template -->
+    	<record id="signup_contract_template_junior_coach" model="signup.contract.template">
+    		<field name="name">Signup Contract Template Junior Coach</field>
+    		<field name="content">
+					Arbeidsovereenkomst Junior Coach
+						Eerste contract 7 maanden
+
+De ondergetekenden:
+
+Naam								: De Zorgcoach (Handelsnaam xs2care B.V.)
+Adres								: Dorpsstraat 56, 1121 BZ
+Vestigingsplaats					: Landsmeer
+Telefoon							: 085 - 300 2 300
+Mail								: back-office@de-zorgcoach.nl
+KvK-gegevens						: 55004849
+hierbij rechtsgeldig vertegenwoordigd door				: de heer W. Dekkers, directeur
+hierna te noemen					: Werkgever
+
+en:
+Naam								: Alle voornamen van de medewerker
+Adres								: Adres medewerker
+
+Geboortedatum						: DD-MM-JJJJ
+Geboorteplaats						: Plaats
+Bankrekeningnummer					: NL
+Burgerservicenummer (BSN)			: 000000000000
+hierna te noemen				 	: Werknemer
+
+komen als volgt overeen:
+
+1. Gegevens arbeidsovereenkomst
+	1.1 Datum in dienst
+		- DD-MM-JJJJ
+
+	1.2 Functie benaming (omschrijving van de functie verwijzing naar het personeelshandboek
+		Werknemer wordt aangesteld in de functie van Junior Coach.
+		Voor verdere functieomschrijving en eisen, waar medewerker aan dient te voldoen, wordt verwezen naar het
+		functieprofiel (3.2.4 Functieomschrijving Junior Coach), het handboek (3.2.0.3 Handboek De Zorgcoach)
+		met hierin de geldende (landelijke)protocollen van Werkgever.
+
+	1.3 Bepaalde of onbepaalde tijd
+		De arbeidsovereenkomst is aangegaan voor bepaalde tijd.
+
+	1.4 Duur arbeidsovereenkomst
+		De arbeidsovereenkomst is aangegaan voor een periode van 00 maanden.
+
+	1.5 Einddatum contract
+		De Arbeidsovereenkomst eindigt (van rechtswege) per DD-MM-JJJJ.
+
+2. Proeftijd
+	De eerste maand dient als proeftijd.
+
+3. Werktijden, verdeling uren en plaats werkzaamheden
+	3.1 Arbeidsduur per week
+		De arbeidsduur bedraagt 00 uur per week.
+
+	3.2 Verdeling uren per week
+		Werkgever zal trachten naar een zo evenredig mogelijk verdeelde arbeidsuren per dag per week.
+		Echter gezien de aard van de werkzaamheden zal van werknemer een flexibele inzet verwacht worden.
+		Dit betekend dat er met regelmaat in de avond gewerkt zal moeten worden en/of dat de er niet altijd 8
+		uur per dag gewerkt kan worden.
+
+	3.3 Plaats waar de werkzaamheden worden verricht
+		De basislocatie voor de werkzaamheden zijn die gemeenten waar Werkgever gecontracteerd is, dit
+		kan wijzigen indien er in andere gemeenten een contract wordt afgesloten, dit voor het werk/Werkgever
+		noodzakelijk is.
+
+4. Salaris, vakantietoeslag en eindejaarsuitkering
+	4.1 Salaris bij indiensttreding
+		Het loon bedraagt € 0.000,- bruto op full-time (36 uur) basis.
+
+	4.2 Indeling schaal en trede
+		Schaal 6, trede 0. (Salarisschalen De Zorgcoach BV Versie 19.09.01)
+
+	4.3 Periodieke verhoging
+		Periodieke salarisverhoging is jaarlijks per 01 MAAND.
+
+	4.4 Vakantietoeslag
+		Werknemer bouwt vakantietoeslag op evenredig met de duur van de Arbeidsovereenkomst en zal periodiek
+		(maandelijks) op het bruto uurloon in meerdering worden gebracht.
+
+	4.5 Loonstrookjes
+		Werknemer geeft toestemming dat Loonstrookjes via elektronische weg worden verstrekt.
+
+5. Reiskosten
+	Werknemer krijgt een kilometerregistratie-app ter beschikking. Hiermee dient Werknemer de gereden kilometers te registreren.
+	Werknemer krijgt een kilometervergoeding, boven de 10 kilometer per enkele reis, van conform de onbelaste vergoeding per kilometer die door de belastingdienst wordt aangehouden, voor woon-werkverkeer.
+	Werknemer zal tijdens werktijd werk-werkverkeer vergoed krijgen tegen de gemaakte kosten. Na overhandiging van een deugdelijke ritten en/of reisregistratie.
+
+6. Vakantiedagen
+
+	6.1 Wettelijke vakantie uren
+		Werknemer bouwt vakantierechten op, met behoud van loon, gedurende de periode dat hij/zij werkzaamheden verricht voor Werkgever. Werknemer heeft bij een fulltime dienstverband (36 uur per week) recht op 144 uur (4 weken) vakantie per jaar. We verwachten dan ook dat je elk jaar minimaal 4 weken vakantie opneemt verspreid over het jaar.
+		Let op: Deze moet je binnen 1,5 jaar opnemen anders vervallen ze.
+
+	6.2 De niet- genoten vakantie uren dienen voor het einde van de arbeidsovereenkomst te zijn opgenomen. Enkel in onderling overleg kan hier vanaf worden geweken.
+
+	6.3 Het opnemen van vakantiedagen geschiedt in overleg met leidinggevende.
+
+7. Flex Budget
+
+	7.1 Het flexBudget bedraagt 9,69% van het maandelijkse salaris en is als volgt opgebouwd
+		7.1.1. Eindejaarsuitkering 8,3%
+		7.1.2. Bovenwettelijke vakantie uren 1,39%
+	7.2 Het Flexbudget kan gebruikt worden voor
+		7.2.1. Extra vrije tijd
+		7.2.2. Extra geld
+		7.2.3. Extra training/opleiding (buiten de verplichte trainingen vanuit De Zorgcoach)
+		7.2.4 Een afspraak op maat
+
+8. Pensioen
+	Werkgever draagt zorg voor aanmelding bij het Pensioenfonds Zorg en Welzijn (PFZW).
+
+9. Tussentijdse opzegging arbeidsovereenkomst
+	Werkgever en werknemer zijn gerechtigd deze overeenkomst schriftelijk te beëindigen met inachtneming van een termijn van 2 maanden, waarbij de laatste dag van de voorgaande 2 maanden opgezegd moet worden.
+
+10. Bedrijfseigendommen, nevenwerkzaamheden, geheimhouding- en relatiebeding
+	10.1 Bedrijfseigendommen
+		Alle middelen, waaronder bijvoorbeeld computerprogrammatuur, materialen, schriftelijke bescheiden, gegevensdragers daaronder begrepen, en goederen, die aan de werknemer door Werkgever ter beschikking zijn gesteld, zijn en blijven eigendom van Werkgever. Het is verboden deze middelen en materialen voor privé gebruik aan te wenden of anderszins, anders dan met schriftelijke toestemming van Werkgever.
+		Bij het einde van de dienstverband/opdracht - of op het eerste verzoek van Werkgever op elk gewenst eerder tijdstip – zal de werknemer deze middelen, materialen, programmatuur en goederen alsmede alle kopieën van dergelijke zaken/goederen (al dan niet vervat op gegevensdragers) en eigendommen ongevraagd en onmiddellijk ter beschikking te stellen van de Werkgever.
+		Het is niet toegestaan kopieën van programmatuur of bescheiden te behouden (al dan niet op gegevensdragers).
+		Het is de werknemer verboden de bedoelde bescheiden, programmatuur en/of goederen, of kopieën daarvan zonder schriftelijke toestemming van de Werkgever in zijn (privé) bezit te houden en/of kopieën daarvan ter inzage te geven aan derden, één en ander indien en voor zover de werkzaamheden van de werknemer/flexwerker dit niet vereisen.
+		Producten (schriftelijke of andere media) die door de werknemer of andere medewerknemers van Werkgever gemaakt zijn binnen de werkzaamheden voor de werkgever zijn auteursrechtelijk eigendom van de werkgever, en kunnen niet zonder toestemming van de werkgever doorgegeven worden.
+
+	10.2 Verbod op nevenwerkzaamheden
+		Wanneer Werknemer de intentie heeft nevenactiviteiten te gaan verrichten of reeds verricht, dan meldt Werknemer dit aan Werkgever. Wanneer de activiteiten strijdig of onverenigbaar zijn met de belangen van de werkgever kan werkgever de toestemming daarvoor onthouden.
+
+	10.3 Geheimhoudingsbeding
+		De werknemer is jegens De Zorgcoach BV (hierna: Werkgever) verplicht, zowel tijdens als na afloop beëindiging van zijn overeenkomst ongeacht de reden voor de beëindiging, strikte geheimhouding te betrachten omtrent al hetgeen hem ter kennis is gekomen bij de uitoefening van zijn werkzaamheden bij Werkgever. Werknemer zal de wettelijke bepalingen met betrekking tot de bescherming van de persoonlijke levenssfeer en privacy (AVG) van Klanten in acht nemen. Bovendien verbindt Werknemer zich voldoende maatregelen te treffen om geheimhouding te verzekeren met betrekking tot alle gegevens waarvan Werknemer of personen, van wie hij zich bij de uitvoering van de Overeenkomst bedient, inzake het verlenen van Zorg in Natura (ZIN) en/of Persoonsgebonden Budget (PGB) en/of private gelden (PG) en/of andere financieringsvormen zijn aangegaan, teneinde de persoonsgegevens van de Klanten te beschermen.
+		Werknemer is gehouden alle van Werkgever afkomstige informatie en bedrijfsgegevens en de in het kader van de uitvoering van door Werkgever verstrekte Opdracht(en) te zijner kennis gekomen of ontwikkelde informatie, geheim te houden. Het is Werknemer verboden om zonder toestemming van de andere partij bedoelde informatie aan te wenden voor eigen gebruik of gebruik door derden.
+		De ten aanzien van de Werknemer in bovenstaande twee alinea’s geformuleerde geheimhouding geldt evenzeer voor de Werkgever.
+
+
+	10.4 Relatiebeding
+		Werknemer verbindt zich jegens Werkgever om gedurende en na het einde van de Overeenkomst en de daaruit voortvloeiende overeenkomsten van opdracht tot een periode van 12 (twaalf) maanden, aanvangende op de datum van beëindiging, noch rechtstreeks noch zijdelings, alleen, in enige vorm van samenwerking met derden, zelfstandig of als ondergeschikte, noch op enige andere wijze, betrekkingen (tot het verlenen van hulp/ondersteuning middels behandeling en/of begeleiding of op welke manier dan ook, via welke financieringsvorm dat ook betaald en onbetaald) aan te gaan of te onderhouden met een persoon, of diens familieleden en/of huisgenoten, die in een periode van 12 maanden voorafgaande aan het einde van de Overeenkomst Klant en/of relatie zijn geweest.
+
+	10.5 Boetebeding
+		Overtreding van het in artikel 10.1 t/m 10.4 gestelde gedurende het bestaan van de arbeidsovereenkomst zal voor Werkgever een reden kunnen vormen om met onmiddellijke ingang de opdracht te beëindigen c.q. te ontbinden. Werknemer is door de enkele overtreding of niet-nakoming van rechtswege in gebreke. Werkgever blijft bevoegd om -zo nodig in kort geding- naast de boete nakoming van de overeenkomst en/of een verbod op de onrechtmatige handelingen van werknemer te vorderen.
+		Bij één of meer overtredingen van het bepaalde in dit artikel verbeurt de overtredende partij jegens de andere partij een onmiddellijk opeisbare boete van € 1000,- (duizend euro) per overtreding, alsmede een boete gelijk aan € 500,- (vijfhonderd euro) voor elke dag dat de overtreding of de niet nakoming voortduurt, onverminderd het recht van de andere partij om in plaats daarvan de door haar daadwerkelijk als gevolg van de overtreding geleden schade te vorderen, alles te vermeerderen met kosten en de wettelijke rente ex artikel 6:119a BW.
+
+
+11. Handboek De Zorgcoach
+	11.1 Werknemer verklaart ten allen tijde te zullen werken conform de gestelde functie eisen alsmede de richtlijnen (Inclusief de (landelijke) protocollen) als omschreven in het Handboek van Werkgever.
+
+	11.2 Het handboek is te vinden via het inloggedeelte van de site en/of via Google Drive.
+
+12. Overige afspraken
+	12.1 Beding van eenzijdige wijziging
+		De werkgever is bevoegd de in de onderlinge arbeidsovereenkomst en in de bijlage neergelegde arbeidsvoorwaarde eenzijdig te wijzigen, als hij bij de wijziging een zwaarwegend of zwaarwichtig belang heeft. Als bedoeld in artikel 7:613 BW.
+
+	12.2 Aanzegbepaling
+		Deze arbeidsovereenkomst voor bepaalde tijd zal, na de overeengekomen duur, niet worden voortgezet en eindigt van rechtswege. Hiermee heeft de werkgever voldaan aan zijn aanzegverplichting.
+
+	12.3 Wijze van ziekmelding en controlevoorschriften
+		Werknemer is verplicht ieder verzuim wegens ziekte aan de werkgever te (laten) meedelen op de eerste ziektedag ’s morgens voor 10 uur.
+
+	12.4 VOG
+		12.4.1. Werknemer dient een VOG (Verklaring Omtrent Gedrag) aan te vragen conform de richtlijn van De Zorgcoach en zo spoedig mogelijk te overhandigen aan werkgever. In de regel vraag Werkgever een VOG aan.
+		12.4.2. De kosten van de VOG worden, bij goedkeuring, door werkgever vergoed. Werknemer overhandigd het origineel aan Werkgever.
+		12.4.3.Werknemer dient voor aanvang van contract de VOG aan te leveren.
+		12.4.4. Mocht het onverhoopt voorkomen dat de overhandiging verlaat is dan dient de VOG uiterlijk één maand na start contract aan Werkgever overhandigd te zijn. Mocht dit niet het geval zijn is dat reden voor ontslag op staande voet.
+		12.4.5. Deze arbeidsovereenkomst is alleen geldig bij de beschikbaarheid van een VOG.
+
+	12.5 Detachering
+		Werknemer kan gedetacheerd worden om voor andere handelsnamen, werkmaatschappijen en/of samenwerkingspartners van MainWay B.V. werkzaamheden te verrichten.
+
+	12.6 Overgang overeenkomst
+		Het staat Werkgever vrij deze overeenkomst in een door Werkgever en/of W. Dekkers op te richten B.V. of andere rechtsvorm in te brengen. Alle contractuele bepalingen zullen hiermee automatisch overgaan naar de nieuwe rechtsvorm.
+
+	12.7 Vertrouwelijk
+		Deze overeenkomst heeft een vertrouwelijk karakter. Inhoud mag niet met derden gedeeld worden.
+
+13. Bijlagen
+	13.1 Bij deze overeenkomst worden de volgende bijlagen aan Werknemer overhandigd:
+		Functieomschrijving Junior Coach
+		Handboek De Zorgcoach
+		Uitgelicht handboek
+
+	13.2 Hierbij verklaar ik dat deze bijlagen heb gelezen en ik ga akkoord met de inhoud en zal hier naar handelen.
+
+14. Nederlands recht
+	Op deze overeenkomst is het Nederlandse recht van toepassing.
+
+15. Ondertekening
+	De overeenkomst is in tweevoud opgemaakt te Landsmeer.
+
+	Datum: 							Datum:
+	Naam:							Naam:
+	Ward Dekkers					VOOR- &amp; ACHTERNAAM MEDEWERKER
+	De werkgever: 						Werknemer:
+</field>
+			<field name="coach">junior</field>
+    	</record>
+
+		<record id="signup_contract_template_senior_coach" model="signup.contract.template">
+    		<field name="name">Signup Contract Template Senior Coach</field>
+    		<field name="content">
+					Arbeidsovereenkomst Senior Coach
+						Eerste contract 7 maanden
+
+De ondergetekenden:
+
+Naam								: De Zorgcoach (Handelsnaam xs2care B.V.)
+Adres								: Dorpsstraat 56, 1121 BZ
+Vestigingsplaats					: Landsmeer
+Telefoon							: 085 - 300 2 300
+Mail								: back-office@de-zorgcoach.nl
+KvK-gegevens						: 55004849
+hierbij rechtsgeldig vertegenwoordigd door				: de heer W. Dekkers, directeur
+hierna te noemen					: Werkgever
+
+en
+Naam								:Alle voornamen van de medewerker
+Adres								: Adres medewerker
+
+
+Geboortedatum							: DD-MM-JJJJ
+Geboorteplaats							: Plaats
+Bankrekeningnummer						: NL
+Burgerservicenummer (BSN)				: 000000000000
+hierna te noemen						: Werknemer
+
+komen als volgt overeen:
+
+1. Gegevens arbeidsovereenkomst
+	1.1 Datum in dienst
+		- DD-MM-JJJJ
+
+	1.2 Functiebenaming
+		Werknemer wordt aangesteld in de functie van Senior Coach.
+		Voor verdere functieomschrijving en eisen, waar medewerker aan dient te voldoen, wordt verwezen naar het functieprofiel (3.2.5 Functieomschrijving Senior Coach), het handboek (3.2.0.3 Handboek De Zorgcoach) met hierin de geldende (landelijke)protocollen van Werkgever.
+
+	1.3 Bepaalde of onbepaalde tijd
+		De arbeidsovereenkomst is aangegaan voor bepaalde tijd
+
+	1.4 Duur arbeidsovereenkomst
+		De arbeidsovereenkomst is aangegaan voor een periode van 00 maanden.
+
+	1.5 Einddatum contract
+		De Arbeidsovereenkomst eindigt (van rechtswege) per DD-MM-JJJJ.
+
+2. Proeftijd
+	De eerste 2 maanden dient als proeftijd.
+
+3. Werktijden, verdeling uren en plaats werkzaamheden
+	3.1 Arbeidsduur per week
+		De arbeidsduur bedraagt 00 uur per week.
+
+	3.2 Verdeling uren per week
+		Werkgever zal trachten naar een zo evenredig mogelijk verdeelde arbeidsuren per dag per week. Echter gezien de aard van de werkzaamheden zal van werknemer een flexibele inzet verwacht worden. Dit betekend dat er met regelmaat in de avond gewerkt zal moeten worden en/of dat de er niet altijd 8 uur per dag gewerkt kan worden.
+
+	3.3 Plaats waar de werkzaamheden worden verricht
+		De basislocatie voor de werkzaamheden zijn die gemeenten waar Werkgever gecontracteerd is, dit kan wijzigen indien er in andere gemeenten een contract wordt afgesloten, dit voor het werk/Werkgever noodzakelijk is.
+
+4. Salaris, vakantietoeslag en eindejaarsuitkering
+	4.1 Salaris bij indiensttreding
+		Het loon bedraagt € 0.000,-bruto op fulltime (36 uur) basis.
+
+	4.2 Indeling schaal en trede
+		Schaal 8, trede 0 (Salarisschalen De Zorgcoach BV Versie 19.09.01)
+
+	4.3 Periodieke verhoging
+		Periodieke salarisverhoging is jaarlijks per 01 MAAND.
+
+	4.4 Vakantietoeslag
+		Werknemer bouwt vakantietoeslag op evenredig met de duur van de Arbeidsovereenkomst en zal periodiek (maandelijks) op het bruto uurloon in meerdering worden gebracht.
+
+	4.5 Loonstrookjes
+		Werknemer geeft toestemming dat Loonstrookjes via elektronische weg worden verstrekt.
+
+5. Reiskosten
+	Werknemer krijgt een kilometerregistratie-app ter beschikking. Hiermee dient Werknemer de gereden kilometers te registreren.
+	Werknemer krijgt een kilometervergoeding, boven de 10 kilometer per enkele reis, van conform de onbelaste vergoeding per kilometer die door de belastingdienst wordt aangehouden, voor woon-werkverkeer.
+	Werknemer zal tijdens werktijd werk-werkverkeer vergoed krijgen tegen de gemaakte kosten. Na overhandiging van een deugdelijke ritten en/of reisregistratie.
+
+6. Vakantiedagen
+	6.1 Wettelijke vakantie uren
+		Werknemer bouwt vakantierechten op, met behoud van loon, gedurende de periode dat hij/zij werkzaamheden verricht voor Werkgever. Werknemer heeft bij een fulltime dienstverband (36 uur per week) recht op 144 uur (4 weken) vakantie per jaar. We verwachten dan ook dat je elk jaar minimaal 4 weken vakantie opneemt verspreid over het jaar.
+		Let op: Deze moet je binnen 1,5 jaar opnemen anders vervallen ze.
+
+	6.2 De niet- genoten vakantie uren dienen voor het einde van de arbeidsovereenkomst te zijn opgenomen. Enkel in onderling overleg kan hier vanaf worden geweken.
+
+	6.3 Het opnemen van vakantiedagen geschiedt in overleg met leidinggevende.
+
+7. Flex Budget
+	7.1. Het flexBudget bedraagt 9,69% van het maandelijkse salaris en is als volgt opgebouwd
+		7.1.1. Eindejaarsuitkering 8,3%
+		7.1.2. Bovenwettelijke vakantie uren 1,39%
+
+	7.2. Het Flexbudget kan gebruikt worden voor
+		7.2.1. Extra vrije tijd
+		7.2.2. Extra geld
+		7.2.3. Extra training/opleiding (buiten de verplichte trainingen vanuit De Zorgcoach)
+		7.2.4. Een afspraak op maat
+
+8. Pensioen
+	Werkgever draagt zorg voor aanmelding bij het Pensioenfonds Zorg en Welzijn (PFZW).
+
+9. Tussentijdse opzegging arbeidsovereenkomst
+	Werkgever en werknemer zijn gerechtigd deze overeenkomst schriftelijk te beëindigen met inachtneming van een termijn van 2 maanden, waarbij de laatste dag van de voorgaande 2 maanden opgezegd moet worden.
+
+10. Bedrijfseigendommen, nevenwerkzaamheden, geheimhouding- en relatiebeding
+	10.1. Bedrijfseigendommen
+		Alle middelen, waaronder bijvoorbeeld computerprogrammatuur, materialen, schriftelijke bescheiden, gegevensdragers daaronder begrepen, en goederen, die aan de werknemer door Werkgever ter beschikking zijn gesteld, zijn en blijven eigendom van Werkgever. Het is verboden deze middelen en materialen voor privé gebruik aan te wenden of anderszins, anders dan met schriftelijke toestemming van Werkgever.
+		Bij het einde van de dienstverband/opdracht - of op het eerste verzoek van Werkgever op elk gewenst eerder tijdstip – zal de werknemer deze middelen, materialen, programmatuur en goederen alsmede alle kopieën van dergelijke zaken/goederen (al dan niet vervat op gegevensdragers) en eigendommen ongevraagd en onmiddellijk ter beschikking te stellen van de Werkgever.
+		Het is niet toegestaan kopieën van programmatuur of bescheiden te behouden (al dan niet op gegevensdragers).
+		Het is de werknemer verboden de bedoelde bescheiden, programmatuur en/of goederen, of kopieën daarvan zonder schriftelijke toestemming van de Werkgever in zijn (privé) bezit te houden en/of kopieën daarvan ter inzage te geven aan derden, één en ander indien en voor zover de werkzaamheden van de werknemer/flexwerker dit niet vereisen.
+		Producten (schriftelijke of andere media) die door de werknemer of andere medewerknemers van Werkgever gemaakt zijn binnen de werkzaamheden voor de werkgever zijn auteursrechtelijk eigendom van de werkgever, en kunnen niet zonder toestemming van de werkgever doorgegeven worden.
+
+	10.2. Verbod op nevenwerkzaamheden
+		Wanneer Werknemer de intentie heeft nevenactiviteiten te gaan verrichten of reeds verricht, dan meldt Werknemer dit aan Werkgever. Wanneer de activiteiten strijdig of onverenigbaar zijn met de belangen van de werkgever kan werkgever de toestemming daarvoor onthouden.
+
+	10.3. Geheimhoudingsbeding
+		De werknemer is jegens De Zorgcoach BV (hierna: Werkgever) verplicht, zowel tijdens als na afloop beëindiging van zijn overeenkomst ongeacht de reden voor de beëindiging, strikte geheimhouding te betrachten omtrent al hetgeen hem ter kennis is gekomen bij de uitoefening van zijn werkzaamheden bij Werkgever. Werknemer zal de wettelijke bepalingen met betrekking tot de bescherming van de persoonlijke levenssfeer en privacy (AVG) van Klanten in acht nemen. Bovendien verbindt Werknemer zich voldoende maatregelen te treffen om geheimhouding te verzekeren met betrekking tot alle gegevens waarvan Werknemer of personen, van wie hij zich bij de uitvoering van de Overeenkomst bedient, inzake het verlenen van Zorg in Natura (ZIN) en/of Persoonsgebonden Budget (PGB) en/of private gelden (PG) en/of andere financieringsvormen zijn aangegaan, teneinde de persoonsgegevens van de Klanten te beschermen.
+		Werknemer is gehouden alle van Werkgever afkomstige informatie en bedrijfsgegevens en de in het kader van de uitvoering van door Werkgever verstrekte Opdracht(en) te zijner kennis gekomen of ontwikkelde informatie, geheim te houden. Het is Werknemer verboden om zonder toestemming van de andere partij bedoelde informatie aan te wenden voor eigen gebruik of gebruik door derden.
+		De ten aanzien van de Werknemer in bovenstaande twee alinea’s geformuleerde geheimhouding geldt evenzeer voor de Werkgever.
+
+	10.4. Relatiebeding
+		Werknemer verbindt zich jegens Werkgever om gedurende en na het einde van de Overeenkomst en de daaruit voortvloeiende overeenkomsten van opdracht tot een periode van 12 (twaalf) maanden, aanvangende op de datum van beëindiging, noch rechtstreeks noch zijdelings, alleen, in enige vorm van samenwerking met derden, zelfstandig of als ondergeschikte, noch op enige andere wijze, betrekkingen (tot het verlenen van hulp/ondersteuning middels behandeling en/of begeleiding of op welke manier dan ook, via welke financieringsvorm dat ook betaald en onbetaald) aan te gaan of te onderhouden met een persoon, of diens familieleden en/of huisgenoten, die in een periode van 12 maanden voorafgaande aan het einde van de Overeenkomst Klant en/of relatie zijn geweest.
+
+	10.5. Boetebeding
+		Overtreding van het in artikel 9.1 t/m 9.4 gestelde gedurende het bestaan van de arbeidsovereenkomst zal voor Werkgever een reden kunnen vormen om met onmiddellijke ingang de opdracht te beëindigen c.q. te ontbinden. Werknemer is door de enkele overtreding of niet-nakoming van rechtswege in gebreke. Werkgever blijft bevoegd om -zo nodig in kort geding- naast de boete nakoming van de overeenkomst en/of een verbod op de onrechtmatige handelingen van werknemer te vorderen.
+		Bij één of meer overtredingen van het bepaalde in dit artikel verbeurt de overtredende partij jegens de andere partij een onmiddellijk opeisbare boete van € 1000,- (duizend euro) per overtreding, alsmede een boete gelijk aan € 500,- (vijfhonderd euro) voor elke dag dat de overtreding of de niet nakoming voortduurt, onverminderd het recht van de andere partij om in plaats daarvan de door haar daadwerkelijk als gevolg van de overtreding geleden schade te vorderen, alles te vermeerderen met kosten en de wettelijke rente ex artikel 6:119a BW.
+
+11. Handboek De Zorgcoach
+	11.1. Werknemer verklaart ten allen tijde te zullen werken conform de gestelde functie eisen alsmede de richtlijnen (Inclusief de (landelijke) protocollen) als omschreven in het Handboek van Werkgever.
+	11.2. Het handboek is te vinden via het inloggedeelte van de site en/of via Google Drive.
+
+12. Overige afspraken
+	12.1. Beding van eenzijdige wijziging
+		De werkgever is bevoegd de in de onderlinge arbeidsovereenkomst en in de bijlage neergelegde arbeidsvoorwaarde eenzijdig te wijzigen, als hij bij de wijziging een zwaarwegend of zwaarwichtig belang heeft. Als bedoeld in artikel 7:613 BW.
+
+	12.2. Aanzegbepaling
+		Deze arbeidsovereenkomst voor bepaalde tijd zal, na de overeengekomen duur, niet worden voortgezet en eindigt van rechtswege. Hiermee heeft de werkgever voldaan aan zijn aanzegverplichting.
+
+	12.3. Wijze van ziekmelding en controlevoorschriften
+		Werknemer is verplicht ieder verzuim wegens ziekte aan de werkgever te (laten) meedelen op de eerste ziektedag ’s morgens voor 10 uur.
+
+	12.4. VOG
+		12.4.1. Werknemer dient een VOG (Verklaring Omtrent Gedrag) aan te vragen conform de richtlijn van De Zorgcoach en zo spoedig mogelijk te overhandigen aan werkgever. In de regel vraag Werkgever een VOG aan.
+		12.4.2. De kosten van de VOG worden, bij goedkeuring, door werkgever vergoed. Werknemer overhandigd het origineel aan Werkgever.
+		12.4.3. Werknemer dient voor aanvang van contract de VOG aan te leveren.
+		12.4.4. Mocht het onverhoopt voorkomen dat de overhandiging verlaat is dan dient de VOG uiterlijk één maand na start contract aan Werkgever overhandigd te zijn. Mocht dit niet het geval zijn is dat reden voor ontslag op staande voet.
+		12.4.5. Deze arbeidsovereenkomst is alleen geldig bij de beschikbaarheid van een VOG.
+
+	12.5. Detachering
+		Werknemer kan gedetacheerd worden om voor andere handelsnamen, werkmaatschappijen en/of samenwerkingspartners van MainWay B.V. werkzaamheden te verrichten.
+
+	12.6. Overgang overeenkomst
+		Het staat Werkgever vrij deze overeenkomst in een door Werkgever en/of W. Dekkers op te richten B.V. of andere rechtsvorm in te brengen. Alle contractuele bepalingen zullen hiermee automatisch overgaan naar de nieuwe rechtsvorm.
+
+	12.7. Vertrouwelijk
+		Deze overeenkomst heeft een vertrouwelijk karakter. Inhoud mag niet met derden gedeeld worden.
+
+13. Bijlagen
+	13.1. Bij deze overeenkomst worden de volgende bijlagen aan Werknemer overhandigd:
+		Functieomschrijving Senior Coach
+		Handboek De Zorgcoach
+		Uitgelicht handboek
+
+	13.2. Hierbij verklaar ik dat deze bijlagen heb gelezen en ik ga akkoord met de inhoud en zal hier naar handelen.
+
+14. Nederlands recht
+	Op deze overeenkomst is het Nederlandse recht van toepassing.
+
+
+15. Ondertekening
+
+	De overeenkomst is in tweevoud opgemaakt te Landsmeer.
+
+	Datum: 							Datum:
+
+	Naam:							Naam:
+	Ward Dekkers					VOOR- &amp; ACHTERNAAM MEDEWERKER
+
+	De werkgever: 						Werknemer:
+
+		</field>
+			<field name="coach">senior</field>
+    	</record>
+
+    <!-- Mail Template for Send Contract Signup Link -->
+    <record id="template_send_signup_link" model="mail.template">
+        <field name="name">Send Signup Link</field>
+        <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+        <field name="email_from"><![CDATA["${object.company_id.name|safe}" <${(object.company_id.email or user.email)|safe}>]]></field>
+        <field name="email_to">${object.email_from|safe}</field>
+        <field name="subject">Welcome to ${object.company_id.name}!</field>
+        <field name="body_html" type="html">
+			<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+			    <table cellspacing="0" cellpadding="0" style="width:600px;border-collapse:collapse;background:inherit;color:inherit">
+			        <tbody><tr>
+			            <td valign="center" width="200" style="padding:10px 10px 10px 5px;font-size: 12px">
+			                <img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${user.company_id.name}" />
+			            </td>
+			        </tr></tbody>
+			    </table>
+			</div>
+			<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+			    <p>Dear ${object.partner_name},</p>
+			    <p>
+			        Your application has been successfully submitted and verified!
+			    </p>
+			    <p>
+			        Please sign a online contract by using following link:
+			    </p>
+			    <div style="text-left: center; margin-top: 16px;">
+			        <a href="${object.get_current_root_url()}" style="padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px">Sign Contract</a>
+			    </div>
+			    <p>Best regards,</p>
+			</div>
+			<div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+			    ${user.name | safe}
+			    <p style="font-size: 11px; margin-top: 10px;">
+			        <strong>Sent by ${user.company_id.name}</strong>
+			    </p>
+			</div>
+		</field>
+	</record>
+	</data>
+</odoo>

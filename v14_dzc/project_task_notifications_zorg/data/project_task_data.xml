@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="mt_task_assigned_deadline" model="mail.message.subtype">
+        <field name="name">Task Assigned Past Deadline</field>
+        <field name="res_model">project.task</field>
+        <field name="default" eval="True"/>
+        <field name="hidden" eval="False"/>
+        <field name="description">Task assigned / past deadline</field>
+    </record>
+
+    <record id="mt_project_task_assigned_deadline" model="mail.message.subtype">
+        <field name="name">Task Assigned Past Deadline</field>
+        <field name="sequence">10</field>
+        <field name="res_model">project.project</field>
+        <field name="default" eval="True"/>
+        <field name="parent_id" eval="ref('mt_task_assigned_deadline')"/>
+        <field name="relation_field">project_id</field>
+    </record>
+
+    <record id="m_task_assigned" model="mail.message.subtype">
+        <field name="name">Task Assigned</field>
+        <field name="res_model">project.task</field>
+        <field name="default" eval="True"/>
+        <field name="hidden" eval="False"/>
+        <field name="description">Task assigned</field>
+    </record>
+
+    <record id="m_project_task_assigned" model="mail.message.subtype">
+        <field name="name">Task Assigned</field>
+        <field name="sequence">10</field>
+        <field name="res_model">project.project</field>
+        <field name="default" eval="True"/>
+        <field name="parent_id" eval="ref('m_task_assigned')"/>
+        <field name="relation_field">project_id</field>
+    </record>
+
+</odoo>

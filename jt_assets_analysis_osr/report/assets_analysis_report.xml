@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_analysis_report_template">
+            <t t-if="env.context.get('type') == 'download_pdf'" t-call="web.html_container">
+                <div class="page" style="padding: 0 10px;">
+                    <t t-call="web.external_layout">
+                        <style type="text/css">
+                            .cust_tbl tr td, .cust_tbl tr th{
+                                text-align: center;
+                                border: 1px solid #c9c7c7;
+                            }
+                            .cust_tbl tr th{
+                                background-color: #edeaea;
+                            }
+                            .cust_tbl tr:nth-child(odd){
+                                background-color: #f7f7f7;
+                            }
+                            .cust_tbl tr:nth-child(even){
+                                background-color: white;
+                            }
+                        </style>
+                        <center id='tbl_wo'>
+                            <!-- Header for table -->
+                            <h2>Assets Analysis Report</h2><br/>
+                            <table class="cust_tbl table table-bordered">
+                                <!-- Labels for table columns -->
+                                <tr>
+                                   <th>Asset Name</th>
+                                   <th>Acquisition Date</th>
+                                   <th>Orignal Value</th>
+                                   <th>Salvage Value</th>
+                                   <th>Residual Value</th>
+                                   <th>Computation Method</th>
+                                   <th>Prorata Temporis</th>
+                                   <th>Prorata Date</th>
+                                   <th>Number of Depreciations</th>
+                                   <th>Number of Months in a Period</th>
+                                   <th>Status</th>
+                                </tr>
+
+                                <t t-set="assets" t-value="request.env['account.asset'].get_assets_to_print()"/>
+                                <t t-foreach="assets" t-as="asset">
+                                    <tr>
+                                        <td><span t-field="asset.name"/></td>
+                                        <td><span t-field="asset.acquisition_date"/></td>
+                                        <td><span t-field="asset.original_value" t-options='{"widget": "monetary", "display_currency": asset.currency_id}'/></td>
+                                        <td><span t-field="asset.salvage_value" t-options='{"widget": "monetary", "display_currency": asset.currency_id}'/></td>
+                                        <td><span t-field="asset.value_residual" t-options='{"widget": "monetary", "display_currency": asset.currency_id}'/></td>
+                                        <td><span t-field="asset.method"/></td>
+                                        <td><span t-field="asset.prorata"/></td>
+                                        <td><span t-field="asset.prorata_date"/></td>
+                                        <td><span t-field="asset.method_number"/></td>
+                                        <td><span t-field="asset.method_period"/></td>
+                                        <td><span t-field="asset.state"/></td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </center>
+                    </t>
+                </div>
+            </t>
+            <t t-if="env.context.get('type') == 'view'">
+                <div class="page" style="padding: 0 10px;">
+                    <style type="text/css">
+                        .cust_tbl tr td, .cust_tbl tr th{
+                            text-align: center;
+                            border: 1px solid #c9c7c7;
+                        }
+                        .cust_tbl tr th{
+                            background-color: #edeaea;
+                        }
+                        .cust_tbl tr:nth-child(odd){
+                            background-color: #f7f7f7;
+                        }
+                        .cust_tbl tr:nth-child(even){
+                            background-color: white;
+                        }
+                    </style>
+                    <center id='tbl_wo'>
+                        <!-- Header for table -->
+                        <h2>Assets Analysis Report</h2><br/>
+                        <table class="cust_tbl table table-bordered">
+                            <!-- Labels for table columns -->
+                              <tr>
+                                   <th>Asset Name</th>
+                                   <th>Acquisition Date</th>
+                                   <th>Orignal Value</th>
+                                   <th>Salvage Value</th>
+                                   <th>Residual Value</th>
+                                   <th>Computation Method</th>
+                                   <th>Prorata Temporis</th>
+                                   <th>Prorata Date</th>
+                                   <th>Number of Depreciations</th>
+                                   <th>Number of Months in a Period</th>
+                                   <th>Status</th>
+                                </tr>
+                            <t t-set="assets" t-value="request.env['account.asset'].get_assets_to_print()"/>
+                            <t t-foreach="assets" t-as="asset">
+                                <tr>
+                                    <td><span t-field="asset.name"/></td>
+                                    <td><span t-field="asset.acquisition_date"/></td>
+                                    <td><span t-field="asset.original_value" t-options='{"widget": "monetary", "display_currency": asset.currency_id}'/></td>
+                                    <td><span t-field="asset.salvage_value" t-options='{"widget": "monetary", "display_currency": asset.currency_id}'/></td>
+                                    <td><span t-field="asset.value_residual" t-options='{"widget": "monetary", "display_currency": asset.currency_id}'/></td>
+                                    <td><span t-field="asset.method"/></td>
+                                    <td><span t-field="asset.prorata"/></td>
+                                    <td><span t-field="asset.prorata_date"/></td>
+                                    <td><span t-field="asset.method_number"/></td>
+                                    <td><span t-field="asset.method_period"/></td>
+                                    <td><span t-field="asset.state"/></td>
+                                </tr>
+                            </t>
+                        </table>
+                    </center>
+                </div>
+            </t>
+        </template>
+
+        <!-- Report paper format -->
+        <record id="assets_analysis_report_paperformat" model="report.paperformat">
+            <field name="name">Assets Analysis Report PaperFormat</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">60</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">55</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <record id="assets_analysis_report" model="ir.actions.report">
+            <field name="name">Asset Analysis Report</field>
+            <field name="model">account.asset</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">jt_assets_analysis_osr.assets_analysis_report_template</field>
+            <field name="report_file">jt_assets_analysis_osr.assets_analysis_report_template</field>
+            <field name="print_report_name">object.name</field>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>

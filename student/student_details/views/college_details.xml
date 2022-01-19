@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+      <record id="view_college_details_form" model="ir.ui.view">
+            <field name="name">college.details.form</field>
+            <field name="model">college.details</field>
+            <field name="arch" type="xml">
+                  <form>
+                        <sheet>
+                              <group>
+                            <group>
+                              <field name="name"/>
+                              <field name="desc"/>
+                              <field name="address"/>
+                              <field name="clg_code" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="contry"/>
+                                <field name="state"/>
+                                <field name="city"/>
+                            </group>
+                            <group>
+                               <notebook>
+                                    <page string="Department">
+                                        <field name="department_ids">
+                                            <tree editable="bottom">
+                                                <field name="name"/>
+                                                <field name="desc"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </group>
+                          </group>
+                        </sheet> 
+                  </form>
+            </field>
+      </record>
+
+
+    <record id="view_college_details_tree" model="ir.ui.view">
+        <field name="name">college.details.tree</field>
+        <field name="model">college.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="desc"/>
+                <field name="clg_code"/>
+            </tree>
+        </field>         
+    </record>
+
+
+
+
+      <record id="action_college_details" model="ir.actions.act_window">
+            <field name="name">College details</field>
+            <field name="res_model">college.details</field>
+            <field name="view_mode">tree,form</field>
+      </record>
+
+      <menuitem id="menu_student_root" name="Student"/>
+      <menuitem id="menu_colllege_main" name="College" action="action_college_details" parent="menu_student_root"/>
+
+</odoo>

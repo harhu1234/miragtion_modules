@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="invoeren_nedap" model="schedule.auto.activity">
+			<field name="name">Invoeren nedap</field>
+			<field name="due_day">7</field>
+		</record>
+
+		<record id="verwijs_brief" model="schedule.auto.activity">
+			<field name="name">Verwijsbrief/beschikking aangevraagd</field>
+			<field name="due_day">7</field>
+		</record>
+
+		<record id="verwijs_binnen" model="schedule.auto.activity">
+			<field name="name">Verwijsbrief/beschikking binnen</field>
+			<field name="due_day">7</field>
+		</record>
+
+		<record id="zorglegitimatie_aangevraagd" model="schedule.auto.activity">
+			<field name="name">Zorglegitimatie aangevraagd</field>
+			<field name="due_day">7</field>
+		</record>
+
+		<record id="zorglegitimatie_binnen" model="schedule.auto.activity">
+			<field name="name">Zorglegitimatie binnen</field>
+			<field name="due_day">7</field>
+		</record>
+
+		<record id="zorgarrangement_zorgtraject_invoeren" model="schedule.auto.activity">
+			<field name="name">Zorgarrangement &amp; zorgatraject invoeren</field>
+			<field name="due_day">7</field>
+		</record>
+
+		<record id="klant_ingevuld_ingg" model="schedule.auto.activity">
+			<field name="name">Klant ingevuld in GG</field>
+			<field name="due_day">7</field>
+		</record>
+
+	</data>
+</odoo>

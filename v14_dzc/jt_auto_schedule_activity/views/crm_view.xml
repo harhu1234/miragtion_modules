@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="crm_document_smart_button" model="ir.ui.view">
+        <field name="name">crm.lead.form.doc.smart.button.view</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                  <button name="action_get_attachment_tree_view" class="oe_stat_button" icon="fa-book" type="object">
+                        <field name="documents_count" widget="statinfo" string="Documents"/>
+                  </button>
+            </xpath>
+            <xpath expr="//field[@name='date_deadline']" position="after">
+                <field name="first_meeting_date"/>
+                <field name="coach_id"/>
+                <field name="coach_email"/>
+                <field name="coach_phone"/>
+                <field name="end_date_indication"/>
+                <field name="is_dutch" invisible="1"/>
+                <field name="other_language" invisible="1"/>
+                <field name="pets" invisible="1"/>
+                <field name="preference" invisible="1"/>
+                <field name="phase_days" readonly="1" />
+                <field name="total_phase_days" readonly="1" />
+                <field name="stage_updated_date" invisible="1" />
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="initial"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_lead_inherit_display_name" model="ir.ui.view">
+        <field name="name">crm.lead.inherit.display.name</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]/h1" position="replace">
+                <h1 class="oe_edit_only"><field name="name"/></h1>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_title')]/label" position="before">
+                <h1><field name="lead_name"/></h1><br/>
+            </xpath>
+            
+        </field>
+
+    </record>
+
+    <!-- Cron job for count lead in particular stage -->
+
+    <record model="ir.cron" id="crm_lead_count_lead_phase_days">
+            <field name="name">CRM lead count lead phase days</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_crm_lead"/>
+            <field name="state">code</field>
+            <field name="code">model.count_lead_phase_day()</field>
+    </record>
+
+</odoo>

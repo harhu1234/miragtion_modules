@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+
+      <record id="view_student_details_kanban" model="ir.ui.view">
+            <field name="name">student.details.kanban</field>
+            <field name="model">student.details</field>
+            <field name="arch" type="xml">
+                  <kanban>
+                        <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                              <div class="o_kanban_image">
+                                    <field name="student_img" widget="image"/>
+                              </div>
+                              <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                    Name : <field name="name"/><br/>
+                                    E-mail : <field name="email"/><br/>
+                                    <field name="student_code" readonly="1"/>
+                                    <!-- Hometown : <field name="hometown"/> -->
+                                    </strong>
+                              </div>
+                            </div>
+                        </t>
+                        </templates>
+                  </kanban>
+            </field>
+      </record>
+
+      <record id="view_student_details_form" model="ir.ui.view">
+            <field name="name">student.details.form</field>
+            <field name="model">student.details</field>
+            <field name="arch" type="xml">
+                  <form>
+                        <button name="browse_method" type="object" class="oe_highlight" string="browse"/> 
+                        <button name="search_method" type="object" class="oe_highlight" string="search"/> 
+                        <sheet>
+                              <group>
+                                    <group>
+                                          <field name="name" placeholder="Name" required="True"/>
+                                          <field name="mname" placeholder="Father Name"/>
+                                          <field name="college_id"/>
+                                          <field name="semester"/>
+                                          <field name="contact" placeholder="Mobile No" required="True"/>
+                                          <field name="age"/>
+                                          <field name="hometown"/>
+                                          <field name="student_code" readonly="1"/>
+                                    </group>
+                                    <group>
+                                          <field name="lname" placeholder="Surname" required="True"/>
+                                          <field name="brith_date" placeholder="Brith Date"/>
+                                          <field name="education"/>
+                                          <field name="department_id" domain="[('college_id','=',college_id)]"/>
+                                          <field name="email" placeholder="E-mail"/>
+                                          <field name="gender"/>
+                                          <field name="contry1"/>
+                                          <field name="state1"/>
+                                          <field name="document" filename="document_name"/>
+                                          <field name="document_name" invisible="1"/>
+                                          <field name="student_img" widget="image"/>
+                                    </group>
+                              </group>
+                        </sheet>
+                  </form>
+            </field>
+      </record>
+
+      <record id="view_student_details_tree" model="ir.ui.view">
+            <field name="name">student.details.tree</field>
+            <field name="model">student.details</field>
+            <field name="arch" type="xml">
+                  <tree>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="department_id"/>
+                        <field name="contact"/>
+                        <field name="hometown"/>
+                        <field name="age"/>
+                        <field name="gender"/>
+                        <field name="education"/>
+                        <field name="student_code" readonly="1"/>
+                  </tree>
+            </field>
+            
+      </record>
+
+
+      <record id="view_student_details_search" model="ir.ui.view">
+            <field name="name">student.details.search</field>
+            <field name="model">student.details</field>
+            <field name="arch" type="xml">
+                  <search>
+                         <!-- <field name="name" filter_domain="['|','|', ('name','ilike',self), ('email','ilike',self),('hometown','ilike',self)]" string="Action"/> -->
+                        <field name="name" />
+                        <field name="email"/>
+                        <filter name="gender_male" domain="[('gender','=', 'male')]" string="Male"/>
+                        <filter name="gender_female" domain="[('gender','=', 'female')]" string="Female"/>
+                        <filter name="education_bechalor" domain="[('education','=', 'be')]" string="Bachelor of Engineering"/>
+                        <filter name="education_diploma" domain="[('education','=', 'diploma')]" string="Diploma"/>
+                        <!-- <filter name="education_highersecondary" domain="[('education','=', 'highersecondary')]" string="Higher Secondary"/> -->
+                        <group string="Group By">
+                              <filter string="Gender" name="group_gender" context="{'group_by':'gender'}"/>
+                              <filter string="Education" name="group_education" context="{'group_by':'education'}"/>
+                              <filter string="Home Town" name="group_hometown" context="{'group_by':'hometown'}"/>
+                        </group>
+                  </search>
+            </field>
+      </record>
+
+
+	<record id="action_student_details" model="ir.actions.act_window">
+		<field name="name">Student Details</field>
+		<field name="res_model">student.details</field>
+            <field name="view_mode">kanban,tree,form</field>
+	</record>
+
+      <!-- <record id="action_student_details1" model="ir.actions.act_window">
+            <field name="name">Student Det</field>
+            <field name="res_model">student.details</field>
+            <field name="view_mode">kanban,tree,form</field>
+      </record> -->
+	
+      <menuitem id="menu_student_root" name="Student"/>
+
+	<menuitem id="menu_student_deatils_main" name="Student" action="action_student_details" parent="menu_student_root"/>
+
+      <!-- <menuitem id="menu_subject" name="Subject" action="action_student_details1" parent="menu_student_deatils_main"/> -->
+      
+	
+</odoo>

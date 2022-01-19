@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+	<record id="view_department_details_form" model="ir.ui.view">
+ 		<field name="name">department.details.form</field>
+            <field name="model">department.details</field>
+            <field name="arch" type="xml">
+            	<form>
+            		<sheet>
+	            		<group>
+                            <group>
+                                <field name="college_id"/>
+    	                    	<!-- <field name="department_id"/> -->
+                            </group>
+	            		</group>
+                            <group>
+                                <notebook>
+                                    <page string="Project">
+                                        <field name="project_ids">
+                                            <tree editable="bottom">
+                                                <field name="sequence" widget="handle"/>
+                                                <field name="name"/>
+                                                <field name="desc"/>
+                                                <field name="dep_desc"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </group>
+            		</sheet> 
+            	</form>
+            </field>
+	</record>
+
+
+    <record id="view_department_details_tree" model="ir.ui.view">
+        <field name="name">department.details.tree</field>
+        <field name="model">department.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="desc"/>
+                <field name="college_id"/>
+            </tree>
+        </field>         
+    </record>
+
+
+
+
+	<record id="action_department_details" model="ir.actions.act_window">
+		<field name="name">Department details</field>
+		<field name="res_model">department.details</field>
+            <field name="view_mode">tree,form</field>
+	</record>
+
+	<!-- <menuitem id="menu_student_root" name="Student"/>
+	<menuitem id="menu_department_main" name="Department" action="action_department_details" parent="menu_student_root"/> -->
+
+</odoo>

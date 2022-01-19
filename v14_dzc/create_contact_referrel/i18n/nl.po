@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* create_contact_referrel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-18 09:33+0000\n"
+"PO-Revision-Date: 2021-12-18 09:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__referrel_adres
+msgid "Adres"
+msgstr ""
+
+#. module: create_contact_referrel
+#: model:ir.actions.server,name:create_contact_referrel.server_action_clear_lead_age
+msgid "Clear Age"
+msgstr "Leeftijd wissen"
+
+#. module: create_contact_referrel
+#: model:ir.actions.server,name:create_contact_referrel.create_contacts_from_note
+msgid "Create Contacts from Note"
+msgstr "Contacten maken vanuit notitie"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__display_name
+#: model:ir.model.fields,field_description:create_contact_referrel.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__referrel_email
+msgid "E-mailadres"
+msgstr "E-mailadres"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__cd_email
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__oc_email
+msgid "Email"
+msgstr "E-mail"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__name
+msgid "File Name"
+msgstr "Bestandsnaam"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__id
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__id
+#: model:ir.model.fields,field_description:create_contact_referrel.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard____last_update
+#: model:ir.model.fields,field_description:create_contact_referrel.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: create_contact_referrel
+#: model:ir.actions.act_window,name:create_contact_referrel.application_report_questions
+msgid "Last Two Questions Report"
+msgstr "Rapport laatste twee vragen"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: create_contact_referrel
+#: model:ir.model,name:create_contact_referrel.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Verkoopkans"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__referrel_locatie
+msgid "Locatie (vestiging)"
+msgstr "Locatie (vestiging)"
+
+#. module: create_contact_referrel
+#: model_terms:ir.ui.view,arch_db:create_contact_referrel.inherit_lead_form_for_referrel
+msgid "Marketing"
+msgstr "Marketing"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__referrel_name
+msgid "Naam"
+msgstr "Naam"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__cd_name
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__oc_name
+msgid "Name"
+msgstr "Naam"
+
+#. module: create_contact_referrel
+#: model_terms:ir.ui.view,arch_db:create_contact_referrel.inherit_lead_form_for_referrel
+msgid "Others"
+msgstr "Anders"
+
+#. module: create_contact_referrel
+#: model_terms:ir.ui.view,arch_db:create_contact_referrel.inherit_lead_form_for_referrel
+msgid "Parent / Guardian"
+msgstr "Ouder / verzorger"
+
+#. module: create_contact_referrel
+#: model:ir.model,name:create_contact_referrel.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: create_contact_referrel
+#: model:ir.model,name:create_contact_referrel.model_questions_export_wizard
+msgid "Partner Export XLS Report"
+msgstr ""
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__cd_phone
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__oc_phone
+msgid "Phone"
+msgstr "Telefoon"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__referrel_plaats
+msgid "Plaats"
+msgstr ""
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__referrel_postcode
+msgid "Postcode"
+msgstr ""
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__report
+msgid "Prepared file"
+msgstr "Voorbereid bestand"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_res_partner__referral
+#: model:ir.model.fields,field_description:create_contact_referrel.field_res_users__referral
+#: model_terms:ir.ui.view,arch_db:create_contact_referrel.inherit_lead_form_for_referrel
+#: model_terms:ir.ui.view,arch_db:create_contact_referrel.inherit_partner_filter_referrel
+msgid "Referral"
+msgstr "Verwijzers"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_questions_export_wizard__state
+msgid "State"
+msgstr "Staat / Provincie"
+
+#. module: create_contact_referrel
+#: model:ir.actions.server,name:create_contact_referrel.create_contacts_to_mass_mailing
+msgid "Subscribe"
+msgstr ""
+
+#. module: create_contact_referrel
+#: model:ir.model.fields,field_description:create_contact_referrel.field_crm_lead__referrel_telephone
+msgid "Telefoon"
+msgstr ""
+
+#. module: create_contact_referrel
+#: model:ir.actions.server,name:create_contact_referrel.server_action_update_crm_note
+msgid "Update Crm Note"
+msgstr "Crm notitie bijwerken"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields.selection,name:create_contact_referrel.selection__questions_export_wizard__state__choose
+msgid "choose"
+msgstr "Kiezen"
+
+#. module: create_contact_referrel
+#: model:ir.model.fields.selection,name:create_contact_referrel.selection__questions_export_wizard__state__get
+msgid "get"
+msgstr "krijgen"

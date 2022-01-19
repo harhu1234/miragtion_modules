@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="signup_contract_template_view_form">
+            <field name="name">signup.contract.template.form.view</field>
+            <field name="model">signup.contract.template</field>
+            <field name="arch" type="xml">
+                <form create="false" delete="false">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Name" invisible="1"/>
+                            <field name="content" string="Contract Content"/>
+                            <field name="coach" string="Coach"/>
+                        </group>
+                    </sheet>
+                </form>        
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="signup_contract_template_view_tree">
+            <field name="name">signup.contract.template.tree.view</field>
+            <field name="model">signup.contract.template</field>
+            <field name="arch" type="xml">
+                <tree create="false" delete="false">
+                    <field name="name" string="Name"/>
+                    <field name="coach" string="Coach"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_signup_contract_template" model="ir.actions.act_window">
+            <field name="name">Signup Contract Template</field>
+            <field name="res_model">signup.contract.template</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem 
+            id="menu_signup_contract_template"
+            name="Signup Contract Template"
+            parent="base.menu_administration"
+            action="action_signup_contract_template"/>
+    </data>
+</odoo>

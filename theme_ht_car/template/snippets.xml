@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets" name="Car">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Car</div>
+				<div class="o_panel_body">
+					<t t-snippet="theme_ht_car.ht_slide_snippet" t-thumbnail="/theme_ht_car/static/src/images/img4.png">
+                    </t>
+                    <t t-snippet="theme_ht_car.ht_feature_snippet" t-thumbnail="/theme_ht_car/static/src/images/img4.png">
+                    </t>
+                    <t t-snippet="theme_ht_car.ht_about_snippet" t-thumbnail="/theme_ht_car/static/src/images/img4.png">
+                    </t>
+                    <t t-snippet="theme_ht_car.ht_work_snippet" t-thumbnail="/theme_ht_car/static/src/images/img4.png">
+                    </t>
+                    <t t-snippet="theme_ht_car.ht_testimonial_snippet" t-thumbnail="/theme_ht_car/static/src/images/img4.png">
+                    </t>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+	<template id="ht_slide_snippet" name="Slider">
+		<!-- banner -->
+		<section class="s_carousel_wrapper" data-vxml="001">
+	        <div id="myCarousel" class="s_carousel s_carousel_default carousel slide" data-interval="10000">
+	            <!-- Indicators -->
+	            <!-- <ol class="carousel-indicators">
+	                <li data-target="#myCarousel" data-slide-to="0" class="active"/>
+	                <li data-target="#myCarousel" data-slide-to="1"/>
+	                <li data-target="#myCarousel" data-slide-to="2"/>
+	            </ol> -->
+	            <!-- Content -->
+	            <div class="carousel-inner">
+	                <!-- #01 -->
+	                <div class="carousel-item active oe_img_bg pt152 pb152" style="background-image: url('/theme_ht_car/static/src/images/banner.jpg');" data-name="Slide">
+	                    <div class="container-fluid">
+	                        <div class="row">
+	                           <div class="col-md-6">
+	                              <div class="text-bg">
+	                                 <h1>Welcome</h1>
+	                                 <span>car repair services</span>
+	                                 <p style="color:white;font-size: 20px;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+	                                 <a href="#">More Info </a> <a href="#">Contact Us</a>
+	                              </div>
+	                           </div>
+	                           <div class="col-md-6">
+	                              <div class="text_img">
+	                                 <figure><img src="/theme_ht_car/static/src/images/car.png" alt="#"/></figure>
+	                              </div>
+	                           </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- #02 -->
+	                <div class="carousel-item oe_img_bg pt96 pb96" style="background-image: url('/theme_ht_car/static/src/images/banner.jpg');" data-name="Slide">
+	                    <div class="container-fluid">
+	                        <div class="row">
+	                           <div class="col-md-6">
+	                              <div class="text-bg">
+	                                 <h1>Welcome</h1>
+	                                 <span>car repair services</span>
+	                                 <p style="color:white;font-size: 20px;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+	                                 <a href="#">More Info </a> <a href="#">Contact Us</a>
+	                              </div>
+	                           </div>
+	                           <div class="col-md-6">
+	                              <div class="text_img">
+	                                 <figure><img src="/theme_ht_car/static/src/images/car.png" alt="#"/></figure>
+	                              </div>
+	                           </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- #03 -->
+	                <div class="carousel-item oe_img_bg pt128 pb128" style="background-image: url('/theme_ht_car/static/src/images/banner.jpg');" data-name="Slide">
+	                    <div class="container-fluid">
+	                        <div class="row">
+	                           <div class="col-md-6">
+	                              <div class="text-bg">
+	                                 <h1>Welcome</h1>
+	                                 <span>car repair services</span>
+	                                 <p style="color:white;font-size: 20px;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, </p>
+	                                 <a href="#">More Info </a> <a href="#">Contact Us</a>
+	                              </div>
+	                           </div>
+	                           <div class="col-md-6">
+	                              <div class="text_img">
+	                                 <figure><img src="/theme_ht_car/static/src/images/car.png" alt="#"/></figure>
+	                              </div>
+	                           </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- Controls -->
+	            <a class="carousel-control-prev o_not_editable" contenteditable="false" href="#myCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+	                <span class="carousel-control-prev-icon"/>
+	                <span class="sr-only">Previous</span>
+	            </a>
+	            <a class="carousel-control-next o_not_editable" contenteditable="false" href="#myCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+	                <span class="carousel-control-next-icon"/>
+	                <span class="sr-only">Next</span>
+	            </a>
+	        </div>
+	    </section>
+      <!-- end banner -->
+	</template>
+	<template id="ht_feature_snippet" name="Feature Box">
+		<section>
+		      <!-- three_box -->
+	      <div class="three_box">
+	         <div class="container">
+	            <div class="row">
+	               <div class="col-md-4">
+	                  <div class="box_text">
+	                     <h3>AUTO DIAGNOSE</h3>
+	                     <i><img src="/theme_ht_car/static/src/images/thr.png" alt="#"/></i>
+	                     <p>ipsum dolor sit amet, consectetur adipiscing elit, sed d veniam, adipiscing elit, sed d veniam</p>
+	                  </div>
+	               </div>
+	               <div class="col-md-4">
+	                  <div class="box_text">
+	                     <h3>AUTO DIAGNOSE</h3>
+	                     <i><img src="/theme_ht_car/static/src/images/thr1.png" alt="#"/></i>
+	                     <p>ipsum dolor sit amet, consectetur adipiscing elit, sed d veniam, adipiscing elit, sed d veniam</p>
+	                  </div>
+	               </div>
+	               <div class="col-md-4">
+	                  <div class="box_text">
+	                     <h3>AUTO DIAGNOSE</h3>
+	                     <i><img src="/theme_ht_car/static/src/images/thr2.png" alt="#"/></i>
+	                     <p>ipsum dolor sit amet, consectetur adipiscing elit, sed d veniam, adipiscing elit, sed d veniam</p>
+	                  </div>
+	               </div>
+	            </div>
+	         </div>
+	      </div>
+	      <!-- three_box -->
+	      </section>
+	</template>
+	<template id="ht_about_snippet" name="About">
+		<section>
+	      	<!-- about -->
+	      <div  class="about">
+	         <div class="container">
+	            <div class="row">
+	               <div class="col-md-12">
+	                  <div class="titlepage">
+	                     <h2>About Our Car Service </h2>
+	                  </div>
+	               </div>
+	            </div>
+	            <div class="container">
+	               <div class="row">
+	                  <div class="col-md-10 offset-md-1">
+	                     <div class="about_img">
+	                        <div class="about_box">
+	                           <h3>Dolor sit amet, consectetur adipiscing elit,  </h3>
+	                           <p>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+	                           <a class="read_more">Read More</a>
+	                        </div>
+	                     </div>
+	                  </div>
+	               </div>
+	            </div>
+	         </div>
+	      </div>
+	      <!-- end about -->
+	  </section>
+	</template>
+	<template id="ht_work_snippet" name="Work">
+		<section>
+		      	<!-- wedo  section -->
+			      <div class="wedo ">
+			         <div class="container">
+			            <div class="row">
+			               <div class="col-md-12">
+			                  <div class="titlepage">
+			                     <h2>What We Do</h2>
+			                     <p>It is a long established fact that a reader will be distracted by the </p>
+			                  </div>
+			               </div>
+			            </div>
+			            <div class="row">
+			               <div class="col-md-10 offset-md-1">
+			                  <div class="row">
+			                     <div class="col-md-6 margin_bottom">
+			                        <div class="work">
+			                           <figure><img src="/theme_ht_car/static/src/images/img1.png" alt="#" /></figure>
+			                        </div>
+			                        <div class="work_text">
+			                           <h3>Quick repair<br/><span class="blu">Total Service</span></h3>
+			                        </div>
+			                     </div>
+			                     <div class="col-md-6 margin_bottom">
+			                        <div class="work">
+			                           <figure><img src="/theme_ht_car/static/src/images/img2.png" alt="#" /></figure>
+			                        </div>
+			                        <div class="work_text">
+			                           <h3>Quick repair<br/><span class="blu">Total Service</span></h3>
+			                        </div>
+			                     </div>
+			                     <div class="col-md-6 margin_bottom">
+			                        <div class="work">
+			                           <figure><img src="/theme_ht_car/static/src/images/img3.png" alt="#" /></figure>
+			                        </div>
+			                        <div class="work_text">
+			                           <h3>Quick repair<br/> <span class="blu">Total Service</span></h3>
+			                        </div>
+			                     </div>
+			                     <div class="col-md-6 margin_bottom">
+			                        <div class="work">
+			                           <figure><img src="/theme_ht_car/static/src/images/img4.png" alt="#" /></figure>
+			                        </div>
+			                        <div class="work_text">
+			                           <h3>Quick repair<br/><span class="blu">Total Service</span></h3>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <a class="read_more" href="#">See More</a>
+			               </div>
+			            </div>
+			         </div>
+			      </div>
+			      <!-- end wedo  section -->
+		      </section>
+	</template>
+	<template id="ht_testimonial_snippet" name="Testimonial">
+		<section>
+		      	<!-- testimonial -->
+		      <div class="testimonial">
+		         <div class="container">
+		            <div class="row">
+		               <div class="col-md-12">
+		                  <div class="titlepage">
+		                     <h2>Testimonial</h2>
+		                     <p>It is a long established fact that a reader will be distracted by the </p>
+		                  </div>
+		               </div>
+		            </div>
+		            <div class="row">
+		               <div class="col-md-12">
+		                  <div id="myCarousel" class="carousel slide testimonial_Carousel " data-ride="carousel">
+		                     <ol class="carousel-indicators">
+		                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		                        <li data-target="#myCarousel" data-slide-to="1"></li>
+		                        <li data-target="#myCarousel" data-slide-to="2"></li>
+		                     </ol>
+		                     <div class="carousel-inner">
+		                        <div class="carousel-item active">
+		                           <div class="container">
+		                                 <div class="row">
+		                                    <div class="col-md-6 margin_boot">
+		                                       <div class="test_box">
+		                                          <i><img src="/theme_ht_car/static/src/images/tes.jpg" alt="#"/></i>
+		                                          <h4>JCKOLO</h4>
+		                                          <span>(It is a long )</span>
+		                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+		                                       </div>
+		                                    </div>
+		                                    <div class="col-md-6 margin_boot">
+		                                       <div class="test_box">
+		                                          <i><img src="/theme_ht_car/static/src/images/tes1.jpg" alt="#"/></i>
+		                                          <h4>ROCOYO</h4>
+		                                          <span>(It is a long )</span>
+		                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+		                                       </div>
+		                                    </div>
+		                              </div>
+		                           </div>
+		                        </div>
+		                        <div class="carousel-item">
+		                           <div class="container">
+		                                 <div class="row">
+		                                    <div class="col-md-6 margin_boot">
+		                                       <div class="test_box">
+		                                          <i><img src="/theme_ht_car/static/src/images/tes.jpg" alt="#"/></i>
+		                                          <h4>JCKOLO</h4>
+		                                          <span>(It is a long )</span>
+		                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+		                                       </div>
+		                                    </div>
+		                                    <div class="col-md-6 margin_boot">
+		                                       <div class="test_box">
+		                                          <i><img src="/theme_ht_car/static/src/images/tes1.jpg" alt="#"/></i>
+		                                          <h4>ROCOYO</h4>
+		                                          <span>(It is a long )</span>
+		                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+		                                       </div>
+		                                    </div>
+		                              </div>
+		                           </div>
+		                        </div>
+		                        <div class="carousel-item">
+		                           <div class="container">
+		                                <div class="row">
+		                                    <div class="col-md-6 margin_boot">
+		                                       <div class="test_box">
+		                                          <i><img src="/theme_ht_car/static/src/images/tes.jpg" alt="#"/></i>
+		                                          <h4>JCKOLO</h4>
+		                                          <span>(It is a long )</span>
+		                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+		                                       </div>
+		                                    </div>
+		                                    <div class="col-md-6 margin_boot">
+		                                       <div class="test_box">
+		                                          <i><img src="/theme_ht_car/static/src/images/tes1.jpg" alt="#"/></i>
+		                                          <h4>ROCOYO</h4>
+		                                          <span>(It is a long )</span>
+		                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+		                                       </div>
+		                                    </div>
+		                                </div>
+		                           </div>
+		                        </div>
+		                     </div>
+		                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+		                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		                     <span class="sr-only">Previous</span>
+		                     </a>
+		                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+		                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		                     <span class="sr-only">Next</span>
+		                     </a>
+		                  </div>
+		               </div>
+		            </div>
+		         </div>
+		      </div>
+		      <!-- end testimonial -->
+		      </section>
+	</template>
+</odoo>

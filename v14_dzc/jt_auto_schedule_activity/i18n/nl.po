@@ -1,0 +1,259 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* jt_auto_schedule_activity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-09 08:42+0000\n"
+"PO-Revision-Date: 2021-06-09 08:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model,name:jt_auto_schedule_activity.model_mail_activity
+msgid "Activity"
+msgstr "Activiteit"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_activity_name
+msgid "Activity Name"
+msgstr "Activity Name"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_activity_type_id
+msgid "Activity Type"
+msgstr "Type activiteit"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model,name:jt_auto_schedule_activity.model_hr_applicant
+msgid "Applicant"
+msgstr "Kandidaat"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.actions.act_window,name:jt_auto_schedule_activity.action_schedule_activity_application
+msgid "Application Schedule Activity Info"
+msgstr "Application Schedule Activity Info"
+
+#. module: jt_auto_schedule_activity
+#: selection:schedule.auto.activity,how:0
+msgid "Automatic"
+msgstr "Automatic"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_code
+msgid "Code"
+msgstr "Kode"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_create_uid
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_create_date
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_description
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_display_name
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_documents_count
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.crm_document_smart_button
+msgid "Documents"
+msgstr "Documenten"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_due_day
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule activity search view
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule_application_activity_search_view
+msgid "Due Day"
+msgstr "Opleveringsdatum"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_due_day
+msgid "Due Day"
+msgstr "Deadline"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_coach_name
+msgid "Coach Name"
+msgstr "Naam Coach"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_first_name
+msgid "First Name"
+msgstr "Voornaam"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_last_name
+msgid "Last Name"
+msgstr "Achternaam"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_initial
+msgid "Initial"
+msgstr "Initialen"
+
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_coach_email
+msgid "Coach Email"
+msgstr "Email Coach"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_coach_phone
+msgid "clientnumber ONS"
+msgstr "ONS Klantnummer"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_end_date_indication
+msgid "End Date Indication"
+msgstr "Einddatum Indicatie"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule activity search view
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule_application_activity_search_view
+msgid "Due Day.."
+msgstr "Due Day.."
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_how
+msgid "How?"
+msgstr "How?"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_id
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_id
+msgid "ID"
+msgstr "ID"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_mail_activity_is_mandatory
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_is_mandatory
+msgid "Is Mandatory?"
+msgstr "Verplicht?"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application___last_update
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity___last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_write_uid
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_write_date
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model,name:jt_auto_schedule_activity.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Prospect"
+
+#. module: jt_auto_schedule_activity
+#: selection:schedule.auto.activity,how:0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_name
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_name
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule activity search view
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule_application_activity_search_view
+msgid "Name"
+msgstr "Naam"
+
+#. module: jt_auto_schedule_activity
+#: code:addons/jt_auto_schedule_activity/models/crm.py:21
+#, python-format
+msgid "Please close this %s activity first before moving to next stage"
+msgstr "Please close this %s activity first before moving to next stage"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.actions.act_window,name:jt_auto_schedule_activity.action_schedule_activity
+msgid "Schedule Activity Info"
+msgstr "Schedule Activity Info"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.ui.menu,name:jt_auto_schedule_activity.menu_ideas_sub
+#: model:ir.ui.menu,name:jt_auto_schedule_activity.menu_sch_application_activity
+msgid "Schedule Auto Activity"
+msgstr "Schedule Auto Activity"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_activity_application_stage_id
+msgid "Stage"
+msgstr "Fase"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_mail_activity_stage_id
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_schedule_auto_activity_stage_id
+msgid "Status"
+msgstr "Fase"
+
+#. module: jt_auto_schedule_activity
+#: model:schedule.auto.activity,activity_name:jt_auto_schedule_activity.zorglegitimatie_aangevraagd
+msgid "Te doen"
+msgstr "Te doen"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule activity search view
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule_application_activity_search_view
+msgid "name.."
+msgstr "name.."
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model,name:jt_auto_schedule_activity.model_schedule_activity_application
+msgid "schedule.activity.application"
+msgstr "schedule.activity.application"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model,name:jt_auto_schedule_activity.model_schedule_auto_activity
+msgid "schedule.auto.activity"
+msgstr "schedule.auto.activity"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule activity search view
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.schedule_application_activity_search_view
+msgid "student search"
+msgstr "student search"
+
+#. module: jt_auto_schedule_activity
+#: model:ir.model.fields,field_description:jt_auto_schedule_activity.field_crm_lead_first_meeting_date
+#: model:ir.ui.view,arch_db:jt_auto_schedule_activity.crm_document_smart_button
+msgid "Date Introductory Conversation"
+msgstr "Datum kennismaking"
+
+
+#. module: jt_auto_schedule_activity
+#: selection:crm.lead,preference:0
+msgid "Woman"
+msgstr "Vrouw"
+
+#. module: jt_auto_schedule_activity
+#: selection:crm.lead,preference:0
+msgid "No Preference"
+msgstr "Geen voorkeur"

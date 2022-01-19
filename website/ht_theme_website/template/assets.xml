@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="assets_website" inherit_id="website.assets_frontend">
+        <xpath expr="//link[last()]" position="after">
+        	 <link rel="stylesheet" type="text/css" href="/ht_theme_website/static/src/css/main.css"/>
+        </xpath>
+    </template>
+</odoo>

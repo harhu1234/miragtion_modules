@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="contact_page" name="Contact Page">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty">
+            <section class="s_banner parallax s_parallax_is_fixed pt96 pb96" data-scroll-background-ratio="1">
+        		<span class="s_parallax_bg oe_img_bg" style="background-image: url('/theme_ht_car/static/src/images/banner.jpg'); background-position: 50% 0;"/>
+        		<div class="container">
+		            <div class="row">
+		                <h1><font style="font-size: 62px;color:white;">Contact</font></h1>
+		            </div>
+		        </div>
+    		</section>
+            </div>
+        </t>
+    </template>
+</odoo>

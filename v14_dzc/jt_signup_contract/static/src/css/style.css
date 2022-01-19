@@ -1,0 +1,39 @@
+.popup_main{
+    width: 400px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.popup_main h1{
+    font-family: "Lucida Grande";
+    padding: 5px;
+    border-bottom: 1px solid grey;
+    border-radius: 10px 10px 0 0;
+    background-color: #feffed;
+}
+.popup_main form textarea{
+    width: 80%;
+    outline: 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.popup_main form textarea{
+    padding: 5px;
+    border: 1px solid #c8c9bb;
+    background-repeat: no-repeat !important;
+    background-size: 25px 28px !important;
+    background-position: 5px 1px;
+}
+.popup_main form input[type="submit"]{
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #c8c9bb;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold !important;
+    background-color: #f2dd6a;
+}
+.popup_main form input[type="submit"]:hover{
+    background-color: #e2c42b;
+    cursor: pointer;
+}

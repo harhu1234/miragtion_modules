@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="klachten_tag_search" model="ir.ui.view">
+        <field name="name">Tag - Search</field>
+        <field name="model">klachten.tag</field>
+        <field name="arch" type="xml">
+            <search string="Tag Search">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="klachten_tag_tree" model="ir.ui.view">
+        <field name="name">klachten.tag.tree</field>
+        <field name="model">klachten.tag</field>
+        <field name="arch" type="xml">
+            <tree string="Tags">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="klachten_tag_form" model="ir.ui.view">
+        <field name="name">klachten.tag.form</field>
+        <field name="model">klachten.tag</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <form string="Tag">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="klachten_tag_action" model="ir.actions.act_window">
+        <field name="name">Tags</field>
+        <field name="res_model">klachten.tag</field>
+        <field name="view_id" ref="klachten.klachten_tag_tree"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to set a new tag in your support pipeline.
+            </p><p>
+            Stages allow support to easily track how a specific ticket
+            is positioned in the support cycle.
+        </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_klachten_tag"
+            name="Tags"
+            sequence="20"
+            action="klachten_tag_action"
+            parent="menu_config"
+            groups="base.group_no_one"/>
+
+</odoo>

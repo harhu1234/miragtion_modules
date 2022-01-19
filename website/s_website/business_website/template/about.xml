@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="about_us_theme" name="About Us">
+	   <t t-call="website.layout">
+	   		<div class="oe_structure oe_empty">
+				<center><h3>About Us...Google</h3></center>
+			</div>
+		</t>
+	</template>
+</odoo>

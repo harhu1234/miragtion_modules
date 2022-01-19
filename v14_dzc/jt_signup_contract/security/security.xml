@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_application_user" model="res.groups">
+        <field name="name">Application User</field>
+        <field name="category_id" ref="base.module_category_extra"/>
+        <field name="comment">The user will be able to read and write own aplication, read own projects and read and
+        write own timesheet.</field>
+    </record>
+
+<!--    <record id="app_user_application_rule" model="ir.rule">-->
+<!--        <field name="name">Application Rule for Applicant User</field>-->
+<!--        <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>-->
+<!--        <field name="domain_force">[('user_id','=',user.id)]</field>-->
+<!--        <field name="groups" eval="[(4, ref('group_application_user'))]"/>-->
+<!--    </record>-->
+
+<!--     <record id="group_all_timesheet" model="res.groups">-->
+<!--        <field name="name">Allow All Timesheet</field>-->
+<!--        <field name="category_id" ref="base.module_category_extra"/>-->
+<!--        <field name="comment">This user can see All Timesheet Menu.</field>-->
+<!--    </record>-->
+
+     <record id="app_user_timesheet_rule" model="ir.rule">
+        <field name="name">Timesheet Rule for Applicant User</field>
+        <field name="model_id" ref="analytic.model_account_analytic_line"/>
+        <field name="domain_force">[('user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_application_user'))]"/>
+    </record>
+
+<!--   <record id="group_allow_discuss_rec_contact_cal_web" model="res.groups">-->
+<!--        <field name="name">Allow Discuss, Contact, Calendar, Website and Recruitment</field>-->
+<!--        <field name="category_id" ref="base.module_category_extra"/>-->
+<!--        <field name="comment">This user can see Discuss, Contact, Calendar, Website and Recruitment Menu.</field>-->
+<!--    </record>-->
+
+    <record id="see_own_employee" model="ir.rule">
+        <field name="name">Own Employee</field>
+        <field ref="hr.model_hr_employee" name="model_id"/>
+        <field name="domain_force">[('user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_application_user'))]"/>
+    </record>
+    
+</odoo>
+        

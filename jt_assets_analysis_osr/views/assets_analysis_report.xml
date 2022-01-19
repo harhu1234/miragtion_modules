@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="assets_analysis_report_menu"
+            name="Assets Analysis"
+            parent="account.account_reports_management_menu"
+            action="action_server_assets_report"
+            sequence="40"
+        />
+    </data>
+</odoo>

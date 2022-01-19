@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets_inherit" inherit_id="website.snippets">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Custom Snippets</div>
+				<div class="o_panel_body">
+                    <t t-snippet="ht_theme_website.custom_snippets" t-thumbnail="/ht_theme_website/static/src/images/about.jpg">
+                    </t>
+                    <t t-snippet="ht_theme_website.custom_snippets_imgg" t-thumbnail="/ht_theme_website/static/src/images/project-1.jpg">
+                    </t>
+                    <t t-snippet="ht_theme_website.custom_snippets_code" t-thumbnail="/ht_theme_website/static/src/images/project-1.jpg">
+                    </t>
+                    <t t-snippet="ht_theme_website.custom_snippets_search_product" t-thumbnail="/ht_theme_website/static/src/images/project-1.jpg">
+                    </t>
+                </div>
+			</div>
+		</xpath>
+	</template>
+	<template id="custom_snippets" name="Custom Snippets">
+		<section>
+			<div class="container">
+				<center>
+					<span>Aashish</span>
+				</center>
+			</div>
+		</section>
+	</template>
+	<template id="custom_snippets_imgg" name="Custom Image">
+		<section>
+			<div class="container">
+				<img src="/ht_theme_website/static/src/images/project-1.jpg"/>
+			</div>
+		</section>
+	</template>
+	<template id="custom_snippets_code" name="Custom Cart Zoom">
+		<style>
+			.zoom {
+					padding: 29px;
+				  	transition: transform .2s;
+				  	width: 200px;
+				  	height: 200px;
+				  	margin: 0 auto;
+				}
+
+			.zoom:hover {
+			  transform: scale(1.1); /* (150% zoom)*/
+			}
+		</style>
+				<section class="container">
+						<div class="row">
+							<div class="col-3">
+								<div class="zoom">
+								<img style="width:100%;height:100%;" src="/ht_theme_website/static/src/images/project-1.jpg"/>
+								</div>
+								<p style="text-align:center">Header</p>
+								<p style="font-size: 14px;text-align:center;">Lorem ipsum dolor sit amet, eam et reque, te est
+                                    audire persius.
+                                </p>
+							</div>
+							<div class="col-3">
+								<div class="zoom">
+								<img style="width:100%;height:100%;" src="/ht_theme_website/static/src/images/project-1.jpg"/></div>
+								<p style="text-align:center">Header</p>
+								<p style="font-size: 14px;text-align:center;">Lorem ipsum dolor sit amet, eam et reque, te est
+                                    audire persius.
+                                </p>
+							</div>
+							<div class="col-3">
+								<div class="zoom">
+								<img style="width:100%;height:100%;" src="/ht_theme_website/static/src/images/project-1.jpg"/></div>
+								<p style="text-align:center">Header</p>
+								<p style="font-size: 14px;text-align:center;">Lorem ipsum dolor sit amet, eam et reque, te est
+                                    audire persius.
+                                </p>
+							</div>
+							<div class="col-3">
+								<div class="zoom">
+								<img style="width:100%;height:100%;" src="/ht_theme_website/static/src/images/project-1.jpg"/></div>
+								<p style="text-align:center">Header</p>
+								<p style="font-size: 14px;text-align:center;">Lorem ipsum dolor sit amet, eam et reque, te est
+                                    audire persius.
+                                </p>
+							</div>
+						</div>
+				</section>
+	</template>
+	<template id="custom_snippets_search_product" name="Custom Search Product">
+		<section>
+			<div class="products_pager form-inline flex-md-nowrap justify-content-between justify-content-md-center">
+                        
+        
+						    	<form method="get" class="o_wsale_products_searchbar_form w-100 w-md-auto mt-2" action="/shop">
+						         <div role="search" class="input-group">
+						            <input type="search" name="search" class="search-query form-control oe_search_box" data-limit="5" data-display-description="true" data-display-price="true" data-display-image="true" placeholder="Search..." value="" autocomplete="off"/>
+						        		<div class="input-group-append">
+						            	<button type="submit" class="btn btn-primary oe_search_button" aria-label="Search" title="Search"><i class="fa fa-search"></i></button>
+						        		</div>
+						    		</div>
+						            <input name="order" type="hidden" class="o_wsale_search_order_by" value=""/>
+						      </form>
+						     </div>
+		</section>
+	</template>
+</odoo>

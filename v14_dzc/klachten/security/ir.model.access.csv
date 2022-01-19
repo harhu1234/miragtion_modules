@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_klachten_ticket_user,klachten.ticket,model_klachten_ticket,,1,1,1,0
+access_klachten_tag_user,klachten.tag.user,model_klachten_tag,,1,1,1,0
+access_klachten_tag_manag,klachten.tag.manager,model_klachten_tag,,1,1,1,1
+access_klachten_ticket_manager,klachten.ticket manager,model_klachten_ticket,,1,1,1,1
+access_klachten_ticket_portal,klachten.ticket portal,model_klachten_ticket,,1,0,0,0
+access_klachten_stage_user,klachten.stage,model_klachten_stage,,1,0,0,0
+access_klachten_stage_manager,klachten.stage manager,model_klachten_stage,,1,1,1,1
+access_klachten_stage_portal,klachten.stage portal,model_klachten_stage,,1,0,0,0
+access_klachten_team_user,klachten.team,model_klachten_team,,1,0,0,0
+access_klachten_team_manager,klachten.team manager,model_klachten_team,,1,1,1,1

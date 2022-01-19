@@ -1,0 +1,172 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* fl_auth_signup
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-25 14:05+0000\n"
+"PO-Revision-Date: 2019-07-25 14:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fl_auth_signup
+#: model:ir.model.fields,field_description:fl_auth_signup.field_res_partner_bank
+#: model:ir.model.fields,field_description:fl_auth_signup.field_res_users_bank
+msgid "Account Number"
+msgstr "Rekeningnummer"
+
+#. module: fl_auth_signup
+#: code:addons/fl_auth_signup/controllers/main.py:71
+#, python-format
+msgid "Another user is already registered using this email address."
+msgstr "Another user is already registered using this email address."
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Bank Account Number"
+msgstr "IBAN Bankrekeningnummer (op dit rekeningnummer storten wij het salaris)"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Nationality"
+msgstr "Nationaliteit"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Sex"
+msgstr "Geslacht"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Male"
+msgstr "Man"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Female"
+msgstr "Vrouw"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Other"
+msgstr "Overige"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "City"
+msgstr "Plaats"
+
+#. module: fl_auth_signup
+#: model:ir.model,name:fl_auth_signup.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: fl_auth_signup
+#: code:addons/fl_auth_signup/controllers/main.py:75
+#, python-format
+msgid "Could not create a new account."
+msgstr "Could not create a new account."
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Country"
+msgstr "Land"
+
+#. module: fl_auth_signup
+#: model:ir.model.fields,field_description:fl_auth_signup.field_res_partner_birthday
+#: model:ir.model.fields,field_description:fl_auth_signup.field_res_users_birthday
+msgid "Date of Birth"
+msgstr "Geboortedatum"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Employee"
+msgstr "Werknemer"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Identification number"
+msgstr "Burger Service Nummer"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Image"
+msgstr "Pasfoto (niet verplicht)"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "For verification we would like to receive a copy of your passport or ID(not mandatory for self-employed persons)"
+msgstr "Ter controle ontvangen wij graag een kopie van je paspoort of ID(niet verplicht voor ZZP'ers)"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Passport Number"
+msgstr "Paspoort Nummer"
+
+#. module: fl_auth_signup
+#: code:addons/fl_auth_signup/controllers/main.py:30
+#, python-format
+msgid "Passwords do not match; please retype them."
+msgstr "Passwords do not match; please retype them."
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Phone"
+msgstr "Mobiel telefoonnummer"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Select"
+msgstr "Select"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Street"
+msgstr "Straat"
+
+#. module: fl_auth_signup
+#: code:addons/fl_auth_signup/controllers/main.py:28
+#, python-format
+msgid "The form was not properly filled in."
+msgstr "The form was not properly filled in."
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Your Birthday"
+msgstr "Geboortedatum"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Zip"
+msgstr "Postcode"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Driving licence Front and Back"
+msgstr "Rijbewijs Voor- en achterkant"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "VOG no older than 3 months"
+msgstr "VOG niet ouder dan 3 maanden"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Car insurance policy sheet"
+msgstr "Polisblad autoverzekering"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Registration to the Chamber of Commerce"
+msgstr "Inschrijving bij de Kamer van Koophandel"
+
+#. module: fl_auth_signup
+#: model:ir.ui.view,arch_db:fl_auth_signup.auth_signup_fields_extend
+msgid "Professional liability insurance policy sheet"
+msgstr "Polisblad beroepsaansprakelijkheidsverzekering"

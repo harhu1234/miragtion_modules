@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <record id="crm_case_form_view_oppor" model="ir.ui.view">
+        <field name="name">crm.lead.form.opportunity</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="after">
+                <field name="place"/>
+                <field name="township"/>
+                <field name="age"/>
+            </xpath>
+            <xpath expr="//label[@for='phone']" position="before">
+                <field name="customer_gender"/>
+                <field name="customer_BSN"/>
+            </xpath>
+<!--             <xpath expr="//notebook/page[@name='extra']/group/group/div" position="after">
+               <field name="register_by"/>
+            </xpath> -->
+            <xpath expr="//notebook/page[@name='lead']/group/group[2]" position="replace">
+                <group>
+                    <field name="contact_email"/>
+                    <field name="contact_phone"/>
+                    <field name="contact_address"/>
+                    <field name="contact_postcode"/>
+                    <field name="contact_residence" />
+                    <field name="contact_location"/>
+                </group>
+            </xpath>
+            <xpath expr="//notebook/page[@name='lead']/group/group[1]/field[@name='website']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[@name='lead']/group/group[1]/field[@name='lang_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[@name='lead']/group/group[3]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[@name='lead']/group/group[@name='Misc']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[@name='lead']/group/group[1]" position="attributes">
+                <attribute name="string"></attribute>
+            </xpath>
+            
+        </field>
+    </record>
+
+    <record id="crm_stage_matrix_form" model="ir.ui.view">
+        <field name="name">crm.stage.form</field>
+        <field name="inherit_id" ref="crm.crm_stage_form"/>
+        <field name="model">crm.stage</field>
+        <field name="arch" type="xml">
+                <xpath expr="//field[@name='fold']" position="after">
+                    <field name="stage_type_action"/>
+                </xpath>
+        </field>
+    </record>
+
+    <record id="add_place_age_tag" model="ir.actions.server">
+        <field name="name">Add tag based on Age and City</field>
+        <field name="model_id" ref="crm.model_crm_lead"/>
+        <field name="binding_model_id" ref="crm.model_crm_lead"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.add_place_age_tag()
+        </field>
+    </record>
+
+    <record id="crm_case_kanban_view_leads_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.kanban.view.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//progressbar[@field='activity_state']" position="before">
+                <field name="age"/>
+                <!-- <field name="coach_id"/> -->
+                <field name="place"/>
+                <field name="township"/>
+                <!-- <field name="preference"/> -->
+                <!-- <field name="is_dutch" /> -->
+                <!-- <field name="other_language"/> -->
+                <!-- <field name="pets"/> -->
+            </xpath>
+            <xpath expr="//kanban/templates/t/div[1]" position="attributes">
+                <attribute name="style">left: 0%; right: 0%;top: 0%; bottom: 0%;
+                                background: #FFFFFF;
+                                border: 1px solid #EDEDED;
+                                box-sizing: border-box;
+                                border-radius: 8px;
+                                width:260px;margin-bottom: 8px;
+                </attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_kanban_content')]/div[1]" position="replace">
+                <div>
+                    <table>
+                        <tr>
+                            <th style="width:40px; font-size:10px;">Klant&amp;nbsp;</th>
+                            <td style="width:70%;">
+                                <strong class="o_kanban_record_title">
+                                    <field name="name"/>
+                                </strong>
+                            </td>
+                            <t t-if="record.age.raw_value"> 
+                                <td style="text-align:right; width:70px;font-size:10px;">
+                                    <b><field name="age"/>&amp;nbsp; Jaar</b>
+                                </td>
+                            </t>
+                        </tr>
+                        
+                    </table>
+                    <table style="color:#808080;margin-top:5px;">
+                        <!-- Dispaly Fase and Totaal -->
+                        <t t-if="record.phase_days.raw_value" >
+                            <tr>
+                                <th style="font-size:10px;width:40px;">Fase 
+                                </th>
+                                <td>:&amp;nbsp;</td>
+                                <td><b><field name="phase_days"/></b>
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-if="record.total_phase_days.raw_value">
+                            <tr>
+                                <th style="font-size:10px;">Totaal  
+                                </th>
+                                <td>:&amp;nbsp;</td>
+                                <td><b><field name="total_phase_days"/></b>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                    <hr style="height:1px;color:#808080;background-color:#808080"/>
+                    <div>
+                        <table>
+                            <tr>
+                                <!-- <t t-if="record.pets.raw_value">
+                                        <td>
+                                            <div style="
+                                                    text-align: center;
+                                                    background: #E4765E;
+                                                    border-radius: 5px;color:white;height: 25px;
+                                                    padding-top: 4px;    
+                                                    margin-right: 3px;
+                                                    padding-right:5px;
+                                                    padding-left:5px;">
+                                                <t t-esc="record.pets.value"/>
+                                            </div>
+                                        </td>
+                                </t> -->
+                                <!-- <t t-if="record.is_dutch.raw_value">
+                                    <td >
+                                        <div style="text-align: center;
+                                                background: #FFAB5F;
+                                                border-radius: 5px;
+                                                color: white;
+                                                height: 25px;
+                                                padding-top: 4px;
+                                                padding-top: 4px;
+                                                padding-right:5px;
+                                                padding-left:5px;">Nederlandstalig
+                                        </div>
+                                    </td>
+                                </t> -->
+
+                                <!-- <t t-elif="record.other_language.raw_value">
+                                    <td >
+                                        <div style="text-align: center;
+                                                background: #FFAB5F;
+                                                border-radius: 5px;
+                                                color: white;
+                                                height: 25px;
+                                                padding-top: 4px;
+                                                padding-right:5px;
+                                                padding-left:5px;">
+                                                <field name="other_language"/>
+                                        </div>
+                                    </td>
+                                </t> -->
+                                <!-- <t t-if="record.preference.raw_value">
+                                    <t t-if="record.preference.raw_value"> 
+                                        <td>
+                                            <div style="
+                                                    text-align: center;
+                                                    height: 25px;
+                                                    background: #9285DE;
+                                                    border-radius: 5px;color:white;
+                                                    margin-left: 3px;
+                                                    padding-top: 4px;
+                                                    padding-left:5px;
+                                                    padding-right:5px;">        
+                                                <t t-esc="record.preference.value"/>
+                                            </div>
+                                        </td>
+                                    </t>
+                                </t> -->
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_kanban_content')]/div[hasclass('o_kanban_record_subtitle')]" position="replace">
+            </xpath>
+            <xpath expr="//div[hasclass('oe_kanban_content')]/div[1]" position="after">
+                <div>
+                    <t t-if="record.place.raw_value">
+                        <div style="height:10px">
+                        </div>
+                        <div>
+                            <table style="width:100%">
+                                <tr>
+                                    <th style="color:#808080;">
+                                        Woonplaats
+                                    </th>
+                                    <td style="text-align:right;">
+                                        <b><field name="place" style="text-align:right;color"/></b>
+                                    </td>
+                                </tr>
+                                <t t-if="record.township.raw_value">
+                                    <tr>
+                                        <th style="color:#808080;">
+                                            Gemeente
+                                        </th>
+                                        <td style="text-align:right;width:128px">
+                                            <b><field name="township"/></b>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                        <div style="height:10px">
+                        </div>
+                    </t>
+                </div>
+            </xpath>
+            <!-- <xpath expr="//div[hasclass('oe_kanban_content')]/div[3]" position="after">
+                <div>
+                    <t t-if="record.tag_ids">
+                        <t t-foreach="record.tag_ids.value" t-as="o"> display 1 to 8 -->
+                        <!-- display only id 
+                        <t t-foreach="record.tag_ids.raw_value" t-as="o">
+                            <span><t t-esc="o"/></span>
+                        </t>
+                    </t>
+                </div> 
+            </xpath> -->
+<!--             <xpath expr="//div[hasclass('oe_kanban_content')]/div[3]" position="after"> 
+                <div style="text-align:left;">
+                    <t t-if="record.coach_id.value">
+                        <div>
+                            <table style="width:100%">
+                                <tr>
+                                    <th style="color:#808080;width:20%"> 
+                                        Coach
+                                    </th>
+                                    <td style="text-align:right">
+                                        <b><t t-esc="record.coach_id.value"/></b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                    <hr style="height:1px;color:#808080;background-color:#808080"/>
+                </div>
+            </xpath> -->
+            <!-- <xpath expr="//div[hasclass('oe_kanban_content')]/div[hasclass('text-muted')]" position="replace">
+            </xpath> -->
+            <xpath expr="//div[hasclass('oe_kanban_bottom_right')]" position="attributes">
+                <!-- <div class="oe_kanban_bottom_right" style="height:30px;">
+                    <img t-att-src="kanban_image('res.users', 'image_small', record.image_1920.raw_value)" t-att-title="record.image_1920.raw_value" class="oe_kanban_avatar" style="width:40px;height:40px;border-radius: 50%;vertical-align: middle;margin-right:-5px;margin-bottom:10px;"/>
+                    
+                </div> -->
+                <attribute name="style">width:40px;height:40px;border-radius: 50%;vertical-align: middle;margin-right:-5px;margin-bottom:10px;</attribute>
+            </xpath>     
+        </field>
+    </record>
+    <record id="crm_case_search_view_oppor1" model="ir.ui.view">
+        <field name="name">crm.lead.form.opportunity1</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="arch" type="xml">
+            <!--Search Lead with place and township  -->
+            <xpath expr="//separator[1]" position="before">
+                <field name="place"/>
+                <field name="township"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

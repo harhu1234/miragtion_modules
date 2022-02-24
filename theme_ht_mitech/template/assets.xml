@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="mitech_assets" name="Theme Management" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Css Styles -->
+		    <!-- <link rel="stylesheet" href="/theme_ht_mitech/static/src/css/bootstrap.min.css" type="text/css"/>-->
+		    <link rel="stylesheet" href="/theme_ht_mitech/static/src/assets/css/vendor/vendor.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_mitech/static/src/assets/css/plugins/plugins.min.css"/>
+		    <!-- Main Style CSS -->
+		    <link rel="stylesheet" href="/theme_ht_mitech/static/src/assets/css/style.css"/>
+			
+		    
+
+			<!-- Js Plugins -->
+		  	<script src="/theme_ht_mitech/static/src/assets/js/jquery-migrate-3.0.1.min.js"></script>
+			<!-- Modernizer JS -->
+		    <script src="/theme_ht_mitech/static/src/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+		    <!-- jQuery JS -->
+		    <script src="/theme_ht_mitech/static/src/assets/js/plugins/plugins.min.js"></script>
+		    <!-- Main JS -->
+		    <script src="/theme_ht_mitech/static/src/assets/js/main.js"></script>
+
+			
+		</xpath>
+	</template>
+</odoo>

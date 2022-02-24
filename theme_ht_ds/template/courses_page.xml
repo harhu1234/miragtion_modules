@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="courses_page" name="Courses Page">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty">
+				<!-- Breadcrumb Begin -->
+			    <div class="breadcrumb-option">
+			        <div class="container">
+			            <div class="row">
+			                <div class="col-lg-12">
+			                    <div class="breadcrumb__links">
+			                        <a href="/"><i class="fa fa-home"></i> Home</a>
+			                        <span>Courses</span>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <!-- Breadcrumb End -->
+
+			    <!-- Application Form Section Begin -->
+			    <section class="application-form courses--page spad">
+			        <div class="container">
+			            <div class="application__form__content">
+			                <div class="row">
+			                    <div class="col-lg-12">
+			                        <div class="section-title center-title">
+			                            <span>Giving Best Options For You</span>
+			                            <h2>Application Form</h2>
+			                        </div>
+			                    </div>
+			                </div>
+			                <form action="#">
+			                    <div class="row">
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" placeholder="Your name"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" placeholder="Your Email"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" placeholder="Your Phone"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" class="datepicker_pop" placeholder="Date &amp; time"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <select>
+			                                <option value="">Courses type</option>
+			                                <option value="">Safe Driving Courses</option>
+			                                <option value="">Motorhome Drivers</option>
+			                            </select>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <select>
+			                                <option value="">Car type</option>
+			                                <option value="">Hatchback</option>
+			                                <option value="">Sedan</option>
+			                                <option value="">Crossover</option>
+			                            </select>
+			                        </div>
+			                        <div class="col-lg-12 text-center">
+			                            <button type="submit" class="site-btn second-bg">SEND INQUIRY</button>
+			                        </div>
+			                    </div>
+			                </form>
+			            </div>
+			        </div>
+			    </section>
+			    <!-- Application Form Section End -->
+
+			    <!-- Courses Section Begin -->
+			    <section class="courses spad">
+			        <div class="container">
+			            <div class="row">
+			                <div class="col-lg-7 col-md-7 col-sm-7">
+			                    <div class="section-title">
+			                        <span>Our Great Team</span>
+			                        <h2>Our Instructors</h2>
+			                    </div>
+			                </div>
+			                <div class="col-lg-5 col-md-5 col-sm-5">
+			                    <div class="courses__all">
+			                        <a href="#" class="primary-btn second-bg">View all</a>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-lg-4 col-md-4 col-sm-6">
+			                    <div class="course__item">
+			                        <img src="/theme_ht_ds/static/src/img/courses/course-1.jpg" alt=""/>
+			                        <h5>Winter driving</h5>
+			                        <h4>$ 119</h4>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+			                            lacus.</p>
+			                        <a href="#">View detail</a>
+			                    </div>
+			                </div>
+			                <div class="col-lg-4 col-md-4 col-sm-6">
+			                    <div class="course__item">
+			                        <img src="/theme_ht_ds/static/src/img/courses/course-2.jpg" alt=""/>
+			                        <h5>Program for seniors</h5>
+			                        <h4>$ 119</h4>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+			                            lacus.</p>
+			                        <a href="#">View detail</a>
+			                    </div>
+			                </div>
+			                <div class="col-lg-4 col-md-4 col-sm-6">
+			                    <div class="course__item">
+			                        <img src="/theme_ht_ds/static/src/img/courses/course-3.jpg" alt=""/>
+			                        <h5>Adult in car lesons</h5>
+			                        <h4>$ 119</h4>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+			                            lacus.</p>
+			                        <a href="#">View detail</a>
+			                    </div>
+			                </div>
+			                <div class="col-lg-4 col-md-4 col-sm-6">
+			                    <div class="course__item">
+			                        <img src="/theme_ht_ds/static/src/img/courses/course-4.jpg" alt=""/>
+			                        <h5>Teen driver education</h5>
+			                        <h4>$ 119</h4>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+			                            lacus.</p>
+			                        <a href="#">View detail</a>
+			                    </div>
+			                </div>
+			                <div class="col-lg-4 col-md-4 col-sm-6">
+			                    <div class="course__item">
+			                        <img src="/theme_ht_ds/static/src/img/courses/course-5.jpg" alt=""/>
+			                        <h5>Defensive Driving</h5>
+			                        <h4>$ 119</h4>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+			                            lacus.</p>
+			                        <a href="#">View detail</a>
+			                    </div>
+			                </div>
+			                <div class="col-lg-4 col-md-4 col-sm-6">
+			                    <div class="course__item">
+			                        <img src="/theme_ht_ds/static/src/img/courses/course-6.jpg" alt=""/>
+			                        <h5>Stick shit lessons</h5>
+			                        <h4>$ 119</h4>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+			                            lacus.</p>
+			                        <a href="#">View detail</a>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </section>
+			    <!-- Courses Section End -->
+			</div>
+		</t>
+	</template>
+</odoo>

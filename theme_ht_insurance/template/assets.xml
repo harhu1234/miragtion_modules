@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="finance_assets" name="Theme Management" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Css Styles -->
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/fonts/icomoon/style.css"/>
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/bootstrap.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/magnific-popup.css"/>
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/jquery-ui.css"/>
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/owl.carousel.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/owl.theme.default.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/bootstrap-datepicker.css"/>
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/animate.css"/>
+		    
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/fonts/flaticon/font/flaticon.css"/>
+		  
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/aos.css"/>
+
+		    <link rel="stylesheet" href="/theme_ht_insurance/static/src/css/style.css"/>
+
+			<!-- Js Plugins -->
+		  	<!-- <script src="/theme_ht_insurance/static/src/js/jquery-3.3.1.min.js"></script> -->
+		  <script src="/theme_ht_insurance/static/src/js/jquery-migrate-3.0.1.min.js"></script>
+		  <!-- <script src="/theme_ht_insurance/static/src/js/jquery-ui.js"></script> -->
+		  <script src="/theme_ht_insurance/static/src/js/popper.min.js"></script>
+		  <script src="/theme_ht_insurance/static/src/js/bootstrap.min.js"></script>
+		  <script src="/theme_ht_insurance/static/src/js/owl.carousel.min.js"></script>
+		  <script src="/theme_ht_insurance/static/src/js/jquery.stellar.min.js"></script>
+		  <script src="/theme_ht_insurance/static/src/js/jquery.countdown.min.js"></script>
+		  <script src="/theme_ht_insurance/static/src/js/jquery.magnific-popup.min.js"></script>
+		  <script src="/theme_ht_insurance/static/src/js/bootstrap-datepicker.min.js"></script>
+		  <script src="/theme_ht_insurance/static/src/js/aos.js"></script>
+
+		  <script src="/theme_ht_insurance/static/src/js/main.js"></script>
+		</xpath>
+	</template>
+</odoo>

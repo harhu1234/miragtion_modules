@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="pricing_page" name="Pricing Page">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty">
+				<!-- Breadcrumb Begin -->
+			    <div class="breadcrumb-option">
+			        <div class="container">
+			            <div class="row">
+			                <div class="col-lg-12">
+			                    <div class="breadcrumb__links">
+			                        <a href="/"><i class="fa fa-home"></i> Home</a>
+			                        <a href="#">Pages</a>
+			                        <span>Pricing</span>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <!-- Breadcrumb End -->
+
+			    <!-- Pricing Section Begin -->
+			    <section class="pricing pricing--page spad">
+			        <div class="container">
+			            <div class="row">
+			                <div class="col-lg-12">
+			                    <div class="section-title center-title">
+			                        <span>Get Special Offer</span>
+			                        <h2>Our Pricing</h2>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-lg-4 col-md-6 col-sm-6">
+			                    <div class="pricing__item">
+			                        <div class="pricing__item__title">
+			                            <span>20% off</span>
+			                            <h2>$ 199</h2>
+			                            <h5>Personal Driving</h5>
+			                        </div>
+			                        <ul>
+			                            <li>Full course theory</li>
+			                            <li>Full driving course</li>
+			                            <li>Training in first aid</li>
+			                            <li>Practical sessions</li>
+			                            <li>Psychological support</li>
+			                        </ul>
+			                        <a href="#" class="primary-btn second-bg">get Started</a>
+			                    </div>
+			                </div>
+			                <div class="col-lg-4 col-md-6 col-sm-6">
+			                    <div class="pricing__item">
+			                        <div class="pricing__item__title">
+			                            <span>20% off</span>
+			                            <h2>$ 379</h2>
+			                            <h5>Power Booster</h5>
+			                        </div>
+			                        <ul>
+			                            <li>Full course theory</li>
+			                            <li>Full driving course</li>
+			                            <li>Training in first aid</li>
+			                            <li>Practical sessions</li>
+			                            <li>Psychological support</li>
+			                        </ul>
+			                        <a href="#" class="primary-btn second-bg">get Started</a>
+			                    </div>
+			                </div>
+			                <div class="col-lg-4 col-md-6 col-sm-6">
+			                    <div class="pricing__item">
+			                        <div class="pricing__item__title">
+			                            <span>20% off</span>
+			                            <h2>$ 259</h2>
+			                            <h5>Freight Driving</h5>
+			                        </div>
+			                        <ul>
+			                            <li>Full course theory</li>
+			                            <li>Full driving course</li>
+			                            <li>Training in first aid</li>
+			                            <li>Practical sessions</li>
+			                            <li>Psychological support</li>
+			                        </ul>
+			                        <a href="#" class="primary-btn second-bg">get Started</a>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </section>
+			    <!-- Pricing Section End -->
+
+			    <!-- Application Form Section Begin -->
+			    <section class="application-form pricing--page spad">
+			        <div class="container">
+			            <div class="application__form__content">
+			                <div class="row">
+			                    <div class="col-lg-12">
+			                        <div class="section-title center-title">
+			                            <span>Giving Best Options For You</span>
+			                            <h2>Application Form</h2>
+			                        </div>
+			                    </div>
+			                </div>
+			                <form action="#">
+			                    <div class="row">
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" placeholder="Your name"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" placeholder="Your Email"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" placeholder="Your Phone"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <input type="text" class="datepicker_pop" placeholder="Date &amp; time"/>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <select>
+			                                <option value="">Courses type</option>
+			                                <option value="">Safe Driving Courses</option>
+			                                <option value="">Motorhome Drivers</option>
+			                            </select>
+			                        </div>
+			                        <div class="col-lg-4 col-md-4 col-sm-6">
+			                            <select>
+			                                <option value="">Car type</option>
+			                                <option value="">Hatchback</option>
+			                                <option value="">Sedan</option>
+			                                <option value="">Crossover</option>
+			                            </select>
+			                        </div>
+			                        <div class="col-lg-12 text-center">
+			                            <button type="submit" class="site-btn second-bg">SEND INQUIRY</button>
+			                        </div>
+			                    </div>
+			                </form>
+			            </div>
+			        </div>
+			    </section>
+			    <!-- Application Form Section End -->
+			</div>
+		</t>
+	</template>
+</odoo>

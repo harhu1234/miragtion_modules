@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="contact_page" name="Contact Page">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty">
+               
+                    <!-- breadcrumb-area start -->
+                    <section class="breadcrumb-area" style="background-image: url(/theme_ht_mitech/static/src/assets/images/bg/title-bar-01-bg.webp);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="breadcrumb_box text-center">
+                                        <h2 class="breadcrumb-title">Contact us</h2>
+                                        <!-- breadcrumb-list start -->
+                                        <ul class="breadcrumb-list">
+                                            <li class="breadcrumb-item"><a href="mitech/index.html">Home</a></li>
+                                            <li class="breadcrumb-item active">Contact us </li>
+                                        </ul>
+                                        <!-- breadcrumb-list end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- breadcrumb-area end -->
+            
+                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                    <!--====================  Conact us Section Start ====================-->
+                    <div class="contact-us-section-wrappaer section-space--pt_100 section-space--pb_70">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-lg-6">
+                                    <div class="conact-us-wrap-one mb-30">
+                                        <h3 class="heading">To make requests for <br/>further information, <br/><span class="text-color-primary">contact us</span> via our social channels. </h3>
+                                        <div class="sub-heading">We just need a couple of hours! <br/> No more than 2 working days since receiving your issue ticket.</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-lg-6">
+                                    <div class="contact-form-wrap">
+                                        <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required contact-form" data-mark="*" data-editable-form="false">
+                                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label  s_website_form_label"  for="opportunity1">
+                                                            <!-- <span class="s_website_form_label_content">Your Name</span>
+                                                            <span class="s_website_form_mark"> *</span> -->
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required="" placeholder="Your Name *" style="color: #000;border-color: #f8f8f8;background-color: #f8f8f8;font-size: 15px;font-weight: 400;letter-spacing: 0em;border: none;width: 100%;outline: none;border: 1px solid #eee;border-top-color: transparent;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;border-radius: 5px;padding: 3px 20px;height: 56px;"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label  s_website_form_label"  for="opportunity2">
+                                                            <!-- <span class="s_website_form_label_content">Phone Number</span> -->
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" placeholder="Phone Number" style="color: #000;border-color: #f8f8f8;background-color: #f8f8f8;font-size: 15px;font-weight: 400;letter-spacing: 0em;border: none;width: 100%;outline: none;border: 1px solid #eee;border-top-color: transparent;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;border-radius: 5px;padding: 3px 20px;height: 56px;"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label  s_website_form_label"  for="opportunity3">
+                                                            <!-- <span class="s_website_form_label_content">Email</span>
+                                                            <span class="s_website_form_mark"> *</span> -->
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" placeholder="Email *" style="color: #000;border-color: #f8f8f8;background-color: #f8f8f8;font-size: 15px;font-weight: 400;letter-spacing: 0em;border: none;width: 100%;outline: none;border: 1px solid #eee;border-top-color: transparent;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;border-radius: 5px;padding: 3px 20px;height: 56px;"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label  s_website_form_label"  for="opportunity4">
+                                                            <!-- <span class="s_website_form_label_content">Your Company</span> -->
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" placeholder="Your Company" style="color: #000;border-color: #f8f8f8;background-color: #f8f8f8;font-size: 15px;font-weight: 400;letter-spacing: 0em;border: none;width: 100%;outline: none;border: 1px solid #eee;border-top-color: transparent;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;border-radius: 5px;padding: 3px 20px;height: 56px;"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label  s_website_form_label"  for="opportunity5">
+                                                            <!-- <span class="s_website_form_label_content">Subject</span> -->
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" placeholder="Subject" style="color: #000;border-color: #f8f8f8;background-color: #f8f8f8;font-size: 15px;font-weight: 400;letter-spacing: 0em;border: none;width: 100%;outline: none;border: 1px solid #eee;border-top-color: transparent;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;border-radius: 5px;padding: 3px 20px;height: 56px;"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label  s_website_form_label"  for="opportunity6">
+                                                            <!-- <span class="s_website_form_label_content">Your Question</span>
+                                                            <span class="s_website_form_mark"> *</span> -->
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required="" placeholder="Your Question *" style="color: #000;border-color: #f8f8f8;background-color: #f8f8f8;font-size: 15px;font-weight: 400;letter-spacing: 0em;border: none;width: 100%;outline: none;border: 1px solid #eee;border-top-color: transparent;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;border-radius: 5px;padding: 3px 20px;height: 56px;"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                                    <div style="width: 200px;" class="s_website_form_label"/>
+                                                    <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                                    <span id="s_website_form_result"></span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====================  Conact us Section End  ====================-->
+                </section>
+                
+                <section>
+                    <!--========== Call to Action Area Start ============-->
+                    <div class="cta-image-area_one section-space--ptb_80 cta-bg-image_two">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-xl-8 col-lg-7">
+                                    <div class="cta-content md-text-center">
+                                        <h3 class="heading">We run all kinds of IT services that vow your <span class="text-color-primary"> success</span></h3>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-5">
+                                    <div class="cta-button-group--two text-center">
+                                        <a href="#" class="btn btn--white btn-one"><span class="btn-icon me-2"><i class="far fa-comment-alt-dots"></i></span> Let's talk</a>
+                                        <a href="#" class="btn btn--secondary btn-two "><span class="btn-icon me-2"><i class="far fa-info-circle"></i></span> Get info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--========== Call to Action Area End ============-->
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

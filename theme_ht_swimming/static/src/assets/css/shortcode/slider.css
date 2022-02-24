@@ -1,0 +1,184 @@
+/* -----------------------------------
+Template Name: Swimmer-Swimming School HTML Template
+Template URI: www.bootitems.com
+Description: This is a multipurpose html5 template
+Author URI: www.bootitems.com
+Version: 1.0  
+
+NOTE: This is Slider style file. All Slider related style included in this file.
+-----------------------------------------------------------------------------------
+CSS INDEX
+===================
+   1. Default Slider Settings
+--------------------------------------*/
+/*===========================================
+   1. Default Slider Settings
+=============================================*/
+
+.owl-item{width: 34%}
+#slider-container .owl-wrapper-outer,
+#slider-container .owl-wrapper,
+#slider-container .owl-item{
+	position: relative;
+	width: 100%;
+}
+.single-slide {
+	position: relative;
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat; 
+    background-attachment: scroll; 
+    background-position: top center; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.single-slide:after {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+}
+.single-slide > a {
+	display: block;
+	position: relative;
+}
+.single-slide img {
+	width: 100%;
+	z-index: 1;
+}
+/* Slider Content Style */
+.slider-content, .home-banner-content, .fixed-content {
+    position: relative;
+    z-index: 20;
+}
+.slide-content h3 {
+	font-size: 30px;
+	line-height: 30px;
+	position:relative;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 3px;
+    color: #fff;
+    text-transform: lowercase;
+}
+.slide-content h1, .home-banner-content h1 {
+	font-size: 40px;
+	line-height: 70px;
+	position:relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+.slide-content p {
+	font-size: 14px;
+	line-height: 20px;
+	position:relative;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+.slide-content .btn, .read-more {
+    color: #fff;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 9px 30px 9px;
+    border-radius: 0px;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: relative;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.slide-content .btn::before {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  z-index: 1;
+}
+.slide-content .btn::after {
+  background-color: rgba(255, 255, 255, 0.25);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5, 0.5);
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  z-index: 1;
+}
+.slide-content .btn:hover::before {
+  opacity: 0;
+  transform: scale(1.2, 1.2);
+}
+.slide-content .btn:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.hs-item .hs-content * {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+/* Default Slider Animations */
+.owl-item.active .slide-content h3{
+       animation-delay: .5s;
+    animation-name: fadeInUp;
+}
+.owl-item.active .slide-content h1, .home-banner-content h1{
+         animation-delay: 1s;
+    animation-name: fadeInUp;
+}
+.owl-item.active .slider-content p{
+        animation-delay: 1.8s;
+    animation-name: fadeInUp;
+}
+.owl-item.active .slider-content a.btn, .home-banner-content a.btn{
+    animation-delay: 2s;
+    animation-name: fadeInUp;
+}
+.swimmer-owl-slider .owl-nav{
+
+}
+.swimmer-owl-slider .owl-nav button{
+    background: #fff !important;
+    color: #0148BC !important;
+    font-size: 30px !important;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    line-height: 43px !important;
+    z-index: 999;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    outline-style: none;
+}
+.swimmer-owl-slider .owl-prev{
+    left: -43px;
+}
+.swimmer-owl-slider .owl-next{
+    right: -43px;
+}
+.swimmer-owl-slider:hover .owl-prev{
+    left: 0px;
+}
+.swimmer-owl-slider:hover .owl-next{
+    right: 0px;
+}

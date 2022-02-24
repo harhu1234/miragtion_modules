@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="visa_assets" name="Theme Management" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Icon Font CSS -->
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/font-awesome.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/material-design-iconic-font.min.css"/>
+		    <!-- Plugins CSS -->
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/bootstrap.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/plugins/animate.css"/>
+		    <!-- <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/plugins/jquery-ui.min.css"/> -->
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/plugins/magnific-popup.css"/>
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/plugins/owl.carousel.css"/>
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/plugins/slick.css"/>
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/plugins/odometer.min.css"/>
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/shortcode/shortcodes.css"/>
+		    <!-- Main Style CSS -->
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/style.css"/>
+		    <link rel="stylesheet" href="/theme_ht_swimming/static/src/assets/css/responsive.css"/>
+		    
+
+			<!-- Js Plugins -->
+
+
+			<!-- Modernizer & jQuery JS -->
+		    <script src="/theme_ht_swimming/static/src/assets/js/jquery-migrate-3.0.1.min.js"></script>
+		    <!-- <script src="/theme_ht_swimming/static/src/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
+		    <!-- <script src="/theme_ht_swimming/static/src/assets/js/vendor/jquery-3.6.0.min.js"></script> -->
+		    <!-- Bootstrap JS -->
+		    <script src="/theme_ht_swimming/static/src/assets/js/popper.min.js"></script>
+		    <!-- <script src="/theme_ht_swimming/static/src/assets/js/bootstrap.min.js"></script> -->
+		    <!-- Plugins JS -->
+		    <script src="/theme_ht_swimming/static/src/assets/js/owl.carousel.min.js"></script>
+		    <script src="/theme_ht_swimming/static/src/assets/js/isotope.pkgd.min.js"></script>
+		    <script src="/theme_ht_swimming/static/src/assets/js/imagesloaded.pkgd.min.js"></script>
+		    <!-- <script src="/theme_ht_swimming/static/src/assets/js/ajax-mail.js"></script> -->
+		    <script src="/theme_ht_swimming/static/src/assets/js/jquery.ajaxchimp.min.js"></script>
+		    <script src="/theme_ht_swimming/static/src/assets/js/plugins.js"></script>
+		    <script src="/theme_ht_swimming/static/src/assets/js/jquery.magnific-popup.js"></script>
+		    <script src="/theme_ht_swimming/static/src/assets/js/slick.min.js"></script>
+		    <script src="/theme_ht_swimming/static/src/assets/js/odometer.min.js"></script>
+		    <!-- Main JS -->
+		    <script src="/theme_ht_swimming/static/src/assets/js/main.js"></script>
+			
+		</xpath>
+	</template>
+</odoo>

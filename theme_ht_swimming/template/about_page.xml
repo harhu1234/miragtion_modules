@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="about_page" name="About Page">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty">
+				<section>
+					<!-- Start Banner Area-->
+		            <div class="banner-area text-center">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-12">
+		                            <div class="banner-content-wrapper">
+		                                <div class="banner-content">
+		                                    <h2>About Us</h2>
+		                                    <div class="banner-breadcrumb">
+		                                        <ul>
+		                                            <li><a href="/">home </a> <i class="zmdi zmdi-chevron-right"></i>
+		                                            </li>
+		                                            <li>about us</li>
+		                                        </ul>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End Banner Area-->
+				</section>
+				<section>
+					<!-- Start of About Area -->
+		            <div class="about-area pt-75 pb-75 text-center">
+		                <div class="container">
+		                    <div class="row justify-content-center">
+		                        <div class="col-lg-6">
+		                            <div class="section-title text-center">
+		                                <h2>about us</h2>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+		                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="row">
+		                        <div class="col-12">
+		                            <div class="about-content">
+		                                <img src="/theme_ht_swimming/static/src/assets/images/about/1.webp" alt="about"/>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+		                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+		                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+		                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+		                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+		                                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+		                                    sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+		                                    ab illo inventore veritatis et qua</p>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of Instructor Area -->
+				</section>
+				<section>
+					<!-- Start of Welcome Area -->
+		            <div class="welcome-area">
+		                <div class="container">
+		                    <div class="row justify-content-center">
+		                        <div class="col-lg-8">
+		                            <div class="welcome-content text-center">
+		                                <img src="/theme_ht_swimming/static/src/assets/images/logo/1.webp" alt="logo"/>
+		                                <h2>Welcome to our swimmer</h2>
+		                                <h3>book an appointment now</h3>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+		                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+		                                    exercitation ullamco lenderit in voluptate </p>
+		                                <a href="#" class="read-more btn"><span>register now</span></a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of Welcome Area -->
+				</section>
+				<section>
+					<!-- Start of touch Area -->
+		            <div class="touch-area pt-80">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="contact-left-wrapper">
+		                            <div class="contact-left text-center">
+		                                <h2>Ask us to know all info</h2>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+		                                    incididunt ut labore et dolore magna aliqua. </p>
+		                            </div>
+		                        </div>
+		                        <div class="contact-right">
+		                            <h3 class="text-center">always keep us in your prayer</h3>
+		                            <form id="contact-form" action="#" method="post">
+		                                <div class="row">
+		                                    <div class="col-lg-6">
+		                                        <div class="form-box mb-20">
+		                                            <input type="text" name="name" placeholder="First Name"/>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-lg-6 mb-20">
+		                                        <div class="form-box">
+		                                            <input type="text" name="name" placeholder="Last Name"/>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="row">
+		                                    <div class="col-lg-6 mb-20">
+		                                        <div class="form-box">
+		                                            <input type="email" name="email" placeholder="Email Address"/>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-lg-6 mb-20">
+		                                        <div class="form-box">
+		                                            <input type="text" name="phone" placeholder="Phone"/>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="row">
+		                                    <div class="col-12">
+		                                        <div class="form-box mb-20">
+		                                            <input type="text" name="subject" placeholder="Subject"/>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="row">
+		                                    <div class="col-12">
+		                                        <div class="form-box">
+		                                            <textarea name="message" placeholder="Message"></textarea>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="row">
+		                                    <div class="col-12">
+		                                        <div class="form-box">
+		                                            <button type="submit" class="default-button submit-btn">Submit Now</button>
+		                                            <p class="form-messege"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of touch Area -->
+				</section>
+				<section>
+					<!-- start of fun Area -->
+		            <div class="fun-area mt-85 pt-110 pb-110">
+		                <div class="container">
+		                    <div class="row g-4">
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/1.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="2400">2400</h3>
+		                                    <h5>happy clients</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/2.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="28">28</h3>
+		                                    <h5>experience</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/3.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="90">90</h3>
+		                                    <h5>success</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/4.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="560">560</h3>
+		                                    <h5>awards</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of fun Area -->
+				</section>
+				<section>
+					<!-- Start of contact Area -->
+		            <div class="contact-area text-center pb-80 pt-80">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-home"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>Address</h5>
+		                                    <p>Elizabeth Tower, 6th Floor<br/> Medtown, New York</p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-phone"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>phone number</h5>
+		                                    <p>0123456789<br/>
+		                                        0123456789</p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-email"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>email</h5>
+		                                    <p>demo@example.com<br/>
+		                                        demo@example.com </p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of contact Area -->
+				</section>
+			</div>
+		</t>
+	</template>
+</odoo>

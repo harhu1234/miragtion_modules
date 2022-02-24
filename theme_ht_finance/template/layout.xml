@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="theme_loan_layout" name="Harhu Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <header>
+                <!-- Header Start -->
+                <div class="wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bg-wrap">
+                                    <div class="row">
+                                        <div class="col-md-6 d-flex align-items-center">
+                                            <p class="mb-0 phone pl-md-2">
+                                                <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a> 
+                                                <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-md-end">
+                                            <div class="social-media">
+                                            <p class="mb-0 d-flex">
+                                                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                                                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                                                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                                                <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                                            </p>
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">Accounting</a>
+                        <form action="#" class="searchform order-sm-start order-lg-last">
+                      <div class="form-group d-flex">
+                        <input type="text" class="form-control pl-3" placeholder="Search"/>
+                        <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+                      </div>
+                    </form>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars"></span> Menu
+                      </button>
+                      <div class="collapse navbar-collapse" id="ftco-nav">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
+                          <li class="nav-item"><a href="/cases" class="nav-link">Case Study</a></li>
+                          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                <!-- END nav -->
+                <!-- Header End -->
+            </header>
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <footer class="footer">
+                <div class="container-fluid px-lg-5">
+                    <div class="row">
+                        <div class="col-md-9 py-5">
+                            <div class="row">
+                                <div class="col-md-4 mb-md-0 mb-4">
+                                    <h2 class="footer-heading">About us</h2>
+                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                                    <ul class="ftco-footer-social p-0">
+                          <li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+                          <li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+                          <li><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-12 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-md-4 mb-md-0 mb-4">
+                                                    <h2 class="footer-heading">Services</h2>
+                                                    <ul class="list-unstyled">
+                                          <li><a href="#" class="py-1 d-block">Market Analysis</a></li>
+                                          <li><a href="#" class="py-1 d-block">Accounting Advisor</a></li>
+                                          <li><a href="#" class="py-1 d-block">General Consultancy</a></li>
+                                          <li><a href="#" class="py-1 d-block">Structured Assestment</a></li>
+                                        </ul>
+                                                </div>
+                                                <div class="col-md-4 mb-md-0 mb-4">
+                                                    <h2 class="footer-heading">Discover</h2>
+                                                    <ul class="list-unstyled">
+                                          <li><a href="#" class="py-1 d-block">About us</a></li>
+                                          <li><a href="#" class="py-1 d-block">Contract us</a></li>
+                                          <li><a href="#" class="py-1 d-block">Terms &amp; Conditions</a></li>
+                                          <li><a href="#" class="py-1 d-block">Policies</a></li>
+                                        </ul>
+                                                </div>
+                                                <div class="col-md-4 mb-md-0 mb-4">
+                                                    <h2 class="footer-heading">Resources</h2>
+                                                    <ul class="list-unstyled">
+                                          <li><a href="#" class="py-1 d-block">Security</a></li>
+                                          <li><a href="#" class="py-1 d-block">Global</a></li>
+                                          <li><a href="#" class="py-1 d-block">Charts</a></li>
+                                          <li><a href="#" class="py-1 d-block">Privacy</a></li>
+                                        </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-md-5">
+                                <div class="col-md-12">
+                                    <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          Copyright &amp;copy<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">harhu.com</a>
+                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+                            <h2 class="footer-heading">Free consultation</h2>
+                        <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                            <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required form-consultation" data-mark="*" data-editable-form="false">
+                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                    <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label s_website_form_label" for="opportunity1">
+                                                <!-- <span class="s_website_form_label_content">Your Name</span>
+                                                <span class="s_website_form_mark"> *</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required="" placeholder="Your Name *"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label s_website_form_label" for="opportunity2">
+                                                <!-- <span class="s_website_form_label_content">Phone Number</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" placeholder="Phone Number"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label s_website_form_label" for="opportunity3">
+                                                <!-- <span class="s_website_form_label_content">Email</span>
+                                                <span class="s_website_form_mark"> *</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" placeholder="Email *"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label s_website_form_label" for="opportunity4">
+                                                <!-- <span class="s_website_form_label_content">Your Company</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" placeholder="Your Company"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label s_website_form_label" for="opportunity5">
+                                                <!-- <span class="s_website_form_label_content">Subject</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" placeholder="Subject"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label s_website_form_label" for="opportunity6">
+                                                <!-- <span class="s_website_form_label_content">Your Question</span> -->
+                                                <!-- <span class="s_website_form_mark"> *</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required="" placeholder="Your Question *"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                        <div class="s_website_form_label"/>
+                                        <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Send Message</a>
+                                        <span id="s_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="instructor_page" name="Instructor Page">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty">
+				<section>
+					<!-- Start Banner Area-->
+		            <div class="banner-area text-center">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-12">
+		                            <div class="banner-content-wrapper">
+		                                <div class="banner-content">
+		                                    <h2>Instructor</h2>
+		                                    <div class="banner-breadcrumb">
+		                                        <ul>
+		                                            <li><a href="/">home </a> <i class="zmdi zmdi-chevron-right"></i>
+		                                            </li>
+		                                            <li>Instructor</li>
+		                                        </ul>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End Banner Area-->
+				</section>
+				<section>
+                        <!-- Start of Instructor Area -->
+                        <div class="instructor-area bg-gray pt-76 pb-80">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="section-title text-center">
+                                            <h2>our best instructor</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="s_three_columns pt32 pb32" data-vcss="001">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-stretch">
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top" src="/theme_ht_swimming/static/src/assets/images/insturctor/2.webp" alt=""/>
+                                                    <div class="card-body" style="background-color: #EA4335 !important;">
+                                                        <h3 class="card-title" style="color:white;">Feature One</h3>
+                                                        <p class="card-text" style="color:white;">Adapt these three columns to fit your design need. To duplicate, delete or move columns, select the column and use the top icons to perform your action.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top" src="/theme_ht_swimming/static/src/assets/images/insturctor/3.webp" alt=""/>
+                                                    <div class="card-body" style="background-color: #0148bc !important;">
+                                                        <h3 class="card-title" style="color:white;">Feature Two</h3>
+                                                        <p class="card-text" style="color:white;">To add a fourth column, reduce the size of these three columns using the right icon of each block. Then, duplicate one of the columns to create a new one as a copy.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                                <div class="card bg-white h-100">
+                                                    <img class="card-img-top" src="/theme_ht_swimming/static/src/assets/images/insturctor/1.webp" alt=""/>
+                                                    <div class="card-body" style="background-color: #42a5f5 !important;">
+                                                        <h3 class="card-title" style="color:white;">Feature Three</h3>
+                                                        <p class="card-text" style="color:white;">Delete the above image or replace it with a picture that illustrates your message. Click on the picture to change its <em>rounded corner</em> style.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- End of Instructor Area -->
+                    </section>
+				<section>
+					<!-- Start of Welcome Area -->
+		            <div class="welcome-area">
+		                <div class="container">
+		                    <div class="row justify-content-center">
+		                        <div class="col-lg-8">
+		                            <div class="welcome-content text-center">
+		                                <img src="/theme_ht_swimming/static/src/assets/images/logo/1.webp" alt="logo"/>
+		                                <h2>Welcome to our swimmer</h2>
+		                                <h3>book a appointment now</h3>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+		                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+		                                    exercitation ullamco lenderit in voluptate </p>
+		                                <a href="#" class="read-more btn"><span>register now</span></a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of Welcome Area -->
+				</section>
+				<section>
+					<!-- Start of Newsletter Area -->
+		            <div class="newsletter-area mt-80 mb-80">
+		                <div class="container">
+		                    <div class="row justify-content-center">
+		                        <div class="col-lg-6 col-md-10">
+		                            <div class="news-content text-center">
+		                                <h2>News letter signup</h2>
+		                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+		                                <form action="#" id="mc-form" class="mc-form fix">
+		                                    <div class="subscribe-form">
+		                                        <input id="mc-email" type="email" name="email" placeholder="Enter Your Email"/>
+		                                        <button id="mc-submit" type="submit">subscribe <i
+		                                                class="zmdi zmdi-mail-send"></i></button>
+		                                    </div>
+		                                </form>
+		                                <!-- mailchimp-alerts Start -->
+		                                <div class="mailchimp-alerts text-centre fix text-small">
+		                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+		                                    <div class="mailchimp-success"></div>
+		                                    <!-- mailchimp-success end -->
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of Newsletter Area -->
+				</section>
+				<section>
+					<!-- start of fun Area -->
+		            <div class="fun-area mt-85 pt-110 pb-110">
+		                <div class="container">
+		                    <div class="row g-4">
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/1.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="2400">2400</h3>
+		                                    <h5>happy clients</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/2.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="28">28</h3>
+		                                    <h5>experience</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/3.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="90">90</h3>
+		                                    <h5>success</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-3 col-sm-6">
+		                            <div class="single-fun text-center">
+		                                <div class="fun-img">
+		                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/4.webp" alt="fun"/></span>
+		                                </div>
+		                                <div class="fun-content">
+		                                    <h3 class="counter odometer" data-count-to="560">560</h3>
+		                                    <h5>awards</h5>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of fun Area -->
+				</section>
+				<section>
+					<!-- Start of contact Area -->
+		            <div class="contact-area text-center pb-80 pt-80">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-home"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>Address</h5>
+		                                    <p>Elizabeth Tower, 6th Floor<br/> Medtown, New York</p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-phone"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>phone number</h5>
+		                                    <p>0123456789<br/>
+		                                        0123456789</p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-email"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>email</h5>
+		                                    <p>demo@example.com<br/>
+		                                        demo@example.com </p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of contact Area -->
+				</section>
+			</div>
+		</t>
+	</template>
+</odoo>

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets" name="Insurance">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Insurance</div>
+				<div class="o_panel_body">
+					<t t-snippet="theme_ht_insurance.ht_slide_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+					</t>
+		  			<t t-snippet="theme_ht_insurance.ht_coverage_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_trust_agency" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_choose_left_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_choose_right_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t> 
+		  			<t t-snippet="theme_ht_insurance.ht_services_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t> 
+		  			<t t-snippet="theme_ht_insurance.ht_house_damage_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_founder_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_testimonies_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_business_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_insurance_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>
+		  			<t t-snippet="theme_ht_insurance.ht_contact_snippet" t-thumbnail="/theme_ht_insurance/static/src/images/hero_bg_1.jpg">
+		  			</t>      
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+	<template id="ht_slide_snippet" name="slider">
+		<section>
+			<div class="slide-one-item home-slider owl-carousel">
+			  <div class="site-blocks-cover inner-page overlay" style="background-image: url(/theme_ht_insurance/static/src/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+				<div class="container">
+				  <div class="row align-items-center">
+					<div class="col-md-6" data-aos="fade">
+					  <h1 class="font-secondary font-weight-bold text-uppercase">Small Business Insurance Agency</h1>
+					  <span class="caption d-block text-white">An Insurance Company</span>
+					</div>
+				  </div>
+				</div>
+			  </div>  
+
+			  <div class="site-blocks-cover inner-page overlay" style="background-image: url(/theme_ht_insurance/static/src/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+				<div class="container">
+				  <div class="row align-items-center justify-content-center">
+					<div class="col-md-7 text-center" data-aos="fade">
+					  <h1 class="font-secondary font-weight-bold text-uppercase">Insurance Coverage To Meet Your Needs</h1>
+					  <span class="caption d-block text-white">You Will Love Our Services</span>
+					</div>
+				  </div>
+				</div>
+			  </div> 
+			</div>
+		</section>
+	</template>
+  	<template id="ht_coverage_snippet" name="Coverage">
+		<section>
+			<div class="site-section">
+			  <div class="container">
+				<div class="row">
+				  <div class="col-md-12 text-center">
+					<span class="caption d-block mb-2 font-secondary font-weight-bold">Products &amp;amp; Services</span>
+					<h2 class="site-section-heading text-uppercase text-center font-secondary">Insurance Coverage</h2>
+				  </div>
+				</div>
+				<div class="row">
+				  <div class="col-md-12 block-13 nav-direction-white">
+					<div class="nonloop-block-13 owl-carousel">
+					  <div class="media-image">
+						<img src="/theme_ht_insurance/static/src/images/img_1.jpg" alt="Image" class="img-fluid"/>
+						<div class="media-image-body">
+						  <h2 class="font-secondary text-uppercase">Home Insurance</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+						  <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+						</div>
+					  </div>
+					  <div class="media-image">
+						<img src="/theme_ht_insurance/static/src/images/img_2.jpg" alt="Image" class="img-fluid"/>
+						<div class="media-image-body">
+						  <h2 class="font-secondary text-uppercase">Auto Insurance</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+						  <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+						</div>
+					  </div>
+					  <div class="media-image">
+						<img src="/theme_ht_insurance/static/src/images/img_3.jpg" alt="Image" class="img-fluid"/>
+						<div class="media-image-body">
+						  <h2 class="font-secondary text-uppercase">Travel Insurance</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+						  <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+						</div>
+					  </div>
+					  <div class="media-image">
+						<img src="/theme_ht_insurance/static/src/images/img_1.jpg" alt="Image" class="img-fluid"/>
+						<div class="media-image-body">
+						  <h2 class="font-secondary text-uppercase">Home Insurance</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+						  <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+						</div>
+					  </div>
+					  <div class="media-image">
+						<img src="/theme_ht_insurance/static/src/images/img_2.jpg" alt="Image" class="img-fluid"/>
+						<div class="media-image-body">
+						  <h2 class="font-secondary text-uppercase">Auto Insurance</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+						  <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+						</div>
+					  </div>
+					  <div class="media-image">
+						<img src="/theme_ht_insurance/static/src/images/img_3.jpg" alt="Image" class="img-fluid"/>
+						<div class="media-image-body">
+						  <h2 class="font-secondary text-uppercase">Travel Insurance</h2>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+						  <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</section>
+  	</template>
+  	<template id="ht_trust_agency" name="Trust Agency">
+  		<section>
+            <div class="site-section">
+              <div class="container">
+                <div class="row mb-5">
+                  <div class="col-12"><h2 class="text-uppercase">We Are Trusted Agency Company</h2></div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-md-12">
+                    <img src="/theme_ht_insurance/static/src/images/about_1.jpg" alt="image" class="img-fluid"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 ml-auto">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid eius facilis voluptatem eligendi magnam accusamus vel commodi asperiores sint rem reprehenderit nobis nesciunt veniam qui fugit doloremque numquam quod.</p>
+                  </div>
+                  <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora distinctio ipsam nesciunt recusandae repellendus asperiores amet.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+  	</template>
+  	<template id="ht_choose_left_snippet" name="Choose Left">
+  		<section>
+            <div class="site-half">
+                <div class="img-bg-1" style="background-image: url('/theme_ht_insurance/static/src/images/hero_bg_2.jpg');"></div>
+                <div class="container">
+                  <div class="row no-gutters align-items-stretch">
+                    <div class="col-md-5 ml-md-auto py-5">
+                      <span class="caption d-block mb-2 font-secondary font-weight-bold">Outstanding Services</span>
+                      <h2 class="site-section-heading text-uppercase font-secondary mb-5">Why Choose Us</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid eius facilis voluptatem eligendi magnam accusamus vel commodi asperiores sint rem reprehenderit nobis nesciunt veniam qui fugit doloremque numquam quod.</p>
+
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora distinctio ipsam nesciunt recusandae repellendus asperiores amet.</p>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+  	</template>
+  	<template id="ht_choose_right_snippet" name="Choose Right">
+  		<section>
+	        <div class="site-half">
+	            <div class="img-bg-1 right" style="background-image: url('/theme_ht_insurance/static/src/images/hero_bg_1.jpg');"></div>
+	            <div class="container">
+	              <div class="row no-gutters align-items-stretch">
+	                <div class="col-md-5 mr-md-auto py-5">
+	                  <span class="caption d-block mb-2 font-secondary font-weight-bold">Outstanding Services</span>
+	                  <h2 class="site-section-heading text-uppercase font-secondary mb-5">Why Choose Us</h2>
+	                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid eius facilis voluptatem eligendi magnam accusamus vel commodi asperiores sint rem reprehenderit nobis nesciunt veniam qui fugit doloremque numquam quod.</p>
+
+	                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora distinctio ipsam nesciunt recusandae repellendus asperiores amet.</p>  
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	    </section>
+  	</template>
+  	<template id="ht_services_snippet" name="Services">
+  		<section>
+            <div class="site-section">
+              <div class="container">
+                <div class="row mb-5">
+                  <div class="col-md-12 text-center">
+                    <span class="caption d-block mb-2 font-secondary font-weight-bold">Outstanding Services</span>
+                    <h2 class="site-section-heading text-uppercase text-center font-secondary">Why Choose Us</h2>
+                  </div>
+                </div>
+                <div class="row border-responsive">
+                  <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 border-right">
+                    <div class="text-center">
+                      <span class="flaticon-customer-service display-4 d-block mb-3 text-primary"></span>
+                      <h3 class="text-uppercase h4 mb-3">24/7 Support</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nobis?</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 border-right">
+                    <div class="text-center">
+                      <span class="flaticon-group display-4 d-block mb-3 text-primary"></span>
+                      <h3 class="text-uppercase h4 mb-3">Trusted People</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nobis?</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 border-right">
+                    <div class="text-center">
+                      <span class="flaticon-medal display-4 d-block mb-3 text-primary"></span>
+                      <h3 class="text-uppercase h4 mb-3">12 Years Experience</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nobis?</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="text-center">
+                      <span class="flaticon-agreement display-4 d-block mb-3 text-primary"></span>
+                      <h3 class="text-uppercase h4 mb-3">Join With Us</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nobis?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+  	</template>
+  	<template id="ht_house_damage_snippet" name="House Damage">
+  		<section>
+            <div class="site-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <p class="mb-5"><img src="/theme_ht_insurance/static/src/images/img_1.jpg" alt="Image" class="img-fluid"/></p>
+                  </div>
+                  <div class="col-lg-5 ml-auto">
+                    <h2 class="site-section-heading mb-3 font-secondary text-uppercase">Thousands of Houses Damage Each Year</h2>
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ad, tempora incidunt accusantium. Similique magni quaerat beatae illo aliquid. Libero non ipsa nisi, corporis architecto incidunt rem repellendus asperiores numquam!</p>
+                    <p><a href="#" class="btn btn-outline-primary py-2 px-4">Insured Yours Now</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+  	</template>
+  	<template id="ht_founder_snippet" name="Founders">
+  		<section>
+	        <div class="site-section" style="background-image: url('images/topography.png'); background-attachment: fixed">
+	          <div class="container">
+	            <div class="row mb-5">
+	              <div class="col-md-12">
+	                <h2 class="site-section-heading text-center text-uppercase">Our Founders</h2>
+	              </div>
+	            </div>
+	            <div class="row justify-content-center">
+	              <div class="col-md-6 text-center">
+	                <img src="/theme_ht_insurance/static/src/images/person_2.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4"/>
+	                <h2 class="h5 ">Alex Peters</h2>
+	                <span class="d-block mb-4">CEO, Co-Founder</span>
+	                <p class="font-weig mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita et aliquam fuga dicta amet ad laborum error recusandae, voluptatibus quam minima sed, saepe odio voluptatem. Sed unde hic, vitae fugiat.</p>
+	              </div>
+	              <div class="col-md-6 text-center">
+	                <img src="/theme_ht_insurance/static/src/images/person_3.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4"/>
+	                <h2 class="h5">Shane Cripton</h2>
+	                <span class="d-block mb-4">President, Co-Founder</span> 
+	                <p class="font-weig mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita et aliquam fuga dicta amet ad laborum error recusandae, voluptatibus quam minima sed, saepe odio voluptatem. Sed unde hic, vitae fugiat.</p>
+	              </div>
+	            </div>
+	          </div>  
+	        </div>
+	    </section>
+  	</template>
+  	<template id="ht_testimonies_snippet" name="Testimonies">
+  		<section>
+		    <div class="site-section block-14 bg-light nav-direction-white">
+		      <div class="container">
+		        
+		        <div class="row mb-5">
+		          <div class="col-md-12">
+		            <h2 class="site-section-heading text-center text-uppercase">Testimonies</h2>
+		          </div>
+		        </div>
+
+		        <div class="nonloop-block-14 owl-carousel">
+		          
+		          <div class="p-5">
+		            <div class="d-block block-testimony w-75 mx-auto text-center">
+		              <div class="person w-25 mx-auto mb-4">
+		                <img src="/theme_ht_insurance/static/src/images/person_1.jpg" alt="Image" class="img-fluid rounded-circle"/>
+		              </div>
+		              <div>
+		                <h2 class="h5 mb-4">Katie Johnson</h2>
+		                <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="p-5">
+		            <div class="d-block block-testimony w-75 mx-auto text-center">
+		              <div class="person w-25 mx-auto mb-4">
+		                <img src="/theme_ht_insurance/static/src/images/person_2.jpg" alt="Image" class="img-fluid rounded-circle"/>
+		              </div>
+		              <div>
+		                <h2 class="h5 mb-4">Jun Mars</h2>
+		                <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="p-5">
+		            <div class="d-block block-testimony w-75 mx-auto text-center">
+		              <div class="person w-25 mx-auto mb-4">
+		                <img src="/theme_ht_insurance/static/src/images/person_3.jpg" alt="Image" class="img-fluid rounded-circle"/>
+		              </div>
+		              <div>
+		                <h2 class="h5 mb-4">Shane Holmes</h2>
+		                <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="p-5">
+		            <div class="d-block block-testimony w-75 mx-auto text-center">
+		              <div class="person w-25 mx-auto mb-4">
+		                <img src="/theme_ht_insurance/static/src/images/person_4.jpg" alt="Image" class="img-fluid rounded-circle"/>
+		              </div>
+		              <div>
+		                <h2 class="h5 mb-4">Mark Johnson</h2>
+		                <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		</section>
+  	</template>
+  	<template id="ht_business_snippet" name="Business">
+  		<section>
+            <div class="py-5 bg-primary">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <h2 class="text-uppercase text-white mb-0">Small Business Insurance Company</h2>
+                  </div>
+                  <div class="col-md-3 ml-auto text-center text-md-left">
+                    <a href="/contact" class="btn btn-bg-primary d-inline-block d-md-block font-secondary text-uppercase">Contact Us</a> 
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+  	</template>
+  	<template id="ht_insurance_snippet" name="Insaurance">
+  		<section>
+            <div class="site-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="media-image">
+                                <img src="/theme_ht_insurance/static/src/images/img_1.jpg" alt="Image" class="img-fluid"/>
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Home Insurance</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+                                    <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="media-image">
+                                <img src="/theme_ht_insurance/static/src/images/img_2.jpg" alt="Image" class="img-fluid"/>
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Auto Insurance</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+                                    <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="media-image">
+                                <img src="/theme_ht_insurance/static/src/images/img_3.jpg" alt="Image" class="img-fluid"/>
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Travel Insurance</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+                                    <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="media-image">
+                                <img src="/theme_ht_insurance/static/src/images/img_1.jpg" alt="Image" class="img-fluid"/>
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Home Insurance</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+                                    <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="media-image">
+                                <img src="/theme_ht_insurance/static/src/images/img_2.jpg" alt="Image" class="img-fluid"/>
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Auto Insurance</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+                                    <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5">
+                            <div class="media-image">
+                                <img src="/theme_ht_insurance/static/src/images/img_3.jpg" alt="Image" class="img-fluid"/>
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Travel Insurance</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, voluptate.</p>
+                                    <p><a href="#" class="btn btn-primary text-white px-4"><span class="caption">Learn More</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  	</template>
+  	<template id="ht_contact_snippet" name="Conatct">
+  		<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+            <div class="py-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8 mb-5">
+                            <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required p-5 bg-white" data-mark="*" data-editable-form="false">
+                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity1">
+                                                <span class="s_website_form_label_content">Your Name</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity2">
+                                                <span class="s_website_form_label_content">Phone Number</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity3">
+                                                <span class="s_website_form_label_content">Email</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity4">
+                                                <span class="s_website_form_label_content">Your Company</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity5">
+                                                <span class="s_website_form_label_content">Subject</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity6">
+                                                <span class="s_website_form_label_content">Your Question</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <div class="col-sm">
+                                                <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                        <div class="s_website_form_label"/>
+                                        <a href="#" role="button" class="btn btn-primary btn-lg text-white s_website_form_send">Send Message</a>
+                                        <span id="s_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="p-4 mb-3 bg-white">
+                                <h3 class="h5 text-black mb-3">Contact Info</h3>
+                                <p class="mb-0 font-weight-bold">Address</p>
+                                <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                                <p class="mb-0 font-weight-bold">Phone</p>
+                                <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                                <p class="mb-0 font-weight-bold">Email Address</p>
+                                <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  	</template>
+</odoo>

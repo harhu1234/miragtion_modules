@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets" name="Driving School">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Driving School</div>
+				<div class="o_panel_body">
+					<t t-snippet="theme_ht_ds.ht_banner_snippet" t-thumbnail="/theme_ht_ds/static/src/img/hero-bg.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_ds.ht_feature_snippet" t-thumbnail="/theme_ht_ds/static/src/img/hero-bg.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_ds.ht_about_snippet" t-thumbnail="/theme_ht_ds/static/src/img/hero-bg.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_ds.ht_form_snippet" t-thumbnail="/theme_ht_ds/static/src/img/hero-bg.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_ds.ht_pricing_snippet" t-thumbnail="/theme_ht_ds/static/src/img/hero-bg.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_ds.ht_team_snippet" t-thumbnail="/theme_ht_ds/static/src/img/hero-bg.jpg">
+                    </t>
+                    <t t-snippet="theme_ht_ds.ht_contact_snippet" t-thumbnail="/theme_ht_ds/static/src/img/hero-bg.jpg">
+                    </t>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+	<template id="ht_banner_snippet" name="banner">
+		<!-- Hero Section Begin -->
+        <section class="hero " style="background-image:url(/theme_ht_ds/static/src/img/hero-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="hero__text">
+                            <h5>Best options for you</h5>
+                            <h2>drive safe &amp; get license</h2>
+                            <a href="#" class="primary-btn">Contact us</a>
+                            <a href="#" class="primary-btn second-bg">See Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+    </template>
+    <template id="ht_feature_snippet" name="Feature">
+        <!-- Feature Section Begin -->
+        <section class="feature spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="feature__text">
+                            <div class="section-title">
+                                <span>Why choose us ?</span>
+                                <h2>Our feature</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua viverra maecenas facilisis. </p>
+                            <a href="#" class="primary-btn second-bg">See Courses</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="feature__item">
+                                    <img src="/theme_ht_ds/static/src/img/feature/feature-1.png" alt=""/>
+                                    <h5>Unlimited Car Support</h5>
+                                </div>
+                                <div class="feature__item">
+                                    <img src="/theme_ht_ds/static/src/img/feature/feature-2.png" alt=""/>
+                                    <h5>Driving School Insures</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="feature__item right-column">
+                                    <img src="/theme_ht_ds/static/src/img/feature/feature-3.png" alt=""/>
+                                    <h5>Any Time Any Location</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Feature Section End -->
+    </template>
+    <template id="ht_about_snippet" name="About">
+        <!-- About Video Section Begin -->
+        <section class="about-video">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 p-0">
+                        <div class="about__video__bg" style="background-image:url(/theme_ht_ds/static/src/img/video-bg.jpg)">
+                            <a href="https://www.youtube.com/watch?v=bGuHgRQSEuk" class="play-btn video-popup"><i
+                                    class="fa fa-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-0">
+                        <div class="about__video__text">
+                            <div class="section-title">
+                                <span>Welcome to Online trafic school</span>
+                                <h2>looking for lessons?</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Quis ipsum vidnas accumsan lacus vel facilisis. </p>
+                            <a href="#" class="primary-btn second-bg">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Video Section End -->
+    </template>
+    <template id="ht_form_snippet" name="Form">
+        <!-- Application Form Section Begin -->
+        <section class="application-form spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title center-title">
+                            <span>Giving Best Options For You</span>
+                            <h2>Application Form</h2>
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <input type="text" placeholder="Your name"/>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <input type="text" placeholder="Your Email"/>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <input type="text" placeholder="Your Phone"/>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <input type="text" class="datepicker_pop" placeholder="Date &amp; time"/>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <select>
+                                <option value="">Courses type</option>
+                                <option value="">Safe Driving Courses</option>
+                                <option value="">Motorhome Drivers</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <select>
+                                <option value="">Car type</option>
+                                <option value="">Hatchback</option>
+                                <option value="">Sedan</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-12 text-center">
+                            <button type="submit" class="site-btn">SEND INQUIRY</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Application Form Section End -->
+    </template>
+    <template id="ht_pricing_snippet" name="Pricing">
+        <!-- Pricing Section Begin -->
+        <section class="pricing spad" style="background-image:url(/theme_ht_ds/static/src/img/pricing-bg.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title center-title">
+                            <span>Get Special Offer</span>
+                            <h2>Our Pricing</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="pricing__item">
+                            <div class="pricing__item__title">
+                                <span>20% off</span>
+                                <h2>$ 199</h2>
+                                <h5>Personal Driving</h5>
+                            </div>
+                            <ul>
+                                <li>Full course theory</li>
+                                <li>Full driving course</li>
+                                <li>Training in first aid</li>
+                                <li>Practical sessions</li>
+                                <li>Psychological support</li>
+                            </ul>
+                            <a href="#" class="primary-btn second-bg">get Started</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="pricing__item">
+                            <div class="pricing__item__title">
+                                <span>20% off</span>
+                                <h2>$ 379</h2>
+                                <h5>Power Booster</h5>
+                            </div>
+                            <ul>
+                                <li>Full course theory</li>
+                                <li>Full driving course</li>
+                                <li>Training in first aid</li>
+                                <li>Practical sessions</li>
+                                <li>Psychological support</li>
+                            </ul>
+                            <a href="#" class="primary-btn second-bg">get Started</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="pricing__item">
+                            <div class="pricing__item__title">
+                                <span>20% off</span>
+                                <h2>$ 259</h2>
+                                <h5>Freight Driving</h5>
+                            </div>
+                            <ul>
+                                <li>Full course theory</li>
+                                <li>Full driving course</li>
+                                <li>Training in first aid</li>
+                                <li>Practical sessions</li>
+                                <li>Psychological support</li>
+                            </ul>
+                            <a href="#" class="primary-btn second-bg">get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Section End -->
+    </template>
+    <template id="ht_team_snippet" name="Team">
+        <!-- Team Section Begin -->
+        <section class="team spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="section-title">
+                            <span>Our Great Team</span>
+                            <h2>Our Instructors</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="team__all">
+                            <a href="#" class="primary-btn second-bg">View all</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item__img">
+                                <img src="/theme_ht_ds/static/src/img/team/team-1.png" alt=""/>
+                            </div>
+                            <div class="team__item__text">
+                                <h5>DAVID WARNER</h5>
+                                <span>Instructor</span>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item__img">
+                                <img src="/theme_ht_ds/static/src/img/team/team-2.png" alt=""/>
+                            </div>
+                            <div class="team__item__text">
+                                <h5>DAVID WARNER</h5>
+                                <span>Instructor</span>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item__img">
+                                <img src="/theme_ht_ds/static/src/img/team/team-3.png" alt=""/>
+                            </div>
+                            <div class="team__item__text">
+                                <h5>DAVID WARNER</h5>
+                                <span>Instructor</span>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team__item">
+                            <div class="team__item__img">
+                                <img src="/theme_ht_ds/static/src/img/team/team-4.png" alt=""/>
+                            </div>
+                            <div class="team__item__text">
+                                <h5>DAVID WARNER</h5>
+                                <span>Instructor</span>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                                <div class="team__item__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section End -->
+    </template>
+    <template id="ht_contact_snippet" name="Contact">
+        <!-- Contact Section Begin -->
+        <section class="contact spad s_website_form" data-vcss="001" data-snippet="s_website_form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="contact__address">
+                            <h4>Contact info</h4>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <p><span>Support@gmail.com</span><span>+ 1 212-683-9756</span></p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <p>799 W 6th St Hoisington, Kansas 121 Sparrow Hawk, Alberta</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-clock-o"></i>
+                                    </div>
+                                    <p><span>Mon - Sat : 8:00am - 5:00pm</span><span>Sunday: Closed</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="contact__form">
+                            <h4>Leave a message</h4>
+                            <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required" data-mark="*" data-editable-form="false">
+                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                    <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label  s_website_form_label"  for="opportunity1">
+                                                <!-- <span class="s_website_form_label_content">Your Name</span>
+                                                <span class="s_website_form_mark"> *</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required="" placeholder="Your Name *"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label  s_website_form_label"  for="opportunity2">
+                                                <!-- <span class="s_website_form_label_content">Phone Number</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" placeholder="Phone Number" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label  s_website_form_label"  for="opportunity3">
+                                                <!-- <span class="s_website_form_label_content">Email</span>
+                                                <span class="s_website_form_mark"> *</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" placeholder="Email *"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label  s_website_form_label"  for="opportunity4">
+                                                <!-- <span class="s_website_form_label_content">Your Company</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" placeholder="Your Company"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label  s_website_form_label"  for="opportunity5">
+                                                <!-- <span class="s_website_form_label_content">Subject</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" placeholder="Subject"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                            <label class="col-form-label  s_website_form_label"  for="opportunity6">
+                                                <!-- <span class="s_website_form_label_content">Your Question</span>
+                                                <span class="s_website_form_mark"> *</span> -->
+                                            </label>
+                                            <div class="col-sm">
+                                                <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required="" placeholder="Your Question"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                        <div class="s_website_form_label"/>
+                                        <a href="#" role="button" class="btn site-btn s_website_form_send">Find an agent</a>
+                                        <span id="s_website_form_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+    </template>
+</odoo>

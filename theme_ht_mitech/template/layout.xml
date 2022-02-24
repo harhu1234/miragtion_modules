@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="theme_loan_layout" name="Harhu Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <header>
+                <!--====================  header area ====================-->
+                <div class="header-area header-area--default">
+                    <!-- Header Top Wrap Start -->
+                    <div class="header-top-wrap border-bottom">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p class="text-center top-message"><a href="/careers">Now Hiring:</a> Are you a driven and motivated 1st Line IT Support Engineer?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header Top Wrap End -->
+                    <!-- Header Bottom Wrap Start -->
+                    <div class="header-bottom-wrap header-sticky">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="header default-menu-style position-relative">
+                                        <!-- brand logo -->
+                                        <div class="header__logo">
+                                            <a href="/theme_ht_mitech/static/src/index.html">
+                                                <img src="/theme_ht_mitech/static/src/assets/images/logo/logo-dark.webp" width="160" height="48" class="img-fluid" alt=""/>
+                                            </a>
+                                        </div>
+                                        <!-- header midle box  -->
+                                        <div class="header-midle-box">
+                                            <div class="header-bottom-wrap d-md-block d-none">
+                                                <div class="header-bottom-inner">
+                                                    <div class="header-bottom-left-wrap">
+                                                        <!-- navigation menu -->
+                                                        <div class="header__navigation d-none d-xl-block">
+                                                            <nav class="navigation-menu primary--menu">
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="/"><span>Home</span></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="/about"><span>About us</span></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="/it-solutions"><span>IT solutions</span></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="/blog"><span>Blog</span></a>
+                                                                    </li>
+                                                                    <li><a href="/careers"><span>Careers</span></a></li>
+                                                                    <li><a href="/faqs"><span>FAQs</span></a></li>
+                                                                    <li><a href="/contact"><span>Contact us</span></a></li>
+                                                                    <li groups="base.group_public" ><a href="/web/login">Login</a></li>
+                                                                    <li groups="base.group_user"><a href="/web/session/logout" >Logout</a></li>
+                                                                </ul>
+                                                            </nav>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- header right box -->
+                                        <div class="header-right-box">
+                                            <div class="header-right-inner" id="hidden-icon-wrapper">
+                                                <!-- language-menu -->
+                                                <!-- <div class="language-menu">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#" class="">
+                                                                <img class="ls-flag" src="/theme_ht_mitech/static/src/assets/images/flags/en.webp" alt="en" title="English"/>
+                                                                <span class="wpml-ls-native">English</span>
+                                                            </a>
+                                                            <ul class="ls-sub-menu">
+                                                                <li class="">
+                                                                    <a href="#" class="">
+                                                                        <img class="ls-flag" src="/theme_ht_mitech/static/src/assets/images/flags/fr.webp" alt="en" title="Français"/><span class="wpml-ls-native">Français</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="#" class="">
+                                                                        <img class="wpml-ls-flag" src="/theme_ht_mitech/static/src/assets/images/flags/de.webp" alt="de" title="Deutsch"/><span class="wpml-ls-native">Deutsch</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div> -->
+                                                <!-- header-search-form -->
+                                                <!-- <div class="header-search-form default-search">
+                                                    <form action="#" class="search-form-top">
+                                                        <input class="search-field" type="text" placeholder="Search…"/>
+                                                        <button class="search-submit">
+                                                            <i class="search-btn-icon fa fa-search"></i>
+                                                        </button>
+                                                    </form>
+                                                </div> -->
+                                            </div>
+                                            <!-- mobile menu -->
+                                            <div class="mobile-navigation-icon d-block d-xl-none" id="mobile-menu-trigger">
+                                                <i></i>
+                                            </div>
+                                            <!-- hidden icons menu -->
+                                            <div class="hidden-icons-menu d-block d-md-none" id="hidden-icon-trigger">
+                                                <a href="javascript:">
+                                                    <i class="far fa-ellipsis-h-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header Bottom Wrap End -->
+                </div>
+                <!--====================  End of header area  ====================-->
+                <!--====================  mobile menu overlay ====================-->
+                <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+                    <div class="mobile-menu-overlay__inner">
+                        <div class="mobile-menu-overlay__header">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6 col-8">
+                                        <!-- logo -->
+                                        <div class="logo">
+                                            <a href="mitech/index.html">
+                                                <img src="mitech/assets/images/logo/logo-dark.webp" class="img-fluid" alt=""/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-4">
+                                        <!-- mobile menu content -->
+                                        <div class="mobile-menu-content text-end">
+                                            <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-overlay__body">
+                            <nav class="offcanvas-navigation">
+                                <ul>
+                                    <li class="has-children">
+                                        <a href="/">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="mitech/index.html"><span>Infotechno</span></a></li>
+                                            <li><a href="mitech/index-processing.html"><span>Processing</span></a></li>
+                                            <li><a href="mitech/index-appointment.html"><span>Appointment</span></a></li>
+                                            <li><a href="mitech/index-services.html"><span>Services</span></a></li>
+                                            <li><a href="mitech/index-resolutions.html"><span>Resolutions</span></a></li>
+                                            <li><a href="mitech/index-cybersecurity.html"><span>cybersecurity</span></a></li>
+                                            <li><a href="mitech/index-modern-it-company.html"><span>Modern IT Company</span></a></li>
+                                            <li><a href="mitech/index-machine-learning.html"><span>Machine Learning</span></a></li>
+                                            <li><a href="mitech/index-software-innovation.html"><span>Software Innovation</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="#">Company</a>
+                                        <ul class="sub-menu">
+                                            <li class="has-children">
+                                                <a href="mitech/about-us-01.html"><span>About us</span></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="mitech/about-us-01.html"><span>About us 01</span></a></li>
+                                                    <li><a href="mitech/about-us-02.html"><span>About us 02</span></a></li>
+                                                    <li class="has-children">
+                                                        <a href="#"><span>Submenu Level Two</span></a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                            <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                            <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="mitech/contact-us.html"><span>Contact us</span></a></li>
+                                            <li><a href="mitech/leadership.html"><span>Leadership</span></a></li>
+                                            <li><a href="mitech/why-choose-us.html"><span>Why choose us</span></a></li>
+                                            <li><a href="mitech/our-history.html"><span>Our history</span></a></li>
+                                            <li><a href="mitech/faqs.html"><span>FAQs</span></a></li>
+                                            <li><a href="mitech/careers.html"><span>Careers</span></a></li>
+                                            <li><a href="mitech/pricing-plans.html"><span>Pricing plans</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="#">IT solutions</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="mitech/it-services.html"><span>IT Services</span></a></li>
+                                            <li><a href="mitech/managed-it-service.html"><span>Managed IT Services</span></a></li>
+                                            <li><a href="mitech/industries.html"><span>Industries</span></a></li>
+                                            <li><a href="mitech/business-solution.html"><span>Business solution</span></a></li>
+                                            <li><a href="mitech/it-services-details.html"><span>IT Services Details</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="#">Elements</a>
+                                        <ul class="sub-menu">
+                                            <li class="has-children">
+                                                <a href="#">Element Group 01</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="mitech/element-accordion.html"><span>Accordions &amp; Toggles</span></a></li>
+                                                    <li><a href="mitech/element-box-icon.html"><span>Box Icon</span></a></li>
+                                                    <li><a href="mitech/element-box-image.html"><span>Box Image</span></a></li>
+                                                    <li><a href="mitech/element-box-large-image.html"><span>Box Large Image</span></a></li>
+                                                    <li><a href="mitech/element-buttons.html"><span>Buttons</span></a></li>
+                                                    <li><a href="mitech/element-cta.html"><span>Call to action</span></a></li>
+                                                    <li><a href="mitech/element-client-logo.html"><span>Client Logo</span></a></li>
+                                                    <li><a href="mitech/element-countdown.html"><span>Countdown</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-children">
+                                                <a href="#">Element Group 02</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="mitech/element-counters.html"><span>Counters</span></a></li>
+                                                    <li><a href="mitech/element-dividers.html"><span>Dividers</span></a></li>
+                                                    <li><a href="mitech/element-flexible-image-slider.html"><span>Flexible image slider</span></a></li>
+                                                    <li><a href="mitech/element-google-map.html"><span>Google Map</span></a></li>
+                                                    <li><a href="mitech/element-gradation.html"><span>Gradation</span></a></li>
+                                                    <li><a href="mitech/element-instagram.html"><span>Instagram</span></a></li>
+                                                    <li><a href="mitech/element-lists.html"><span>Lists</span></a></li>
+                                                    <li><a href="mitech/element-message-box.html"><span>Message box</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-children">
+                                                <a href="#">Element Group 03</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="mitech/element-popup-video.html"><span>Popup Video</span></a></li>
+                                                    <li><a href="mitech/element-pricing-box.html"><span>Pricing Box</span></a></li>
+                                                    <li><a href="mitech/element-progress-bar.html"><span>Progress Bar</span></a></li>
+                                                    <li><a href="mitech/element-progress-circle.html"><span>Progress Circle</span></a></li>
+                                                    <li><a href="mitech/element-rows-columns.html"><span>Rows &amp; Columns</span></a></li>
+                                                    <li><a href="mitech/element-social-networks.html"><span>Social Networks</span></a></li>
+                                                    <li><a href="mitech/element-tabs.html"><span>Tabs</span></a></li>
+                                                    <li><a href="mitech/element-team-member.html"><span>Team member</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-children">
+                                                <a href="#">Element Group 04</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="mitech/element-testimonials.html"><span>Testimonials</span></a></li>
+                                                    <li><a href="mitech/element-timeline.html"><span>Timeline</span></a></li>
+                                                    <li><a href="mitech/element-carousel-sliders.html"><span>Carousel Sliders</span></a></li>
+                                                    <li><a href="mitech/element-typed-text.html"><span>Typed Text</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="javascript:void(0)">Case Studies</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="mitech/case-studies.html"><span>Case Studies 01</span></a></li>
+                                            <li><a href="mitech/case-studies-02.html"><span>Case Studies 02</span></a></li>
+                                            <li><a href="mitech/single-smart-vision.html"><span>Single Layout</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="javascript:void(0)">Blogs</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="mitech/blog-list-large-image.html"><span>List Large Image</span></a></li>
+                                            <li><a href="mitech/blog-list-left-large-image.html"><span>Left Large Image</span></a></li>
+                                            <li><a href="mitech/blog-grid-classic.html"><span>Grid Classic</span></a></li>
+                                            <li><a href="mitech/blog-grid-masonry.html"><span>Grid Masonry</span></a></li>
+                                            <li class="has-children">
+                                                <a href="mitech/blog-post-layout-one.html"><span>Single Layouts</span></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="mitech/blog-post-layout-one.html"><span>Left Sidebar</span></a></li>
+                                                    <li><a href="mitech/blog-post-right-sidebar.html"><span>Right Sidebar</span></a></li>
+                                                    <li><a href="mitech/blog-post-no-sidebar.html"><span>No Sidebar</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!--====================  End of mobile menu overlay  ====================-->
+                <!--====================  search overlay ====================-->
+                <div class="search-overlay" id="search-overlay">
+                    <div class="search-overlay__header">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 ms-auto col-4">
+                                    <!-- search content -->
+                                    <div class="search-content text-end">
+                                        <span class="mobile-navigation-close-icon" id="search-close-trigger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-overlay__inner">
+                        <div class="search-overlay__body">
+                            <div class="search-overlay__form">
+                                <form action="#">
+                                    <input type="text" placeholder="Search"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====================  End of search overlay  ====================-->
+            </header>
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <!-- Footer Section Begin -->
+            <footer>
+                <!--====================  footer area ====================-->
+                <div class="footer-area-wrapper bg-gray">
+                    <div class="footer-area section-space--ptb_80">
+                        <div class="container">
+                            <div class="row footer-widget-wrapper">
+                                <div class="col-lg-4 col-md-6 col-sm-6 footer-widget">
+                                    <div class="footer-widget__logo mb-30">
+                                        <img src="/theme_ht_mitech/static/src/assets/images/logo/dark-logo-160x48.webp" width="160" height="48" class="img-fluid" alt=""/>
+                                    </div>
+                                    <ul class="footer-widget__list">
+                                        <li><p class="mb-2"><span class="text"><t t-esc="res_company.street"/>&#160;<t t-esc="res_company.state_id.name"/>&#160;<t t-esc="res_company.country_id.name"/></span></p></li>
+                                        <li><a href="mailto:contact@aeroland.com" class="hover-style-link"><t t-esc="res_company.email"/></a></li>
+                                        <li><a href="tel:123344556" class="hover-style-link text-black font-weight--bold"><t t-esc="res_company.phone"/></a></li>
+                                        <li><a href="https://hasthemes.com/" class="hover-style-link text-color-primary"><t t-esc="res_company.website"/></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                                    <h6 class="footer-widget__title mb-20">IT Services</h6>
+                                    <ul class="footer-widget__list">
+                                        <li><a href="#" class="hover-style-link">Managed IT</a></li>
+                                        <li><a href="#" class="hover-style-link">IT Support</a></li>
+                                        <li><a href="#" class="hover-style-link">IT Consultancy</a></li>
+                                        <li><a href="#" class="hover-style-link">Cloud Computing</a></li>
+                                        <li><a href="#" class="hover-style-link">Cyber Security</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                                    <h6 class="footer-widget__title mb-20">Quick links</h6>
+                                    <ul class="footer-widget__list">
+                                        <li><a href="#" class="hover-style-link">Pick up locations</a></li>
+                                        <li><a href="#" class="hover-style-link">Terms of Payment</a></li>
+                                        <li><a href="#" class="hover-style-link">Privacy Policy</a></li>
+                                        <li><a href="#" class="hover-style-link">Where to Find Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                                    <h6 class="footer-widget__title mb-20">Support</h6>
+                                    <ul class="footer-widget__list">
+                                        <li><a href="#" class="hover-style-link">Forum Support</a></li>
+                                        <li><a href="#" class="hover-style-link">Help &amp; FAQ</a></li>
+                                        <li><a href="#" class="hover-style-link">Contact Us</a></li>
+                                        <li><a href="#" class="hover-style-link">Pricing and plans</a></li>
+                                        <li><a href="#" class="hover-style-link">Cookies Policy</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                                    <div class="footer-widget__title section-space--mb_50"></div>
+                                    <ul class="footer-widget__list">
+                                        <li><a href="#" class="image_btn"><img class="img-fluid" src="/theme_ht_mitech/static/src/assets/images/icons/aeroland-button-google-play.webp" alt=""/></a></li>
+                                        <li><a href="#" class="image_btn"><img class="img-fluid" src="/theme_ht_mitech/static/src/assets/images/icons/aeroland-button-app-store.webp" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright-area section-space--pb_30">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 text-center text-md-start">
+                                    <span class="copyright-text">&amp;copy; 2021 Harhu. <a href="https://hasthemes.com/">All Rights Reserved.</a></span>
+                                </div>
+                                <div class="col-md-6 text-center text-md-end">
+                                    <ul class="list ht-social-networks solid-rounded-icon">
+                                        <li class="item">
+                                            <a t-attf-href="{{res_company.social_twitter}}" aria-label="Twitter" class="social-link hint--bounce hint--top hint--primary">
+                                                <i class="fab fa-twitter link-icon"></i>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+                                            <a t-attf-href="{{res_company.social_facebook}}" aria-label="Facebook" class="social-link hint--bounce hint--top hint--primary">
+                                                <i class="fab fa-facebook-f link-icon"></i>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+                                            <a t-attf-href="{{res_company.social_instagram}}" aria-label="Instagram" class="social-link hint--bounce hint--top hint--primary">
+                                                <i class="fab fa-instagram link-icon"></i>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+                                            <a t-attf-href="{{res_company.social_linkedin}}" aria-label="Linkedin" class="social-link hint--bounce hint--top hint--primary">
+                                                <i class="fab fa-linkedin link-icon"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====================  End of footer area  ====================-->
+            </footer>
+        </xpath>
+    </template>
+</odoo>

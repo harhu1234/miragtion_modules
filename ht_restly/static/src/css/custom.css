@@ -1,0 +1,67 @@
+#wrapwrap {
+    z-index: 0;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.ht_btn {
+    flex: none;
+    width: 45px;
+    height: 45px;
+    background: #417fef;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid #417fef !important;
+}
+
+.ht_btn:hover {
+    background-color: #417fef !important;
+    border: 1px solid #417fef !important;
+}
+
+.ht_check {
+    color: white !important;
+    font-size: 14px;
+    content: "\f00c";
+    font-weight: 600 !important;
+    margin-top: -4px;
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+    background: #104cba;
+    line-height: 35px !important;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'Font Awesome 5 Free' !important;
+}
+.ht_fa_plus{
+    font-family: 'Font Awesome 5 Free' !important;
+    font-size: 25px;
+}
+.ht_bgc {
+    background-image: linear-gradient(135deg, rgb(24 29 56 / 0.7) 0%, rgb(24 29 56 / 0.7) 100%);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute !important;
+    display: block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+.ht_check_s{
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 20px;
+    color: #104cba;
+    font-family: 'Font Awesome 5 Free' !important;
+
+}

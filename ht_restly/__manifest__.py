@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Theme Restly",
+    "summary": "Theme Restly",
+    'description': '',
+    'version': '14.0.0.1',
+    'category': 'Theme/Corporate',
+    'author': 'Harhu Technologies Pvt. Ltd.',
+    'maintainer': 'Harhu Technologies Pvt. Ltd.',
+    "website": "www.harhu.com",
+    "depends": ['website', 'website_blog', 'website_crm', 'mass_mailing'],
+    'data': [
+        'template/assets.xml',
+        'template/layout.xml',
+        'template/homepage.xml',
+        'template/about_page.xml',
+        'template/services_page.xml',
+        'template/portfolio_page.xml',
+        'template/team_page.xml',
+        'template/contact_page.xml',
+        'template/signup_page.xml',
+        'template/snippets.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

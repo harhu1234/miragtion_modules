@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="snippets" inherit_id="website.snippets" name="Finance">
+		<xpath expr="//div[@id='snippet_structure']" position="before">
+			<div id="snippet_structure" class="o_panel">
+				<div class="o_panel_header">Finance</div>
+				<div class="o_panel_body">
+					<t t-snippet="theme_ht_swimming.ht_slide_snippet" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_breadcrumb_snippet" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_class_snippet" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_about_snippet" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_instructor_snippet" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_clients_snippet" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_gallery_snippets" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_plan_snippets" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_counter_snippets" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+                    <t t-snippet="theme_ht_swimming.ht_contact_snippets" t-thumbnail="/theme_ht_swimming/static/src/assets/images/slider/2.webp">
+                    </t>
+				</div>
+			</div>
+		</xpath>
+	</template>
+
+	<template id="ht_slide_snippet" name="slider">
+		<section class="s_carousel_wrapper" data-vxml="001">
+            <div id="myCarousel" class="s_carousel s_carousel_default carousel slide" data-interval="10000">
+                <!-- Indicators -->
+                <ol>
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"/>
+                    <li data-target="#myCarousel" data-slide-to="1"/>
+                    <li data-target="#myCarousel" data-slide-to="2"/>
+                </ol>
+                <!-- Content -->
+                <div class="carousel-inner">
+                    <!-- #01 -->
+                    <div class="carousel-item active oe_img_bg pt152 pb152" style="background-image: url('/theme_ht_swimming/static/src/assets/images/slider/1.webp');" data-name="Slide">
+                        <div class="container">
+                            <div class="row content">
+                                <div class="carousel-content col-lg-6">
+                                     <h2><font style="font-size: 62px;">Slide Title</font></h2>
+                                    <p class="lead">Use this snippet to presents your content in a slideshow-like format. Don't write about products or services here, write about solutions.</p>
+                                    <p>
+                                        <a href="/contactus" class="btn btn-primary mb-2">Contact us</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #02 -->
+                    <div class="carousel-item oe_img_bg pt96 pb96" style="background-image: url('/theme_ht_swimming/static/src/assets/images/slider/2.webp');" data-name="Slide">
+                        <div class="container">
+                            <div class="row content">
+                                <div class="carousel-content col-lg-8 offset-lg-2 bg-black-50 text-center pt48 pb40">
+                                    <h2 style="font-size: 62px;">Clever Slogan</h2>
+                                    <div class="s_hr pt8 pb24" data-snippet="s_hr" data-name="Separator">
+                                        <hr class="w-25 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+                                    </div>
+                                    <p class="lead">Storytelling is powerful.<br/> It draws readers in and engages them.</p>
+                                    <p><a href="/" class="btn btn-primary mb-2">Start your journey</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #03 -->
+                    <div class="carousel-item oe_img_bg pt128 pb128" style="background-image: url('/theme_ht_swimming/static/src/assets/images/slider/3.webp');" data-name="Slide">
+                        <div class="container">
+                            <div class="row content">
+                                <div class="carousel-content col-lg-6 offset-lg-6">
+                                    <h2><font style="font-size: 62px; background-color: rgb(255, 255, 255);">Edit this title</font></h2>
+                                    <h4><font style="background-color: rgb(255, 255, 255);">Good writing is simple, but not simplistic.</font></h4>
+                                    <p><br/></p>
+                                    <p>Good copy starts with understanding how your product or service helps your customers. Simple words communicate better than big words and pompous language.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="carousel-control-prev o_not_editable" contenteditable="false" href="#myCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                    <span class="carousel-control-prev-icon"/>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next o_not_editable" contenteditable="false" href="#myCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+                    <span class="carousel-control-next-icon"/>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+	</template>
+	<template id="ht_breadcrumb_snippet" name="Breadcrumb">
+		<section>
+            <!-- Start Banner Area-->
+            <div class="banner-area text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="banner-content-wrapper">
+                                <div class="banner-content">
+                                    <h2>About Us</h2>
+                                    <div class="banner-breadcrumb">
+                                        <ul>
+                                            <li><a href="/">home </a> <i class="zmdi zmdi-chevron-right"></i>
+                                            </li>
+                                            <li>about us</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Banner Area-->
+        </section>
+	</template>
+	<template id="ht_class_snippet" name="Class">
+		<section>
+        <!--Start Class Area-->
+        <div class="class-area text-center pt-80 pb-80">
+            <div class="container">
+                <div class="row g-4">     
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-class picton-border">
+                            <div class="class-icon">
+                                <img src="/theme_ht_swimming/static/src/assets/images/class/icon-1.webp" alt="class"/>
+                            </div>
+                            <div class="class-content">
+                                <h3>Swim class for mini</h3>
+                                <h6>Instructor Adom Jonson </h6>
+                                <p class="hover">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. </p>
+                                <div class="class-button">
+                                    <a href="#" class="read-more btn"><span>read more</span></a> 
+                                </div>
+                            </div>
+                        </div> 
+                    </div>   
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-class cobalt-border">
+                            <div class="class-icon">
+                                <img src="/theme_ht_swimming/static/src/assets/images/class/icon-2.webp" alt="class"/>
+                            </div>
+                            <div class="class-content">
+                                <h3>Swim class for toddler</h3>
+                                <h6>Instructor Adom Jonson </h6>
+                                <p class="hover">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. </p>
+                                <div class="class-button">
+                                    <a href="#" class="read-more btn"><span>read more</span></a>
+                                </div>    
+                            </div>
+                        </div> 
+                    </div>   
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-class cinnabar-border">
+                            <div class="class-icon">
+                                <img src="/theme_ht_swimming/static/src/assets/images/class/icon-3.webp" alt="class"/>
+                            </div>
+                            <div class="class-content">
+                                <h3>Swim class for adult</h3>
+                                <h6>Instructor Adom Jonson </h6>
+                                <p class="hover">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. </p>
+                                <div class="class-button">
+                                    <a href="#" class="read-more btn"><span>read more</span></a>
+                                </div>    
+                            </div>
+                        </div>    
+                    </div>  
+                </div>
+            </div>
+        </div>    
+        <!-- End of Class Area -->
+        </section>
+	</template>
+	<template id="ht_about_snippet" name="About">
+		<section>
+        <!-- Start of Appointment Area -->
+        <div class="appointment-area">
+            <div class="container-fluid">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <div class="appoint-left active">
+                            <div class="game">
+                                <a href="#"><img src="/theme_ht_swimming/static/src/assets/images/appointment/2.webp" alt="appointment"/></a>
+                            </div>
+                            <div class="video-icon video-hover">
+                                <a class="video-popup" href="https://https://www.youtube.com/watch?v=P3JCqYEEd2A">
+                                    <i class="zmdi zmdi-play-circle-outline"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="appoint-right pt-20 pb-20 pr-100 pl-100 text-center" style="background: url(/theme_ht_swimming/static/src/assets/images/appointment/1.webp);">
+                            <div class="appoint-content">
+                                <img src="/theme_ht_swimming/static/src/assets/images/appointment/1.webp" alt="appointment"/>
+                                <h6>about us</h6>
+                                <h2>welcome to pur swimmer</h2>
+                                <h3>book a appointment now</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lenderit in voluptate </p>
+                                <div class="class-button">
+                                    <a href="#" class="read-more btn"><span>read more</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Appointment Area -->
+        </section>
+	</template>
+	<template id="ht_instructor_snippet" name="Instructor">
+		 <section>
+        <!-- Start of Instructor Area -->
+        <div class="instructor-area bg-gray pt-76 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h2>our best instructor</h2>
+                        </div>
+                    </div>
+                </div>
+                <section class="s_three_columns pt32 pb32" data-vcss="001">
+                    <div class="container">
+                        <div class="row d-flex align-items-stretch">
+                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                <div class="card bg-white h-100">
+                                    <img class="card-img-top" src="/theme_ht_swimming/static/src/assets/images/insturctor/2.webp" alt=""/>
+                                    <div class="card-body" style="background-color: #EA4335 !important;">
+                                        <h3 class="card-title" style="color:white;">Feature One</h3>
+                                        <p class="card-text" style="color:white;">Adapt these three columns to fit your design need. To duplicate, delete or move columns, select the column and use the top icons to perform your action.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                <div class="card bg-white h-100">
+                                    <img class="card-img-top" src="/theme_ht_swimming/static/src/assets/images/insturctor/3.webp" alt=""/>
+                                    <div class="card-body" style="background-color: #0148bc !important;">
+                                        <h3 class="card-title" style="color:white;">Feature Two</h3>
+                                        <p class="card-text" style="color:white;">To add a fourth column, reduce the size of these three columns using the right icon of each block. Then, duplicate one of the columns to create a new one as a copy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+                                <div class="card bg-white h-100">
+                                    <img class="card-img-top" src="/theme_ht_swimming/static/src/assets/images/insturctor/1.webp" alt=""/>
+                                    <div class="card-body" style="background-color: #42a5f5 !important;">
+                                        <h3 class="card-title" style="color:white;">Feature Three</h3>
+                                        <p class="card-text" style="color:white;">Delete the above image or replace it with a picture that illustrates your message. Click on the picture to change its <em>rounded corner</em> style.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- End of Instructor Area -->
+    </section>
+	</template>
+	<template id="ht_clients_snippet" name="Clients">
+		<section>
+        <!-- Start of Testimonal Area -->
+        <div class="testimonial-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="testimonial-owl owl-carousel">
+                            <div class="col">
+                                <div class="testimonial-content text-center pt-75 pb-100 mt-80 mb-80">
+                                    <h3>what client say?</h3>
+                                    <i class="zmdi zmdi-quote first"></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et daenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. voluptate velit esse cillum dolore eu fugiat swimmer ground</p>
+                                    <i class="zmdi zmdi-quote"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="testimonial-content text-center pt-75 pb-100 mt-80 mb-80">
+                                    <h3>what client say?</h3>
+                                    <i class="zmdi zmdi-quote first"></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et daenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. voluptate velit esse cillum dolore eu fugiat swimmer ground</p>
+                                    <i class="zmdi zmdi-quote"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="testimonial-content text-center pt-75 pb-100 mt-80 mb-80">
+                                    <h3>what client say?</h3>
+                                    <i class="zmdi zmdi-quote first"></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et daenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. voluptate velit esse cillum dolore eu fugiat swimmer ground</p>
+                                    <i class="zmdi zmdi-quote"></i>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Testimonal Area -->
+    </section>
+	</template>
+	<template id="ht_gallery_snippets" name="Gallery">
+		<section>
+        <!--Start of gallery Area-->
+        <div class="project-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h2>our gallery</h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="grid">
+                            <div class="grid-item cat1 cat3">
+                                <div class="portfolio-img">
+                                    <img src="/theme_ht_swimming/static/src/assets/images/portfolio/1.webp" alt="project" />
+                                    <div class="portfolio-hover-wrapper">
+                                        <div class="portfolio-hover">
+                                            <div class="hover-content">
+                                                <a class="img-poppu" href="/theme_ht_swimming/static/src/assets/images/portfolio/1.webp">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                </a>
+                                                <h4>Mini Infant kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, lenim ad minim veniam</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item cat2 cat3">
+                                <div class="portfolio-img">
+                                    <img src="/theme_ht_swimming/static/src/assets/images/portfolio/2.webp" alt="project" />
+                                    <div class="portfolio-hover-wrapper">
+                                        <div class="portfolio-hover">
+                                            <div class="hover-content">
+                                                <a class="img-poppu" href="/theme_ht_swimming/static/src/assets/images/portfolio/2.webp">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                </a>
+                                                <h4>Mini Infant kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, lenim ad minim veniam</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item cat1 cat2">
+                                <div class="portfolio-img">
+                                    <img src="/theme_ht_swimming/static/src/assets/images/portfolio/3.webp" alt="project" />
+                                    <div class="portfolio-hover-wrapper">
+                                        <div class="portfolio-hover">
+                                            <div class="hover-content">
+                                                <a class="img-poppu" href="/theme_ht_swimming/static/src/assets/images/portfolio/3.webp">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                </a>
+                                                <h4>Mini Infant kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, lenim ad minim veniam</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item cat2">
+                                <div class="portfolio-img">
+                                    <img src="/theme_ht_swimming/static/src/assets/images/portfolio/4.webp" alt="project" />
+                                    <div class="portfolio-hover-wrapper">
+                                        <div class="portfolio-hover">
+                                            <div class="hover-content">
+                                                <a class="img-poppu" href="/theme_ht_swimming/static/src/assets/images/portfolio/4.webp">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                </a>
+                                                <h4>Mini Infant kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, lenim ad minim veniam</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item cat2 cat3">
+                                <div class="portfolio-img">
+                                    <img src="/theme_ht_swimming/static/src/assets/images/portfolio/5.webp" alt="project" />
+                                    <div class="portfolio-hover-wrapper">
+                                        <div class="portfolio-hover">
+                                            <div class="hover-content">
+                                                <a class="img-poppu" href="/theme_ht_swimming/static/src/assets/images/portfolio/5.webp">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                </a>
+                                                <h4>Mini Infant kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, lenim ad minim veniam</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item cat1 cat3">
+                                <div class="portfolio-img">
+                                    <img src="/theme_ht_swimming/static/src/assets/images/portfolio/6.webp" alt="project" />
+                                    <div class="portfolio-hover-wrapper">
+                                        <div class="portfolio-hover">
+                                            <div class="hover-content">
+                                                <a class="img-poppu" href="/theme_ht_swimming/static/src/assets/images/portfolio/6.webp">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                </a>
+                                                <h4>Mini Infant kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, lenim ad minim veniam</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item cat1 cat3">
+                                <div class="portfolio-img">
+                                    <img src="/theme_ht_swimming/static/src/assets/images/portfolio/7.webp" alt="project" />
+                                    <div class="portfolio-hover-wrapper">
+                                        <div class="portfolio-hover">
+                                            <div class="hover-content">
+                                                <a class="img-poppu" href="/theme_ht_swimming/static/src/assets/images/portfolio/7.webp">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                </a>
+                                                <h4>Mini Infant kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, lenim ad minim veniam</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- portfolio_gallery_area End -->  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of gallery Area -->
+    </section>
+	</template>
+	<template id="ht_plan_snippets" name="Plan">
+		<section>
+        <!-- Start of pricing Area -->
+        <div class="pricing-area pt-75 pb-80 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>our pricing plan</h2> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-price">
+                            <div class="price-table">
+                                <div class="table-head">
+                                    <h4>Silver Pack</h4>
+                                    <div class="price-icon">
+                                        <span><img src="/theme_ht_swimming/static/src/assets/images/pricing/1.webp" alt="price"/></span>
+                                    </div>
+                                </div>
+                                <div class="table-body">
+                                    <h2>$95 <span> / month</span></h2>
+                                    <ul>
+                                        <li>Mini - Toddler</li>
+                                        <li>Coffee Break</li>
+                                        <li>Total Classes - 15</li>
+                                        <li>Group Lesson</li>
+                                    </ul>
+                                    <button><span>Register Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-price offer">
+                            <div class="price-table">
+                                <div class="table-head">
+                                    <h4>Premium Pack</h4>
+                                    <div class="price-icon">
+                                        <span><img src="/theme_ht_swimming/static/src/assets/images/pricing/2.webp" alt="price"/></span>
+                                    </div>
+                                </div>
+                                <div class="table-body">
+                                    <h2>$95 <span> / month</span></h2>
+                                    <ul>
+                                        <li>Mini - Toddler</li>
+                                        <li>Coffee Break</li>
+                                        <li>Total Classes - 15</li>
+                                        <li>Group Lesson</li>
+                                    </ul>
+                                    <button class="active"><span>Register Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-price">
+                            <div class="price-table">
+                                <div class="table-head">
+                                    <h4>Platinum Pack</h4>
+                                    <div class="price-icon">
+                                        <span><img src="/theme_ht_swimming/static/src/assets/images/pricing/3.webp" alt="price"/></span>
+                                    </div>
+                                </div>
+                                <div class="table-body">
+                                    <h2>$95 <span> / month</span></h2>
+                                    <ul>
+                                        <li>Mini - Toddler</li>
+                                        <li>Coffee Break</li>
+                                        <li>Total Classes - 15</li>
+                                        <li>Group Lesson</li>
+                                    </ul>
+                                    <button><span>Register Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
+        <!-- End of pricing Area -->
+    </section>
+    </template>
+		<template id="ht_counter_snippets" name="Counter">
+			<section>
+            <!-- start of fun Area -->
+            <div class="fun-area pt-110 pb-110">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-fun text-center">
+                                <div class="fun-img">
+                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/1.webp" alt="fun"/></span>
+                                </div>
+                                <div class="fun-content">
+                                    <h3 class="counter odometer" data-count-to="2400">2400</h3>
+                                    <h5>happy clients</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-fun text-center">
+                                <div class="fun-img">
+                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/2.webp" alt="fun"/></span>
+                                </div>
+                                <div class="fun-content">
+                                    <h3 class="counter odometer" data-count-to="28">28</h3>
+                                    <h5>experience</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-fun text-center">
+                                <div class="fun-img">
+                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/3.webp" alt="fun"/></span>
+                                </div>
+                                <div class="fun-content">
+                                    <h3 class="counter odometer" data-count-to="90">90</h3>
+                                    <h5>success</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-fun text-center">
+                                <div class="fun-img">
+                                    <span><img src="/theme_ht_swimming/static/src/assets/images/fun/4.webp" alt="fun"/></span>
+                                </div>
+                                <div class="fun-content">
+                                    <h3 class="counter odometer" data-count-to="560">560</h3>
+                                    <h5>awards</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of fun Area -->
+        </section>
+		</template>
+        <template id="ht_contact_snippets" name="Conatct">
+            <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+            <!--Start contact us Area-->
+            <div class="contact-us-area text-center pt-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="contact-right">
+                                <h3 class="text-center">always keep us in your prayer</h3>
+                                <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required" data-mark="*" data-editable-form="false">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label s_website_form_label"  for="opportunity1">
+                                                    <!-- <span class="s_website_form_label_content">Your Name</span> -->
+                                                    <!-- <span class="s_website_form_mark"> *</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required="" placeholder="Your Name *"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label s_website_form_label"  for="opportunity2">
+                                                    <!-- <span class="s_website_form_label_content">Phone Number</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" placeholder="Phone Number"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-6 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label s_website_form_label"  for="opportunity3">
+                                                    <!-- <span class="s_website_form_label_content">Email</span>
+                                                    <span class="s_website_form_mark"> *</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" placeholder="Email *"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-6 s_website_form_field" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="opportunity4">
+                                                    <!-- <span class="s_website_form_label_content">Your Company</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" placeholder="Your Company"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="opportunity5">
+                                                    <!-- <span class="s_website_form_label_content">Subject</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" placeholder="Subject"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label  s_website_form_label"  for="opportunity6">
+                                                    <!-- <span class="s_website_form_label_content">Your Question</span>
+                                                    <span class="s_website_form_mark"> *</span> -->
+                                                </label>
+                                                <div class="col-sm">
+                                                    <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required="" placeholder="Your Question"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                            <div  class="s_website_form_label"/>
+                                            <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                            <span id="s_website_form_result"></span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Class Area -->
+        </section>
+        </template>
+</odoo>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="theme_swimming_layout" name="Harhu Theme Layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="replace">
+            <!--Header Area Start-->
+            <header class="header-area sticker" id="topnav">
+                <div class="header-wrapper header-padding">
+                    <div class="header-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-9">
+                                    <div class="top-left">
+                                        <ul>
+                                            <li><i class="zmdi zmdi-email"></i> demo@example.com</li>
+                                            <li><i class="zmdi zmdi-phone"></i> 0123456789</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-3">
+                                    <div class="top-right">
+                                        <ul>
+                                            <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+                                            <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+                                            <li><a href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
+                                            <li><a href="#"><i class="zmdi zmdi-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="/theme_ht_swimming/static/src/assets/images/logo/logo.webp" alt="swimmer" /></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="menu-area">
+                                        <div class="menu-item">
+                                            <!-- Mobile menu toggle-->
+                                            <a class="navbar-toggle">
+                                                <div class="lines">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </a>
+                                            <!-- End mobile menu toggle-->
+                                        </div>
+                                    </div>        
+                                    <div id="navigation" class="main-menu">
+                                        <nav>
+                                            <ul class="navigation-menu">
+                                                <li><a href="/">home </a></li>
+                                                <li><a href="/about">About </a></li>
+                                                <li><a href="/courses">courses </a></li>
+                                                <li class="hidden-sm"><a href="/instructor">Instructor</a></li>
+                                                <li><a href="/contact">contact</a></li>
+                                            </ul>
+                                        </nav>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>      
+            </header>
+            <!-- End of Header Area -->
+        </xpath>
+        <xpath expr="//footer" position="replace">
+            <!-- Start of Footer area -->
+            <footer class="footer-area">
+                <div class="main-footer pt-76 pb-72">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-7 col-12 mb-md--40">
+                                <div class="footer-widget text-left f-left">
+                                    <h3>twitter Feed</h3>
+                                    <div class="single-feed mb-15">
+                                        <h5>Post By: John Doe <span>12 Feb 2017</span></h5>
+                                        <p><a href="#">#There</a> are may <a href="#">“varations”</a> pasages of texi Lorem Ipsum available njhgh fhg excercise</p>
+                                    </div>
+                                    <div class="single-feed">
+                                        <h5>Post By: John Doe <span>12 Feb 2017</span></h5>
+                                        <p>There are may <a href="#">#“variations”</a> pasages of texi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-5 col-12 mb-md--40">
+                                <div class="footer-widget text-center">
+                                    <a href="index.html"><img src="/theme_ht_swimming/static/src/assets/images/logo/footer-logo.webp" alt="logo"/></a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, seo eiusmod tempor in hjgcididunt ut labore eagna al veniam, quis nostrud </p>
+                                    <div class="footer-icons">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="footer-widget f-right">
+                                    <h3 class="text-left">latest post</h3>
+                                    <div class="post">
+                                        <div class="post-img">
+                                            <img src="/theme_ht_swimming/static/src/assets/images/post/1.webp" alt="post"/>
+                                            <a href="#">
+                                                <i class="zmdi zmdi-link"></i>
+                                            </a>
+                                        </div>
+                                        <div class="post-img">
+                                            <img src="/theme_ht_swimming/static/src/assets/images/post/2.webp" alt="post"/>
+                                            <a href="#">
+                                                <i class="zmdi zmdi-link"></i>
+                                            </a>
+                                        </div>
+                                        <div class="post-img">
+                                            <img src="/theme_ht_swimming/static/src/assets/images/post/3.webp" alt="post"/>
+                                            <a href="#">
+                                                <i class="zmdi zmdi-link"></i>
+                                            </a>
+                                        </div>
+                                        <div class="post-img">
+                                            <img src="/theme_ht_swimming/static/src/assets/images/post/4.webp" alt="post"/>
+                                            <a href="#">
+                                                <i class="zmdi zmdi-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="footer-bottom pt-8 pb-10">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p class="copyright">&amp;copy 2021 <strong>Swimmer</strong> Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <a href="https://hasthemes.com/"><strong>HasThemes</strong></a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </footer>
+            <!-- End of Footer area -->
+        </xpath>
+    </template>
+</odoo>

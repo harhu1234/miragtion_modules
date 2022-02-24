@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="contact_page" name="Contact Page">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty">
+                <section>
+                    <div class="site-blocks-cover inner-page overlay" style="background-image: url(/theme_ht_insurance/static/src/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-7 text-center" data-aos="fade">
+                                <h1 class="text-uppercase">Contact Us</h1>
+                                <span class="caption d-block text-white">An Insurance Company</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                    <div class="py-5 bg-light">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-8 mb-5">
+                                    <form id="contactus_form" action="/website_form/" method="post" enctype="multipart/form-data" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" class="o_mark_required p-5 bg-white" data-mark="*" data-editable-form="false">
+                                        <div class="s_website_form_rows row s_col_no_bgcolor">
+                                            <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity1">
+                                                        <span class="s_website_form_label_content">Your Name</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input id="opportunity1" type="text" class="form-control s_website_form_input" name="contact_name" required=""/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity2">
+                                                        <span class="s_website_form_label_content">Phone Number</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input id="opportunity2" type="tel" class="form-control s_website_form_input" name="phone" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity3">
+                                                        <span class="s_website_form_label_content">Email</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input id="opportunity3" type="text" class="form-control s_website_form_input" name="email_from" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_field" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity4">
+                                                        <span class="s_website_form_label_content">Your Company</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input id="opportunity4" type="text" class="form-control s_website_form_input" name="partner_name" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity5">
+                                                        <span class="s_website_form_label_content">Subject</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input id="opportunity5" type="text" class="form-control s_website_form_input" name="name" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="text" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="opportunity6">
+                                                        <span class="s_website_form_label_content">Your Question</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <textarea id="opportunity6" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                                <div class="s_website_form_label"/>
+                                                <a href="#" role="button" class="btn btn-primary btn-lg text-white s_website_form_send">Send Message</a>
+                                                <span id="s_website_form_result"></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="p-4 mb-3 bg-white">
+                                        <h3 class="h5 text-black mb-3">Contact Info</h3>
+                                        <p class="mb-0 font-weight-bold">Address</p>
+                                        <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                                        <p class="mb-0 font-weight-bold">Phone</p>
+                                        <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                                        <p class="mb-0 font-weight-bold">Email Address</p>
+                                        <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="site-section block-14 nav-direction-white">
+                        <div class="container">
+                            <div class="row mb-5">
+                                <div class="col-md-12">
+                                    <h2 class="site-section-heading text-center text-uppercase">Testimonies</h2>
+                                </div>
+                            </div>
+                            <div class="nonloop-block-14 owl-carousel">
+                                <div class="p-5">
+                                    <div class="d-block block-testimony w-75 mx-auto text-center">
+                                        <div class="person w-25 mx-auto mb-4">
+                                            <img src="/theme_ht_insurance/static/src/images/person_1.jpg" alt="Image" class="img-fluid rounded-circle"/>
+                                        </div>
+                                        <div>
+                                            <h2 class="h5 mb-4">Katie Johnson</h2>
+                                            <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="d-block block-testimony w-75 mx-auto text-center">
+                                        <div class="person w-25 mx-auto mb-4">
+                                            <img src="/theme_ht_insurance/static/src/images/person_2.jpg" alt="Image" class="img-fluid rounded-circle"/>
+                                        </div>
+                                        <div>
+                                            <h2 class="h5 mb-4">Jun Mars</h2>
+                                            <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="d-block block-testimony w-75 mx-auto text-center">
+                                        <div class="person w-25 mx-auto mb-4">
+                                            <img src="/theme_ht_insurance/static/src/images/person_3.jpg" alt="Image" class="img-fluid rounded-circle"/>
+                                        </div>
+                                        <div>
+                                            <h2 class="h5 mb-4">Shane Holmes</h2>
+                                            <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="d-block block-testimony w-75 mx-auto text-center">
+                                        <div class="person w-25 mx-auto mb-4">
+                                            <img src="/theme_ht_insurance/static/src/images/person_4.jpg" alt="Image" class="img-fluid rounded-circle"/>
+                                        </div>
+                                        <div>
+                                            <h2 class="h5 mb-4">Mark Johnson</h2>
+                                            <blockquote>&amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&amp;rdquo;</blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

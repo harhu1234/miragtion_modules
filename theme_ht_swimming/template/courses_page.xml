@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="courses_page" name="Courses Page">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty">
+				<section>
+					<!-- Start Banner Area-->
+		            <div class="banner-area text-center">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-12">
+		                            <div class="banner-content-wrapper">
+		                                <div class="banner-content">
+		                                    <h2>courses grid view</h2>
+		                                    <div class="banner-breadcrumb">
+		                                        <ul>
+		                                            <li><a href="/index">home </a> <i class="zmdi zmdi-chevron-right"></i>
+		                                            </li>
+		                                            <li>courses grid view</li>
+		                                        </ul>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End Banner Area-->
+				</section>
+				<section>
+					<!--Start Category Area-->
+		            <div class="category-area text-center pt-80 two">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-12">
+		                            <div class="categories">
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/1.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/2.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/3.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/5.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/4.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/6.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/8.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/7.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="cat-item cat-lg-4 cat-md-6">
+		                                    <div class="single-category">
+		                                        <div class="category-img">
+		                                            <img src="/theme_ht_swimming/static/src/assets/images/category/9.webp" alt="category"/>
+		                                            <div class="category-hover">
+		                                                <h3>Swim classes for mini</h3>
+		                                                <span>$98</span>
+		                                            </div>
+		                                        </div>
+		                                        <div class="category-content pt-20 pb-20">
+		                                            <h6>Instructor Adom Jonson </h6>
+		                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                                                tempor incididunt ut labore et magna aliqua. </p>
+		                                            <div class="class-button">
+		                                                <a href="#" class="read-more btn"><span>read more</span></a>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of Category Area -->
+				</section>
+				<section>
+					<!-- Start of Start Area -->
+		            <div class="start-area">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-12">
+		                            <div class="start-content text-center">
+		                                <h2>Register Today &amp; Start Class Tommorow</h2>
+		                                <a href="/contact" class="read-more btn"><span>register now</span></a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of Start Area -->
+				</section>
+				<section>
+					<!-- Start of contact Area -->
+		            <div class="contact-area text-center pb-80 pt-80">
+		                <div class="container">
+		                    <div class="row">
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-home"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>Address</h5>
+		                                    <p>Elizabeth Tower, 6th Floor<br/> Medtown, New York</p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-phone"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>phone number</h5>
+		                                    <p>0123456789<br/>
+		                                        0123456789</p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="single-contact">
+		                                <div class="contact-icon">
+		                                    <i class="zmdi zmdi-email"></i>
+		                                </div>
+		                                <div class="contact-info">
+		                                    <h5>email</h5>
+		                                    <p>demo@example.com<br/>
+		                                        demo@example.com </p>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- End of contact Area -->
+				</section>
+			</div>
+		</t>
+	</template>
+</odoo>

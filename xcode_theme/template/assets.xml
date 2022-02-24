@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="construction_assets" name="Theme Management" inherit_id="website.assets_frontend">
+		<xpath expr="//link[last()]" position="after">
+			<!-- Css Styles -->
+		    <link rel="stylesheet" href="/xcode_theme/static/src/css/bootstrap.min.css"/>
+		    <link rel="stylesheet" href="/xcode_theme/static/src/lib/animate/animate.min.css"/>
+		    <link rel="stylesheet" href="/xcode_theme/static/src/lib/owlcarousel/assets/owl.carousel.min.css"/>
+		    <link rel="stylesheet" href="/xcode_theme/static/src/css/style.css"/>
+		    
+
+		    <!-- Js Plugins -->
+			<script src="/xcode_theme/static/src/js/jquery-migrate-3.0.1.min.js"></script>
+			<script src="/xcode_theme/static/src/lib/wow/wow.min.js"></script>
+			<script src="/xcode_theme/static/src/lib/easing/easing.min.js"></script>
+			<script src="/xcode_theme/static/src/lib/waypoints/waypoints.min.js"></script>
+			<script src="/xcode_theme/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+			<script src="/xcode_theme/static/src/js/main.js"></script>
+		</xpath>
+	</template>
+</odoo>

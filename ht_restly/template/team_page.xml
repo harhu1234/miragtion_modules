@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="team_page" name="Team Page">
+		<t t-call="website.layout">
+			<div id="wrap">
+				<div class="oe_structure"/>
+				<!-- Page Banner Start -->
+		        <section class="page-banner bgs-cover overlay pt-50" style="background-image: url('/ht_restly/static/src/images/banner.jpg');">
+		            <div class="container">
+		                <div class="banner-inner">
+		                    <h1 class="page-title">Team</h1>
+		                    <nav aria-label="breadcrumb">
+		                        <ol class="breadcrumb">
+		                            <li class="breadcrumb-item"><a href="/">Restly</a></li>
+		                            <li class="breadcrumb-item active">Team</li>
+		                        </ol>
+		                    </nav>
+		                </div>
+		            </div>
+		        </section>
+		        <!-- Page Banner End -->
+		        <div class="oe_structure"/>
+		        <!-- Team Section Start -->
+		        <section class="team-section bg-lighter text-center pt-115 rpt-95 pb-200 rpb-70">
+		            <div class="container">
+		                <div class="section-title mb-55">
+		                    <span class="sub-title">Export Team</span>
+		                    <h2>Meet our colleague</h2>
+		                </div>
+		                <div class="row">
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-2s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-four-1.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">michael phelps</a></h5>
+		                                <span>Founder CEO</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-4s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-four-2.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">Emile Smith Rowe</a></h5>
+		                                <span>Senior Manager</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-6s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-four-3.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">michelle williams</a></h5>
+		                                <span>UIUX Designer</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-8s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-four-4.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">rachel weisz</a></h5>
+		                                <span>front end developer</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-2s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-three-1.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">michael phelps</a></h5>
+		                                <span>Founder CEO</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-4s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-three-2.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">Emile Smith Rowe</a></h5>
+		                                <span>Senior Manager</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-6s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-three-3.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">michelle williams</a></h5>
+		                                <span>UIUX Designer</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="col-lg-3 col-sm-6">
+		                        <div class="team-member-four fadeInUp delay-0-8s">
+		                            <div class="image">
+		                                <img src="/ht_restly/static/src/images/team/team-three-1.jpg" alt="Team Member"/>
+		                                <div class="social-style-two">
+		                                    <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		                                    <a href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+		                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		                                </div>
+		                            </div>
+		                            <div class="member-designation">
+		                                <h5><a href="#">rachel weisz</a></h5>
+		                                <span>front end developer</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </section>
+		        <!-- Team Section End -->
+		        <div class="oe_structure"/>
+		        <!-- Wrok Progress Start -->
+		        <section class="work-progress-three bg-blue text-white pb-85 rpb-65" style="background-image: url('/ht_restly/static/src/images/background/progress.png');">
+		            <div class="container">
+		                <div class="work-progress-inner-three">
+		                    <div class="row justify-content-center">
+		                        <div class="col-lg-4 col-sm-6">
+		                            <div class="progress-item-two style-two fadeInUp delay-0-2s">
+		                                <span class="progress-step">01</span>
+		                                <div class="icon">
+		                                    <i class="flaticon flaticon-speech-bubble"></i>
+		                                </div>
+		                                <h3>Advertising and <br/>Marketing</h3>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+		                                <a href="/service" class="learn-more">Read More <i class="fas fa-arrow-right"></i></a>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-4 col-sm-6">
+		                            <div class="progress-item-two style-two fadeInUp delay-0-4s">
+		                                <span class="progress-step">02</span>
+		                                <div class="icon">
+		                                    <i class="flaticon flaticon-vector"></i>
+		                                </div>
+		                                <h3>Web <br/>Development</h3>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+		                                <a href="/service" class="learn-more">Read More <i class="fas fa-arrow-right"></i></a>
+		                            </div>
+		                        </div>
+		                        <div class="col-lg-4 col-sm-6">
+		                            <div class="progress-item-two style-two fadeInUp delay-0-6s no-border mb-0">
+		                                <span class="progress-step">03</span>
+		                                <div class="icon">
+		                                    <i class="flaticon flaticon-like-1"></i>
+		                                </div>
+		                                <h3>Mobile App <br/>Development</h3>
+		                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+		                                <a href="/service" class="learn-more">Read More <i class="fas fa-arrow-right"></i></a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </section>
+		        <!-- Wrok Progress End -->
+		        <div class="oe_structure"/>
+		        <!-- Testimonial Section Start -->
+		        <section class="cournter-section-three bg-lighter text-center pt-115 rpt-95 pb-70 rpb-50">
+	                <div class="container">
+	                    <div class="section-title mb-55">
+	                        <h2>Over 1200+ finished work and <br/>Still counting.</h2>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-lg-3 col-sm-6">
+	                            <div class="success-item circle-style fadeInUp delay-0-2s counted animated" style="visibility: visible; animation-name: fadeInUp;">
+	                                <span class="count-text k">35k</span>
+	                                <span>Complate</span>
+	                            </div>
+	                        </div>
+	                        <div class="col-lg-3 col-sm-6">
+	                            <div class="success-item circle-style fadeInUp delay-0-4s color-two counted animated" style="visibility: visible; animation-name: fadeInUp;">
+	                                <span class="count-text k">34k</span>
+	                                <span>Trusted Users</span>
+	                            </div>
+	                        </div>
+	                        <div class="col-lg-3 col-sm-6">
+	                            <div class="success-item circle-style fadeInUp delay-0-6s color-three counted animated" style="visibility: visible; animation-name: fadeInUp;">
+	                                <span class="count-text plus">119<i class="fa fa-plus ht_fa_plus"/></span>
+	                                <span>Awards</span>
+	                            </div>
+	                        </div>
+	                        <div class="col-lg-3 col-sm-6">
+	                            <div class="success-item circle-style fadeInUp delay-0-8s color-four counted animated" style="visibility: visible; animation-name: fadeInUp;">
+	                                <span class="count-text plus">119<i class="fa fa-plus ht_fa_plus"/></span>
+	                                <span>Happy Clients</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </section>
+		        <!-- Testimonial Section End -->
+		        <div class="oe_structure"/>
+			</div>
+		</t>
+	</template>
+</odoo>

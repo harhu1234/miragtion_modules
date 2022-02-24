@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "MItech",
+    "summary": "MItech",
+    'description': 'MItech',
+    'version': '14.0.0.1',
+    'category': 'Theme/MItech',
+    'author': 'Harhu Technologies Pvt. Ltd.',
+    'maintainer': 'Harhu Technologies Pvt. Ltd.',
+    "website": "www.harhu.com",
+    "depends": ['website','website_crm','crm','website_blog'],
+    'data': [
+            'template/assets.xml',
+            'template/layout.xml',
+            'template/home_page.xml',
+            'template/about_page.xml',
+            'template/leadership_page.xml',
+            'template/whychooseus_page.xml',
+            'template/ourhistory_page.xml',
+            'template/itsolution_page.xml',
+            'template/faqs_page.xml',
+            'template/careers_page.xml',
+            'template/contact_page.xml',
+            'template/snippets.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'license': 'LGPL-3',
+
+}

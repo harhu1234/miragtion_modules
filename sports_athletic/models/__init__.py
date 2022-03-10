@@ -7,3 +7,4 @@ from . import sa_expense
 from . import employee
 from . import sports_competitions_csv
 from . import calendar
+from . import sport_competition

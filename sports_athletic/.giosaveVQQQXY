@@ -48,15 +48,15 @@ class SportsSaison(models.Model):
                 year2 = str(order.date_end).split('-')[0]
                 order.name = str(year) + '/' + str(year2)
 
-    name = fields.Char(string='Saison sportive', track_visibility='onchange')
-    date_start = fields.Date(string='Date début', track_visibility='onchange')
-    date_end = fields.Date(string='Date fin', track_visibility='onchange')
+    name = fields.Char(string='Saison sportive', tracking=True)
+    date_start = fields.Date(string='Date début', tracking=True)
+    date_end = fields.Date(string='Date fin', tracking=True)
 
     state = fields.Selection([('future', 'Future'), ('active', 'Active'), ('cloturee', u'Cloturée')], 'Statut',
-                             readonly=True, copy=False, index=True, track_visibility='onchange', default='future')
+                             readonly=True, copy=False, index=True, tracking=True, default='future')
     date_start_comp = fields.Date(u"Date Début Compétition")
     date_end_comp = fields.Date(u"Date Fin Compétition")
-    label_saison = fields.Char('Libellé', track_visibility='onchange')
+    label_saison = fields.Char('Libellé', tracking=True)
 
     # Zoubida: Contraintes sur les dates debut et fin
 
@@ -381,8 +381,8 @@ class SportsAffiliation(models.Model):
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     name = fields.Char(string='N° de demande', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
+    club_id = fields.Many2one('sports.club', string='Club', tracking=True)
 
     athletes_ids = fields.One2many('sports.athletes', 'affiliation_id', string='Athletes')
 
@@ -393,7 +393,7 @@ class SportsAffiliation(models.Model):
         ('Officiel', 'Officiel'),
 
     ], string='Type Affiliation', default='Athlete')
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -402,12 +402,12 @@ class SportsAffiliation(models.Model):
          ("ath_attente_crea", "Attente Création"), ("edition_licence_assu", "Attente Edition"), ("edition", "Edition"),
          ("licence_attente_dispo_club", "Mise à disposition"), ("licence_attente_recup", "A Rrécupérer"),
          ("licence_recuperees", "Récupérée"), ("affiliation_rejetee", "Rejetées")], 'Statut', readonly=True, copy=False,
-        index=True, track_visibility='onchange', default='bord_attente_envoi')
+        index=True, tracking=True, default='bord_attente_envoi')
 
     mode_creation_ath = fields.Selection([("normal", "Pas de blocage"), ('blocage', 'Blocage si un athlète existant')],
                                          'Politique de création des athlètes',
                                          help="Blocage lorsqu\'un athlète(Nom,Prénom,Date naissance) est déja dans le système",
-                                         readonly=False, copy=False, index=True, track_visibility='onchange',
+                                         readonly=False, copy=False, index=True, tracking=True,
                                          default='blocage')
 
     date_init_bord_attente_envoi = fields.Datetime('Date initiale de l\'Envoi du Bordereau le', readonly=True)
@@ -657,17 +657,17 @@ class Sportsrenouvellement(models.Model):
     name = fields.Char('N°', required=True, copy=False, readonly=True, index=True, default='Nouveau')
     message1 = fields.Text('message1', readonly=True)
     message2 = fields.Text('message2', readonly=True)
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
+    club_id = fields.Many2one('sports.club', string='Club', tracking=True)
 
     athletes2_ids = fields.Many2many('sports.athletes', string='Athletes')
 
     state = fields.Selection(
         [('dem_att_verif', 'Attente de Renouvellement'), ("edition_licence_attente", "Attente d'édition"),
          ("edition_licence_assu", "Edition"), ('ren_rejete', 'Rejeté')], 'Statut', readonly=True, copy=False,
-        index=True, track_visibility='onchange', default='dem_att_verif')
+        index=True, tracking=True, default='dem_att_verif')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -683,7 +683,7 @@ class Sportsrenouvellement(models.Model):
     date_att_recup_club = fields.Datetime('Récupération des cartes le', readonly=True)
     user_ren_rejete = fields.Many2one('res.users', 'Par', readonly=True)
     date_ren_rejete = fields.Datetime('Renouvellement Rejeté le', readonly=True)
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
     afficher_button = fields.Boolean('Afficher button')
@@ -788,8 +788,8 @@ class Sportsreaffiliation(models.Model):
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
 
     name = fields.Char('N° Demande', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
+    club_id = fields.Many2one('sports.club', string='Club', tracking=True)
 
     # athletes_reaffiliation_ids = fields.One2many('sports.athletes.reaffiliation', 'reaffiliation_id', string='Athletes')
 
@@ -804,7 +804,7 @@ class Sportsreaffiliation(models.Model):
                               ("licence_attente_recup", "Licences à récupérer par le Club"),
                               ("licence_recuperees", "Licences récupérées par le Club"),
                               ("affiliation_rejetee", "Rejetées")], 'Statut', readonly=True, copy=False, index=True,
-                             track_visibility='onchange', default='bord_attente_envoi')
+                             tracking=True, default='bord_attente_envoi')
 
     user_init_bord_attente_envoi = fields.Many2one('res.users', 'Par', readonly=True)
     date_bord_attente_envoi = fields.Datetime('Création du Bordereau le', readonly=True)
@@ -825,7 +825,7 @@ class Sportsreaffiliation(models.Model):
     date_affiliation_rejetee = fields.Datetime('Demandes d\'affiliations rejetées le', readonly=True)
     user_affiliation_rejetee = fields.Many2one('res.users', 'Par', readonly=True)
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
     afficher_button = fields.Boolean('Afficher button'),
@@ -1084,14 +1084,14 @@ class SportsAthletes(models.Model):
 
     name = fields.Char(string='N° licence', copy=False, readonly=False, index=True, default='Nouveau')
     name2 = fields.Char(string='OLD ID', copy=False, readonly=False)
-    prenom = fields.Char(string='Prénom', track_visibility='onchange')
+    prenom = fields.Char(string='Prénom', tracking=True)
 
-    name_ar = fields.Char(string='الاسم الكامل', track_visibility='onchange')
+    name_ar = fields.Char(string='الاسم الكامل', tracking=True)
 
-    name_at = fields.Char(string='Nom', track_visibility='onchange')
+    name_at = fields.Char(string='Nom', tracking=True)
 
     category_age_id = fields.Many2one('sports.category_age', string='Catégorie d’âge',
-                                      default=_get_default_category_age, track_visibility='onchange')
+                                      default=_get_default_category_age, tracking=True)
 
     licence = fields.Selection([
         ('Athlete', 'Athlete'),
@@ -1113,13 +1113,13 @@ class SportsAthletes(models.Model):
     ], string='Situation Actuel', readonly=True)
 
     lieu_naissance = fields.Char(string='Lieu de naissance')
-    datenaissance = fields.Date(string='Date de naissance', track_visibility='onchange')
+    datenaissance = fields.Date(string='Date de naissance', tracking=True)
 
     adresse = fields.Char(string='Adresse')
     name_pere = fields.Char(string='Nom père')
     name_mere = fields.Char(string='Nom mère')
     adresse_adresse = fields.Char(string='Adresse Parent')
-    cin = fields.Char(string='CIN', track_visibility='onchange')
+    cin = fields.Char(string='CIN', tracking=True)
     cinexpiration = fields.Date(string='Date Expiration CIN? ')
 
     far = fields.Boolean(string='Far')
@@ -1189,7 +1189,7 @@ class SportsAthletes(models.Model):
 
     surclassement = fields.Selection([('non_surclasse', 'Non surclassé'), ('surclasse', 'surclassé')],
                                      'Surclassement ?', readonly=True, copy=False, index=True,
-                                     track_visibility='onchange', default='non_surclasse')
+                                     tracking=True, default='non_surclasse')
 
     actenaissance = fields.Binary('Extrait d\'acte de Naissance')
     actenaissance_filename = fields.Char("Extrait d\'acte de Naissance Filename")
@@ -1227,7 +1227,7 @@ class SportsAthletes(models.Model):
     doublon_ids = fields.One2many('sports.doublon', 'athletes_id', string='Doublons')
 
     age = fields.Integer(compute='_compute_age', string='Age', readonly=True, store=False, default=0,
-                         track_visibility='onchange')
+                         tracking=True)
 
     state = fields.Selection([("draft", "Brouillon"), ("attente_activation", "Attente Activation"),
                               ("actif", "Actif"),
@@ -1237,7 +1237,7 @@ class SportsAthletes(models.Model):
                               ("Rejete", "Rejeté"),
                               ("Sanctionne", "Sanctionné"),
                               ("nonConforme", "Non Conforme"),
-                              ], 'Statut', readonly=False, copy=False, index=True, track_visibility='onchange',
+                              ], 'Statut', readonly=False, copy=False, index=True, tracking=True,
                              default='draft')
 
     niveau_scolaire = fields.Selection([
@@ -1255,7 +1255,7 @@ class SportsAthletes(models.Model):
     type_athletes = fields.Selection([('Sportif-Interne', 'Sportif-Interne'), ('Sportif-MRE', 'Sportif-MRE'),
                                       ('Sportif-Etranger', 'Sportif-Etranger')], string='Type Athlètes')
 
-    # impression =  fields.Selection([('attente_impression', 'Attente d’impression'), ('Imprimee', 'Imprimée'),('Duplicata','Duplicata')], 'Impression Carte?', readonly=True, copy=False, index=True, track_visibility='onchange', default='attente_impression')
+    # impression =  fields.Selection([('attente_impression', 'Attente d’impression'), ('Imprimee', 'Imprimée'),('Duplicata','Duplicata')], 'Impression Carte?', readonly=True, copy=False, index=True, tracking=True, default='attente_impression')
 
     assure = fields.Boolean(string='Assuré?', readonly=True)
     date_assure = fields.Datetime('Date Assurance', readonly=True)
@@ -1607,7 +1607,7 @@ class SportsSanctions(models.Model):
     saison_id = fields.Many2one('sports.saison', string='Saison sportive')
     athletes_id = fields.Many2one('sports.athletes', 'N° Licence')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -1709,15 +1709,15 @@ class SportsMutations(models.Model):
         self.prenom = self.env['sports.athletes'].search([('name', '=', self.athletes_id.name)]).prenom
 
     name = fields.Char('N° Mutation', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
 
     # zoubida: ajout de nom et prenom athlete onchange
 
-    prenom = fields.Char(string='Prénom', track_visibility='onchange', readonly = True)
-    name_at = fields.Char(string='Nom', track_visibility='onchange', readonly = True)
+    prenom = fields.Char(string='Prénom', tracking=True, readonly = True)
+    name_at = fields.Char(string='Nom', tracking=True, readonly = True)
 
-    club_giving_id = fields.Many2one('sports.club', 'Club Cédant', required=True, track_visibility='onchange')
-    club_receiving_id = fields.Many2one('sports.club', 'Club Recevant', required=True, track_visibility='onchange')
+    club_giving_id = fields.Many2one('sports.club', 'Club Cédant', required=True, tracking=True)
+    club_receiving_id = fields.Many2one('sports.club', 'Club Recevant', required=True, tracking=True)
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     athletes_id = fields.Many2one('sports.athletes', 'N° Licence')
@@ -1747,7 +1747,7 @@ class SportsMutations(models.Model):
     date_dem_attente_val = fields.Datetime('Fait le', readonly=True)
     reaffiliation_id = fields.Many2one('sports.reaffiliation', string='Réaffiliation')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -1823,14 +1823,14 @@ class SportsAnneeblanche(models.Model):
         return self.env['sports.saison'].search([('state', '=', 'active')])
 
     name = fields.Char('N° Année blanche', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
 
     club_id = fields.Many2one('sports.club', 'Club', required=True)
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     athletes_id = fields.Many2one('sports.athletes', 'N° Licence')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -1914,7 +1914,7 @@ class EditionAssurances(models.Model):
     athletes3_reaf_ids = fields.One2many('sports.athletes.assurances', 'assurances_id', string='Athlétes',
                                          domain=[('situation_etat', '=', 'Reaffiliations')], readonly=True)
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
 
@@ -2145,7 +2145,7 @@ class EditionCartesLicences(models.Model):
     athletes3_reaf_ids = fields.One2many('sports.athletes.carteslicences', 'carteslicences_id', string='Athlétes',
                                          domain=[('situation_etat', '=', 'Reaffiliations')], readonly=True)
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)

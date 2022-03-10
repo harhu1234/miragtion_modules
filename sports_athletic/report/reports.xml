@@ -10,7 +10,7 @@
         <!-- report declaration -->
 
         <!-- report achat demande -->
-        <report
+        <!-- <report
                 id="report_achat_demande_da"
                 string="Demande d'achat"
                 model="achat.demande"
@@ -35,7 +35,7 @@
                 report_type="qweb-pdf"
                 file="sports_athletic.sa_expense_report"
                 name="sports_athletic.sa_expense_report"
-        />
+        /> -->
 
     </data>
 </odoo>

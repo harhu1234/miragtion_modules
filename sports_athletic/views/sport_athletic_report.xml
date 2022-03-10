@@ -5,25 +5,23 @@
         <!-- <report auto="False" id="report_sports_athletes" model="sports.athletes" name="sports.athletes" rml="sports_athletic/report/sports_athletes.rml" string="Fiche Athlète"/> -->
         <!--report auto="False" id="report_sports_athletes" model="sports.edition.carteslicences"  name="sports.athletes.carte" rml="sports_athletic/report/sports_athletes_carte.rml" string="Carte Athlète"/-->
 
-        <report
-                id="ath_cart_report"
+        <!-- <report id="ath_cart_report"
                 string="Carte Athlète"
                 model="sports.athletes"
                 report_type="qweb-pdf"
                 file="sports_athletic.athlete_cart_report"
-                name="sports_athletic.athlete_cart_report"
-        />
+                name="sports_athletic.athlete_cart_report"/> -->
 
-        <report
+        <!-- <report
                 id="report_ml"
                 string="Liste des adhérents"
                 model="sports.passage.categorie"
                 report_type="qweb-pdf"
                 file="sports_athletic.member_list_report"
                 name="sports_athletic.member_list_report"
-        />
+        /> -->
 
-        <!--record id="paperformat_ath_cart_report" model="report.paperformat">
+        <!-- <record id="paperformat_ath_cart_report" model="report.paperformat">
             <field name="name">Carte athlète</field>
             <field name="default" eval="True" />
             <field name="format"></field>
@@ -37,11 +35,11 @@
             <field name="header_line" eval="False" />
             <field name="header_spacing">0</field>
             <field name="dpi">90</field>
-        </record>
+        </record> -->
 
-        <record id="ath_cart_report" model="ir.actions.report.xml">
+        <!-- <record id="ath_cart_report" model="ir.actions.report.xml">
             <field name="paperformat_id" ref="paperformat_ath_cart_report"/>
-        </record-->
+        </record> -->
 
     </data>
 </odoo>

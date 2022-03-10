@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sports_competitions,sports.competitions,model_sports_competitions,,1,1,1,1
+access_sports_result,sports.result,model_sports_result,,1,1,1,1
+access_passage_de_grade,access.passage.de.grade,model_passage_de_grade,,1,1,1,1
+access_grade_de_passage_line,grade.de.passage.line,model_grade_de_passage_line,,1,1,1,1
+access_charger_result_wizard,charger.result.wizard,model_charger_result_wizard,,1,1,1,1

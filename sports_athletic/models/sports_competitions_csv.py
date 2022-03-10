@@ -90,10 +90,8 @@ class competitionsUnicodeWriter(object):
 class competitioncsv(osv.osv):
     _inherit = 'sports.competition'
 
-    def name_get(self, cr, uid, ids, context=None):
-        if not len(ids):
-            return []
-        reads = self.read(cr, uid, ids, ['name'], context=context)
+    def name_get(self):
+        reads = self.read(['name'])
         res = []
         x = " "
         for record in reads:

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		
+		<menuitem name="Compétitions et Résultats" id="base.menu_root_competitions" sequence="2" web_icon="competition_management,static/description/icon.png"/>
+        <menuitem name="Compétitions et Résultats" id="base.menu_root_competition_epreuve" sequence="1"  parent="base.menu_root_competitions"/>
+
+
+        <record id="view_competition_form" model="ir.ui.view">
+            <field name="name">sports.competitions.form</field>
+            <field name="model">sports.competitions</field>
+            <field name="arch" type="xml">
+                <form string="Compétitions">
+                	<header>
+                		<button name="communique" states="brouillon" string="Communique" type="object" class="btn-primary"/>
+	                    <button name="tirage_ijf" states="confirmee" string="Tirage IJF" type="object" class="btn-primary"/>
+	                    <button name="diffuser" states="brouillon" string="Diffuser" type="object" class="btn-primary"/>
+	                    <button name="confirmer" states="ouverte" string="Confirmer" type="object" class="btn-primary"/>
+	                    <button name="resultats" states="confirmee" string="Resultats" type="object" class="btn-primary"/>
+	                    <button name="remettre_en_brouillon" states="ouverte" string="Remettre en Brouillon" type="object" class="btn-primary"/>
+                		<field name="state" widget="statusbar" statusbar_visible="brouillon,ouverte,confirmee,resultats"/>
+                	</header>
+                	<sheet>
+                		<group>
+                			<group>
+                				<field name="name"/>
+                				<field name="object_co" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}" required="1"/>
+                    			<field name="date_de_compitition" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}" required="1"/>
+                    			<field name="saison_id" required="1" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+                    			<field name="famille" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="type_co" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}" required="1"/>
+			                    <field name="nivea_se" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+                			</group>
+                			<group>
+                				<field name="evenement_co" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="discipline_id" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}" required="1"/>
+			                    <field name="lieu" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="genre_athletes" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="category_age_idss" widget="many2many_tags" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="delal_dengagement" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="date_limit_declaration" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="ligues_ids" widget="many2many_tags" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="grades_ids" widget="many2many_tags" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+			                    <field name="cotisation_comp" attrs="{'readonly':['|','|',('state','=','ouverte'),('state','=','confirmee'),('state','=','resultats')]}"/>
+                			</group>
+                		</group>
+                        <button string=" Charger Resultats"
+                                name="%(competition_management.charger_result_action)d"
+                                type="action" class="fa fa-upload btn btn-secondary" attrs="{'invisible':[('state','!=','resultats')]}">
+                        </button>
+                		<notebook>
+                			<!--Details Page -->
+		                    <page string="Details">
+		                        <group>
+		                            <group string="Description">
+		                                <field name="description"/>
+		                            </group>
+		                            <group string="Conditions de Participation">
+		                                <field name="conditions_de_part"/>
+		                            </group>
+		                        </group>
+
+		                        <group>
+		                            <group string="Droits de Participation">
+		                                <field name="droits_de_part"/>
+		                            </group>
+		                            <group string="Pesee">
+		                                <field name="pesee"/>
+		                            </group>
+		                        </group>
+		                        
+		                        <group>
+		                            <group string="Enagements-Inscription-Accreditation">
+		                                <field name="enagement_inscrip_accre"/>
+		                            </group>
+		                            <group string="Reglement">
+		                                <field name="reglement"/>
+		                            </group>
+		                        </group>
+		                        
+		                        <group>
+		                             <group string="Programme de Levenement">
+		                                <field name="program_de_levenement"/>
+		                            </group>
+		                            <group string="Tirage au sort">
+		                                <field name="tirage_au_sort"/>
+		                            </group>
+		                        </group>
+
+		                        <group string="Judogi">
+		                                <field name="judogi"/>
+		                        </group>
+		                        
+		                        <group>
+		                            <group>
+		                                <field name="heure_reun_arbitres" widget="float_time"/>
+		                                <field name="heure_reun_comp" widget="float_time"/>
+		                            </group>
+		                            <group>
+		                                <field name="secretaire_general"/>
+		                            </group>
+		                        </group>
+		                    </page>
+		                    <page string="Participants" name="comp_participants2">
+		                        <field name="participants_ids" colspan="4" nolabel="1" attrs="{'readonly':['|',('state','=','confirmee'),('state','=','resultats')]}" >
+		                            <tree string="Participants" editable="bottom" >
+		                                <field name="athletes_id" domain="[('state', '=', 'actif'),('athlete_b','=',True)]"/>
+		                                <field name="athletes_nom"/>
+		                                <field name="athletes_pre_nom"/>
+		                                <field name="clubs_id"/>
+		                                <field name="ligues_id"/>
+		                                <field name="grade_id"/>
+		                                <field name="genre_athletes"/>
+		                                <field name="categorie_de_age"/>
+		                                <field name="origin_id"/>
+		                                <field name="etat_se"/>
+		                                <field name="commentaire"/>
+		                                <field name="cotisation_payee"/>
+		                            </tree>
+		                        </field>
+	                    	</page>
+		                    <page string="Resultats">
+		                        <field name="resultats_ids" nolabel="1">
+		                            <tree string="Resultats" editable="bottom">
+		                                <field name="athletes_id" attrs="{'readonly':[('state','=','resultats')]}"/>
+		                                <field name="athletes_nom"/>
+		                                <field name="athletes_pre_nom"/>
+		                                <field name="clubs_id"/>
+		                                <field name="ligues_id"/>
+		                                <field name="grade_id"/>
+		                                <field name="genre_athletes"/>
+		                                <field name="categorie_de_age"/>
+		                                <field name="note" />
+		                                <field name="remark"/>
+                                        <field name="state" invisible="1"/>
+		                            </tree>
+		                        </field>
+	                    	</page>
+                		</notebook>
+                	</sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_competition_tree" model="ir.ui.view">
+            <field name="name">sports.competitions.tree</field>
+            <field name="model">sports.competitions</field>
+            <field name="arch" type="xml">
+                <tree string="Compétitions">
+                    <field name="name"/>
+                    <field name="object_co"/>
+                    <field name="date_de_compitition"/>
+                    <field name="saison_id"/>
+                    <field name="famille"/>
+                    <field name="type_co"/>
+                    <field name="nivea_se"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_view_competition" model="ir.actions.act_window">
+            <field name="name">Compétitions</field>
+            <field name="res_model">sports.competitions</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+		<menuitem id="menu_action_view_competition" action="action_view_competition" parent="base.menu_root_competition_epreuve"/>
+
+        <!-- OUVERTES -->
+
+        <record id="view_competition_ouvertes_tree" model="ir.ui.view">
+            <field name="name">sports.competition.ouvertes.tree</field>
+            <field name="model">sports.competitions</field>
+            <field name="arch" type="xml">
+                <tree string="Compétitions ouvertes">
+                    <field name="name"/>
+                    <field name="object_co"/>
+                    <field name="date_de_compitition"/>
+                    <field name="saison_id"/>
+                    <field name="famille"/>
+                    <field name="type_co"/>
+                    <field name="nivea_se"/>	
+                </tree>
+            </field>
+        </record>
+        <record id="action_view_competition_ouvertes" model="ir.actions.act_window">
+            <field name="name">Compétitions Ouvertes</field>
+            <field name="res_model">sports.competitions</field>
+            <field name="domain">[('state', '=', 'ouverte')]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="action_view_competition_ouvertes"
+        id="main_menu_view_competition_ouvertes" parent="base.menu_root_competition_epreuve"/>
+        <!-- END OUVERTES -->
+
+        <!-- CONFIRMEES -->
+        <record id="view_competition_confirmees_tree" model="ir.ui.view">
+            <field name="name">sports.competition.confirmees.tree</field>
+            <field name="model">sports.competitions</field>
+            <field name="arch" type="xml">
+                <tree string="Compétitions confirmees">
+                    <field name="name"/>
+                    <field name="object_co"/>
+                    <field name="date_de_compitition"/>
+                    <field name="saison_id"/>
+                    <field name="famille"/>
+                    <field name="type_co"/>
+                    <field name="nivea_se"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_view_competition_confirmees_tree" model="ir.actions.act_window">
+            <field name="name">Compétitions confirmees</field>
+            <field name="res_model">sports.competitions</field>
+            <field name="domain">[('state', '=', 'confirmee')]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="action_view_competition_confirmees_tree"
+        id="menu_action_view_competition_confirmees_tree" parent="base.menu_root_competition_epreuve"/>
+
+        <!--RESULTATS -->
+        <record id="view_competition_resultats_tree" model="ir.ui.view">
+            <field name="name">sports.competition.resultats.tree</field>
+            <field name="model">sports.competitions</field>
+            <field name="arch" type="xml">
+                <tree string="Compétitions resultats">
+                    <field name="name"/>
+                    <field name="object_co"/>
+                    <field name="date_de_compitition"/>
+                    <field name="saison_id"/>
+                    <field name="famille"/>
+                    <field name="type_co"/>
+                    <field name="nivea_se"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_view_competition_resultats_tree" model="ir.actions.act_window">
+            <field name="name">Resultats</field>
+            <field name="res_model">sports.competitions</field>
+            <field name="domain">[('state', '=', 'resultats')]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="action_view_competition_resultats_tree"
+        id="menu_action_view_competition_resultats" parent="base.menu_root_competition_epreuve"/>
+
+        <!--Passage De Grade-->
+
+        <record id="view_passage_de_grade_form" model="ir.ui.view">
+        <field name="name">sports.competition.passage.de.grade.form</field>
+        <field name="model">passage.de.grade</field>
+            <field name="arch" type="xml">
+                <form string="Passage de grade">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="brouillon,confirmee"/>
+                        <button name="confirmer" type="object" states="brouillon" class="btn-primary" string="Confirmer"/>
+                        <button name="remettre_en_brouillon" states="confirmee" type="object" class="btn-primary" string="Remettre en Brouillon"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="n_sequence" readonly="1"/>
+                                <field name="date_passage_grade"/>
+                            </group>
+                            <group>
+                                <field name="saison_id" domain="[('state','=','active')]" options="{'no_create': True}"/>
+                                <field name="competition_id"/>
+                            </group>
+                        </group>
+                        <div class="text-center">
+                            <button name="generer_athletes_eligi" class="btn-primary" type="object" string="Générer athletes eligibles">
+                            </button>
+                        </div>
+                        <group>
+                            <field name="cotisation" readonly="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Athelete eligible">
+                                <field name="grade_passage_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="athletes_id"/>
+                                        <field name="athletes_nom"/>
+                                        <field name="athletes_pre_nom"/>
+                                        <field name="clubs_id"/>
+                                        <field name="ligues_id"/>
+                                        <field name="grade_id"/>
+                                        <field name="genre_athletes"/>
+                                        <field name="categorie_de_age"/>
+                                        <field name="note"/>
+                                        <field name="cumul_points"/>
+                                        <field name="qualification"/>
+                                        <field name="remarque"/>
+                                    </tree>
+                                 </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_passage_de_grade_tree" model="ir.ui.view">
+            <field name="name">view.passage.de.grade.tree</field>
+            <field name="model">passage.de.grade</field>
+            <field name="arch" type="xml">
+                <tree string="Passage De Grade">
+                    <field name="n_sequence"/>
+                    <field name="date_passage_grade"/>
+                    <field name="saison_id"/>
+                    <field name="competition_id"/>
+                    <field name="cotisation"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_view_passage_de_grade" model="ir.actions.act_window">
+            <field name="name">Passage de Grade</field>
+            <field name="res_model">passage.de.grade</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="action_view_passage_de_grade"
+            id="menu_action_view_passage_de_grade" parent="base.menu_root_competition_epreuve"/>
+
+        <!--Passage de grade action for athletes button-->
+        <record id="action_passage_grade_athletes_view" model="ir.actions.act_window">
+            <field name="name">Passage De Grade</field>
+            <field name="res_model">passage.de.grade</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('grade_passage_line_ids.athletes_id','=',active_id)]</field>
+        </record>
+
+        <!--Resultats action for athletes button-->
+        <record id="view_resultats_tree" model="ir.ui.view">
+            <field name="name">view.sports.result.tree</field>
+            <field name="model">sports.result</field>
+            <field name="arch" type="xml">
+                <tree string="Resultats">
+                    <field name="athletes_id"/>
+                    <field name="athletes_nom"/>
+                    <field name="athletes_pre_nom"/>
+                    <field name="clubs_id"/>
+                    <field name="ligues_id"/>
+                    <field name="grade_id"/>
+                    <field name="categorie_de_age"/>
+                    <field name="note"/>
+                    <field name="remark"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_result_athletes_view" model="ir.actions.act_window">
+            <field name="name">Resultats</field>
+            <field name="res_model">sports.result</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('athletes_id','=',active_id)]</field>
+        </record>
+
+        <!--Competition action for athletes button-->
+        <record id="view_sports_competition_participants_tree" model="ir.ui.view">
+            <field name="name">view.sports.competition.participants.tree</field>
+            <field name="model">sports.competition.participants</field>
+            <field name="arch" type="xml">
+                <tree string="Compétition Participants">
+                    <field name="athletes_id"/>
+                    <field name="athletes_nom"/>
+                    <field name="athletes_pre_nom"/>
+                    <field name="clubs_id"/>
+                    <field name="ligues_id"/>
+                    <field name="grade_id"/>
+                    <field name="genre_athletes"/>
+                    <field name="categorie_de_age"/>
+                    <field name="origin_id"/>
+                    <field name="etat_se"/>
+                    <field name="commentaire"/>
+                    <field name="cotisation_payee"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_competition_athletes_view" model="ir.actions.act_window">
+            <field name="name">Competition Participants</field>
+            <field name="res_model">sports.competition.participants</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('athletes_id','=',active_id)]</field>
+        </record>
+
+        <record id="competition_athletes_view_form" model="ir.ui.view">
+            <field name="name">competition.athletes.inherit.form</field>
+            <field name="model">sports.athletes</field>
+            <field name="inherit_id" ref="sports_athletic.view_athletes_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_view_reaffiliations']" position="before">
+                    <button name="%(action_result_athletes_view)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-pencil-square-o"
+                            string="Resultats">
+                    </button>
+                    <button name="%(action_passage_grade_athletes_view)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-pencil-square-o"
+                            string="Passage de grade">
+                    </button>
+                    <button name="%(action_competition_athletes_view)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-pencil-square-o"
+                            string="Compétitions">
+                    </button>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</odoo>

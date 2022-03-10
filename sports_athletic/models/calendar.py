@@ -41,6 +41,7 @@ _logger = logging.getLogger(__name__)
 
 class calendar_type(osv.osv):
     _name = "calendar.type"
+    _description = "Calender Type"
     _columns = {
         'name': fields.Char('Type de calandrier', size=256)
     }
@@ -67,23 +68,23 @@ class athletic_athlete_wkf_annual_calendar(osv.osv):
     date_env_circ_l_c = fields.Date('Date Envoi du Circulaire aux Ligues et Clubs')
     date_rem_cal_bur_fed = fields.Date('Date de Remise du Calendrier au Bureau Fédéral')
     date_val_cal = fields.Date('Date de Validation du Calendrier Annuel')
-    user_calen_cours_prep = fields.Many2one('res.users', 'Par', readonly=True)
+    user_calen_cours_prep = fields.Many2one('res.users', string='Par', readonly=True)
     date_calen_cours_prep = fields.Datetime('Préparation du Calendrier Le', readonly=True)
-    user_circ_att_val = fields.Many2one('res.users', 'Par', readonly=True)
+    user_circ_att_val = fields.Many2one('res.users', string='Pars', readonly=True)
     date_circ_att_val = fields.Datetime('Validation du Circulaire Le', readonly=True)
-    user_circ_att_diff = fields.Many2one('res.users', 'Par', readonly=True)
+    user_circ_att_diff = fields.Many2one('res.users', string='Parss', readonly=True)
     date_circ_att_diff = fields.Datetime('Diffusion du Circulaire Le', readonly=True)
-    user_att_coll_cal_reg = fields.Many2one('res.users', 'Par', readonly=True)
+    user_att_coll_cal_reg = fields.Many2one('res.users', string='Parsss', readonly=True)
     date_att_coll_cal_reg = fields.Datetime('Collecte des Calendriers Régionaux Le', readonly=True)
-    user_cal_att_val = fields.Many2one('res.users', 'Par', readonly=True)
+    user_cal_att_val = fields.Many2one('res.users', string='Parssss', readonly=True)
     date_cal_att_val = fields.Datetime('Validation des Calendriers Régionaux Le', readonly=True)
-    user_cal_att_rem_fed = fields.Many2one('res.users', 'Par', readonly=True)
+    user_cal_att_rem_fed = fields.Many2one('res.users', string='Parsssss', readonly=True)
     date_cal_att_rem_fed = fields.Datetime('Remise du Calendrier à la Fédération Le', readonly=True)
-    user_cal_att_val_bur = fields.Many2one('res.users', 'Par', readonly=True)
+    user_cal_att_val_bur = fields.Many2one('res.users', string='Par1', readonly=True)
     date_cal_att_val_bur = fields.Datetime('Validation du Calendrier par le Bureau Le', readonly=True)
-    user_cal_att_maj = fields.Many2one('res.users', 'Par', readonly=True)
+    user_cal_att_maj = fields.Many2one('res.users', string='Par2', readonly=True)
     date_cal_att_maj = fields.Datetime('Mise à Jour du Calendrier Le', readonly=True)
-    user_cal_att_pub = fields.Many2one('res.users', 'Par', readonly=True)
+    user_cal_att_pub = fields.Many2one('res.users', string='Par3', readonly=True)
     date_cal_att_pub = fields.Datetime('Publication du Calendrier Le', readonly=True)
 
 
@@ -94,10 +95,11 @@ class athletic_athlete_wkf_annual_calendar(osv.osv):
         # 'metier': organism.get_active_metier,
     }
 
-    def create(self, cr, uid, vals, context=None):
+    @api.model
+    def create(self,vals):
         if not vals.get('num_calendar'):
-            vals['num_calendar'] = self.pool.get('ir.sequence').get(cr, uid, 'athlete.wkf.annual.calendar')
-        return super(athletic_athlete_wkf_annual_calendar, self).create(cr, uid, vals, context)
+            vals['num_calendar'] = self.env['ir.sequence'].next_by_code('athlete.wkf.annual.calendar')
+        return super(athletic_athlete_wkf_annual_calendar, self).create(vals)
 
     def action_circ_att_val(self, cr, uid, ids):
         self.write(cr, uid, ids, {'state': 'circ_att_val'})

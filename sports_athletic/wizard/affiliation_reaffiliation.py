@@ -21,7 +21,7 @@ class AffiliationReaffiliation(models.TransientModel):
 
     licence_id = fields.Many2one('sports.athletes', string='N° Licence')
     club_id = fields.Many2one('sports.club', string='Club', default=_get_club)
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange', default=lambda self: self.env.user)
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True, default=lambda self: self.env.user)
 
     def create_reaffiliation(self):
 

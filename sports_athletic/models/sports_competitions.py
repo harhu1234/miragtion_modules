@@ -22,7 +22,6 @@ class SportsCategory_age_Sexe(models.Model):
     category_age_id = fields.Many2one('sports.category_age', string='Catégories')
     sexe = fields.Selection([('h', 'Masculin'), ('f', 'Féminin')], string='Sexe')
 
-
 # Epreuve
 
 
@@ -81,11 +80,11 @@ class sport_epreuve(models.Model):
     is_metre = fields.Boolean('Mètre')
     is_centimetre = fields.Boolean('Centimètre')
 
-    is_heure = fields.Boolean('Heures')
-    is_minute = fields.Boolean('Minutes')
-    is_seconde = fields.Boolean('Secondes')
-    is_milliseconde = fields.Boolean('1/10')
-    is_centseconde = fields.Boolean('1/100')
+    is_heure = fields.Boolean('Heuress')
+    is_minute = fields.Boolean('Minutess')
+    is_seconde = fields.Boolean('Secondess')
+    is_milliseconde = fields.Boolean('1/10s')
+    is_centseconde = fields.Boolean('1/100s')
 
     performance_temps = fields.Integer('Performance Temps')
     performance_distance = fields.Integer('Performance Distance')
@@ -131,22 +130,22 @@ class sport_competition(models.Model):
 
         return self.env['sports.saison'].search([('state', '=', 'active')])
 
-    name = fields.Char(string='Num Compétition')
+    name = fields.Char(string='N Compétition')
     name_competition = fields.Char(string='Nom')
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     date_debut = fields.Date(string='Date Début')
     date_fin = fields.Date(string='Date Fin')
     organisateur = fields.Selection([('Club', 'Club'), ('Ligue', 'Ligue'), ('IAAF', 'IAAF'), ('FRMA', 'FRMA'), ('Autre', 'Autre')], string='Organisateur')
 
-    calendar_id = fields.Many2one('athletic.athlete.wkf.annual.calendar', string='Calendrier', track_visibility='onchange')
+    calendar_id = fields.Many2one('athletic.athlete.wkf.annual.calendar', string='Calendrier', tracking=True)
 
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
+    club_id = fields.Many2one('sports.club', string='Club', tracking=True)
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
     autre_organisateur = fields.Char(string='Autre Organisateur')
 
-    type = fields.Selection([('Athletisme', 'Athlétisme'), ('Cross country', 'Cross country'), ('Course sur route', 'Course sur route')], string='Type')
+    type = fields.Selection([('Athletisme', 'Athlétisme'), ('Cross country', 'Cross country'), ('Course sur route', 'Course sur route')], string='Types')
 
-    niveau = fields.Selection([('Internationale', 'Internationale'), ('Nationale', 'Nationale'), ('Federale', 'Fédérale'), ('Zone', 'Zone'), ('Regionale', 'Régionale'), ('Locale', 'Locale')], string='Niveau')
+    niveau = fields.Selection([('Internationale', 'Internationale'), ('Nationale', 'Nationale'), ('Federale', 'Fédérale'), ('Zone', 'Zone'), ('Regionale', 'Régionale'), ('Locale', 'Locale')], string='Niveaus')
 
     lieu = fields.Char(string='Lieu')
 
@@ -154,7 +153,7 @@ class sport_competition(models.Model):
 
     timing = fields.Selection([('manuel', 'Manuel'), ('electrique', 'Electrique')], string='Chronomètre')
 
-    familles_id = fields.Many2one('sports.competition.familles', string='Famille', track_visibility='onchange')
+    familles_id = fields.Many2one('sports.competition.familles', string='Famille', tracking=True)
 
     prise_compte_frma_ids = fields.Many2many(comodel_name='sports.competition.prise_compte',
                                              relation='competition_prise_compte_rel',
@@ -165,7 +164,10 @@ class sport_competition(models.Model):
 
     critere_invitation_qualification = fields.Selection([('Personnalise', 'Personnalisé'), ('Championnat national et circuit federal', 'Championnat national et circuit fédéral — Athlétisme'), ('Coupe de trone', 'Coupe de trône — Athlétisme'), ('Coupe des jeunes', 'Coupe des jeunes — Athlétisme'), ('Championnat national', 'Championnat national — Cross'), ('Competitions Internationales', 'Compétitions Internationales — Athlétisme'), ('Meetings Regionaux', ' Meetings Régionaux — Athlétisme'), ('Meetings Nationaux', 'Meetings Nationaux — Athlétisme')], string='Critère Qualification/Invitation')
 
-    state = fields.Selection([('brouillon', 'Brouillon'), ('en_att_valid', 'En Attente de Validation'), ('en_att_org', 'En Attente d\'organisation'), ('att_val_pre_eng', 'En Attente de Pré-engagements'), ('att_val_eng', 'En Attente de Validation des Engagements'), ('att_conf_eng', 'En Attente de Confirmation des Engagements'), ('liste_eng_conf', 'Engagements Confirmée'), ('calcul_pt_club', 'Points Calculés'), ('dem_rejetee', '''Demande Rejetée''')], string='Statut', readonly=True, default="brouillon")
+    state = fields.Selection([('brouillon', 'Brouillon'),('ouverte', 'Ouverte'),('confirmee','Confirmee'),
+                            ('resultats','Resultats'), ('en_att_valid', 'En Attente de Validation'), ('en_att_org', 'En Attente d\'organisation'), 
+                            ('att_val_pre_eng', 'En Attente de Pré-engagements'), ('att_val_eng', 'En Attente de Validation des Engagements'), 
+                            ('att_conf_eng', 'En Attente de Confirmation des Engagements'), ('liste_eng_conf', 'Engagements Confirmée'), ('calcul_pt_club', 'Points Calculés'), ('dem_rejetee', '''Demande Rejetée''')], string='Statut', readonly=True, default="brouillon")
 
     objectif = fields.Char(string='Objectif')
 
@@ -177,11 +179,11 @@ class sport_competition(models.Model):
 
     epreuve_competition_ids = fields.One2many('sports.epreuve.competition', 'competition_id', 'Epreuves Competition')
 
-    participants_ids = fields.One2many('sports.competition.participants', 'competition_id', 'Participants')
+    participants_ids = fields.One2many('sports.competition.participants', 'competition_id', string='Participants')
 
-    engagement_ids = fields.One2many('sports.competition.participants', 'competition_rel_id', 'Liste des Engagements')
+    engagement_ids = fields.One2many('sports.competition.participants', 'competition_rel_id',string='Liste des Engagement')
 
-    feuille_comp_ids = fields.One2many('sports.competition.participants', 'competition_rel_id', 'Liste des Engagements', domain=[('engage', '=', True)])
+    feuille_comp_ids = fields.One2many('sports.competition.participants', 'competition_rel_id', 'Liste des Engagementse', domain=[('engage', '=', True)])
 
     @api.model
     def create(self, vals):
@@ -255,17 +257,17 @@ class sport_epreuve_competition(models.Model):
     is_metre = fields.Boolean('Mètre')
     is_centimetre = fields.Boolean('Centimètre')
 
-    is_heure = fields.Boolean('Heures')
-    is_minute = fields.Boolean('Minutes')
-    is_seconde = fields.Boolean('Secondes')
-    is_milliseconde = fields.Boolean('1/10')
-    is_centseconde = fields.Boolean('1/100')
+    is_heure = fields.Boolean('Heuress')
+    is_minute = fields.Boolean('Minutess')
+    is_seconde = fields.Boolean('Secondess')
+    is_milliseconde = fields.Boolean('1/10s')
+    is_centseconde = fields.Boolean('1/100s')
 
-    heure = fields.Integer('Heures')
-    minute = fields.Integer('Minutes')
-    seconde = fields.Integer('Secondes')
-    milliseconde = fields.Integer('1/10')
-    centseconde = fields.Integer('1/100')
+    heure = fields.Integer(string='Heures')
+    minute = fields.Integer(string='Minutes')
+    seconde = fields.Integer(string='Secondes')
+    milliseconde = fields.Integer(string='1/10')
+    centseconde = fields.Integer(string='1/100')
 
 
 # Participants
@@ -274,18 +276,17 @@ class sport_competition_participants(models.Model):
     _description = "sports competition participants"
 
     competition_id = fields.Many2one('sports.competition', string='Compétition')
-    competition_rel_id = fields.Many2one('sports.competition', string='Compétition')
+    competition_rel_id = fields.Many2one('sports.competition', string='Compétitions')
     athletes_id = fields.Many2one('sports.athletes', string='Num Licence')
-    athletes_name = fields.Char(string='Nom ')
-    athletes_prenom = fields.Char(string='Prénom')
-
+    athletes_name = fields.Char(string='Noms')
+    athletes_prenom = fields.Char(string='Prénoms')
     epreuve_id = fields.Many2one('sports.epreuve.competition', string='Epreuve')
     formatresultat_id = fields.Many2one('sports.epreuve.formatresultat', string='Format résultat')
 
-    format_resultat = fields.Char(string='Format résultat', related='formatresultat_id.name', store=True)
+    format_resultat = fields.Char(string='Format résultats', related='formatresultat_id.name', store=True)
 
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
+    club_id = fields.Many2one('sports.club', string='Clubs', tracking=True)
+    ligue_id = fields.Many2one('sports.ligue', string='Ligues', tracking=True)
     engage = fields.Boolean('Engagé?')
     confirmation_engage = fields.Boolean('Confirmation Engagement?')
 
@@ -316,3 +317,5 @@ class sport_competition_participants(models.Model):
     classement_final = fields.Integer(string='Classement Final')
 
     statut_participant = fields.Selection([('none', ''), ('dnf', u'''DNF'''), ('dns', u'''DNS'''), ('dq', u'''DQ'''), ('nc', u'''NC''')], string='Staut', default='dns')
+
+    

@@ -3,7 +3,7 @@
 
 import time
 import math
-from datetime import datetime, timedelta
+from datetime import date, timedelta, datetime
 from odoo import SUPERUSER_ID
 from odoo import api, fields, tools, models, _
 import odoo.addons.decimal_precision as dp
@@ -63,37 +63,37 @@ class ClubGeneralAssembly(models.Model):
     league_representative_report_filename = fields.Char("Rapport Représentant Ligue Filename")
     league_representative_report_reception = fields.Boolean(string="Reçu")
     league_representative_report_reception_date = fields.Date(string='Date réception')
-    league_representative_report_note = fields.Text(string='Note')
+    league_representative_report_note = fields.Text(string='Notes')
     minutes = fields.Binary("Procès Verbal")
     minutes_filename = fields.Char("Procès Verbal Filename")
-    minutes_reception = fields.Boolean(string="Reçu")
-    minutes_reception_date = fields.Date(string='Date réception')
-    minutes_note = fields.Text(string='Note')
+    minutes_reception = fields.Boolean(string="Reçus")
+    minutes_reception_date = fields.Date(string='Date réceptions')
+    minutes_note = fields.Text(string='Notee')
     attendance_list = fields.Binary("Liste de Présence")
     attendance_list_filename = fields.Char("Liste de Présence Filename")
-    attendance_list_reception = fields.Boolean(string="Reçu")
-    attendance_list_reception_date = fields.Date(string='Date réception')
-    attendance_list_note = fields.Text(string='Note')
+    attendance_list_reception = fields.Boolean(string="Reçue")
+    attendance_list_reception_date = fields.Date(string='Date réceptionn')
+    attendance_list_note = fields.Text(string='Notess')
     financial_report = fields.Binary("Rapport Financier")
     financial_report_filename = fields.Char("Rapport Financier Filename")
-    financial_report_reception = fields.Boolean(string="Reçu")
-    financial_report_reception_date = fields.Date(string='Date réception')
-    financial_report_note = fields.Text(string='Note')
+    financial_report_reception = fields.Boolean(string="Reçues")
+    financial_report_reception_date = fields.Date(string='Date réceptione')
+    financial_report_note = fields.Text(string='Note1')
     technical_report = fields.Binary("Rapport Technique")
     technical_report_filename = fields.Char("Rapport Technique Filename")
-    technical_report_reception = fields.Boolean(string="Reçu")
-    technical_report_reception_date = fields.Date(string='Date réception')
-    technical_report_note = fields.Text(string='Note')
+    technical_report_reception = fields.Boolean(string="Reçuse")
+    technical_report_reception_date = fields.Date(string='Date réceptionss')
+    technical_report_note = fields.Text(string='Note2')
     signature_specimen = fields.Binary("Spécimen Signature")
     signature_specimen_filename = fields.Char("Spécimen Signature Filename")
-    signature_specimen_reception = fields.Boolean(string="Reçu")
-    signature_specimen_reception_date = fields.Date(string='Date réception')
-    signature_specimen_note = fields.Text(string='Note')
+    signature_specimen_reception = fields.Boolean(string="Reçuss")
+    signature_specimen_reception_date = fields.Date(string='Date réceptionns')
+    signature_specimen_note = fields.Text(string='Note3')
     recipe_deposit = fields.Binary("Récipicé Dépôt")
     recipe_deposit_filename = fields.Char("Récipicé Dépôt Filename")
-    recipe_deposit_reception = fields.Boolean(string="Reçu")
-    recipe_deposit_reception_date = fields.Date(string='Date réception')
-    recipe_deposit_note = fields.Text(string='Note')
+    recipe_deposit_reception = fields.Boolean(string="Reçuis")
+    recipe_deposit_reception_date = fields.Date(string='Date réceptionsn')
+    recipe_deposit_note = fields.Text(string='Notei')
     members = fields.One2many('general.assembly.member', 'assembly_id', string='Membres')
     financial_report_view = fields.Selection([('Non Conforme', 'Non Conforme'), ('Conforme', 'Conforme')],
                                              string="Avis Rapport Financier", default="")
@@ -118,22 +118,22 @@ class ClubGeneralAssembly(models.Model):
     planned_user_id = fields.Many2one("res.users", "Par", readonly=True)
 
     approved_time = fields.Datetime("Accord de Principe le", readonly=True)
-    approved_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    approved_user_id = fields.Many2one("res.users", "Parr", readonly=True)
 
     reported_time = fields.Datetime("Rapport Représentant le", readonly=True)
-    reported_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    reported_user_id = fields.Many2one("res.users", "Pare", readonly=True)
 
     loaded_num_time = fields.Datetime("Chargement Dossier Numérique le", readonly=True)
-    loaded_num_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    loaded_num_user_id = fields.Many2one("res.users", "Parer", readonly=True)
 
     loaded_paper_time = fields.Datetime("Chargement Dossier Papier le", readonly=True)
-    loaded_paper_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    loaded_paper_user_id = fields.Many2one("res.users", "Pars", readonly=True)
 
     validated_time = fields.Datetime("Validation Rapport Financier le", readonly=True)
-    validated_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    validated_user_id = fields.Many2one("res.users", "Parse", readonly=True)
 
     decided_time = fields.Datetime("Décision Commission le", readonly=True)
-    decided_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    decided_user_id = fields.Many2one("res.users", "Paresr", readonly=True)
 
     def action_waiting_approval(self):
         self.write({'state': 'waiting_approval',
@@ -248,37 +248,37 @@ class LigueGeneralAssembly(models.Model):
     league_representative_report_filename = fields.Char("Rapport Représentant Ligue Filename")
     league_representative_report_reception = fields.Boolean(string="Reçu")
     league_representative_report_reception_date = fields.Date(string='Date réception')
-    league_representative_report_note = fields.Text(string='Note')
+    league_representative_report_note = fields.Text(string='Notes')
     minutes = fields.Binary("Procès Verbal")
     minutes_filename = fields.Char("Procès Verbal Filename")
-    minutes_reception = fields.Boolean(string="Reçu")
-    minutes_reception_date = fields.Date(string='Date réception')
-    minutes_note = fields.Text(string='Note')
+    minutes_reception = fields.Boolean(string="Reçus")
+    minutes_reception_date = fields.Date(string='Date réceptions')
+    minutes_note = fields.Text(string='Notee')
     attendance_list = fields.Binary("Liste de Présence")
     attendance_list_filename = fields.Char("Liste de Présence Filename")
-    attendance_list_reception = fields.Boolean(string="Reçu")
-    attendance_list_reception_date = fields.Date(string='Date réception')
-    attendance_list_note = fields.Text(string='Note')
+    attendance_list_reception = fields.Boolean(string="Reçue")
+    attendance_list_reception_date = fields.Date(string='Date réceptione')
+    attendance_list_note = fields.Text(string='Notees')
     financial_report = fields.Binary("Rapport Financier")
     financial_report_filename = fields.Char("Rapport Financier Filename")
-    financial_report_reception = fields.Boolean(string="Reçu")
-    financial_report_reception_date = fields.Date(string='Date réception')
-    financial_report_note = fields.Text(string='Note')
+    financial_report_reception = fields.Boolean(string="Reçues")
+    financial_report_reception_date = fields.Date(string='Date réceptiones')
+    financial_report_note = fields.Text(string='Notese')
     technical_report = fields.Binary("Rapport Technique")
     technical_report_filename = fields.Char("Rapport Technique Filename")
-    technical_report_reception = fields.Boolean(string="Reçu")
-    technical_report_reception_date = fields.Date(string='Date réception')
-    technical_report_note = fields.Text(string='Note')
+    technical_report_reception = fields.Boolean(string="Reçuse")
+    technical_report_reception_date = fields.Date(string='Date réceptionss')
+    technical_report_note = fields.Text(string='Noteei')
     signature_specimen = fields.Binary("Spécimen Signature")
     signature_specimen_filename = fields.Char("Spécimen Signature Filename")
-    signature_specimen_reception = fields.Boolean(string="Reçu")
-    signature_specimen_reception_date = fields.Date(string='Date réception')
-    signature_specimen_note = fields.Text(string='Note')
+    signature_specimen_reception = fields.Boolean(string="Reçuu")
+    signature_specimen_reception_date = fields.Date(string='Date réceptionse')
+    signature_specimen_note = fields.Text(string='Notei')
     recipe_deposit = fields.Binary("Récipicé Dépôt")
     recipe_deposit_filename = fields.Char("Récipicé Dépôt Filename")
-    recipe_deposit_reception = fields.Boolean(string="Reçu")
-    recipe_deposit_reception_date = fields.Date(string='Date réception')
-    recipe_deposit_note = fields.Text(string='Note')
+    recipe_deposit_reception = fields.Boolean(string="Reçued")
+    recipe_deposit_reception_date = fields.Date(string='Date réceptionee')
+    recipe_deposit_note = fields.Text(string='Noteis')
     members = fields.Many2many('general.assembly.member', string='Membres')
     financial_report_view = fields.Selection([('Non Conforme', 'Non Conforme'), ('Conforme', 'Conforme')],
                                              string="Avis Rapport Financier", default="")
@@ -303,22 +303,22 @@ class LigueGeneralAssembly(models.Model):
     planned_user_id = fields.Many2one("res.users", "Par", readonly=True)
 
     approved_time = fields.Datetime("Accord de Principe le", readonly=True)
-    approved_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    approved_user_id = fields.Many2one("res.users", "Pare", readonly=True)
 
     reported_time = fields.Datetime("Rapport Représentant le", readonly=True)
-    reported_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    reported_user_id = fields.Many2one("res.users", "Pars", readonly=True)
 
     loaded_num_time = fields.Datetime("Chargement Dossier Numérique le", readonly=True)
-    loaded_num_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    loaded_num_user_id = fields.Many2one("res.users", "Pares", readonly=True)
 
     loaded_paper_time = fields.Datetime("Chargement Dossier Papier le", readonly=True)
-    loaded_paper_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    loaded_paper_user_id = fields.Many2one("res.users", "Parse", readonly=True)
 
     validated_time = fields.Datetime("Validation Rapport Financier le", readonly=True)
-    validated_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    validated_user_id = fields.Many2one("res.users", "Parr", readonly=True)
 
     decided_time = fields.Datetime("Décision Commission le", readonly=True)
-    decided_user_id = fields.Many2one("res.users", "Par", readonly=True)
+    decided_user_id = fields.Many2one("res.users", "Parrs", readonly=True)
 
     def action_waiting_approval(self):
         self.write({'state': 'waiting_approval',
@@ -440,11 +440,11 @@ class GeneralAssemblyMember(models.Model):
     role = fields.Char(string="Rôle")
     principal_contact = fields.Char(string="Interlocuteur Principal")
     address = fields.Text(string="Adresse")
-    father_fname = fields.Char(string="Nom du père")
-    father_lname = fields.Char(string="Prénom du père")
+    father_fname = fields.Char(string="Nom du pèree")
+    father_lname = fields.Char(string="Prénom du pèree")
     mother_fname = fields.Char(string="Nom du père")
     mother_lname = fields.Char(string="Prénom du père")
-    general_assembly = fields.Many2one('general.assembly', string="Assemblée Générale")
+    general_assembly = fields.Many2one('ligue.general.assembly', string="Assemblée Générale")
 
     @api.model
     def create(self, vals):
@@ -499,15 +499,15 @@ class SportsSaison(models.Model):
                 year2 = str(order.date_end).split('-')[0]
                 order.name = str(year) + '/' + str(year2)
 
-    name = fields.Char(string='Saison sportive', track_visibility='onchange')
-    date_start = fields.Date(string='Date début', track_visibility='onchange')
-    date_end = fields.Date(string='Date fin', track_visibility='onchange')
+    name = fields.Char(string='Saison sportive', tracking=True)
+    date_start = fields.Date(string='Date début', tracking=True)
+    date_end = fields.Date(string='Date fin', tracking=True)
 
     state = fields.Selection([('future', 'Future'), ('active', 'Active'), ('cloturee', u'Cloturée')], 'Statut',
-                             readonly=True, copy=False, index=True, track_visibility='onchange', default='future')
+                             readonly=True, copy=False, index=True, tracking=True, default='future')
     date_start_comp = fields.Date(u"Date Début Compétition")
     date_end_comp = fields.Date(u"Date Fin Compétition")
-    label_saison = fields.Char('Libellé', track_visibility='onchange')
+    label_saison = fields.Char('Libellé', tracking=True)
     make_club_non_compliant = fields.Boolean(string='Rendre les club non conforme')
 
     # Zoubida: Contraintes sur les dates debut et fin
@@ -518,9 +518,9 @@ class SportsSaison(models.Model):
         from_date = self.date_start
         to_date = self.date_end
         if from_date and to_date:
-            d1 = datetime.strptime(from_date, fmt).year
-            d2 = datetime.strptime(to_date, fmt).year
-            yearsDiff = str((d2 - d1))
+            d1 = from_date.strftime('%Y')
+            d2 = to_date.strftime('%Y')
+            yearsDiff = int(d2) - int(d1)
             if d2 < d1:
                 raise ValidationError("La date fin est inférieure à la date de début!!!")
             elif int(yearsDiff) != 1:
@@ -578,15 +578,11 @@ class SportsSaison(models.Model):
                 club.situation_admin = "Non Conforme"
         athletes_ids = self.env['sports.athletes'].search([('id', '>=', 0)])
         for athletes in athletes_ids:
-            if athletes.licence == "Athlete":
-
+            if athletes.athlete_b == True:
                 if athletes.state == "actif":
-
                     athletes.write({'state': 'renouvellement'})
                 elif athletes.state == "renouvellement":
                     athletes.write({'state': 'inactif'})
-            else:
-                athletes.write({'state': 'inactif'})
         self.write({'state': 'cloturee'})
 
 
@@ -613,6 +609,12 @@ class centres(models.Model):
 
 
 # Ligue
+class SportsRespartner(models.Model):
+    _inherit = 'res.partner'
+
+    ligue_id = fields.Many2one('sports.ligue',string="Ligue")
+    club_id = fields.Many2one('sports.club',string="Club")
+
 
 
 class SportsLigue(models.Model):
@@ -624,8 +626,8 @@ class SportsLigue(models.Model):
     name_ar = fields.Char(string='إسم العصبة')
     num = fields.Char(string='Numéro de la Ligue')
     saison_id = fields.Many2one('sports.saison', string='Saison sportive')
-    zone_id = fields.Many2one('sports.zone', string='Zone')
-
+    zone_id = fields.Many2one('sports.zone', string='Region')
+    contact_ids = fields.One2many('res.partner','ligue_id',string="Contact")
     date = fields.Date(string='Date de création')
 
     adresse = fields.Text(string='Adresse')
@@ -641,31 +643,29 @@ class SportsLigue(models.Model):
     image = fields.Binary("Image", attachment=True,
                           help="This field holds the image used as avatar for this contact, limited to 1024x1024px",
                           )
-    image_medium = fields.Binary("Medium-sized image",
-                                 compute='_compute_images', inverse='_inverse_image_medium', store=True,
+    image_mediums = fields.Image("Medium-sized image", max_width=128, max_height=128, related='image', store=True,
                                  attachment=True,
                                  help="Medium-sized image of this contact. It is automatically "
                                       "resized as a 128x128px image, with aspect ratio preserved. "
                                       "Use this field in form views or some kanban views.")
-    image_small = fields.Binary("Small-sized image",
-                                compute='_compute_images', inverse='_inverse_image_small', store=True, attachment=True,
+    image_smalls = fields.Image("Small-sized image",max_width=64, max_height=64, related='image', store=True, attachment=True,
                                 help="Small-sized image of this contact. It is automatically "
                                      "resized as a 64x64px image, with aspect ratio preserved. "
                                      "Use this field anywhere a small image is required.")
 
-    @api.depends('image')
-    def _compute_images(self):
-        for rec in self:
-            rec.image_medium = tools.image_resize_image_medium(rec.image)
-            rec.image_small = tools.image_resize_image_small(rec.image)
+    # @api.depends('image')
+    # def _compute_images(self):
+    #     for rec in self:
+    #         rec.image_medium = tools.image_resize_image_medium(rec.image)
+    #         rec.image_small = tools.image_resize_image_small(rec.image)
 
-    def _inverse_image_medium(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_medium)
+    # def _inverse_image_medium(self):
+    #     for rec in self:
+    #         rec.image = tools.image_resize_image_big(rec.image_medium)
 
-    def _inverse_image_small(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_small)
+    # def _inverse_image_small(self):
+    #     for rec in self:
+    #         rec.image = tools.image_resize_image_big(rec.image_small)
 
 
 # Club
@@ -683,12 +683,12 @@ class SportsClub(models.Model):
     name = fields.Char(string='Nom')
     name_ar = fields.Char(string='الإسم')
     num = fields.Char(string='Sigle du Club')
-    contact = fields.Char(string='Contact')
+    contact = fields.Char(string='Contacts')
 
     code = fields.Char(string='Code Club')  # Code champs a saire  ++++ 01062016
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     code = fields.Char(string='Code')
-
+    contact_ids = fields.One2many('res.partner','club_id',string="Contact")
     ligue_id = fields.Many2one('sports.ligue', string='Ligue')
 
     adresse = fields.Text(string='Adresse')
@@ -696,7 +696,8 @@ class SportsClub(models.Model):
     region = fields.Char(string='Région')  # ++++ 01062016
     commune = fields.Char(string='Ville')  # ++++ 01062016
     zone_id = fields.Many2one('sports.zone', string='Zone')
-
+    exone_cotisation = fields.Boolean(string='Exoneration cotisation?')
+    cotisation_anule = fields.Float(string='Cotisation annuelle')
     tel = fields.Char(string='Téléphone')
     gsm = fields.Char(string='GSM')  # ++++ 01062016s
     fax = fields.Char(string='Fax')
@@ -712,18 +713,17 @@ class SportsClub(models.Model):
     image = fields.Binary("Image", attachment=True,
                           help="This field holds the image used as avatar for this contact, limited to 1024x1024px",
                           )
-    image_medium = fields.Binary("Medium-sized image",
-                                 compute='_compute_images', inverse='_inverse_image_medium', store=True,
+    image_mediums = fields.Image("Medium-sized image",max_width=128, max_height=128,related='image', store=True,
                                  attachment=True,
                                  help="Medium-sized image of this contact. It is automatically "
                                       "resized as a 128x128px image, with aspect ratio preserved. "
                                       "Use this field in form views or some kanban views.")
-    image_small = fields.Binary("Small-sized image",
-                                compute='_compute_images', inverse='_inverse_image_small', store=True, attachment=True,
+    image_smalls = fields.Image("Small-sized image",max_width=64, max_height=64, related='image', store=True, attachment=True,
                                 help="Small-sized image of this contact. It is automatically "
                                      "resized as a 64x64px image, with aspect ratio preserved. "
                                      "Use this field anywhere a small image is required.")
 
+ 
     def name_get(self):
         res = []
         name = ""
@@ -735,34 +735,17 @@ class SportsClub(models.Model):
             res.append((record.id, name))
         return res
 
-    def name_search(self, cr, user, name, args=None, operator='ilike', context=None, limit=100):
+    @api.model
+    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
         if not args:
             args = []
         ids = []
         if name:
-            ids = self.search(cr, user, ['|', ('name', 'ilike', name), ('num', 'ilike', name)] + args, limit=limit)
+            ids = self._search(['|', ('name', 'ilike', name), ('num', 'ilike', name)] + args, limit=limit)
         else:
-            ids = self.search(cr, user, args, context=context, limit=limit)
-        return self.name_get(cr, user, ids, context=context)
-
-    @api.depends('image')
-    def _compute_images(self):
-        for rec in self:
-            rec.image_medium = tools.image_resize_image_medium(rec.image)
-            rec.image_small = tools.image_resize_image_small(rec.image)
-
-    def _inverse_image_medium(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_medium)
-
-    def _inverse_image_small(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_small)
-
-
-# Catégories d’âges
-
-
+            ids = self._search(args,limit=limit)
+        return ids
+    
 class SportsCategory_age(models.Model):
     _name = "sports.category_age"
     _description = "sports category age"
@@ -772,7 +755,8 @@ class SportsCategory_age(models.Model):
     age_debut = fields.Integer(string='Age debut')
     age_fin = fields.Integer(string='Age Fin')
     order = fields.Integer(string='Order')
-
+    boys_wight = fields.Many2many('sports.category.poids.garcons', string='Categorie de poids Garcons')
+    girls_wight = fields.Many2many('sports.category.poids.filles', string='Categorie de poids Filles')
     birth_certificate = fields.Boolean(string="Extrait acte de naissance")
     medical_certificate = fields.Boolean(string="Cértificat médical")
     cin = fields.Boolean(string="CIN pour les séniors et Juniors")
@@ -813,6 +797,52 @@ class Sportsdiscipline(models.Model):
 
     name = fields.Char(string='Discipline')
 
+# grade
+
+
+class Sportsgrade(models.Model):
+    _name = "sports.grade"
+    _description = "sports Grade"
+
+    name = fields.Char(string='Grade')
+    code = fields.Char(string='Code')
+    ceinture_noire = fields.Boolean(string='Ceinture Noire')
+    grade_suiwant = fields.Many2one('sports.grade', string='Grade Suiwant')
+    grade_code = fields.One2many('grade.code', 'grade_sport', string="grade code")
+    grade_avec = fields.One2many('grade.code.avec','grade_avec',string='Grade Code')
+    kata_obilget = fields.Boolean(string='KATA obllgatoire')
+    min_age = fields.Integer(string='Age minimum')
+    nbr_points_exg = fields.Integer(string='Nbr Points exiges au passage')
+    nbr_de_timbres = fields.Integer(string='Nbr de timbres')
+    duries_passage = fields.Integer(string='Durees de passage')
+    points_passage_competion = fields.Integer(string='Points passage par competition')
+    duree_competions = fields.Integer(string='Duree de competition (mn)')
+    month_year = fields.Selection([('ans','Ans'),('mois','Mois')],string="Unité de passage")
+    month_year1 = fields.Selection([('ans','Ans'),('mois','Mois')],string="Unité de passage")
+    nbr_de_timbres = fields.Integer(string="Nbr de Timbres")
+    durees_da_passage = fields.Integer(string="Durées de Passage")
+    cotisation_comptition = fields.Text(string="Cotisation Comptition")
+    cotisation_examin_kata = fields.Text(string="Cotisation Examin KATA")
+    cotisation_diplome = fields.Text(string="Cotisation Diplome")
+    cotisation_passage_de_grade = fields.Text(string="Cotisation Passage de Grade")
+    cotisation_kata_technique = fields.Text(string="Cotisation KATA Technique")
+
+
+class Gradecode(models.Model):
+    _name = "grade.code"
+    _description = "Grade Code"
+
+    grade_sport = fields.Many2one('sports.grade', string='Grade')
+    code = fields.Char(string="Code")
+    description = fields.Text(string="Description")
+
+class GradecodeAvec(models.Model):
+    _name = "grade.code.avec"
+    _description = "Grade Code Avec"
+
+    grade_avec = fields.Many2one('sports.grade', string='Grade')
+    code = fields.Char(string="Code")
+    description = fields.Text(string="Description")
 
 # theme
 
@@ -887,13 +917,18 @@ class SportsAffiliation(models.Model):
 
         return self.env['sports.saison'].search([('state', '=', 'active')])
 
+    def _compute_total_cotisation(self):
+        demande_lines = len(self.athletes_ids)
+        self.total_cotisations = demande_lines * self.club_id.cotisation_anule
+
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     name = fields.Char(string='N° de demande', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
-
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
+    club_id = fields.Many2one('sports.club', string='Club', tracking=True)
+    total_cotisations = fields.Float(string="Total de cotisation assurances", readonly="1",compute="_compute_total_cotisation")
+    justi_de_payment = fields.Binary(string="Justificatif de paiement")
     athletes_ids = fields.One2many('sports.athletes', 'affiliation_id', string='Athletes')
-
+    assurances_id = fields.Many2one('sports.edition.assurances',string="Assurances")
     licence = fields.Selection([
         ('Athlete', 'Athléte'),
         ('Entraineur', 'Entraineur'),
@@ -901,7 +936,7 @@ class SportsAffiliation(models.Model):
         ('Officiel', 'Officiel'),
 
     ], string='Type Affiliation')
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -910,30 +945,30 @@ class SportsAffiliation(models.Model):
          ("ath_attente_crea", "Attente Création"), ("edition_licence_assu", "Attente Edition"), ("edition", "Edition"),
          ("licence_attente_dispo_club", "Mise à disposition"), ("licence_attente_recup", "A Rrécupérer"),
          ("licence_recuperees", "Récupérée"), ("affiliation_rejetee", "Rejetées")], 'Statut', readonly=True, copy=False,
-        index=True, track_visibility='onchange', default='bord_attente_envoi')
+        index=True, tracking=True, default='bord_attente_envoi')
 
     mode_creation_ath = fields.Selection([("normal", "Pas de blocage"), ('blocage', 'Blocage si un athlète existant')],
                                          'Politique de création des athlètes',
                                          help="Blocage lorsqu\'un athlète(Nom,Prénom,Date naissance) est déja dans le système",
-                                         readonly=False, copy=False, index=True, track_visibility='onchange',
+                                         readonly=False, copy=False, index=True, tracking=True,
                                          default='blocage')
 
     date_init_bord_attente_envoi = fields.Datetime('Date initiale de l\'Envoi du Bordereau le', readonly=True)
     user_init_bord_attente_envoi = fields.Many2one('res.users', 'Par', readonly=True)
     date_bord_attente_envoi = fields.Datetime('Envoi du Bordereau le', readonly=True)
-    user_bord_attente_envoi = fields.Many2one('res.users', 'Par', readonly=True)
+    user_bord_attente_envoi = fields.Many2one('res.users', 'Parr', readonly=True)
     date_dem_attente_verif = fields.Datetime('Vérification et Validation de la Demande le', readonly=True)
-    user_dem_attente_verif = fields.Many2one('res.users', 'Par', readonly=True)
+    user_dem_attente_verif = fields.Many2one('res.users', 'Pare', readonly=True)
     date_ath_attente_crea = fields.Datetime('Création des Athlètes le', readonly=True)
-    user_ath_attente_crea = fields.Many2one('res.users', 'Par', readonly=True)
+    user_ath_attente_crea = fields.Many2one('res.users', 'Pars', readonly=True)
     date_edition_licence_assu = fields.Datetime('Edition des licences et Assurances le', readonly=True)
-    user_edition_licence_assu = fields.Many2one('res.users', 'Par', readonly=True)
+    user_edition_licence_assu = fields.Many2one('res.users', 'Parrs', readonly=True)
     date_licence_attente_dispo_club = fields.Datetime('Mise à Disposition des Licences au Club le', readonly=True)
-    user_licence_attente_dispo_club = fields.Many2one('res.users', 'Par', readonly=True)
+    user_licence_attente_dispo_club = fields.Many2one('res.users', 'Parre', readonly=True)
     date_licence_attente_recup = fields.Datetime('Licences récupérées par le Club', readonly=True)
-    user_licence_attente_recup = fields.Many2one('res.users', 'Par', readonly=True)
+    user_licence_attente_recup = fields.Many2one('res.users', 'Parer', readonly=True)
     date_affiliation_rejetee = fields.Datetime('Demandes d\'affiliations rejetées le', readonly=True)
-    user_affiliation_rejetee = fields.Many2one('res.users', 'Par', readonly=True)
+    user_affiliation_rejetee = fields.Many2one('res.users', 'Parse', readonly=True)
     # Zoubida: fields imprime et assure avec computes
 
     is_assure = fields.Boolean('Assuré', default=False, compute='_compute_is_assure')
@@ -978,19 +1013,21 @@ class SportsAffiliation(models.Model):
         return result
 
     def action_envoyer(self):
-        self.write({'state': 'dem_attente_verif',
-                    'date_init_bord_attente_envoi': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
-                    'user_init_bord_attente_envoi': self.env.uid,
-                    'date_bord_attente_envoi': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
-                    'user_bord_attente_envoi': self.env.uid})
+        if not self.justi_de_payment:
+            raise ValidationError(_("Please Enter Justificatif de paiement"))
+        if self.justi_de_payment:
+            self.write({'state': 'dem_attente_verif',
+                        'date_init_bord_attente_envoi': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
+                        'user_init_bord_attente_envoi': self.env.uid,
+                        'date_bord_attente_envoi': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
+                        'user_bord_attente_envoi': self.env.uid})
 
     def generate_report(self):
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.affiliation'),
                                                                ('report_name', '=', 'report_affiliation_ods')])
-        return self.env['report'].get_action(
-            self, report_ids.report_name)
+        return self.env['report'].get_action(self, report_ids.report_name)
 
     def action_verification(self):
         # athletes = self.env['sports.athletes'].search([('double', '=', True)])
@@ -1039,9 +1076,9 @@ class SportsAffiliation(models.Model):
     def action_creation(self):
         if self.athletes_ids:
 
-            if self.club_id.situation_admin != "Conforme":
+            # if self.club_id.situation_admin != "Conforme":
                 # raise ValidationError("La Situation Administrative du Club doit être conforme")
-                raise ValidationError("La Situation Administrative du Club doit être conforme!!!")
+                # raise ValidationError("La Situation Administrative du Club doit être conforme!!!")
 
             for athletes in self.athletes_ids:
 
@@ -1052,18 +1089,18 @@ class SportsAffiliation(models.Model):
                 if athletes.state != "nonConforme":
 
                     name = ""
-                    if athletes.licence == "Athlete":
+                    if athletes.athlete_b == True:
                         if athletes.type_athletes == "Sportif-Interne":
                             name = self.env['ir.sequence'].next_by_code('internal.sports.athletes')
                         if athletes.type_athletes == "Sportif-MRE":
                             name = self.env['ir.sequence'].next_by_code('mre.sports.athletes')
                         if athletes.type_athletes == "Sportif-Etranger":
                             name = self.env['ir.sequence'].next_by_code('foreign.sports.athletes')
-                    if athletes.licence == "Entraineur":
+                    if athletes.entraineur_b == True:
                         name = self.env['ir.sequence'].next_by_code('sports.coach')
-                    if athletes.licence == "Dirigeant":
+                    if athletes.dirigeant_b == True:
                         name = self.env['ir.sequence'].next_by_code('sports.leader')
-                    if athletes.licence == "Officiel":
+                    if athletes.arbitre_b == True:
                         name = self.env['ir.sequence'].next_by_code('sports.official')
 
                     # print self.get.pool('fdf')
@@ -1160,8 +1197,8 @@ class SportsAffiliation(models.Model):
     def action_affiliation_rejetee(self):
         if self.athletes_ids:
 
-            if self.club_id.situation_admin != "Conforme":
-                raise ValidationError("La Situation Administrative du Club doit être conforme")
+            # if self.club_id.situation_admin != "Conforme":
+            #     raise ValidationError("La Situation Administrative du Club doit être conforme")
 
             for athletes in self.athletes_ids:
                 if athletes.name == 'Nouveau':
@@ -1185,38 +1222,43 @@ class Sportsrenouvellement(models.Model):
 
         return self.env['sports.saison'].search([('state', '=', 'active')])
 
+    def _compute_total_cotisation(self):
+        demande_lines = len(self.athletes2_ids)
+        self.total_cotisations = demande_lines * self.club_id.cotisation_anule
+
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
 
     name = fields.Char('N°', required=True, copy=False, readonly=True, index=True, default='Nouveau')
     message1 = fields.Text('message1', readonly=True)
     message2 = fields.Text('message2', readonly=True)
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
-
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
+    club_id = fields.Many2one('sports.club', string='Club', tracking=True)
+    total_cotisations = fields.Float(string="Total de cotisation assurances", readonly="1",compute="_compute_total_cotisation")
+    justi_de_payment = fields.Binary(string="Justificatif de paiement")
     athletes2_ids = fields.Many2many('sports.athletes', string='Athletes')
-
+    assurances_id = fields.Many2one('sports.edition.assurances',string="Assurances")
     state = fields.Selection(
         [('dem_att_verif', 'Attente de Renouvellement'), ("edition_licence_attente", "Attente d'édition"),
-         ("edition_licence_assu", "Edition"), ('ren_rejete', 'Rejeté')], 'Statut', readonly=True, copy=False,
-        index=True, track_visibility='onchange', default='dem_att_verif')
+         ("edition_licence_assu", "Attente Edition"),("edition","Edition"), ('ren_rejete', 'Rejeté')], 'Statut', readonly=True, copy=False,
+        index=True, tracking=True, default='dem_att_verif')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
     user_dem_att_verif = fields.Many2one('res.users', 'Par', readonly=True)
     date_dem_att_verif = fields.Datetime('Vérification de la demande le', readonly=True)
-    user_att_ren_lic = fields.Many2one('res.users', 'Par', readonly=True)
+    user_att_ren_lic = fields.Many2one('res.users', 'Parr', readonly=True)
     date_att_ren_lic = fields.Datetime('Renouvellement des licences le', readonly=True)
     date_edition_licence_assu = fields.Datetime('Edition des licences et Assurances le', readonly=True)
-    user_edition_licence_assu = fields.Many2one('res.users', 'Par', readonly=True)
-    user_att_dispo_club = fields.Many2one('res.users', 'Par', readonly=True)
+    user_edition_licence_assu = fields.Many2one('res.users', 'Pare', readonly=True)
+    user_att_dispo_club = fields.Many2one('res.users', 'Parre', readonly=True)
     date_att_dispo_club = fields.Datetime('Mise à Disposition des cartes licences le', readonly=True)
-    user_att_recup_club = fields.Many2one('res.users', 'Par', readonly=True)
+    user_att_recup_club = fields.Many2one('res.users', 'Pars', readonly=True)
     date_att_recup_club = fields.Datetime('Récupération des cartes le', readonly=True)
-    user_ren_rejete = fields.Many2one('res.users', 'Par', readonly=True)
+    user_ren_rejete = fields.Many2one('res.users', 'Parsr', readonly=True)
     date_ren_rejete = fields.Datetime('Renouvellement Rejeté le', readonly=True)
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
     afficher_button = fields.Boolean('Afficher button')
@@ -1272,13 +1314,16 @@ class Sportsrenouvellement(models.Model):
             order.ligue_id = a
 
     def action_att_ren_lic(self):
-        self.write(
-            {'state': 'edition_licence_attente', 'date_dem_att_verif': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
-             'user_dem_att_verif': self.env.uid})
+        if not self.justi_de_payment:
+            raise ValidationError(_("Please Enter Justificatif de paiement"))
+        if self.justi_de_payment:
+            self.write(
+                {'state': 'edition_licence_attente', 'date_dem_att_verif': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
+                 'user_dem_att_verif': self.env.uid})
 
     def generate_report(self):
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.renouvellement'),
                                                                ('report_name', '=', 'report_renouvellement_ods')])
         return self.env['report'].get_action(
@@ -1286,9 +1331,6 @@ class Sportsrenouvellement(models.Model):
 
     def action_edition_licence_assu(self):
         if self.athletes2_ids:
-
-            if self.club_id.situation_admin != "Conforme":
-                raise ValidationError("La Situation Administrative du Club doit être conforme")
 
             for athletes in self.athletes2_ids:
                 athletes.write({'state': 'actif', 'situation_etat': 'Renouvellement'})
@@ -1311,14 +1353,19 @@ class Sportsreaffiliation(models.Model):
 
         return self.env['sports.saison'].search([('state', '=', 'active')])
 
+    def _compute_total_cotisation(self):
+        demande_lines = len(self.athletes3_ids)
+        self.total_cotisations = demande_lines * self.club_id.cotisation_anule
+
     affilia_athlete = fields.Many2one('sports.athletes', string="Athlète de l'affiliation")
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
-
+    assurances_id = fields.Many2one('sports.edition.assurances',string="Assurances")
     name = fields.Char('N° Demande', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
-    club_id = fields.Many2one('sports.club', string='Club', track_visibility='onchange')
-
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
+    club_id = fields.Many2one('sports.club', string='Club', tracking=True)
+    total_cotisations = fields.Float(string="Total de cotisation assurances", readonly="1",compute="_compute_total_cotisation")
+    justi_de_payment = fields.Binary(string="Justificatif de paiement")
     # athletes_reaffiliation_ids = fields.One2many('sports.athletes.reaffiliation', 'reaffiliation_id', string='Athletes')
 
     athletes3_ids = fields.Many2many('sports.athletes', string='Athletes')
@@ -1332,28 +1379,28 @@ class Sportsreaffiliation(models.Model):
                               ("licence_attente_recup", "Licences à récupérer par le Club"),
                               ("licence_recuperees", "Licences récupérées par le Club"),
                               ("affiliation_rejetee", "Rejetées")], 'Statut', readonly=True, copy=False, index=True,
-                             track_visibility='onchange', default='bord_attente_envoi')
+                             tracking=True, default='bord_attente_envoi')
 
     user_init_bord_attente_envoi = fields.Many2one('res.users', 'Par', readonly=True)
     date_bord_attente_envoi = fields.Datetime('Création du Bordereau le', readonly=True)
-    user_bord_attente_envoi = fields.Many2one('res.users', 'Par', readonly=True)
+    user_bord_attente_envoi = fields.Many2one('res.users', 'Pare', readonly=True)
     date_dem_attente_verif = fields.Datetime('Vérification et Validation de la Demande le', readonly=True)
-    user_dem_attente_verif = fields.Many2one('res.users', 'Par', readonly=True)
+    user_dem_attente_verif = fields.Many2one('res.users', 'Pars', readonly=True)
     date_ath_attente_crea = fields.Datetime('Mise à jour des fiches athlètes le', readonly=True)
-    user_ath_attente_crea = fields.Many2one('res.users', 'Par', readonly=True)
+    user_ath_attente_crea = fields.Many2one('res.users', 'Parr', readonly=True)
     date_edition_licence_assu = fields.Datetime('Edition des licences et Assurances le', readonly=True)
-    user_edition_licence_assu = fields.Many2one('res.users', 'Par', readonly=True)
+    user_edition_licence_assu = fields.Many2one('res.users', 'Parrs', readonly=True)
     date_comp_licence_assu = fields.Datetime('Envoyer la liste des licences à la compangnie d\'assurances le',
                                              readonly=True)
-    user_comp_licence_assu = fields.Many2one('res.users', 'Par', readonly=True)
+    user_comp_licence_assu = fields.Many2one('res.users', 'Parre', readonly=True)
     date_licence_attente_dispo_club = fields.Datetime('Mise à Disposition des Licences au Club le', readonly=True)
-    user_licence_attente_dispo_club = fields.Many2one('res.users', 'Par', readonly=True)
+    user_licence_attente_dispo_club = fields.Many2one('res.users', 'Parer', readonly=True)
     date_licence_attente_recup = fields.Datetime('Licences récupérées par le Club', readonly=True)
-    user_licence_attente_recup = fields.Many2one('res.users', 'Par', readonly=True)
+    user_licence_attente_recup = fields.Many2one('res.users', 'Parsr', readonly=True)
     date_affiliation_rejetee = fields.Datetime('Demandes d\'affiliations rejetées le', readonly=True)
-    user_affiliation_rejetee = fields.Many2one('res.users', 'Par', readonly=True)
+    user_affiliation_rejetee = fields.Many2one('res.users', 'Parse', readonly=True)
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
     afficher_button = fields.Boolean('Afficher button')
@@ -1421,24 +1468,23 @@ class Sportsreaffiliation(models.Model):
 
     def generate_report(self):
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.reaffiliation'),
                                                                ('report_name', '=', 'report_reaffiliation_ods')])
         return self.env['report'].get_action(
             self, report_ids.report_name)
 
     def action_envoyer(self):
-        self.write({'state': 'dem_attente_verif',
-                    'date_init_bord_attente_envoi': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
-                    'user_init_bord_attente_envoi': self.env.uid,
-                    'date_bord_attente_envoi': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
-                    'user_bord_attente_envoi': self.env.uid})
+        if not self.justi_de_payment:
+            raise ValidationError(_("Please Enter Justificatif de paiement"))
+        if self.justi_de_payment:
+            self.write({'state': 'dem_attente_verif',
+                        'user_init_bord_attente_envoi': self.env.uid,
+                        'date_bord_attente_envoi': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
+                        'user_bord_attente_envoi': self.env.uid})
 
     def action_creation(self):
         if self.athletes3_ids:
-
-            if self.club_id.situation_admin != "Conforme":
-                raise ValidationError("La Situation Administrative du Club doit être conforme")
 
             for athletes in self.athletes3_ids:
 
@@ -1600,6 +1646,23 @@ class SportsAthletes(models.Model):
     _name = "sports.athletes"
     _description = "sports athletes"
 
+    # #########################################################
+    # nom2 = fields.Char(string="Nom")
+    # prenom2 = fields.Char(string="prenom")
+    # saison_sportive = fields.Date(string="Saison Sportive")
+    # grade_ids = fields.One2many("grade.code",'grade.sport')
+
+    # ####TYPE LICENCE####
+    # athlete = fields.Boolean(string="Athlete",default="True")
+    # entraineur = fields.Boolean(string="Entraineur")
+    # dirigeant = fields.Boolean(string="Dirigeant")
+    # arbitre = fields.Boolean(string="Arbitre")
+    # n_de_bordereau = fields.Char(string="N de Bordereau")
+    # n_ceinture_noire = fields.Char(string="N Ceinture Noire")
+
+
+#############################################################
+
     # @api.one
     # @api.constrains('datenaissance', 'category_age_id', 'saison_id', 'age', 'actenaissance', 'cinjuniorsseniors')
     # def _check_category_age_id(self):
@@ -1759,42 +1822,49 @@ class SportsAthletes(models.Model):
             res.append((record.id, name))
         return res
 
-    def name_search(self, cr, user, name, args=None, operator='ilike', context=None, limit=100):
+    @api.constrains('athlete_b')
+    def _check_athlete_b(self):
+        if self.athlete_b == True:
+            if self.discipline_id.id == False:
+                raise ValidationError(_('Please Enter Discipline Value'))
+
+    @api.model
+    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
         if not args:
             args = []
         ids = []
         if name:
-            ids = self.search(cr, user, [('name', 'ilike', name)] + args, limit=limit)
+            ids = self._search([('name', 'ilike', name)] + args, limit=limit)
             if not ids:
-                ids = self.search(cr, user, [('cin', 'ilike', name)] + args, limit=limit)
+                ids = self._search([('cin', 'ilike', name)] + args, limit=limit)
             if not ids:
-                ids = self.search(cr, user, [('name_at', 'ilike', name)] + args, limit=limit)
+                ids = self._search([('name_at', 'ilike', name)] + args, limit=limit)
             if not ids:
-                ids = self.search(cr, user, [('prenom', 'ilike', name)] + args, limit=limit)
+                ids = self._search([('prenom', 'ilike', name)] + args, limit=limit)
             if not ids and len(name.split()) >= 2:
                 # Separating code and name for searching
                 operand1, operand2 = name.split(' ', 1)  # name can contain spaces
-                ids = self.search(cr, user, [('name_at', 'ilike', operand1), ('prenom', 'ilike', operand2)] + args,
+                ids = self._search([('name_at', 'ilike', operand1), ('prenom', 'ilike', operand2)] + args,
                                   limit=limit)
                 if not ids:
-                    ids = self.search(cr, user, [('name_at', 'ilike', operand2), ('prenom', 'ilike', operand1)] + args,
+                    ids = self._search([('name_at', 'ilike', operand2), ('prenom', 'ilike', operand1)] + args,
                                       limit=limit)
         else:
-            ids = self.search(cr, user, args, context=context, limit=limit)
-        return self.name_get(cr, user, ids, context=context)
+            ids = self._search(args,limit=limit)
+        return ids
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
 
     name = fields.Char(string='N° licence', copy=False, readonly=False, index=True, default='Nouveau')
     name2 = fields.Char(string='OLD ID', copy=False, readonly=False)
-    prenom = fields.Char(string='Prénom', track_visibility='onchange')
+    prenom = fields.Char(string='Prénom', tracking=True)
 
-    name_ar = fields.Char(string='الاسم الكامل', track_visibility='onchange')
+    name_ar = fields.Char(string='الاسم الكامل', tracking=True)
 
-    name_at = fields.Char(string='Nom', track_visibility='onchange')
+    name_at = fields.Char(string='Nom', tracking=True)
 
     category_age_id = fields.Many2one('sports.category_age', string='Catégorie d’âge',
-                                      default=_get_default_category_age, track_visibility='onchange')
+                                      default=_get_default_category_age, tracking=True)
     category_age_birth_certificate = fields.Boolean(related="category_age_id.birth_certificate", string="Extrait acte de naissance")
     category_age_medical_certificate = fields.Boolean(related="category_age_id.medical_certificate", string="Cértificat médical")
     category_age_cin = fields.Boolean(related="category_age_id.cin", string="CIN pour les séniors et Juniors")
@@ -1803,14 +1873,26 @@ class SportsAthletes(models.Model):
     category_age_foreign_authorization = fields.Boolean(related="category_age_id.foreign_authorization", string="Autorisation étrangère")
     category_age_school_certificate = fields.Boolean(related="category_age_id.school_certificate", string="Cértificat de scolarité")
     category_age_school_att = fields.Boolean(related="category_age_id.school_att", string="Attestation de scolarité")
-
+    athlete_b = fields.Boolean(string="Athlete")
+    entraineur_b = fields.Boolean(string="Entraineurr")
+    dirigeant_b = fields.Boolean(string="Dirigeant")
+    arbitre_b = fields.Boolean(string="Arbitre")
+    grade_id = fields.Many2one('sports.grade',string="Grade")
+    grade_ceinture_noire = fields.Boolean(string="Ceinture Nnoire",related="grade_id.ceinture_noire")
+    n_ceinture_noire = fields.Char(string="N° ceinture noire")
+    niveau_arbitre = fields.Selection([('stagiaire','Stagiaire'),('national','National'),('regional','Regional'),('continental','Continental'),('mondial','Mondial')],string="Niveau Arbitre")
+    paid_f = fields.Float(string="Poid (kg)")
+    cumul_points = fields.Integer(string="Cumul Points",compute="_total_result_note")
+    date_demier_pass = fields.Date(string="Date Dernier Passage",compute='_max_date_passage')
+    disciplines_id = fields.Many2one('sports.discipline', string='Discipline pratiquees')
+    compagine_id = fields.Many2one('utm.campaign',string="Compagnie d'assurance")
     licence = fields.Selection([
         ('Athlete', 'Athlete'),
         ('Entraineur', 'Entraineur'),
         ('Dirigeant', 'Dirigeant'),
         ('Officiel', 'Officiel')
 
-    ], string='Type licence')
+    ], string='Type Athletes')
 
     sexe = fields.Selection([
         ('h', 'Masculin'),
@@ -1824,13 +1906,13 @@ class SportsAthletes(models.Model):
     ], string='Situation Actuel', readonly=True)
 
     lieu_naissance = fields.Char(string='Lieu de naissance')
-    datenaissance = fields.Date(string='Date de naissance', track_visibility='onchange')
+    datenaissance = fields.Date(string='Date de naissance', tracking=True)
 
     adresse = fields.Char(string='Adresse')
     name_pere = fields.Char(string='Nom père')
     name_mere = fields.Char(string='Nom mère')
     adresse_adresse = fields.Char(string='Adresse Parent')
-    cin = fields.Char(string='CIN', track_visibility='onchange')
+    cin = fields.Char(string='CIN', tracking=True)
     cinexpiration = fields.Date(string='Date Expiration CIN? ')
 
     far = fields.Boolean(string='Far')
@@ -1838,7 +1920,7 @@ class SportsAthletes(models.Model):
     date = fields.Date(string='Date d\'ordre')
     date_exp = fields.Date(string='Date d\'expiration')
 
-    affiliation_id = fields.Many2one('sports.affiliation', string='N° d\'Affiliation', readonly=True)
+    affiliation_id = fields.Many2one('sports.affiliation', string='N° de bordereau', readonly=True)
     renouvellement_id = fields.Many2one('sports.renouvellement', string='N° de Renouvellement')
 
     renouvele = fields.Boolean(string='renouvellement ')
@@ -1851,7 +1933,7 @@ class SportsAthletes(models.Model):
     daterenouvellement = fields.Date(string='Date de Renouvellement')
     dateassurance = fields.Datetime(string='Date d\'impression de l\'assurance')
 
-    passeport = fields.Char(string='N° Passeport ')
+    passeport = fields.Char(string='N° Passeport de vayoge')
     visaobtenu = fields.Char(string='Visa obtenu? ')
     sejour = fields.Char(string='Séjour')
 
@@ -1895,12 +1977,12 @@ class SportsAthletes(models.Model):
     note = fields.Text(string='Note')
     pointure = fields.Float('Pointure')
     taille = fields.Float('Taille')
-    grade = fields.Float('Grade')
+    grade = fields.Float(string='Grades')
     montantbourse = fields.Float('Montant de la bourse')
 
     surclassement = fields.Selection([('non_surclasse', 'Non surclassé'), ('surclasse', 'surclassé')],
                                      'Surclassement ?', readonly=True, copy=False, index=True,
-                                     track_visibility='onchange', default='non_surclasse')
+                                     tracking=True, default='non_surclasse')
 
     actenaissance = fields.Binary('Extrait d\'acte de Naissance')
     actenaissance_filename = fields.Char("Extrait d\'acte de Naissance Filename")
@@ -1917,7 +1999,7 @@ class SportsAthletes(models.Model):
     cartesejour = fields.Binary('Carte Séjour')
     cartesejour_filename = fields.Char("Carte Séjour Filename")
 
-    autorisationetrangere = fields.Binary('Autorisation étrangère')
+    autorisationetrangere = fields.Binary('Autorisation étrangèree')
     autorisationetrangere_filename = fields.Char("Autorisation étrangère Filename")
 
     certificatscolarite = fields.Binary('Cértificat de Scolarité')
@@ -1938,7 +2020,7 @@ class SportsAthletes(models.Model):
     doublon_ids = fields.One2many('sports.doublon', 'athletes_id', string='Doublons')
 
     age = fields.Integer(compute='_compute_age', string='Age', readonly=True, store=False, default=0,
-                         track_visibility='onchange')
+                         tracking=True)
 
     state = fields.Selection([("draft", "Brouillon"), ("attente_activation", "Attente Activation"),
                               ("actif", "Actif"),
@@ -1949,7 +2031,7 @@ class SportsAthletes(models.Model):
                               ("Sanctionne", "Sanctionné"),
                               ("AnneeBlanche", "Année Blanche"),
                               ("nonConforme", "Non Conforme"),
-                              ], 'Statut', readonly=False, copy=False, index=True, track_visibility='onchange',
+                              ], 'Statut', readonly=False, copy=False, index=True, tracking=True,
                              default='draft')
 
     niveau_scolaire = fields.Selection([
@@ -1967,7 +2049,7 @@ class SportsAthletes(models.Model):
     type_athletes = fields.Selection([('Sportif-Interne', 'Sportif-Interne'), ('Sportif-MRE', 'Sportif-MRE'),
                                       ('Sportif-Etranger', 'Sportif-Etranger')], string='Type Athlètes')
 
-    # impression =  fields.Selection([('attente_impression', 'Attente d’impression'), ('Imprimee', 'Imprimée'),('Duplicata','Duplicata')], 'Impression Carte?', readonly=True, copy=False, index=True, track_visibility='onchange', default='attente_impression')
+    # impression =  fields.Selection([('attente_impression', 'Attente d’impression'), ('Imprimee', 'Imprimée'),('Duplicata','Duplicata')], 'Impression Carte?', readonly=True, copy=False, index=True, tracking=True, default='attente_impression')
 
     assure = fields.Boolean(string='Assuré?', readonly=True)
     date_assure = fields.Datetime('Date Assurance', readonly=True)
@@ -1978,7 +2060,7 @@ class SportsAthletes(models.Model):
     url = fields.Char(string='URL Image')
 
     # image: all image fields are base64 encoded and PIL-supported
-    image = fields.Binary("Image", attachment=True,
+    image = fields.Binary("Image", attachment=True, store=True,
                           help="This field holds the image used as avatar for this contact, limited to 1024x1024px",
                           )
 
@@ -1998,24 +2080,54 @@ class SportsAthletes(models.Model):
                            help="This field holds the image used as avatar for this contact, limited to 1024x1024px",
                            )
 
-    image_medium = fields.Binary("Medium-sized image",
-                                 compute='_compute_images', inverse='_inverse_image_medium', store=True,
+    image_mediums = fields.Image("Medium-sized image",max_width=128, max_height=128, related='image', store=True,
                                  attachment=True,
                                  help="Medium-sized image of this contact. It is automatically "
                                       "resized as a 128x128px image, with aspect ratio preserved. "
                                       "Use this field in form views or some kanban views.")
-    image_small = fields.Binary("Small-sized image",
-                                compute='_compute_images', inverse='_inverse_image_small', store=True, attachment=True,
+    image_smalls = fields.Image("Small-sized image",max_width=64, max_height=64,related='image', store=True, attachment=True,
                                 help="Small-sized image of this contact. It is automatically "
                                      "resized as a 64x64px image, with aspect ratio preserved. "
                                      "Use this field anywhere a small image is required.")
 
     category_age_change = fields.Boolean(string='Catégorie d\'âge?')
 
-    report_xml_id = fields.Many2one('ir.actions.report.xml', 'Report XML', )
+    report_xml_id = fields.Many2one('ir.actions.report', 'Report XML', )
     lang = fields.Selection(string='Language', selection='_get_lang')
     attachment_history = fields.One2many(comodel_name="attachment.history.athlete", inverse_name="athlete",
                                          string="Historiques des PJ")
+
+    def _total_result_note(self):
+        for athletes in self:
+            competition_obj = self.env['sports.competitions'].search([])
+            total_note = []
+            for comp in competition_obj:
+                if comp.state == 'resultats':
+                    for result_athlete in comp.resultats_ids:
+                        if result_athlete.athletes_id.id == athletes.id and result_athlete.grade_id == athletes.grade_id:
+                            total_note.append(result_athlete.note)
+            athletes.cumul_points = sum(total_note)
+
+    def _max_date_passage(self):
+        for athlete in self:
+            passage_ids = self.env['passage.de.grade'].search([('state','=','confirmee')])
+            date_max = []
+            for passage in passage_ids:
+                    for passage_ath in passage.grade_passage_line_ids:
+                        if passage_ath.athletes_id.id == athlete.id and passage_ath.qualification == 'admis':
+                            date_max.append(passage.date_passage_grade)
+            if date_max:           
+                athlete.date_demier_pass = max(date_max)
+            else:
+                athlete.date_demier_pass = False
+
+
+
+    def check_activer_button(self):
+        self.state = 'actif'
+
+    def check_desactiver_button(self):
+        self.state = 'draft'
 
     @api.model
     def _get_lang(self):
@@ -2033,19 +2145,19 @@ class SportsAthletes(models.Model):
         result = super(SportsAthletes, self).create(vals)
         return result
 
-    @api.depends('image')
-    def _compute_images(self):
-        for rec in self:
-            rec.image_medium = tools.image_resize_image_medium(rec.image)
-            rec.image_small = tools.image_resize_image_small(rec.image)
+    # @api.depends('image')
+    # def _compute_images(self):
+    #     for rec in self:
+    #         rec.image_medium = tools.image_resize_image_medium(rec.image)
+    #         rec.image_small = tools.image_resize_image_small(rec.image)
 
-    def _inverse_image_medium(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_medium)
+    # def _inverse_image_medium(self):
+    #     for rec in self:
+    #         rec.image = tools.image_resize_image_big(rec.image_medium)
 
-    def _inverse_image_small(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_small)
+    # def _inverse_image_small(self):
+    #     for rec in self:
+    #         rec.image = tools.image_resize_image_big(rec.image_small)
 
     def action_view_mutations(self):
         '''
@@ -2059,7 +2171,6 @@ class SportsAthletes(models.Model):
             'name': action.name,
             'help': action.help,
             'type': action.type,
-            'view_type': action.view_type,
             'view_mode': action.view_mode,
             'target': action.target,
             'context': action.context,
@@ -2136,7 +2247,6 @@ class SportsAthletes(models.Model):
             'name': action.name,
             'help': action.help,
             'type': action.type,
-            'view_type': action.view_type,
             'view_mode': action.view_mode,
             'target': action.target,
             'context': action.context,
@@ -2168,7 +2278,6 @@ class SportsAthletes(models.Model):
             'name': action.name,
             'help': action.help,
             'type': action.type,
-            'view_type': action.view_type,
             'view_mode': action.view_mode,
             'target': action.target,
             'context': action.context,
@@ -2200,7 +2309,6 @@ class SportsAthletes(models.Model):
             'name': action.name,
             'help': action.help,
             'type': action.type,
-            'view_type': action.view_type,
             'view_mode': action.view_mode,
             'target': action.target,
             'context': action.context,
@@ -2222,7 +2330,7 @@ class SportsAthletes(models.Model):
 
     def generate_report(self):
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.athletes'),
                                                                ('report_name', '=', 'sports_report')])
         return self.env['report'].get_action(
@@ -2230,7 +2338,7 @@ class SportsAthletes(models.Model):
 
     def generate_attestation_athlete_report(self):
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.athletes'), ('report_name', '=',
                                                                                                    'sports_attestation_athlete_report')])
         return self.env['report'].get_action(
@@ -2238,7 +2346,7 @@ class SportsAthletes(models.Model):
 
     def generate_attestation_bourse_athlete_report(self):
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.athletes'), ('report_name', '=',
                                                                                                    'sports_attestation_de_bourse_report')])
         return self.env['report'].get_action(
@@ -2246,7 +2354,7 @@ class SportsAthletes(models.Model):
 
     def generate_carte_report_duplicata(self):
         self.impression_duplicata = True
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.athletes'),
                                                                ('report_name', '=', 'carte_report')])
         return self.env['report'].get_action(
@@ -2256,7 +2364,7 @@ class SportsAthletes(models.Model):
         return self.pool['report'].get_action(self._cr, self._uid, self.id, 'sports_athletic.athlete_cart_report',
                                               context=self._context)
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.athletes'),
                                                                ('report_name', '=', 'carte_report')])
         return self.env['report'].get_action(
@@ -2280,14 +2388,12 @@ class doublon(models.Model):
 
     image = fields.Binary(related='athletes_id.image', attachment=True, store=True)
 
-    image_medium = fields.Binary("Medium-sized image",
-                                 compute='_compute_images', inverse='_inverse_image_medium', store=True,
+    image_mediums = fields.Image("Medium-sized image",max_width=128, max_height=128,related='image', store=True,
                                  attachment=True,
                                  help="Medium-sized image of this contact. It is automatically "
                                       "resized as a 128x128px image, with aspect ratio preserved. "
                                       "Use this field in form views or some kanban views.")
-    image_small = fields.Binary("Small-sized image",
-                                compute='_compute_images', inverse='_inverse_image_small', store=True, attachment=True,
+    image_smalls = fields.Image("Small-sized image",max_width=64, max_height=64,related='image', store=True, attachment=True,
                                 help="Small-sized image of this contact. It is automatically "
                                      "resized as a 64x64px image, with aspect ratio preserved. "
                                      "Use this field anywhere a small image is required.")
@@ -2298,19 +2404,19 @@ class doublon(models.Model):
     state = fields.Selection(related='athletes_id.state', store=True)
     name = fields.Char(related='athletes_id.name', store=True)
 
-    @api.depends('image')
-    def _compute_images(self):
-        for rec in self:
-            rec.image_medium = tools.image_resize_image_medium(rec.image)
-            rec.image_small = tools.image_resize_image_small(rec.image)
+    # @api.depends('image')
+    # def _compute_images(self):
+    #     for rec in self:
+    #         rec.image_medium = tools.image_resize_image_medium(rec.image)
+    #         rec.image_small = tools.image_resize_image_small(rec.image)
 
-    def _inverse_image_medium(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_medium)
+    # def _inverse_image_medium(self):
+    #     for rec in self:
+    #         rec.image = tools.image_resize_image_big(rec.image_medium)
 
-    def _inverse_image_small(self):
-        for rec in self:
-            rec.image = tools.image_resize_image_big(rec.image_small)
+    # def _inverse_image_small(self):
+    #     for rec in self:
+    #         rec.image = tools.image_resize_image_big(rec.image_small)
 
 
 # Sanctions
@@ -2330,7 +2436,7 @@ class SportsSanctions(models.Model):
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     athletes_id = fields.Many2one('sports.athletes', 'N° Licence')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -2346,10 +2452,10 @@ class SportsSanctions(models.Model):
     user_attente_envoi_demande = fields.Many2one('res.users', 'Envoi de la demande de Sanction Par', readonly=True)
     date_attente_envoi_demande = fields.Datetime('Fait le', readonly=True)
     user_attente_verif_csrl = fields.Many2one('res.users', 'Vérification de la Demande par la CSRL Par', readonly=True)
-    date_attente_verif_csrl = fields.Datetime('Fait le', readonly=True)
+    date_attente_verif_csrl = fields.Datetime('Fait lee', readonly=True)
     user_attente_decision_comm = fields.Many2one('res.users', 'Décision de la Commission Disciplinaire Par',
                                                  readonly=True)
-    date_attente_decision_comm = fields.Datetime('Fait le', readonly=True)
+    date_attente_decision_comm = fields.Datetime('Fait les', readonly=True)
     type_sanction = fields.Selection(
         [('none', ''), ('financiere', 'Financière'), ('arret', 'Arrét'), ('avertissement', 'Avertissement')],
         'Type de Sanctions', required=True)
@@ -2361,19 +2467,18 @@ class SportsSanctions(models.Model):
     sanction2_filename = fields.Char("Sanction Format Electronique Filename")
 
     date_dec_sanction = fields.Date('Date Décision', copy=False, default=fields.Datetime.now)
-    date_start_sanction_csrl = fields.Date('Date Début Effet')
-    date_end_sanction_csrl = fields.Date('Date Fin Effet')
+    date_start_sanction_csrl = fields.Date('Date Début Effets')
+    date_end_sanction_csrl = fields.Date('Date Fin Effets')
     decision_csrl = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],
-                                     'Statut', readonly=False)
+                                     'Statuts', readonly=False)
     motif = fields.Text("Motif")
-    comment_csrl = fields.Text("Commentaire")
-    duration_csrl = fields.Integer("Durée")
+    comment_csrl = fields.Text("Commentaires")
+    duration_csrl = fields.Integer("Durées")
     unite_csrl = fields.Selection(
-        [('none', ''), ('day', u'''Jour'''), ('week', u'''Semaine'''), ('year', u'''Année''')], 'Unité', readonly=False)
+        [('none', ''), ('day', u'''Jour'''), ('week', u'''Semaine'''), ('year', u'''Année''')], string='Unités', readonly=False)
     date_start_sanction_comm = fields.Date('Date Début Effet')
     date_end_sanction_comm = fields.Date('Date Fin Effet')
-    decision_comm = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],
-                                     'Statut', readonly=False)
+    decision_comm = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],string='Statutss', readonly=False)
     comment_comm = fields.Text("Commentaire")
     duration_comm = fields.Integer("Durée")
     unite_comm = fields.Selection([('none', ''), ('day', 'Jour'), ('week', 'Semaine'), ('year', u'''Année''')], 'Unité',
@@ -2492,15 +2597,15 @@ class SportsMutations(models.Model):
         #self.prenom = self.env['sports.athletes'].search([('name', '=', self.athletes_id.name)]).prenom
 
     name = fields.Char('N° Mutation', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
 
     # zoubida: ajout de nom et prenom athlete onchange
 
-    prenom = fields.Char(string='Prénom', track_visibility='onchange', readonly=True)
-    name_at = fields.Char(string='Nom', track_visibility='onchange', readonly=True)
+    prenom = fields.Char(string='Prénom', tracking=True, readonly=True)
+    name_at = fields.Char(string='Nom', tracking=True, readonly=True)
 
-    club_giving_id = fields.Many2one('sports.club', 'Club Cédant', required=True, track_visibility='onchange')
-    club_receiving_id = fields.Many2one('sports.club', 'Club Recevant', required=True, track_visibility='onchange')
+    club_giving_id = fields.Many2one('sports.club', 'Club Cédant', required=True, tracking=True)
+    club_receiving_id = fields.Many2one('sports.club', 'Club Recevant', required=True, tracking=True)
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     athletes_id = fields.Many2one('sports.athletes', 'N° Licence')
@@ -2514,8 +2619,7 @@ class SportsMutations(models.Model):
     mutation2_filename = fields.Char("Mutation Format Electronique Filename")
 
     condition_ids = fields.One2many('sports.mutation.condition', 'mutation_id', 'Conditions')
-    decision_commission = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],
-                                           'Statut', readonly=False)
+    decision_commission = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],string='Statuts', readonly=False)
     motif = fields.Text("Motif")
     statut_mutation = fields.Selection(
         [('none', ''), ('en_cours', 'En cours'), ('mute', u'''Muté'''), ('annulee', u'''Annlée''')], 'Statut Mutation',
@@ -2523,14 +2627,14 @@ class SportsMutations(models.Model):
     state = fields.Selection(
         [('dem_attente_envoi', 'Attente Envoi'), ('dem_attente_val', 'Attente de Validation par la CSRL'),
          ('mutation_effectuee', 'Mutation Effectuée'), ('mutation_annulee', 'Mutation Annulée'),
-         ('reaffiliation', 'Réaffiliation')], 'Statut', readonly=True, default='dem_attente_envoi')
+         ('reaffiliation', 'Réaffiliation')], string='Statut', readonly=True, default='dem_attente_envoi')
     user_dem_attente_envoi = fields.Many2one('res.users', 'Par', readonly=True)
     date_dem_attente_envoi = fields.Datetime('Fait le', readonly=True)
-    user_dem_attente_val = fields.Many2one('res.users', 'Par', readonly=True)
-    date_dem_attente_val = fields.Datetime('Fait le', readonly=True)
+    user_dem_attente_val = fields.Many2one('res.users', 'Parr', readonly=True)
+    date_dem_attente_val = fields.Datetime(string='Fait lee', readonly=True)
     reaffiliation_id = fields.Many2one('sports.reaffiliation', string='Réaffiliation')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -2621,14 +2725,14 @@ class SportsAnneeblanche(models.Model):
         return self.env['sports.saison'].search([('state', '=', 'active')])
 
     name = fields.Char('N° Année blanche', required=True, copy=False, readonly=True, index=True, default='Nouveau')
-    ligue_id = fields.Many2one('sports.ligue', string='Ligue', track_visibility='onchange')
+    ligue_id = fields.Many2one('sports.ligue', string='Ligue', tracking=True)
 
     club_id = fields.Many2one('sports.club', 'Club', required=True)
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
     athletes_id = fields.Many2one('sports.athletes', 'N° Licence')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     date_create = fields.Datetime(string='Date de Création', copy=False, default=fields.Datetime.now)
 
@@ -2639,30 +2743,29 @@ class SportsAnneeblanche(models.Model):
         default='attente_envoi_demande')
 
     user_attente_envoi_demande = fields.Many2one('res.users', 'Envoi de la demande  Par', readonly=True)
-    date_attente_envoi_demande = fields.Datetime('Fait le', readonly=True)
+    date_attente_envoi_demande = fields.Datetime(string='Fait le', readonly=True)
     user_attente_verif_csrl = fields.Many2one('res.users', 'Vérification de la Demande par la CSRL Par', readonly=True)
-    date_attente_verif_csrl = fields.Datetime('Fait le', readonly=True)
+    date_attente_verif_csrl = fields.Datetime(string='Fait lee', readonly=True)
     user_attente_decision_comm = fields.Many2one('res.users', 'Décision de la Commission Disciplinaire Par',
                                                  readonly=True)
-    date_attente_decision_comm = fields.Datetime('Fait le', readonly=True)
+    date_attente_decision_comm = fields.Datetime(string='Fait les', readonly=True)
 
     sanction2 = fields.Binary('Sanction Format Electronique')
     sanction2_filename = fields.Char("Sanction Format Electronique Filename")
 
     date_dec_sanction = fields.Date('Date Décision', copy=False, default=fields.Datetime.now)
-    date_start_sanction_csrl = fields.Date('Date Début Effet')
-    date_end_sanction_csrl = fields.Date('Date Fin Effet')
-    decision_csrl = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],
-                                     'Statut', readonly=False)
+    date_start_sanction_csrl = fields.Date('Date Début Effets')
+    date_end_sanction_csrl = fields.Date('Date Fin Effets')
+    decision_csrl = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],string='Statuts', readonly=False)
     motif = fields.Text("Motif")
-    comment_csrl = fields.Text("Commentaire")
+    comment_csrl = fields.Text("Commentaires")
     duration_csrl = fields.Integer("Durée")
     unite_csrl = fields.Selection(
         [('none', ''), ('day', u'''Jour'''), ('week', u'''Semaine'''), ('year', u'''Année''')], 'Unité', readonly=False)
     date_start_sanction_comm = fields.Date('Date Début Effet')
     date_end_sanction_comm = fields.Date('Date Fin Effet')
     decision_comm = fields.Selection([('none', ''), ('conforme', 'Conforme'), ('non_conforme', 'Non Conforme')],
-                                     'Statut', readonly=False)
+                                     'Statutss', readonly=False)
     comment_comm = fields.Text("Commentaire")
 
     @api.model
@@ -2730,8 +2833,15 @@ class EditionAssurances(models.Model):
             val = param.reaffiliation
         return val
 
+    def _compute_total_cotisation(self):
+        demande_obj = self.env['sports.athletes'].search_count([])
+        self.total_cotisations = demande_obj * self.club_id.cotisation_anule
+
     name = fields.Char(string='Référence', default='/')
     date = fields.Date('Date', copy=False, default=fields.Datetime.now, readonly=True)
+
+    club_id = fields.Many2one('sports.club',string="Club")
+    total_cotisations = fields.Float(string="Total de cotisation assurances", readonly="1",compute="_compute_total_cotisation")
 
     # Zoubida modifier les états
     state = fields.Selection([('draft', 'Brouillon'), ('en_cours', u'''Athlétes cherchés'''), ('valide', 'Validé'),
@@ -2742,14 +2852,11 @@ class EditionAssurances(models.Model):
 
     # Zoubida : athletes
 
-    athletes3_att_ids = fields.One2many('sports.athletes.assurances', 'assurances_id', string='Athlètes',
-                                        domain=[('situation_etat', '=', 'Attribution')], readonly=True)
-    athletes3_ren_ids = fields.One2many('sports.athletes.assurances', 'assurances_id', string='Athlètes',
-                                        domain=[('situation_etat', '=', 'Renouvellement')], readonly=True)
-    athletes3_reaf_ids = fields.One2many('sports.athletes.assurances', 'assurances_id', string='Athlètes',
-                                         domain=[('situation_etat', '=', 'Reaffiliations')], readonly=True)
+    athletes3_att_ids = fields.One2many('sports.affiliation', 'assurances_id', string='Athlètes')
+    athletes3_ren_ids = fields.One2many('sports.renouvellement', 'assurances_id', string='Athlètess')
+    athletes3_reaf_ids = fields.One2many('sports.reaffiliation', 'assurances_id', string='Athlètesss')
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
 
@@ -2774,28 +2881,31 @@ class EditionAssurances(models.Model):
 
             if self.athletes3_att_ids:
                 for obj in self.athletes3_att_ids:
-                    if obj.athletes_id.assure:
-                        assure_att = True
-                    else:
-                        assure_att = False
+                    for athletes in obj.athletes_ids:
+                        if athletes.assure:
+                            assure_att = True
+                        else:
+                            assure_att = False
             else:
                 assure_att = True
 
             if self.athletes3_ren_ids:
                 for obj in self.athletes3_ren_ids:
-                    if obj.athletes_id.assure:
-                        assure_ren = True
-                    else:
-                        assure_ren = False
+                    for athlete2 in obj.athletes2_ids:
+                        if athlete2.assure:
+                            assure_ren = True
+                        else:
+                            assure_ren = False
             else:
                 assure_ren = True
 
             if self.athletes3_reaf_ids:
                 for obj in self.athletes3_reaf_ids:
-                    if obj.athletes_id.assure:
-                        assure_reaf = True
-                    else:
-                        assure_reaf = False
+                    for athletes3 in obj.athletes3_ids:
+                        if athletes3.assure:
+                            assure_reaf = True
+                        else:
+                            assure_reaf = False
             else:
                 assure_reaf = True
 
@@ -2807,45 +2917,58 @@ class EditionAssurances(models.Model):
     # Zoubida: enlever le changement du field assure, et ajout du changement de state
 
     def action_verification(self):
-        if not self.athletes3_att_ids and not self.athletes3_reaf_ids and not self.athletes3_ren_ids:
 
-            c = 0
-            nombre_attribution = self.nombre_attribution
-            athletes_ids = self.env['sports.athletes'].search([('assure', '=', False), ('situation_etat', '=', "Attribution")])
-            for athlete in athletes_ids:
-                if c < nombre_attribution:
-                    c = c + 1
-                    self.env['sports.athletes.assurances'].create(
-                        {'athletes_id': athlete.id, 'assurances_id': self.id, 'ligue_id': athlete.ligue_id.id,
-                         'club_id': athlete.club_id.id, 'nom': athlete.name_at, 'prenom': athlete.prenom,
-                         'sequence': c})
+        affiliation_ids = self.env['sports.affiliation'].search([('state','=','edition_licence_assu')])
+        if affiliation_ids:
+            affiliation_ids.assurances_id = self.id
+            self.state = 'en_cours'
+        renouvellement_ids = self.env['sports.renouvellement'].search([('state','=','edition_licence_assu')])
+        if renouvellement_ids:
+            renouvellement_ids.assurances_id = self.id
+            self.state = 'en_cours'
+        reaffiliation_ids = self.env['sports.reaffiliation'].search([('state','=','edition_licence_assu')])
+        if reaffiliation_ids:
+            reaffiliation_ids.assurances_id = self.id
+            self.state = 'en_cours'
 
-            c = 0
-            nombre_renouvellement = self.nombre_renouvellement
-            athletes_ids = self.env['sports.athletes'].search(
-                [('assure', '=', False), ('situation_etat', '=', "Renouvellement")])
-            for athlete in athletes_ids:
-                if c < nombre_renouvellement:
-                    c = c + 1
-                    self.env['sports.athletes.assurances'].create(
-                        {'athletes_id': athlete.id, 'assurances_id': self.id, 'ligue_id': athlete.ligue_id.id,
-                         'club_id': athlete.club_id.id, 'nom': athlete.name_at, 'prenom': athlete.prenom,
-                         'sequence': c})
+        # if not self.athletes3_att_ids and not self.athletes3_reaf_ids and not self.athletes3_ren_ids:
+        #     c = 0
+        #     nombre_attribution = self.nombre_attribution
+        #     athletes_ids = self.env['sports.athletes'].search([('assure', '=', False), ('situation_etat', '=', "Attribution")])
+        #     for athlete in athletes_ids:
+        #         if c < nombre_attribution:
+        #             c = c + 1
+        #             self.env['sports.athletes.assurances'].create(
+        #                 {'athletes_id': athlete.id, 'assurances_id': self.id, 'ligue_id': athlete.ligue_id.id,
+        #                  'club_id': athlete.club_id.id, 'name': athlete.name_at, 'prenom': athlete.prenom,
+        #                  'sequence': c})
 
-            c = 0
-            nombre_reaffiliation = self.nombre_reaffiliation
-            athletes_ids = self.env['sports.athletes'].search(
-                [('assure', '=', False), ('situation_etat', '=', "Reaffiliations")])
-            for athlete in athletes_ids:
-                if c < nombre_reaffiliation:
-                    c = c + 1
-                    self.env['sports.athletes.assurances'].create(
-                        {'athletes_id': athlete.id, 'assurances_id': self.id, 'ligue_id': athlete.ligue_id.id,
-                         'club_id': athlete.club_id.id, 'nom': athlete.name_at, 'prenom': athlete.prenom,
-                         'sequence': c})
+        #     c = 0
+        #     nombre_renouvellement = self.nombre_renouvellement
+        #     athletes_ids = self.env['sports.athletes'].search(
+        #         [('assure', '=', False), ('situation_etat', '=', "Renouvellement")])
+        #     for athlete in athletes_ids:
+        #         if c < nombre_renouvellement:
+        #             c = c + 1
+        #             self.env['sports.athletes.assurances'].create(
+        #                 {'athletes_id': athlete.id, 'assurances_id': self.id, 'ligue_id': athlete.ligue_id.id,
+        #                  'club_id': athlete.club_id.id, 'nom': athlete.name_at, 'prenom': athlete.prenom,
+        #                  'sequence': c})
 
-            if self.athletes3_att_ids or self.athletes3_ren_ids or self.athletes3_reaf_ids:
-                self.state = 'en_cours'
+        #     c = 0
+        #     nombre_reaffiliation = self.nombre_reaffiliation
+        #     athletes_ids = self.env['sports.athletes'].search(
+        #         [('assure', '=', False), ('situation_etat', '=', "Reaffiliations")])
+        #     for athlete in athletes_ids:
+        #         if c < nombre_reaffiliation:
+        #             c = c + 1
+        #             self.env['sports.athletes.assurances'].create(
+        #                 {'athletes_id': athlete.id, 'assurances_id': self.id, 'ligue_id': athlete.ligue_id.id,
+        #                  'club_id': athlete.club_id.id, 'nom': athlete.name_at, 'prenom': athlete.prenom,
+        #                  'sequence': c})
+
+        # if self.athletes3_att_ids or self.athletes3_ren_ids or self.athletes3_reaf_ids:
+        #     self.state = 'en_cours'
 
     # Zoubida: validation assurance
 
@@ -2853,14 +2976,17 @@ class EditionAssurances(models.Model):
         if self.athletes3_att_ids or self.athletes3_reaf_ids or self.athletes3_ren_ids:
 
             for athlete_att in self.athletes3_att_ids:
-                athlete_att.athletes_id.assure = True
-                athlete_att.athletes_id.date_assure = self.date
+                athlete_att.state = 'edition'
+                athlete_att.athletes_ids.assure = True
+                athlete_att.athletes_ids.date_assure = self.date
             for athlete_reaf in self.athletes3_reaf_ids:
-                athlete_reaf.athletes_id.assure = True
-                athlete_reaf.athletes_id.date_assure = self.date
+                athlete_reaf.state = 'edition'
+                athlete_reaf.athletes3_ids.assure = True
+                athlete_reaf.athletes3_ids.date_assure = self.date
             for athlete_ren in self.athletes3_ren_ids:
-                athlete_ren.athletes_id.assure = True
-                athlete_ren.athletes_id.date_assure = self.date
+                athlete_ren.state = 'edition'
+                athlete_ren.athletes2_ids.assure = True
+                athlete_ren.athletes2_ids.date_assure = self.date
         self.state = 'valide'
 
     # Zoubida: annuler assurance
@@ -2869,11 +2995,11 @@ class EditionAssurances(models.Model):
         if self.athletes3_att_ids or self.athletes3_reaf_ids or self.athletes3_ren_ids:
 
             for athlete_att in self.athletes3_att_ids:
-                athlete_att.athletes_id.assure = False
+                athlete_att.athletes_ids.assure = False
             for athlete_reaf in self.athletes3_reaf_ids:
-                athlete_reaf.athletes_id.assure = False
+                athlete_reaf.athletes3_ids.assure = False
             for athlete_ren in self.athletes3_ren_ids:
-                athlete_ren.athletes_id.assure = False
+                athlete_ren.athletes2_ids.assure = False
         self.state = 'annulee'
 
     @api.model
@@ -2912,26 +3038,51 @@ class EditionAssurancesExcel(models.Model):
             self.date_start = False
             self.date_end = False
 
-    def generate_carte_report(self):
+    # def generate_carte_report(self):            
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
-                                                               ('model', '=', 'sports.excel.assurances'),
-                                                               ('report_name', '=', 'report_assurance_ods3')])
-        return self.env['report'].get_action(
-            self, report_ids.report_name)
+    #     report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
+    #                                                            ('model', '=', 'sports.excel.assurances'),
+    #                                                            ('report_name', '=', 'report_assurance_ods3')])
+    #     return self.env['report'].get_action(
+    #         self, report_ids.report_name)
+
 
     def action_verification(self):
-        self.assurances_ids = False
-        if self.recherche == "date":
-            athletes_ids = self.env['sports.athletes.assurances'].search([('date', '>=', self.date_start),
-                                                                          ('date', '<=', self.date_end)])
-        else:
-            athletes_ids = self.env['sports.athletes.assurances'].search([])
+        
+        # all athletes of sports affilation with state edition
+        self.assurances_ids.unlink()
+        athlets_assurance_obj = self.env['sports.athletes.assurances']
+        affilation_ids = self.env['sports.affiliation'].search([('state','=','edition')])
+        for affiliation in affilation_ids:
+            for athlete in affiliation.athletes_ids:
+                athlets_assurance_obj.create({'assurances_excel_id':self.id,'athletes_id': athlete.id,'ligue_id': athlete.ligue_id.id,
+                         'club_id': athlete.club_id.id, 'nom': athlete.name_at, 'prenom': athlete.prenom})
 
-        for athlete in athletes_ids:
-            athlete.write({'assurances_excel_id': self.id})
+        # all atheltes of sports renovellment with state edition
+        renouvellement_ids = self.env['sports.renouvellement'].search([('state','=','edition')])
+        for renouvellement in renouvellement_ids:
+            for ren_athletes in renouvellement.athletes2_ids:
+                athlets_assurance_obj.create({'assurances_excel_id':self.id,'athletes_id': ren_athletes.id,'ligue_id': ren_athletes.ligue_id.id,
+                         'club_id': ren_athletes.club_id.id, 'nom': ren_athletes.name_at, 'prenom': ren_athletes.prenom})
 
-        return True
+        #all athletes of sports reaffilation with state edition
+        reaffiliation_ids = self.env['sports.reaffiliation'].search([('state','=','edition')])
+        for reaffiliation in reaffiliation_ids:
+            for reaf_athletes in reaffiliation.athletes3_ids:
+                athlets_assurance_obj.create({'assurances_excel_id':self.id,'athletes_id': reaf_athletes.id,'ligue_id': reaf_athletes.ligue_id.id,
+                         'club_id': reaf_athletes.club_id.id, 'nom': reaf_athletes.name_at, 'prenom': reaf_athletes.prenom})
+
+        # self.assurances_ids = False
+        # if self.recherche == "date":
+        #     athletes_ids = self.env['sports.athletes.assurances'].search([('date', '>=', self.date_start),
+        #                                                                   ('date', '<=', self.date_end)])
+        # else:
+        #     athletes_ids = self.env['sports.athletes.assurances'].search([])
+
+        # for athlete in athletes_ids:
+        #     athlete.write({'assurances_excel_id': self.id})
+
+        # return True
 
     @api.model
     def create(self, vals):
@@ -2958,7 +3109,7 @@ class EditionAssurancesAthletes(models.Model):
     prenom = fields.Char(string='Prénom')
 
     assurances_id = fields.Many2one('sports.edition.assurances', 'Assurances', invisible=True)
-    assurances_excel_id = fields.Many2one('sports.excel.assurances', 'Assurances', invisible=True)
+    assurances_excel_id = fields.Many2one('sports.excel.assurances', 'Assurancess', invisible=True)
 
     date = fields.Date(string='Date Assurances',
                        related='assurances_id.date')
@@ -3023,12 +3174,12 @@ class EditionCartesLicences(models.Model):
 
     athletes3_att_ids = fields.One2many('sports.athletes.carteslicences', 'carteslicences_id', string='Athlétes',
                                         domain=[('situation_etat', '=', 'Attribution')], readonly=True)
-    athletes3_ren_ids = fields.One2many('sports.athletes.carteslicences', 'carteslicences_id', string='Athlétes',
+    athletes3_ren_ids = fields.One2many('sports.athletes.carteslicences', 'carteslicences_id', string='Athlétess',
                                         domain=[('situation_etat', '=', 'Renouvellement')], readonly=True)
-    athletes3_reaf_ids = fields.One2many('sports.athletes.carteslicences', 'carteslicences_id', string='Athlétes',
+    athletes3_reaf_ids = fields.One2many('sports.athletes.carteslicences', 'carteslicences_id', string='Athléteess',
                                          domain=[('situation_etat', '=', 'Reaffiliations')], readonly=True)
 
-    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, track_visibility='onchange',
+    responsable_id = fields.Many2one('res.users', string='Responsable', index=True, tracking=True,
                                      default=lambda self: self.env.user)
 
     saison_id = fields.Many2one('sports.saison', string='Saison sportive', default=_get_default_saison)
@@ -3257,7 +3408,7 @@ class EditionCartesLicences(models.Model):
 
     def generate_carte_report(self):
 
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.edition.carteslicences'),
                                                                ('report_name', '=', 'edition_cartes_report')])
         return self.env['report'].get_action(
@@ -3321,7 +3472,7 @@ class Editionpassagecategorie(models.Model):
     def generate_report(self):
         return self.pool['report'].get_action(self._cr, self._uid, self.id, 'sports_athletic.member_list_report',
                                               context=self._context)
-        report_ids = self.env['ir.actions.report.xml'].search([('report_type', '=', 'aeroo'),
+        report_ids = self.env['ir.actions.report'].search([('report_type', '=', 'aeroo'),
                                                                ('model', '=', 'sports.passage.categorie'),
                                                                ('report_name', '=', 'report_passage_categorie_ods')])
         return self.env['report'].get_action(

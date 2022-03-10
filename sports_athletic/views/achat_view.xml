@@ -192,16 +192,18 @@
                   action="action_view_achat_demande_form" sequence="-1"/>
 
 
+       
         <record id="view_requisition_order_form_inherited" model="ir.ui.view">
             <field name="name">purchase.requisition.form.inherited</field>
             <field name="model">purchase.requisition</field>
             <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='picking_type_id']" position="after">
+            
+                <field name="origin" position="after">
                     <field name="demande_id" readonly="True"/>
                     <field name="object" readonly="True"/>
                     <field name="type" readonly="True"/>
-                </xpath>
+                </field>
                 <!-- <xpath expr="//button[@name='action_cancel']" position="after">
                     <button name="action_print_purchase_quotation" string="Imprimé" type="object" icon="gtk-print"/> -->
                     <!--button name="action_print_purchase_order" string="Imprimé" type="object" icon="gtk-print"/-->

@@ -15,6 +15,7 @@ from odoo.exceptions import ValidationError
 
 class sa_expense(models.Model):
     _name = "sa.expense"
+    _description = "Sa expense"
 
     name = fields.Char(string="N° Note de Frais", readonly=True)
     applicant = fields.Many2one("hr.employee", string="Demandeur", required=True)
@@ -57,6 +58,7 @@ sa_expense()
 
 class sa_expense_line(models.Model):
     _name = "sa.expense.line"
+    _description = "Sa Expense Line"
 
     object = fields.Text('Objet', required=True)
     start_date = fields.Date(string="Date de départ", required=True)
@@ -91,6 +93,7 @@ sa_expense_line()
 
 class mileage_allowance(models.Model):
     _name = "mileage.allowance"
+    _description = "Mileage Allowance"
 
     name = fields.Char(string="Puissance Fiscale du Véhicule", required=True)
     price = fields.Float(string="Indémnité Kilométrique en DH", required=True)

@@ -15,6 +15,7 @@ from odoo.exceptions import ValidationError
 
 class mission_order(models.Model):
     _name = "sa.mission.order"
+    _description = "Sa Misson Order"
 
     name = fields.Char(string="N° demande", readonly=True)
     applicant = fields.Many2one("hr.employee", string="Demandeur", required=True)

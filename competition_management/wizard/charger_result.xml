@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="view_charger_results_form" model="ir.ui.view">
+        <field name="name">charger.result.wizard.form</field>
+        <field name="model">charger.result.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Charger Result">
+            	<div>
+                    <p>Uplod Your CSV file for Chagrer resultats</p>
+                    <field name="upload_file"/>
+                </div>
+                <footer>
+                        <button name="upload_result" string="Upload" type="object" class="btn-primary"/>
+                        <button special="cancel" string="Cancel" type="object" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="charger_result_action" model="ir.actions.act_window">
+            <field name="name">Charger Resultats</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">charger.result.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_charger_results_form"/>
+            <field name="target">new</field>
+        </record>
+</odoo>

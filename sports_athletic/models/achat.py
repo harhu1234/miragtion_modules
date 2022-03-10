@@ -26,12 +26,12 @@ class achat_demande(models.Model):
     frma_director = fields.Many2one("hr.employee", string="Directeur FRMA", compute="_get_employee")
     financial_director = fields.Many2one("hr.employee", string="Directeur Financier", compute="_get_employee")
     partner_id = fields.Many2one("res.partner", "Fournisseur")
-    commentaires = fields.Text(string="Commentaires")
+    commentaires = fields.Text(string="Commentairess")
     budget = fields.Float(string="Montant budget")
     compte_charge = fields.Char(string="compte de charge")
     commentaires_ids = fields.One2many("achat.commentaires", "demande_id", string="Commentaires")
     demande_line_ids = fields.One2many("achat.demande.line", "demande_id", string="Ligne Demande d'achat")
-    order_line = fields.One2many("purchase.order.line", "demande_id", "Ligne Demande d'achat")
+    order_line = fields.One2many("purchase.order.line", "demande_id", "Ligne Demande d'achats")
     object = fields.Char(string="Objet de la demande d'achat", required=True)
     state = fields.Selection([("draft", "Brouillon"),
                               ("submitted_user", "Soumis Utilisateur"),
@@ -40,7 +40,7 @@ class achat_demande(models.Model):
                               ("financial_director_validate", "Approuvé Dir Financier"),
                               ("frma_director_validate", "Approuvé Dir FRMA"),
                               ], string="Etat", default="draft")
-    po_count = fields.Integer(string="Nombre BC", compute="_get_po_count")
+    po_count = fields.Integer(string="Nombres BC", compute="_get_po_count")
     purchase_orders = fields.One2many("purchase.order", "demande_id", string="Bon de commande")
     purchase_requisitions = fields.One2many("purchase.requisition", "demande_id", string="Appel d'offre")
     history = fields.One2many("achat.demande.history", "demande_id", string="Historique des actions")
@@ -60,20 +60,19 @@ class achat_demande(models.Model):
     @api.depends('state')
     def _get_view_cancel(self):
         for group in self.env.user.groups_id:
-            if (group.name == "Responsable logistique" and self.state == "user_resp_validate") or \
-                    (group.name == "Directeur financier" and self.state == "logistics_manager_validate") or \
+            if (group.name == "Responsable Logistique" and self.state == "user_resp_validate") or \
+                    (group.name == "Directeur Financier" and self.state == "logistics_manager_validate") or \
                     (group.name == "Directeur FRMA" and self.state == "financial_director_validate"):
                 self.view_cancel = True
             else:
                 self.view_cancel = False
-                    
 
     def _get_is_write(self):
         self.is_write = False
         for group in self.env.user.groups_id:
-            if group.name in ('Directeur FRMA', 'Directeur financier'):
+            if group.name in ('Directeur FRMA', 'Directeur Financier'):
                 self.is_write = True
-            if group.name == "Responsable logistique" and self.state in ('', 'draft', 'submitted_user', 'user_resp_validate'):
+            if group.name == "Responsable Logistique" and self.state in ('', 'draft', 'submitted_user', 'user_resp_validate'):
                 self.is_write = True
             if group.name in ("Demande d'achat / Utilisateur", "Demande d'achat / Responsable") and self.state in ('', 'draft', 'submitted_user'):
                 self.is_write = True
@@ -132,6 +131,10 @@ class achat_demande(models.Model):
                         self.financial_director = employee.id
                     if p == "Responsable Logistique":
                         self.logistics_manager = employee.id
+                else:
+                    raise ValidationError(_("Please assign Employee to job Positions :- 'Directeur FRMA', 'Directeur Financier', 'Responsable Logistique'"))
+            else:
+                raise ValidationError(_("Please assign job Positions :- 'Directeur FRMA', 'Directeur Financier', 'Responsable Logistique'"))
 
     def action_cancel_request(self):
         if self.state == "user_resp_validate":
@@ -190,12 +193,12 @@ class achat_demande(models.Model):
                 employee = self.env['hr.employee'].search([('user_id', '=', user.id)])
                 if employee:
                     purchase_team.append(employee)
-        # if purchase_team:
-        #     self.send_mail([],
-        #                    "Approbation de la demande d'achat " + self.name,
-        #                    "La demande d'achat a été approuvé par le directeur FRMA " + (
-        #                        self.frma_director.name).encode(
-        #                        'utf_8'), purchase_team)
+        if purchase_team:
+            self.send_mail([],
+                           "Approbation de la demande d'achat " + self.name,
+                           "La demande d'achat a été approuvé par le directeur FRMA " + (
+                               self.frma_director.name).encode(
+                               'utf_8'), purchase_team)
         self.write({"state": "frma_director_validate"})
         self.date_frma_director_validate = fields.Datetime.now()
 
@@ -579,13 +582,13 @@ achat_demande_history()
 #         for partner in data.partners:
 #             self.pool.get('purchase.requisition').make_purchase_order(cr, uid, active_ids, partner.id,
 #                                                                       context=context)
-        # if data.multiple_supplier:
-        #     for partner in data.partners:
-        #         self.pool.get('purchase.requisition').make_purchase_order(cr, uid, active_ids, partner.id,
-        #                                                                   context=context)
-        # else:
-        #     self.pool.get('purchase.requisition').make_purchase_order(cr, uid, active_ids, data.partner_id.id,
-        #                                                               context=context)
+# if data.multiple_supplier:
+#     for partner in data.partners:
+#         self.pool.get('purchase.requisition').make_purchase_order(cr, uid, active_ids, partner.id,
+#                                                                   context=context)
+# else:
+#     self.pool.get('purchase.requisition').make_purchase_order(cr, uid, active_ids, data.partner_id.id,
+#                                                               context=context)
 #         return {'type': 'ir.actions.act_window_close'}
 
 

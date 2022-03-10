@@ -93,6 +93,7 @@ def input_template(cr, uid, name):
 
 class wizard_liasse(osv.osv_memory):
     _name = "wizard.liasse"
+    _description = "Wizard Liasse"
 
 
 # =====================================================================================================================================================

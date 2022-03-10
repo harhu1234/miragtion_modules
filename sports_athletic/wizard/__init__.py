@@ -6,3 +6,4 @@ from . import invitation_participants
 from . import engages_participants
 from . import wizard_liasse
 from . import getxlwtstylelist
+from . import assurance_xlsx

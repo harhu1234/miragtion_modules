@@ -4,7 +4,7 @@
 
         <template id="purchase_quotation_frma_report" inherit_id="purchase.report_purchasequotation_document">
 
-            <xpath expr="//table[@class='table table-sm']" position="replace">
+            <xpath expr="//table[hasclass('table-sm')]" position="replace">
 
                 <table class="table table-condensed">
                     <thead>
